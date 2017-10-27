@@ -1,3 +1,5 @@
 
 node_modules/
-app/src/
+app/src/font/
+app/src/images/
+app/src/js/
