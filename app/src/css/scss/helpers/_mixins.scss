@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+
+// **** MIXINS **** //
+
+
+// anchor tag
+@mixin block-anchor {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+// text-overflow : ellipsis
+@mixin txt-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+
+
+// font //@include font-lato;
+@mixin font-dream { //롯데마트드림체
+    font-family: 'LotteMartDream', AppleGothic, sans-serif, Helvetica;
+}
+@mixin font-noto { //본고딕
+    font-family: 'NotoSans', AppleGothic, sans-serif, Helvetica;
+}
+@mixin font-lato($weight:400) {
+    font-family: 'Lato', AppleGothic, sans-serif, Helvetica;
+    font-weight: $weight;
+}
+
+
+
+//center
+@mixin align-center {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-item: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}

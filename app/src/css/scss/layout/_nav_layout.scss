@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/* navigation */
+
+nav {
+    display: none;
+    width: 100%;
+    height: 100%;
+        min-height: 490px;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: #fff;
+    
+    
+    .bar {
+        display: inline-block; 
+        width: 1px; 
+        height: 80%; 
+        vertical-align: middle; 
+    }
+    
+    ol {
+        //vertical-align: middle;
+        //text-align: center;
+        //display: inline-block;
+        //width: 100%;
+        //height: 80%;
+        //background-color: #fff9d8;
+        height: 80%;
+        min-height: 390px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        li {
+            text-align: center;
+            margin-top: 1.8em;
+            
+            a {
+                display: block;
+                 font-family: 'Lato';
+            }
+            
+            &:after {
+                opacity: 0;
+                display: block;
+                letter-spacing: 1px;
+                color: #aaa;
+                font-weight: 100;
+                transition: opacity .3s;
+            }
+        }
+        li:first-child {
+            margin-top: 0;
+            
+            &:after {
+                content: 'Go to Home';
+            }
+        }
+        li:nth-child(2):after {
+            content: 'Feature Work';
+        }
+        li:nth-child(3):after {
+            content: 'Know me';
+        }
+        li:hover:after {
+            opacity: 1;
+            transition: opacity .3s;
+        }
+    }
+}
+
+nav .contact {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Lato', AppleGothic, sans-serif, Helvetica;
+    
+    a {
+        text-align: center;
+        margin-left: 4em;
+        line-height: 180%;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+        
+        span {
+                display: inline-block;
+                text-align: center;
+                width: initial;
+                margin-right: 0.8em;
+                font-weight: bold;
+                 color: #ffde7d;
+            }
+            
+            p {
+                display: inline-block;
+                color:#999;
+            }
+    }
+    
+    
+    
+    
+}
+
+
+/* //////////////////////////////// */
+
+    
+    @media screen and (min-width:1601px) {
+        nav li > a {
+            color:darkseagreen;
+            font-size: 90px;
+        }
+        nav li:after {
+            font-size: 16px;
+        }
+        nav .contact > a {
+            font-size: 22px;
+            margin-left: 5em;
+            
+        }
+    }
+    @media screen and (max-width:1600px) {
+        nav ol {
+            height: 85%;
+        }
+        nav li > a {
+            color:firebrick;
+            font-size: 80px;
+        }
+        
+        nav li:after {
+            font-size: 14px;
+        }
+        nav .contact > a {
+            font-size: 20px;
+            margin-left: 4em;
+            
+        }
+        
+    }
+    @media screen and (max-width:1200px) {
+        nav ol {
+            height: 85%;
+        }
+        nav li > a {
+            color:#5e4dc4;
+            font-size: 70px;
+        }
+        
+        nav li:after {
+            font-size: 13px;
+        }
+        nav .contact > a {
+            font-size: 17px;
+            margin-left: 3em;
+            
+        }
+        
+        
+    }
+    @media screen and (max-width:769px) {
+        nav ol {
+            height: 80%;
+        }
+        nav li > a {
+            color:cadetblue;
+            font-size: 60px;
+        }
+        
+        nav li:after {
+            font-size: 11px;
+        }
+        
+        nav .contact {
+            flex-direction: column;
+        }
+        
+        nav .contact > a {
+            text-align: left;
+            font-size: 16px;
+            margin-left: 0;
+            line-height: 140%;
+            
+            span {
+                text-align: right;
+                display: inline-block;
+                width: 42%;
+                margin-right: 0.8em;
+            }
+            
+            p {
+                display: inline-block;
+            }
+        }
+    }
+
+/* //////////////////////////////// */

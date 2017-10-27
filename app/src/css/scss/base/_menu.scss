@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+
+
+header .logo {
+    z-index: 100;
+    position: fixed;
+    top: 20px;
+    left: 16px;
+    width: 40px;
+    height: 40px;
+    /*background-color: seagreen;*/
+
+
+ & > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-decoration: none;
+    color: #fcd500;
+    font-weight: bold;
+    text-align: center;
+    font-size: 46px;
+     
+    }
+}
+
+
+
+
+
+
+$height: 20px;
+$width: 32px;
+$line-size: 2px;
+$line-color: #bbb;
+$to-translate: ($height - $line-size) / 2;
+$bounce: cubic-bezier(.87,-.50,.19,1.50);
+
+
+#menu_ico {
+    z-index: 300;
+    position: fixed;
+    width: auto;
+    height: auto;
+    top: 36px;
+    right: 30px;
+    cursor: pointer;
+    
+    .burger {
+        position: absolute;
+        width: $width;
+        height: $height;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform 750ms ease-in-out;
+        
+        .line {
+            position: absolute;
+            right: 0;
+            background-color: $line-color;
+            height: $line-size;
+            width: 80%;
+            pointer-events: none;
+        }
+        
+        .line_1 {
+            top: 0;
+            transition: all .2s ease-in-out;
+        }
+        
+        .line_2 {
+            width: 100%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            transition: transform .2s ease-in-out;
+        }
+        
+        .line_2:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: $line-size;
+            background-color: $line-color;
+            transition: transform .2s ease-in-out;
+        }
+        
+        .line_3 {
+            bottom: 0;
+            transition: all .2s ease-in-out;
+        }
+        
+        
+    }
+    
+}
+
+
+.burger.open {
+    
+    .line_1 {
+        opacity: 0;
+        transform: translate3d(-2*$to-translate,0,0);
+        transition: all .2s ease-in-out;
+    }
+    
+    .line_2 {
+        transform: rotate(45deg);
+        transition: transform .2s ease-in-out;
+    }
+    
+    .line_2:before {
+        transform: rotate(-90deg);
+        transition: transform .2s ease-in-out;
+    }
+    
+    .line_3 {
+        opacity: 0;
+        transform: translate3d(2*$to-translate,0,0);
+        transition: all .2s ease-in-out;     
+    }
+    
+}

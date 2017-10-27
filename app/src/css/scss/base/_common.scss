@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+
+/*  
+*   COMMON STYLE
+*/
+
+.text_indent { 
+    text-indent: -9999px; 
+}
+
+.text_hide { 
+    position: absolute; left: -999em; 
+}
+
+.clearfix {
+    *zoom:1;
+}
+
+.clearfix:after {
+    display: block; 
+    content: ''; 
+    clear: both;
+}
+
+.br_m {display: none;}
+
+@media screen and (max-width:769px) {
+    .br_m {display: block;}
+}
+
+#wrap {background-color: #fff;}
+//end of _common.scss
