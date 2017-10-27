@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TSF662H');
+    </script>
+
 	<meta charset="utf-8">
 	<meta name="mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -11,23 +20,69 @@
     <meta name="msapplication-navbutton-color" content="#fcd500">
     <meta name="apple-mobile-web-app-status-bar-style" content="#fcd500">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no" />
-	<meta name="Title" content="NY KIM's portfolio" />
-	<meta name="Author" content="NY KIM" />
+	
+	<!-- 171027 | 페이지별로 다르게 설정할 예정 -->
+    <meta name="description" content="웹퍼블리셔 N의 포트폴리오" />
+	<meta name="keywords" content="웹퍼블리셔 N의 포트폴리오" />
+    <meta name="title" content="NY KIM's portfolio" />
+	<meta name="author" content="웹퍼블리셔 N" />
+	<meta property="og:title" content="웹퍼블리셔 N의 사심 가득한 포트폴리오"/>
+	<meta property="og:url" content="http://nykim.net"/>
+	<meta property="og:image" content="images/og_img.png"/>
+	<meta property="og:description" content="웹퍼블리셔 N의 사심 가득한 포트폴리오 작품을 확인해 보세요."/>
 	
 	<title>NY KIM (TEST)</title>
 	
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/common.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
+	
+	<script>
+		$(function() {
+			var hostname = "nykim.net";
+			$.get("//"+hostname+"/inside.php?what=phone", function(data) {
+				$(".mobile").html(data);
+			});
+			$.get("//"+hostname+"/inside.php?what=mail", function(data) {
+				$(".mail").html(data);
+				$(".mail").attr("href","mailto:"+data);
+			});
+			$.get("//"+hostname+"/inside.php?what=add", function(data) {
+				$(".add").html(data);
+			});
+		});
+	</script>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+    h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+    (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+    })(window,document.documentElement,'async-hide','dataLayer',4000,
+    {'GTM-K2JVNQN':true});</script>
+   
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-102680245-1', 'auto');
+      ga('require', 'GTM-K2JVNQN');
+      ga('send', 'pageview');
+    </script>
 
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSF662H"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+
 <div class="wrap">
   
 <header class="header">
 
     <h1 class="logo">
-        <a href="#">N</a>
+        <a href="#">N</a> <!-- 171027 | 내용 수정하고 svg로 대체할 예정 -->
     </h1>
 
     <div class="menu" role="button">
