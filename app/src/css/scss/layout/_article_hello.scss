@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+
+/*
+*   article_hello
+*/
+
+
+////////////////
+// hello 부분 //
+///////////////
+
+
+.article_hello {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    max-height: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    
+    .inner {
+        transition: margin .5s;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: auto;
+        margin-top: -10em;
+        outline: 3px solid yellow;
+    }
+    
+    .hello_text {
+        transition: margin .5s, font-size .5s;
+        margin: 3em 0 0;
+        padding: 0 3em;
+        font-family: 'LotteMartDream', sans-serif;
+        text-align: center;
+        font-weight: 300;
+        color: #3f3f3f;
+        letter-spacing: 0.025rem;
+        line-height: 1.4em;
+    }
+    
+    .more_link {
+        @include display-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 2em;
+        @include font-noto;
+        letter-spacing: 0.038rem;
+        color: #aaa;
+        
+        .icon_circle {
+            position: relative;
+            @include icon-circle;
+            
+            &:after { //임시 (삭제예정))
+                position: absolute;
+                top: 24px;
+                right: 16px;    
+                width: 20px;
+                height: 4px;
+                outline: 1px solid #fff;
+                content: '';
+            }
+        }
+    }
+    
+    
+    
+} //end of .article_hello
+
+
+
+//////////////////
+// !미디어 쿼리! //
+/////////////////
+
+
+@media screen and (min-width:1601px) {
+    .article_hello {
+        background-color: #fbe6ff;
+        
+        .title .title_svg {
+            height: 90px;
+        }
+        
+        .title .title_svg_text {
+            font-size: 100px;
+        }
+        
+        .title_sm {
+            font-size: 13px;
+        }
+        
+        .hello_text {
+            font-size: 20px;
+        }
+        
+        .more_link {
+            font-size: 19px;
+        }
+        
+        .icon_circle {
+            font-size: 18px;
+        }
+    } //end of .article_hello
+    
+} //end of (min-width:1601px)
+
+@media screen and (max-width:1600px) {
+    .article_hello {
+        background-color: #ffe6e6;
+        
+        .title .title_svg {
+            height: 70px;
+        }
+        
+        .title .title_svg_text {
+            font-size: 80px;
+        }
+        
+        .title_sm {
+            font-size: 12px;
+        }
+        
+        .hello_text {
+            font-size: 18px;
+        }
+        
+        .more_link {
+            font-size: 16px;
+        }
+        
+        .icon_circle {
+            font-size: 17px;
+        }
+    } //end of .article_hello
+    
+} //end of (max-width:1600px)
+
+
+@media screen and (max-width:1200px) {
+    .article_hello {
+        background-color: #f0fff9;
+        
+        .title .title_svg {
+            height: 58px;
+        }
+        
+        .title .title_svg_text {
+            font-size: 70px;
+        }
+        
+        .title_sm {
+            font-size: 11px;
+        }
+        
+        .hello_text {
+            font-size: 16px;
+        }
+        
+        .more_link {
+            font-size: 14px;
+        }
+        
+        .icon_circle {
+            font-size: 15px;
+        }
+    } //end of .article_hello
+    
+} //end of (max-width:1200px)
+
+
+@media screen and (max-width:768px) {
+    .article_hello {
+        min-height: auto;
+        background-color: #fcfff0;
+        
+        .title .title_svg {
+            height: 52px;
+        }
+        
+        .title .title_svg_text {
+            font-size: 65px;
+        }
+        
+        .title_sm {
+            font-size: 10px;
+        }
+        
+        .hello_text {
+            font-size: 14px;
+        }
+        
+        .more_link {
+            font-size: 12px;
+        }
+        
+        .icon_circle {
+            font-size: 12px;
+        }
+    } //end of .article_hello
+    
+} //end of (max-width:769px)

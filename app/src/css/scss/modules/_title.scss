@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+
+/*
+*   title for section, aricle
+*/
+
+    
+.title_line {
+        position: absolute;
+        top: -6em;
+        left: 50%;
+        display: block;
+        content: '';
+        width: 1px;
+        height: 110px;
+        background-color: #67ceeb;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 1.5em;
+    
+    .title_svg {
+        height: 50px;
+    }
+    
+    .title_svg_text {
+        font-size: 60px;
+        transition: font-size .5s;
+    }
+}
+
+
+.title_sm {
+    display: block;
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #aaa;
+    font-weight: 300;
+    text-transform: uppercase;
+    transition: font-size .5s;
+}

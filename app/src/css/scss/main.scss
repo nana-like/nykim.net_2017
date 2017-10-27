@@ -12,7 +12,11 @@
 @import "base/common";
 @import "base/font";
 
-// 페이지별 스타일
-@import "pages/home"
+// 모듈
+@import "modules/title";
 
 // 레이아웃
+@import "layout/visual";
+@import "layout/contents";
+@import "layout/article_hello";
+@import "layout/article_work";

@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+
+/*
+*   article_work
+*/
+
+
+///////////////
+// work 부분 //
+//////////////
+
+
+
+.article_work {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    max-height: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+    
+    .inner {
+        transition: margin .5s;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: auto;
+        margin-top: -10em;
+        outline: 3px solid yellow;
+    }
+}

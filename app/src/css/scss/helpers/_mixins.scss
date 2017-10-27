@@ -42,6 +42,20 @@
 }
 
 
+// yellow circle
+@mixin icon-circle {
+    display: block;
+    width: 3.31em;
+    height: 3.31em;
+    margin-left: 0.8em;
+    line-height: 3.31em;
+    border-radius: 50%;
+    background-color: #ffda6e;
+    box-shadow: 0 0.5em 0.938em #ccc;
+    transition: width .5s, height .5s;
+}
+
+
 
 //center
 @mixin align-center {
