@@ -1,0 +1,34 @@
+{
+  "name": "nykim.net_2017",
+  "version": "1.0.0",
+  "description": "nykim portfolio",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnYKim/nykim.net_2017.git"
+  },
+  "keywords": [
+    "nykim.net"
+  ],
+  "author": "NY KIM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnYKim/nykim.net_2017/issues"
+  },
+  "homepage": "https://github.com/AnnYKim/nykim.net_2017#readme"
+}
