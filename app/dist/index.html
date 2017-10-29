@@ -33,25 +33,10 @@
 	
 	<title>NY KIM (TEST)</title>
 	
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="js/common.js"></script>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/footer.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
 	
-	<script>
-		$(function() {
-			var hostname = "nykim.net";
-			$.get("//"+hostname+"/inside.php?what=phone", function(data) {
-				$(".mobile").html(data);
-			});
-			$.get("//"+hostname+"/inside.php?what=mail", function(data) {
-				$(".mail").html(data);
-				$(".mail").attr("href","mailto:"+data);
-			});
-			$.get("//"+hostname+"/inside.php?what=add", function(data) {
-				$(".add").html(data);
-			});
-		});
-	</script>
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
     h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
     (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
@@ -293,9 +278,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <footer class="footer">
 
     <h2 class="title footer_title">
-        <svg width="auto" height="60" style="margin:0 auto">
+        <svg height="60" style="margin:0 auto">
             <defs>
-                <linearGradient x1="0%" y1="0%" x2="100%" y2="0%">
+                <linearGradient id="title_footer" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" style="stop-color:rgb(102,205,235);
                 stop-opacity:1"/>
                 <stop offset="100%" style="stop-color:rgb(163,235,230);
@@ -303,23 +288,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </linearGradient>
             </defs>
           <text x="50%" y="55%" alignment-baseline="middle" text-anchor="middle"
-                font-family="'Lato', 'LotteMartDream', AppleGothic, sans-serif, Helvetica" font-size="50" fill="url(#gradient)" class="svg_text">
+                font-family="'Lato', 'LotteMartDream', AppleGothic, sans-serif, Helvetica" font-size="50" fill="url(#title_footer)" class="svg_text">
                 I do what I waNNa do.
           </text>
         </svg>
     </h2>
-    <p class="footer_text">국가는 대외무역을 규제·조정할 수 있다. 또한 복수정당제는 보장된다 :)</p>
+    <p class="footer_text">작업 준비 완료됐습니다. 편하실 때 연락 주세요!</p>
     <address class="footer_address">
         <a href="mailto:ppphlox@gmail.com" class="footer_link link_mail">nykim@nykim.net</a>
         <a href="tel:01027285936" class="footer_link link_phone">010 - 2728 - 5936</a>
     </address>
     <div class="footer_bottom">
         <ul class="social">
-            <li><a href="#">blog</a></li>
+            <li><a href="#">mail</a></li>
             <li><a href="#">codepen</a></li>
+            <li><a href="#">github</a></li>
         </ul>
-        <p class="update">last update : 17/10/12</p>
-        <p class="copyright">&copy; 2017 nykim</p>
+        <p class="update">Last updated on October 29th, 2017</p> <!-- 171029 | 자바스크립트로 제어 예정 -->
+        <p class="copyright">&copy; 2017 NY KIM</p>
     </div>
     
 </footer>

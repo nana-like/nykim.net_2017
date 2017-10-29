@@ -54,16 +54,3 @@
     box-shadow: 0 0.5em 0.938em #ccc;
     transition: width .5s, height .5s;
 }
-
-
-
-//center
-@mixin align-center {
-    display: flex;
-    display: -webkit-flex;
-    -webkit-align-item: center;
-    -webkit-justify-content: center;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-}

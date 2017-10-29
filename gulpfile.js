@@ -42,10 +42,10 @@ gulp.task('webserver', function () {
 ////////// js 압축 //////////
 gulp.task('combine:js', function(){ 
     return gulp.src(paths.js)                                   
-       .pipe(concat('common.js')) //하나로 합치기
+       .pipe(concat('test.js')) //하나로 합치기
        .pipe(gulp.dest(dist + '/js')) //합친 파일 보내기
        .pipe(uglify()) //압축하기
-       .pipe(rename('common.min.js')) //압축한 파일 min으로 생성
+       .pipe(rename('test.min.js')) //압축한 파일 min으로 생성
        .pipe(gulp.dest(dist + '/js')) //압축한 파일 보내기
        .pipe(livereload());
 });

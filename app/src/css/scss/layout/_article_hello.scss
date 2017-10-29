@@ -49,7 +49,7 @@
         position: relative;
         margin-top: 3em;
         @include font-noto;
-        letter-spacing: 0.15rem;
+        letter-spacing: 0.12rem;
         color: #999;
         
         &:before {
@@ -89,25 +89,13 @@
 /////////////////
 
 
-@media screen and (min-width:1601px) {
+@include pc-md {     // pc-md : 1601px~
     .article_hello {
         min-height: 800px;
-        background-color: #fbe6ff;
+        background-color: #e3fff7;
         
         .inner {
             font-size: 29px;
-        }
-        
-        .title .title_svg {
-            height: 110px;
-        }
-        
-        .title .title_svg_text {
-            font-size: 110px;
-        }
-        
-        .title_sm {
-            font-size: 13px;
         }
         
         .hello_text {
@@ -121,28 +109,18 @@
         .icon_circle {
             font-size: 20px;
         }
-    } //end of .article_hello
+    } 
     
-} //end of (min-width:1601px)
+} 
 
-@media screen and (max-width:1600px) {
+// =============================================
+
+@include pc-sm {     // pc-sm : 1201px ~ 
     .article_hello {
         background-color: #ffe6e6;
         
         .inner {
             font-size: 26px;
-        }
-        
-        .title .title_svg {
-            height: 94px;
-        }
-        
-        .title .title_svg_text {
-            font-size: 94px;
-        }
-        
-        .title_sm {
-            font-size: 13px;
         }
         
         .hello_text {
@@ -156,29 +134,18 @@
         .icon_circle {
             font-size: 18px;
         }
-    } //end of .article_hello
+    } 
     
-} //end of (max-width:1600px)
+}
 
+// =============================================
 
-@media screen and (max-width:1200px) {
+@include tablet {     // tablet : 641px~
     .article_hello {
-        background-color: #cfffec;
+        background-color: #6c41b1;
         
         .inner {
             font-size: 24px;
-        }
-        
-        .title .title_svg {
-            height: 80px;
-        }
-        
-        .title .title_svg_text {
-            font-size: 80px;
-        }
-        
-        .title_sm {
-            font-size: 12px;
         }
         
         .hello_text {
@@ -192,45 +159,36 @@
         .icon_circle {
             font-size: 16px;
         }
-    } //end of .article_hello
+    }
     
-} //end of (max-width:1200px)
+}
 
+// =============================================
 
-@media screen and (max-width:768px) {
+@include mo-lg {     // mob-lg : ~540px
     .article_hello {
         min-height: 640px;
         background-color: #fcfff0;
         
         .inner {
-            font-size: 20px;
-        }
-        
-        .title .title_svg {
-            height: 52px;
-        }
-        
-        .title .title_svg_text {
-            font-size: 65px;
-        }
-        
-        .title_sm {
-            font-size: 10px;
+            font-size: 22px;
         }
         
         .hello_text {
-            margin: 2.3em 1.3em;
-            font-size: 12px;
+            margin: 2.5em 0em;
+            font-size: 14px;
             text-align: left;
         }
         
         .more_link {
-            font-size: 11px;
+            font-size: 12px;
         }
         
         .icon_circle {
             font-size: 10px;
         }
-    } //end of .article_hello
+    } 
     
-} //end of (max-width:769px)
+}
+
+// =============================================

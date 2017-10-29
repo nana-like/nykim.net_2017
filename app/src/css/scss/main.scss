@@ -6,6 +6,7 @@
 // 변수, 믹스인
 @import "helpers/variables";
 @import "helpers/mixins";
+@import "helpers/mediaQueries";
 
 // 기본 스타일
 @import "base/reset";
@@ -17,6 +18,7 @@
 
 // 레이아웃
 @import "layout/visual";
+@import "layout/footer";
 @import "layout/contents";
 @import "layout/article_hello";
 @import "layout/article_work";

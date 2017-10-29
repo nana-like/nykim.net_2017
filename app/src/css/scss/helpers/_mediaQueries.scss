@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+
+// **** Media Queries **** //
+
+
+// Break Point (Desktop First)
+$desktop-l-width	: 1920px;
+$desktop-m-width	: 1600px;
+$desktop-s-width	: 1200px;
+$tablet-l-width		: 1024px;
+$tablet-s-width		: 768px;
+$mob-l-width		: 640px;
+$mob-m-width		: 425px;
+$mob-s-width		: 375px;
+ 
+
+// ! 사용법 !
+//
+//   @include pc-lg {
+//	  h1 {
+//	 	color: red;
+//    }
+//   }
+//
+
+// ----------------------- * -----------------------
+
+
+// PC large (1921px~)
+@mixin pc-lg {
+	@media screen and (min-width: #{$desktop-l-width + 1}) {
+		@content;
+	}
+}
+
+// PC middle (1601px~1920px)
+@mixin pc-md {
+	@media screen and (min-width: #{$desktop-m-width + 1}) {
+		@content;
+	}
+}
+ 
+// PC small (1201px~1600px)
+@mixin pc-sm {
+	@media screen and (min-width: #{$desktop-m-width + 1}) {
+		@content;
+	}
+}
+
+ 
+// ----------------------- * -----------------------
+
+  
+// Tablet (641px~1200px)
+@mixin tablet {
+	@media screen and (min-width: #{$mob-l-width + 1}) and (max-width: #{$desktop-m-width}) {
+		@content;
+	}
+}
+
+// ----------------------- * -----------------------
+
+
+// Mobile large (~640px)
+@mixin mo-lg {
+	@media screen and (max-width: #{$mob-l-width}) {
+		@content;
+	}
+}
+
+// Mobile small (~375px)
+@mixin mo-sm {
+	@media screen and (max-width: #{$mob-s-width}) {
+		@content;
+	}
+}
+
+// ----------------------- * -----------------------
+

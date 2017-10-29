@@ -49,3 +49,145 @@
     text-transform: uppercase;
     transition: font-size .5s;
 }
+
+
+
+
+//////////////////
+// !미디어 쿼리! //
+/////////////////
+
+
+@include pc-md {     // pc-md : 1601px~
+    .article_hello,
+    .article_work{
+        
+        .title .title_svg {
+            height: 110px;
+        }
+        
+        .title .title_svg_text {
+            font-size: 110px;
+        }
+        
+        .title_sm {
+            font-size: 13px;
+        }
+        
+        .hello_text {
+            font-size: 22px;
+        }
+        
+        .more_link {
+            font-size: 21px;
+        }
+        
+        .icon_circle {
+            font-size: 20px;
+        }
+    } 
+    
+} 
+
+// =============================================
+
+@include pc-sm {     // pc-sm : 1201px ~ 
+    .article_hello,
+    .article_work {
+        
+        .title .title_svg {
+            height: 94px;
+        }
+        
+        .title .title_svg_text {
+            font-size: 94px;
+        }
+        
+        .title_sm {
+            font-size: 13px;
+        }
+        
+        .hello_text {
+            font-size: 20px;
+        }
+        
+        .more_link {
+            font-size: 19px;
+        }
+        
+        .icon_circle {
+            font-size: 18px;
+        }
+    } 
+    
+}
+
+// =============================================
+
+@include tablet {     // tablet : 641px~
+    .article_hello,
+    .article_work {
+        
+        .title .title_svg {
+            height: 80px;
+        }
+        
+        .title .title_svg_text {
+            font-size: 80px;
+        }
+        
+        .title_sm {
+            font-size: 12px;
+        }
+        
+        .hello_text {
+            font-size: 18px;
+        }
+        
+        .more_link {
+            font-size: 17px;
+        }
+        
+        .icon_circle {
+            font-size: 16px;
+        }
+    } 
+    
+} 
+
+// =============================================
+
+@include mo-lg {     // mob-lg : ~540px
+    .article_hello,
+    .article_work {
+        
+        .title .title_svg {
+            height: 52px;
+        }
+        
+        .title .title_svg_text {
+            font-size: 65px;
+        }
+        
+        .title_sm {
+            font-size: 10px;
+        }
+        
+        .hello_text {
+            margin: 2.5em 0em;
+            font-size: 14px;
+            text-align: left;
+        }
+        
+        .more_link {
+            font-size: 12px;
+        }
+        
+        .icon_circle {
+            font-size: 10px;
+        }
+    } 
+    
+}
+
+// =============================================
