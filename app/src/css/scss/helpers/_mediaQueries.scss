@@ -43,7 +43,7 @@ $mob-s-width		: 375px;
  
 // PC small (1201px~1600px)
 @mixin pc-sm {
-	@media screen and (min-width: #{$desktop-m-width + 1}) {
+	@media screen and (min-width: #{$desktop-s-width + 1}) and (max-width: #{$desktop-m-width}) {
 		@content;
 	}
 }
@@ -54,7 +54,7 @@ $mob-s-width		: 375px;
   
 // Tablet (641px~1200px)
 @mixin tablet {
-	@media screen and (min-width: #{$mob-l-width + 1}) and (max-width: #{$desktop-m-width}) {
+	@media screen and (min-width: #{$mob-l-width + 1}) and (max-width: #{$desktop-s-width}) {
 		@content;
 	}
 }

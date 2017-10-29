@@ -17,7 +17,6 @@
     min-height: 700px;
     max-height: auto;
     height: auto;
-    background-color: aliceblue;
     
     .inner {
         transition: margin .5s;
@@ -25,26 +24,26 @@
         margin-top: 3em;
         width: 100%;
         height: auto;
-        outline: 3px solid #808aff;
     }
     
     .work_wrap {
         position: relative;
-        top: -2em;
-        max-width: 1920px;
-        padding-top: 1.55em;
+       // top: -2em;
+        //padding-top: 1.55em;
         padding-bottom: 2em;
-        margin: 0 auto;
+        margin: -1.5em auto 0;
         text-align: center;
         transition: padding .5s;
-        background-color: #ffa8a8;
+        background-color: #f0f0f0;
     }
     
     .work_wrap .work_list { //ul
+        max-width: 1920px;
         box-sizing: border-box;
+        margin: 0 auto;
         padding: 1em 3em;
-        outline: 3px solid navy;
-        margin-top: 3em;
+        //outline: 3px solid navy;
+        padding-top: 5em;
         -webkit-column-count: 3;
         -webkit-column-gap: 1em; 
         -moz-column-count: 3; 
@@ -100,7 +99,6 @@
 
                     .caption_desc {
                         @include font-noto;
-                        letter-spacing: 0.08em;
                     }
                 }
                 
@@ -191,12 +189,12 @@
         }
         
         .work_wrap {
-            font-size: 32px; // work.에 걸리는 회색 영역 조절
+            font-size: 42px; // work.에 걸치는 회색 영역 조절
         }
         
         .work_wrap .work_list,
         .work_item {
-            font-size: 20px; // 이미지 간격 조절
+            font-size: 24px; // 이미지 간격 조절
         }
 
         .caption_title {
@@ -222,12 +220,12 @@
         }
         
         .work_wrap {
-            font-size: 28px;
+            font-size: 36px;
         }
         
         .work_wrap .work_list,
         .work_item {
-            font-size: 16px;
+            font-size: 22px;
         }
 
         .caption_title {
@@ -246,21 +244,24 @@
 
 @include tablet {     // tablet : 641px~
     .article_work {
-        background-color: #ccb9cc;
         
         .inner {
             font-size: 24px;
         }
         
         .work_wrap {
-            font-size: 24px;
+            font-size: 30px;
         }
         
         .work_wrap .work_list {
             -moz-column-count: 2;
             -webkit-column-count: 2;
             column-count: 2;
-            font-size: 14px;
+            font-size: 18px;
+            
+            .work_item  {
+                font-size: 18px;
+            }
             
             .work_caption .caption_textWrap {
                 
@@ -295,20 +296,24 @@
         }
         
         .work_wrap {
-            font-size: 18px;
+            font-size: 24px;
         }
         
         .work_wrap .work_list {
             -moz-column-count: 1;
             -webkit-column-count: 1;
             column-count: 1;
-            font-size: 12px;
+            font-size: 14px;
+            
+            .work_item  {
+                font-size: 14px;
+            }
             
             .work_item .work_caption .caption_textWrap {
                 display: block; // [M] 캡션 항상 표시
                 
                 .caption_title {
-                    font-size: 24px;
+                    font-size: 23px;
                 }
 
                 .caption_desc {
