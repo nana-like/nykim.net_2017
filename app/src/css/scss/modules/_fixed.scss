@@ -4,19 +4,28 @@
 *   fixed (logo, menu)
 */
 
-
-
-.header .fixed {
+.header {
     z-index: 300;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     
+}
+
+
+.header .fixed {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    max-width: 1920px;
+    margin: 0 auto;
+    
     .logo {
         z-index: 100;
-        position: fixed;
-        top: 16px;
-        left: 8px;
+        position: absolute;
+        top: 28px;
+        left: 20px;
         width: 40px;
         height: 40px;
         background-color: #ffdd4c;
@@ -26,18 +35,18 @@
     $burgerWidth: 32px;
     $burgerHeight: 20px;
     $burgerLineSize: 2px;
-    $burgerLineColor: #bbb;
+    $burgerLineColor: #777;
     $burgerTranslate: ($burgerHeight - $burgerLineSize) / 2;
     $burgerBounce: cubic-bezier(.87,-.50,.19,1.50);
 
 
     .menu {
         z-index: 300;
-        position: fixed;
+        position: absolute;
         width: auto;
         height: auto;
-        top: 30px;
-        right: 24px;
+        top: 46px;
+        right: 36px;
         cursor: pointer;
         
 
@@ -126,31 +135,83 @@
 
 
 
+
 //////////////////
 // !미디어 쿼리! //
 /////////////////
+
+
+@include pc-md {
+   .header .fixed {
+        
+        .logo {
+            left: 0px;
+            width: 46px;
+            height: 46px;
+        }
+       
+       $burgerWidth: 38px;
+       $burgerHeight: 24px;
+       
+       .menu {
+           top: 52px;
+           right: 30px;
+            
+            .menu_burger {
+                width: $burgerWidth;
+                height: $burgerHeight;
+            }
+       }
+    }
+}
+
+// =============================================
+
+
+@include pc-md {
+   .header .fixed {
+        
+        .logo {
+            width: 42px;
+            height: 42px;
+        }
+       
+       $burgerWidth: 36px;
+       $burgerHeight: 22px;
+       
+       .menu {
+           top: 42px;
+           right: 38px;
+            
+            .menu_burger {
+                width: $burgerWidth;
+                height: $burgerHeight;
+            }
+       }
+    }
+}
+
+// =============================================
+
+
 
 @include mo-lg {
     
     
     .header .fixed {
         
-       // background-color: rgba(255,255,255,0.5);
-        width: 100%;
-        height: 50px;
-        
         .logo {
-            top: 10px;
+            top: 16px;
             left: 6px;
             width: 30px;
             height: 30px;
         }
         
-        $burgerWidth: 26px;
-        $burgerHeight: 18px;
+        $burgerWidth: 28px;
+        $burgerHeight: 19px;
 
         .menu {
-            top: 26px;
+            top: 32px;
             right: 20px;
             
             .menu_burger {

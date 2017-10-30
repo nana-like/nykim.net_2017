@@ -19,18 +19,12 @@
 
 .title {
     position: relative;
+    color: rgb(129, 226, 244);
     z-index: 1;
     text-align: center;
-    padding-top: 1.5em;
-    
-    .title_svg {
-        height: 50px;
-    }
-    
-    .title_svg_text {
-        font-size: 60px;
-        transition: font-size .5s;
-    }
+    padding-top: 0.5em;
+    font-size: 60px;
+    transition: font-size .5s;
 }
 
 
@@ -38,7 +32,7 @@
     display: block;
     position: relative;
     z-index: 1;
-    margin-top: -0.8em;
+    //margin-top: -40px;
     font-style: normal;
     font-size: 11px;
     letter-spacing: 1px;
@@ -61,11 +55,7 @@
     .article_hello,
     .article_work{
         
-        .title .title_svg {
-            height: 110px;
-        }
-        
-        .title .title_svg_text {
+        .title {
             font-size: 110px;
         }
         
@@ -94,11 +84,8 @@
     .article_hello,
     .article_work {
         
-        .title .title_svg {
-            height: 94px;
-        }
         
-        .title .title_svg_text {
+        .title  {
             font-size: 94px;
         }
         
@@ -127,11 +114,7 @@
     .article_hello,
     .article_work {
         
-        .title .title_svg {
-            height: 80px;
-        }
-        
-        .title .title_svg_text {
+        .title {
             font-size: 80px;
         }
         
@@ -159,12 +142,9 @@
 @include mo-lg {     // mob-lg : ~540px
     .article_hello,
     .article_work {
+
         
-        .title .title_svg {
-            height: 52px;
-        }
-        
-        .title .title_svg_text {
+        .title  {
             font-size: 65px;
         }
         
