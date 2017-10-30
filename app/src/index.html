@@ -75,37 +75,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
   
 <header class="header">
 
-    <h1 class="logo">
+    <div class="fixed">
+        <h1 class="logo">
         <a href="#">N</a> <!-- 171027 | 내용 수정하고 svg로 대체할 예정 -->
-    </h1>
+        </h1>
 
-    <div class="menu" role="button">
-        <div class="menu_burger">
-            <div class="burger_1"></div>
-            <div class="burger_2"></div>
-            <div class="burger_3"></div>
+        <div class="menu" role="button">
+            <div class="menu_burger">
+                <div class="line line_1"></div>
+                <div class="line line_2"></div>
+                <div class="line line_3"></div>
+            </div>
         </div>
     </div>
 
     <nav class="gnb">
         <ul class="nav">
-            <li><a href="#">Home.</a></li>
-            <li><a href="#">Work.</a></li>
-            <li><a href="#">About.</a></li>
+            <li class="menu_item"><a href="#">Home.</a></li>
+            <li class="menu_item"><a href="#">Work.</a></li>
+            <li class="menu_item"><a href="#">About.</a></li>
         </ul>
         <div class="contact">
-            <a href="mailto:ppphlox@gmail.com" class="contact_link">    
+            <a href="mailto:nykim@nykim.net" class="contact_link">    
                 <span class="contact_heading">MAIL</span>    
-                <p class="contact_info">ppphlox@gmail.com</p>
+                <span class="contact_info">nykim@nykim.net</span>
             </a>
-            <a href="blog.naver.com/phlox__" class="contact_link">     
-                <span class="contact_heading">BLOG</span>     
-                <p class="contact_info">blog.naver.com/phlox__</p>
+            <a href="tel:01027285936" class="contact_link">     
+                <span class="contact_heading">PHONE</span>     
+                <span class="contact_info">010 2728 5936</span>
             </a>
-            <a href="#"  class="contact_link">
-                <span>KAKAO</span>   
-                <p class="contact_info">knyoung22</p>
-            </a>
+            <div class="contact_link">
+                <span class="contact_heading">KAKAO</span>   
+                <span class="contact_info">knyoung22</span>
+            </div>
         </div>
     </nav>
 
@@ -278,7 +280,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
 <footer class="footer">
 
     <h2 class="title footer_title">
-        <svg height="60" style="margin:0 auto">
+        <svg width="100%" height="60" style="margin:0 auto" class="title_svg">
             <defs>
                 <linearGradient id="title_footer" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" style="stop-color:rgb(102,205,235);
@@ -288,23 +290,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </linearGradient>
             </defs>
           <text x="50%" y="55%" alignment-baseline="middle" text-anchor="middle"
-                font-family="'Lato', 'LotteMartDream', AppleGothic, sans-serif, Helvetica" font-size="50" fill="url(#title_footer)" class="svg_text">
-                I do what I waNNa do.
+                font-family="'Lato', 'LotteMartDream', AppleGothic, sans-serif, Helvetica" font-size="50" fill="url(#title_footer)" class="title_svg_text">
+                Let's start right Now!
           </text>
         </svg>
     </h2>
     <p class="footer_text">작업 준비 완료됐습니다. 편하실 때 연락 주세요!</p>
     <address class="footer_address">
-        <a href="mailto:ppphlox@gmail.com" class="footer_link link_mail">nykim@nykim.net</a>
-        <a href="tel:01027285936" class="footer_link link_phone">010 - 2728 - 5936</a>
+        <a href="mailto:ppphlox@gmail.com" class="footer_link link_mail">
+                <span class="icon_circle"></span>
+                <span class="footer_link_text">nykim@nykim.net</span>
+        </a>
+        <a href="tel:01027285936" class="footer_link link_phone">
+            <span class="icon_circle"></span>
+            <span class="footer_link_text">010 - 2728 - 5936</span>
+        </a>
     </address>
     <div class="footer_bottom">
         <ul class="social">
-            <li><a href="#">mail</a></li>
-            <li><a href="#">codepen</a></li>
-            <li><a href="#">github</a></li>
+            <li class="social_item"><a href="#">mail</a></li>
+            <li class="social_item"><a href="#">codepen</a></li>
+            <li class="social_item"><a href="#">github</a></li>
         </ul>
-        <p class="update">Last updated on October 29th, 2017</p> <!-- 171029 | 자바스크립트로 제어 예정 -->
+        <p class="update">Last updated on October 30th, 2017</p> <!-- 171029 | 자바스크립트로 제어 예정 -->
         <p class="copyright">&copy; 2017 NY KIM</p>
     </div>
     

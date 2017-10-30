@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+/*
+*   fixed (logo, menu)
+*/
+
+
+
+.header .fixed {
+    z-index: 300;
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    .logo {
+        z-index: 100;
+        position: fixed;
+        top: 16px;
+        left: 8px;
+        width: 40px;
+        height: 40px;
+        background-color: #ffdd4c;
+    }
+    
+    
+    $burgerWidth: 32px;
+    $burgerHeight: 20px;
+    $burgerLineSize: 2px;
+    $burgerLineColor: #bbb;
+    $burgerTranslate: ($burgerHeight - $burgerLineSize) / 2;
+    $burgerBounce: cubic-bezier(.87,-.50,.19,1.50);
+
+
+    .menu {
+        z-index: 300;
+        position: fixed;
+        width: auto;
+        height: auto;
+        top: 30px;
+        right: 24px;
+        cursor: pointer;
+        
+
+        .menu_burger {
+
+            
+            position: absolute;
+            width: $burgerWidth;
+            height: $burgerHeight;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 750ms ease-in-out;
+
+            .line {
+                position: absolute;
+                right: 0;
+                background-color: $burgerLineColor;
+                height: $burgerLineSize;
+                width: 80%;
+                pointer-events: none;
+            }
+
+            .line_1 {
+                top: 0;
+                transition: all .2s ease-in-out;
+            }
+
+            .line_2 {
+                width: 100%;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                transition: transform .2s ease-in-out;
+            }
+
+            .line_2:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: $burgerLineSize;
+                background-color: $burgerLineColor;
+                transition: transform .2s ease-in-out;
+            }
+
+            .line_3 {
+                bottom: 0;
+                transition: all .2s ease-in-out;
+            }
+
+
+        }
+
+    }
+
+
+    .menu_burger.open {
+
+        .line_1 {
+            opacity: 0;
+            transform: translate3d(-2*$burgerTranslate,0,0);
+            transition: all .2s ease-in-out;
+        }
+
+        .line_2 {
+            transform: rotate(45deg);
+            transition: transform .2s ease-in-out;
+        }
+
+        .line_2:before {
+            transform: rotate(-90deg);
+            transition: transform .2s ease-in-out;
+        }
+
+        .line_3 {
+            opacity: 0;
+            transform: translate3d(2*$burgerTranslate,0,0);
+            transition: all .2s ease-in-out;     
+        }
+
+    }
+
+
+}
+
+
+
+
+//////////////////
+// !미디어 쿼리! //
+/////////////////
+
+@include mo-lg {
+    
+    
+    .header .fixed {
+        
+       // background-color: rgba(255,255,255,0.5);
+        width: 100%;
+        height: 50px;
+        
+        .logo {
+            top: 10px;
+            left: 6px;
+            width: 30px;
+            height: 30px;
+        }
+        
+        $burgerWidth: 26px;
+        $burgerHeight: 18px;
+
+        .menu {
+            top: 26px;
+            right: 20px;
+            
+            .menu_burger {
+                width: $burgerWidth;
+                height: $burgerHeight;
+                right: 10px;
+            }
+        }
+    }
+    
+}
+
+// =============================================
+
