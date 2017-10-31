@@ -2,8 +2,6 @@ $(function(){
     
 
 
-        console.log("꼬고")
-
 
     $(window).load(function() {
         
@@ -36,6 +34,29 @@ $(function(){
 
 
 
+
+    });
+    
+    $(window).on('load resize',function(){
+        
+                
+        ////////////////////////////////
+        // work_tiem의 높이 소수점 제거 //
+        ///////////////////////////////
+ /*       
+        var workH = [];
+        $(".work_item").each(function(i){
+            workH[i] = $(this).height();
+            $(this).height(workH[i]);
+            $(this).children().height(workH[i]);
+        });
+        console.log(workH)*/
+        
+        //  사이즈 조절 시 이미지 크기에 맞춰 li크기도 줄어들어야 하는데 조절이 어려움 ㅠㅠㅓ이러마ㅣ너뱌ㅔ3@)$#)84
+        
+        ///////////////////////////////
+     
+        
     });
 
 

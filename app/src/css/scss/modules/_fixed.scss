@@ -17,15 +17,15 @@
 .header .fixed {
     position: relative;
     width: 100%;
-    height: 50px;
+    height: 40px;
     max-width: 1920px;
     margin: 0 auto;
     
     .logo {
-        z-index: 100;
+        z-index: 300;
         position: absolute;
-        top: 28px;
-        left: 20px;
+        top: 20px;
+        left: 16px;
         width: 40px;
         height: 40px;
         background-color: #ffdd4c;
@@ -51,8 +51,6 @@
         
 
         .menu_burger {
-
-            
             position: absolute;
             width: $burgerWidth;
             height: $burgerHeight;
@@ -168,7 +166,7 @@
 // =============================================
 
 
-@include pc-md {
+@include pc-sm {
    .header .fixed {
         
         .logo {
@@ -195,24 +193,52 @@
 
 
 
+// =============================================
+
+
+@include tablet {
+   .header .fixed {
+        
+        .logo {
+            left: 10px;
+        }
+       
+       $burgerWidth: 30px;
+       $burgerHeight: 20px;
+       
+       .menu {
+           top: 42px;
+           right: 26px;
+            
+            .menu_burger {
+                width: $burgerWidth;
+                height: $burgerHeight;
+            }
+       }
+    }
+}
+
+// =============================================
+
+
+
 @include mo-lg {
-    
     
     .header .fixed {
         
         .logo {
-            top: 16px;
-            left: 6px;
+            top: 14px;
+            left: 10px;
             width: 30px;
             height: 30px;
         }
         
         $burgerWidth: 28px;
-        $burgerHeight: 19px;
+        $burgerHeight: 18px;
 
         .menu {
-            top: 32px;
-            right: 20px;
+            top: 30px;
+            right: 26px;
             
             .menu_burger {
                 width: $burgerWidth;

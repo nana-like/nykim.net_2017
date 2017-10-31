@@ -28,8 +28,6 @@
     
     .work_wrap {
         position: relative;
-       // top: -2em;
-        //padding-top: 1.55em;
         padding-bottom: 2em;
         margin: -1.5em auto 0;
         text-align: center;
@@ -266,11 +264,11 @@
             .work_caption .caption_textWrap {
                 
                 .caption_title {
-                    font-size: 26px;
+                    font-size: 25px;
                 }
 
                 .caption_desc {
-                    font-size: 13px;
+                    font-size: 12px;
                 }
                 
                 .caption_title:before {
@@ -293,6 +291,7 @@
         
         .inner {
             font-size: 20px;
+            margin-top: 4em;
         }
         
         .work_wrap {
@@ -345,8 +344,11 @@
 
 // =============================================
 
-@include mo-sm {     // mob-lg : ~375px
+@include mo-sm {     // mo-sm : ~375px
     
+    .article_work .inner {
+        font-size: 19px;
+    }
     .article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title {
         font-size: 22px;
     }

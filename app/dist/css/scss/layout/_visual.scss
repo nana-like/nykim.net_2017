@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+
+/*
+*   visual
+*/
+
+
+/////////////////
+// visual 부분 //
+////////////////
+
+.visual {
+    @include display-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 740px;
+    background-color: #8d8d8d;
+    
+    .visual_title { //비주얼 h2
+        margin-top: -1.5em;
+        text-align: center;
+        
+        .title_text { //비주얼 문구
+            @include font-lato(300);
+            font-size: 40px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .title_logo { //비주얼 로고
+            display: block;
+            width: 240px;
+            height: 240px;
+            margin: 0.5em auto 1.5em;
+            text-align: center;
+            outline: 2px solid #fff;
+        }
+    } // end of .visual_title
+    
+    .scroll_text { //SCROLL DOWN 문구
+        position: relative;
+        margin-left: -6px;
+        @include font-lato(300);
+        color: rgba(255,255,255,0.45);
+        font-size: 12px;
+        letter-spacing: 0.12rem;
+        text-transform: uppercase;
+        
+        &:before, &:after {
+            display: block;
+            position: absolute;
+            top: 0.35rem;
+            right: -14px;
+            font-size: 10px;
+            font-family: sans-serif;
+            content: '>';
+            transform: rotate(90deg);
+        }       
+        &:after {
+            top: 0rem;
+        }
+    } //end of .scroll_text
+    
+} //end of .visual

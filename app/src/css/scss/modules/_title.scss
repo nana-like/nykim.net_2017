@@ -143,7 +143,10 @@
     .article_hello,
     .article_work {
 
-        
+        .title_line {
+            top: -2em;
+            height: 3.6em;
+    }
         .title  {
             font-size: 65px;
         }

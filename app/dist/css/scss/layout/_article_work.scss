@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+
+/*
+*   article_work
+*/
+
+
+///////////////
+// work 부분 //
+//////////////
+
+
+.article_work {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+    max-height: auto;
+    height: auto;
+    
+    .inner {
+        transition: margin .5s;
+        position: relative;
+        margin-top: 3em;
+        width: 100%;
+        height: auto;
+    }
+    
+    .work_wrap {
+        position: relative;
+        padding-bottom: 2em;
+        margin: -1.5em auto 0;
+        text-align: center;
+        transition: padding .5s;
+        background-color: #f2f2f2;
+    }
+    
+    .work_wrap .work_list { //ul
+        max-width: 1920px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 1em 3em;
+        //outline: 3px solid navy;
+        padding-top: 5em;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 1em; 
+        -moz-column-count: 3; 
+        -moz-column-gap: 1em; 
+        column-count: 3; 
+        column-gap: 1em;
+        transition: margin-top .5s;
+        
+        .work_item { //li
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 1em;
+            background-color: #000;
+            transition: margin-bottom .5s;
+            -webkit-backface-visibility: hidden;
+            
+            .work_image {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            
+            .work_caption {
+                position: absolute; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                color: #fff;
+                
+                a {
+                    position: absolute;     
+                    z-index: 10; 
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                .caption_textWrap {
+                    display: none;
+                    position: absolute;
+                    top: 50%;
+                    width: 100%;
+                    transform: translateY(-50%);
+                    letter-spacing: 0.05em;
+                    
+                    .caption_title {
+                        position: relative;
+                    }
+
+                    .caption_desc {
+                        @include font-noto;
+                    }
+                }
+                
+                &:before, &:after {
+                    opacity : 0;
+                    display: block; 
+                    position: absolute; 
+                    top: 20px; 
+                    right: 20px; 
+                    left: 20px; 
+                    bottom: 20px; 
+                    content: ''; 
+                }
+                
+                &:before {
+                    border-top: 1px solid #fff; 
+                    border-bottom: 1px solid #fff;
+                    -webkit-transform: scale(0, 1);
+                    transform: scale(0, 1); 
+                    -webkit-transition: opacity 0.45s, -webkit-transform 0.5s;
+                    transition: opacity 0.45s, transform 0.5s;
+                }
+                
+                &:after {
+                    border-left: 1px solid #fff; 
+                    border-right: 1px solid #fff;
+                    -webkit-transform: scale(1, 0); transform: scale(1, 0);
+                    -webkit-transition: opacity 0.35s, -webkit-transform 0.5s;
+                    transition: opacity 0.35s, transform 0.5s; 
+                }
+                
+            } //end of .work_caption
+            
+            .external .caption_title { //외부 사이트로 바로 연결되는 경우 나타나는 외부 링크 아이콘
+                margin-left: -25px;
+                
+                &:before {
+                    display: block;
+                    position: absolute;
+                    bottom: 9px;
+                    right: -32px;
+                    font-size: 22px;
+                    width: 1em;
+                    height: 1em;
+                    outline: 2px solid #fff;
+                    content: '';
+                }
+            } //end of .external .caption_title
+
+        } //end of .work_item
+        
+        .work_item:hover { //li:hover
+            .work_image {
+                opacity: 0.3;
+            }
+            .work_caption {
+                display: block;
+                
+                .caption_textWrap {
+                    display: block;
+                }
+                
+                &:before, &:after {
+                    opacity: 1;
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    transition: opacity 0.45s, transform 0.5s;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+//////////////////
+// !미디어 쿼리! //
+/////////////////
+
+
+@include pc-md {     // pc-md : 1601px~
+    .article_work {
+        
+        .inner {
+            font-size: 29px;
+        }
+        
+        .work_wrap {
+            font-size: 42px; // work.에 걸치는 회색 영역 조절
+        }
+        
+        .work_wrap .work_list,
+        .work_item {
+            font-size: 24px; // 이미지 간격 조절
+        }
+
+        .caption_title {
+            font-size: 42px; // 캡션 타이틀 조절
+        }
+
+        .caption_desc { //캡션 설명 조절
+            font-size: 16px;
+        }
+        
+    } 
+    
+} 
+
+// =============================================
+
+
+@include pc-sm {     // pc-sm : 1201px ~ 
+    .article_work {
+        
+        .inner {
+            font-size: 26px;
+        }
+        
+        .work_wrap {
+            font-size: 38px;
+        }
+        
+        .work_wrap .work_list,
+        .work_item {
+            font-size: 22px;
+        }
+
+        .caption_title {
+            font-size: 36px;
+        }
+
+        .caption_desc {
+            font-size: 14px;
+        }
+        
+    } 
+    
+} 
+
+// =============================================
+
+@include tablet {     // tablet : 641px~
+    .article_work {
+        
+        .inner {
+            font-size: 24px;
+        }
+        
+        .work_wrap {
+            font-size: 34px;
+        }
+        
+        .work_wrap .work_list {
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+            font-size: 18px;
+            
+            .work_item  {
+                font-size: 18px;
+            }
+            
+            .work_caption .caption_textWrap {
+                
+                .caption_title {
+                    font-size: 25px;
+                }
+
+                .caption_desc {
+                    font-size: 12px;
+                }
+                
+                .caption_title:before {
+                    right: -24px;
+                    bottom: 6px;
+                    font-size: 14px;
+                }
+                
+            }
+        }
+        
+    } 
+    
+} 
+
+// =============================================
+
+@include mo-lg {     // mob-lg : ~540px
+    .article_work {
+        
+        .inner {
+            font-size: 20px;
+            margin-top: 4em;
+        }
+        
+        .work_wrap {
+            font-size: 28px;
+        }
+        
+        .work_wrap .work_list {
+            -moz-column-count: 1;
+            -webkit-column-count: 1;
+            column-count: 1;
+            font-size: 14px;
+            
+            .work_item  {
+                font-size: 14px;
+            }
+            
+            .work_item .work_caption .caption_textWrap {
+                display: block; // [M] 캡션 항상 표시
+                
+                .caption_title {
+                    font-size: 23px;
+                }
+
+                .caption_desc {
+                    display: none; // [M] 캡션 설명 제거
+                }
+                
+                .caption_title:before { // [M] 외부 링크 아이콘 위치 조절
+                    right: -24px;
+                    bottom: 6px;
+                    font-size: 14px;
+                }
+                
+            }
+            
+            .work_item .work_image {
+                opacity: 0.5; // [M] 어두운 배경 항상 표시
+            }
+            
+        }
+
+        .work_wrap .work_list .work_item .work_caption:before,
+        .work_wrap .work_list .work_item .work_caption:after {
+            display: none; // [M] 선 제거
+        }
+    
+    } 
+    
+} 
+
+// =============================================
+
+@include mo-sm {     // mo-sm : ~375px
+    
+    .article_work .inner {
+        font-size: 19px;
+    }
+    .article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title {
+        font-size: 22px;
+    }
+    
+    .article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title:before {
+        right: -20px;
+        font-size: 12px;
+    }
+    
+    
+} 
