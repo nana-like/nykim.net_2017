@@ -41,6 +41,15 @@
   display: flex;  
 }
 
+// flex-box (inline)
+@mixin display-inline-flex {
+  display: -webkit-inline-box;  
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox; 
+  display: -webkit-inline-flex; 
+  display: inline-flex;  
+}
+
 
 // yellow circle
 @mixin icon-circle {

@@ -28,7 +28,7 @@
         left: 16px;
         width: 40px;
         height: 40px;
-        background-color: #ffdd4c;
+        transition: width .5s, height .5s, top .5s, left .5s;
     }
     
     
@@ -57,7 +57,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            transition: transform 750ms ease-in-out;
+            transition: transform 750ms ease-in-out, width .5s, height .5s, top .5s, left .5s;
 
             .line {
                 position: absolute;
@@ -143,7 +143,7 @@
    .header .fixed {
         
         .logo {
-            left: 0px;
+            left: 18px;
             width: 46px;
             height: 46px;
         }
@@ -152,8 +152,8 @@
        $burgerHeight: 24px;
        
        .menu {
-           top: 52px;
-           right: 30px;
+           top: 42px;
+           right: 36px;
             
             .menu_burger {
                 width: $burgerWidth;
@@ -178,7 +178,7 @@
        $burgerHeight: 22px;
        
        .menu {
-           top: 42px;
+           top: 38px;
            right: 38px;
             
             .menu_burger {
@@ -233,12 +233,12 @@
             height: 30px;
         }
         
-        $burgerWidth: 28px;
+        $burgerWidth: 26px;
         $burgerHeight: 18px;
 
         .menu {
             top: 30px;
-            right: 26px;
+            right: 24px;
             
             .menu_burger {
                 width: $burgerWidth;

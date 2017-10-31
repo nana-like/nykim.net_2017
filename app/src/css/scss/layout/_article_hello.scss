@@ -29,7 +29,7 @@
     
     .hello_text {
         transition: margin .5s, font-size .5s;
-        margin: 3em 0 0;
+        margin: 3em 0 1em;
         padding: 0 3em;
         font-family: 'LotteMartDream', sans-serif;
         text-align: center;
@@ -40,38 +40,46 @@
         word-break: keep-all;
     }
     
-    .more_link {
-        @include display-flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        margin-top: 3em;
-        @include font-noto;
-        letter-spacing: 0.12rem;
-        color: #999;
-        
-        &:before {
-            display: block;
-            position: absolute;
-            top: -10px;
-            width: 4em;
-            height: 1px;
-            background-color: #888;
-            content: '';
-        }
-        
-        .icon_circle {
+    .more {
+            @include display-flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
-            @include icon-circle;
-            
-            &:after { //임시 (삭제예정))
+            margin-top: 3em;
+        
+            &:before {
+                display: block;
                 position: absolute;
-                top: 24px;
-                right: 16px;    
-                width: 20px;
-                height: 4px;
-                outline: 1px solid #fff;
+                top: -30px;
+                width: 4em;
+                height: 1px;
+                background-color: #888;
                 content: '';
+            }
+        
+        .more_link {
+            position: relative;
+            @include font-noto;
+            padding: 0 3em 0 0;
+            letter-spacing: 0.12rem;
+            color: #999;
+
+
+            .icon_circle {
+                @include icon-circle;
+                position: absolute;
+                top: -1em;
+                right: -1em;
+
+                &:after { //임시 (삭제예정))
+                    position: absolute;
+                    top: 24px;
+                    right: 16px;    
+                    width: 20px;
+                    height: 4px;
+                    outline: 1px solid #fff;
+                    content: '';
+                }
             }
         }
     }
@@ -99,7 +107,7 @@
             font-size: 22px;
         }
         
-        .more_link {
+        .more .more_link {
             font-size: 21px;
         }
         
@@ -123,7 +131,7 @@
             font-size: 20px;
         }
         
-        .more_link {
+        .more .more_link {
             font-size: 19px;
         }
         
@@ -147,7 +155,7 @@
             font-size: 18px;
         }
         
-        .more_link {
+        .more .more_link {
             font-size: 17px;
         }
         
@@ -173,13 +181,37 @@
             text-align: left;
         }
         
-        .more_link {
+        .more .more_link {
             font-size: 12px;
+            
+                    
+            .icon_circle {
+                font-size: 12px;
+            }
         }
+
+    } 
+    
+}
+
+// =============================================
+
+@include mo-sm {     
+    .article_hello {
         
-        .icon_circle {
-            font-size: 10px;
+        .more .more_link {
+            padding: 0;
+            font-size: 12px;
+            
+                    
+            .icon_circle {
+                position: static;
+                margin: 1em auto 0;
+                font-size: 11px;
+                transition: margin .5s;
+            }
         }
+
     } 
     
 }

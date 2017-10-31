@@ -11,15 +11,27 @@
 ////////////////
 
 .visual {
-    @include display-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     position: relative;
     width: 100%;
+    max-width: 2560px;
     height: 100vh;
     min-height: 740px;
-    background-color: #8d8d8d;
+    margin: 0 auto;
+    background-image:url(../images/visual_lg.jpg);
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .inner {
+        @include display-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(36, 33, 33, 0.46);
+    }
     
     .visual_title { //비주얼 h2
         margin-top: -1.5em;
@@ -37,9 +49,56 @@
             height: 240px;
             margin: 0.5em auto 1.5em;
             text-align: center;
-            outline: 2px solid #fff;
         }
     } // end of .visual_title
+    
+    
+    .visual_elem {
+        opacity: 1;
+        position: absolute;
+    }
+    
+    .visual_tree1 {
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background-image: url(../images/visual_elem_1.png);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: -10% bottom;
+    }
+    
+    .visual_tree2 {
+        right: 0;
+        width: 12%;
+        height: 100%;
+        background-image: url(../images/visual_elem_2.png);
+        background-size: 400px;
+        background-repeat: no-repeat;
+        background-position: 0 bottom;
+    }
+    
+    .visual_fog1 {
+        right: 5%;
+        opacity: 0.4;
+        width: 70%;
+        height: 100%;
+        background-image: url(../images/visual_elem_3.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 110%;
+    }
+    
+    .visual_fog2 {
+        left: 5%;
+        opacity: 0.6;
+        width: 60%;
+        height: 100%;
+        background-image: url(../images/visual_elem_4.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 0 100%;
+    }
     
     .scroll_text { //SCROLL DOWN 문구
         position: relative;
@@ -66,3 +125,10 @@
     } //end of .scroll_text
     
 } //end of .visual
+
+
+
+//////////////////
+// !미디어 쿼리! //
+/////////////////
+

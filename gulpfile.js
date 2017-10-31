@@ -57,7 +57,6 @@ gulp.task('combine:js', function(){
 ///////// css 컴파일 /////////
 gulp.task('compile:scss', function(){
     return gulp.src(paths.scss)
-       .pipe(gulp.dest(dist+'/css/scss'))
        .pipe(sass(sassOptions).on('error',sass.logError)) //scss 문법 오류 발생 시 watch가 중단되지 않도록 함
        .pipe(sourcemaps.init()) // 소스맵 초기화(소스맵 생성)
        .pipe(sourcemaps.write('/', {addComment: false})) //생성한 소스맵을 현재 폴더에 생성하고 주석 없앰
