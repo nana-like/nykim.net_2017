@@ -3,15 +3,15 @@ $(function(){
 
 
 
-    $(window).load(function() {
+    $(window).on('load resize',function(){
         
 
         // INITIATE THE FOOTER
       siteFooter();
         // COULD BE SIMPLIFIED FOR THIS PEN BUT I WANT TO MAKE IT AS EASY TO PUT INTO YOUR SITE AS POSSIBLE
-        $(window).resize(function() {
+       /* $(window).resize(function() {
             siteFooter();
-        });
+        });*/
 
         function siteFooter() {
             var siteContent = $('.contents');

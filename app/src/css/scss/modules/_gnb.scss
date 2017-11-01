@@ -32,7 +32,10 @@
             
             a {
                 display: block;
+                color: #c5c3c0;
                 font-family: 'Lato';
+                font-weight: 700;
+                text-transform: uppercase;
             }
             
             &:after {
@@ -40,9 +43,14 @@
                 display: block;
                 margin-top: -4px;
                 letter-spacing: 1px;
-                color: #aaa;
-                font-weight: 100;
+                color: #ddd;
+                font-weight: 300;
+                text-transform: uppercase;
                 transition: opacity .3s;
+            }
+            
+            &:hover a {
+                color: rgb(140, 221, 235);
             }
             
         }
@@ -85,28 +93,30 @@
             &:first-child {
                 margin-left: 0;
             }
-
-            &:last-child {
-                cursor: default;
-            }
-
+            
             .contact_heading {
                     display: inline-block;
                     text-align: center;
                     width: initial;
                     margin-right: 0.8em;
                     font-weight: bold;
-                    color: #ffde7d;
+                    color: #4c4c4c;
                     font-size: 100%;
             }
 
             .contact_info {
                 display: inline-block;
-                color: #999;
+                color: #bbbbbb;
                 font-size: 100%;
+                
             }
-
+            
         } //end of .contact_link
+
+
+        .contact_link:hover .contact_info {
+            color: #ffde7d;
+        }
 
     } //end of .contact
 
@@ -127,7 +137,6 @@
             //height: 85%;
 
                 .menu_item a { //메뉴 아이템 폰트 크기
-                    color:#2b7257;
                     font-size: 70px;
                 }
 
@@ -153,7 +162,6 @@
             //height: 85%;
 
                 .menu_item a { //메뉴 아이템 폰트 크기
-                    color:firebrick;
                     font-size: 64px;
                 }
 
@@ -180,7 +188,6 @@
             
 
                 .menu_item a { //메뉴 아이템 폰트 크기
-                    color:#889ec1;
                     font-size: 62px;
                 }
 
@@ -211,7 +218,6 @@
                 }
             
                 .menu_item a { //메뉴 아이템 폰트 크기
-                    color:#69694c;
                     font-size: 44px;
                 }
 
