@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/*
+*   work detail 
+*/
+
+
+
+//////////////////////
+// work_detail 부분 //
+/////////////////////
+
+
+.article_detail {
+    position: relative;
+    width: 100%;
+    min-height: 800px;
+    max-height: 100%;
+    height: 100vh;
+    height: 100%;
+    
+    .inner {
+       
+    }
+    
+    .detail_top {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 6em 4.5em 5em;
+        box-sizing: border-box;
+        
+        &:after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+        
+        .detail_title {
+            float: left;
+            width: 30%;
+            color: rgb(140, 221, 235);
+            font-size: 60px;
+            
+            .detail_title_sm {
+                display: block;
+                padding-left: 8px;
+                @include font-noto;
+                color: #696969;
+                font-style: normal;
+                font-size: 25%;
+                letter-spacing: 0.06rem;
+            }
+        } // end of .dtail_title
+        
+        .detail_info {
+            float: right;
+            font-size: 16px;
+            line-height: 150%;
+            
+            .detail_info_text {
+                position: relative;
+                width: auto;
+                margin-top: 4.3em;
+                
+                .detail_line {
+                    display: block;
+                    position: absolute;
+                    top: 12px;
+                    left: -8.5em;
+                    width: 8em;
+                    height: 1px;
+                    background-color: #696969;
+                }
+            }
+        } // end of .detail_info
+        
+    } // end of .detail_top
+    
+    .detail_main {
+        max-width: 1920px;
+        overflow-x: hidden;
+        margin: 0 auto;
+        background-color: #feeeff;
+        
+        .shots {
+            width: 100%;
+            
+            .shots_item {
+                display: block;
+                width: 80%;
+                margin: 1.5em auto;
+                
+                img { //171101 | 클래스 추가 예정
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            
+        } //end of .shots
+        
+        .slider {
+            width: 100%;
+            min-height: 400px;
+            background-color: #9ba7ff;
+        }
+        
+    } //end of .detail_main
+    
+    
+    .detail_bottom {
+        @include display-flex;
+        align-items: center;
+        justify-content: center;
+    } //end of .detail_bottom
+    
+} // end of .article_detail

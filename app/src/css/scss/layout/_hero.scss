@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/*
+*   hero (work detail)
+*/
 
 .hero {
     position: relative;
@@ -33,6 +36,7 @@
     .hero_title {
         position: relative;
         font-size: 80px;
+        font-weight: 700;
             
         .hero_title_sm { //featured work
             position: absolute;
