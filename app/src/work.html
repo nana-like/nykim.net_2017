@@ -36,6 +36,7 @@
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/footer.js"></script>
 	<script src="js/swiper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
     <link rel="stylesheet" href="css/swiper.min.css"/>
 	
@@ -171,30 +172,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                      <li class="shots_item"><img src="../images/temp_04.png" alt="test"/></li>
                 </ul>
                 <div class="slider">
-                
-                  <!-- ---Swiper--- -->
-                  <div class="swiper-container">
-                   
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                          <strong>SLIDER1</strong>
-                          <img src="../images/temp_03.png" alt="slider"/>
-                      </div>
-                      <div class="swiper-slide">
-                          <strong>SLIDER1</strong>
-                          <img src="../images/temp_05.png" alt="slider"/>
-                      </div>
-                      <div class="swiper-slide">
-                          <strong>SLIDER1</strong>
-                          <img src="../images/temp_04.png" alt="slider"/>
-                      </div>
-                    </div>
+                    <div class="slider_inner">
+                     
+                     
+                      <!-- ---Swiper--- -->
+                      
+                       <div class="slider_btn swiper-button-next"></div>
+                       <div class="slider_btn swiper-button-prev"></div>
+                       
+                      <div class="swiper-container">
 
-                  </div>
-                  <!-- //.swiper-container -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <strong>SLIDER1</strong>
+                              <img src="../images/temp_03.png" alt="slider"/>
+                            </div>
+                            <div class="swiper-slide">
+                              <strong>SLIDER1</strong>
+                              <img src="../images/temp_05.png" alt="slider"/>
+                            </div>
+                            <div class="swiper-slide">
+                              <strong>SLIDER1</strong>
+                              <img src="../images/temp_04.png" alt="slider"/>
+                            </div>
+                        </div>
+
+                      </div>
+
+                    </div>
                   
-                  <div class="slider_btn swiper-button-next"></div>
-                  <div class="slider_btn swiper-button-prev"></div>
                   
                 </div>
                 <!-- //.slider-->
@@ -219,9 +225,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 
             </div>
            <div class="detail_bottom">
-               <a href="#" class="detail_btn prev">Prev.</a>
+               <a href="#" class="detail_btn prev">
+                   <span class="detail_btn_title">WORK #6</span>
+                   Prev.
+               </a>
                <a href="#" class="detail_link">view web page</a>
-               <a href="#" class="detail_btn next">Next.</a>
+               <a href="#" class="detail_btn next">
+                   <span class="detail_btn_title">WORK #2</span>
+                   Next.</a>
            </div>
         </div>
         <!-- //inner -->

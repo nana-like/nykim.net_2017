@@ -22,16 +22,18 @@
     .inner {
     }
     
-    .detail_top {
+    .detail_top { // 설명 부분
         @include display-flex;
         justify-content: center;
         position: relative;
         width: auto;
         height: auto;
-        max-width: 1920px;
+        max-width: 1600px;
         margin: 0 auto;
-        padding: 5em 0 11em;
+        padding: 1.5em 0 3em;
         box-sizing: border-box;
+        font-size: 68px;
+        transition: font-size .5s;
         
         &:after {
             display: block;
@@ -42,12 +44,11 @@
         .detail_title {
             width: auto;
             color: $color-main;
-            font-size: 60px;
+            font-size: 100%;
             
             .detail_title_sm {
                 display: block;
                 padding-left: 8px;
-                @include font-noto;
                 color: #696969;
                 font-style: normal;
                 font-size: 25%;
@@ -56,19 +57,20 @@
         } // end of .dtail_title
         
         .detail_info {
-            font-size: 16px;
-            line-height: 150%;
-            margin-left: 9em;
+            font-size: 19px;
+            line-height: 160%;
+            margin-left: 11em;
+            @include font-noto;
             
             .detail_info_text {
                 position: relative;
                 width: auto;
-                margin-top: 4.8em;
+                margin-top: 5em;
                 
                 .detail_line {
                     display: block;
                     position: absolute;
-                    top: 11px;
+                    top: 14px;
                     left: -8em;
                     width: 7em;
                     height: 1px;
@@ -87,14 +89,14 @@
             width: 100%;
             max-width: 1920px;
             margin: 0 auto;
-            padding: 0 5em;
+            padding: 0 $pd-lg;
             box-sizing: border-box;
             background-color: $color-bg;
             
             .shots_item {
                 display: block;
-                width: 88%;
-                margin: 1.5em auto;
+                width: 100%;
+                margin: 5% auto;
                 
                 img { //171101 | 클래스 추가 예정
                     width: 100%;
@@ -111,44 +113,52 @@
         
         .slider {
             position: relative;
-            width: 100%;
-            max-width: 1920px;
-            min-height: 400px;
-            margin: 0 auto;
-            padding: 0 8em;
-            font-size: 16px;
-            box-sizing: border-box;
             background-color: $color-work-01;
             
+            .slider_inner {
+                position: relative;
+                max-width: 1920px;
+                width: 100%;
+                margin: 0 auto;
+                padding: 0 16em;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
+            
             /// -- swiper-- ///
-            .swiper-slide {
-                width: 60% !important;
-                height: auto !important;
-                max-height: 500px;
-                padding: 0px 5px;
+            .swiper-container {
+                
+                .swiper-wrapper {
+                    
+                    .swiper-slide {
+                        width: 60% !important;
+                        height: auto !important;
+                        max-height: 500px;
 
-                img {
-                    display: block;
-                    width: 100%;
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
                 }
             }
             
+
             .slider_btn {
-                //width: 2em;
-                //height: 2em;
                 background-size: 100%;
                 transition: opacity .2s;
             }
-            
+
             .swiper-button-prev {
-                left: 4em !important;
+                left: ($pd-lg - 4em) !important;
                 background-image: url(../images/btn_prev.svg) !important;
             }
-            
+
             .swiper-button-next {
-                right: 4em !important;
+                right: ($pd-lg - 4em) !important;
                 background-image: url(../images/btn_next.svg) !important;
             }
+            
             /// -- swiper -- ///
             
         } //end of .slider 
@@ -157,45 +167,93 @@
     
     
     .detail_bottom {
-        padding: 5em 0;
         @include display-flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         text-transform: uppercase;
+        box-sizing: border-box;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 5em ($pd-lg + 2em);
+        font-size: 18px;
         
         .detail_btn {
             position: relative;
-            margin-top: 10px;
-            padding: 0 10px;
+            overflow: hidden;
+            padding-top: 0.5em;
             color: #acacac;
-            font-size: 29px;
+            font-size: 33px;
             font-weight: 700;
-            letter-spacing: 0.02rem;
-            transition: font-size .5s, color .2s;
+            letter-spacing: 0.03rem;
+            transition: font-size .5s, color .4s;
                    
             &:before {
                 display: block;
+                opacity: 1;
                 position: absolute;
-                top: -1em;
-                left: 10px;
+                top: 0.3em;
                 color: #cdcdcd;
-                font-size: 40%;
+                font-size: 12px;
                 font-weight: 300;
-                letter-spacing: -0.01rem;
                 text-transform: initial;
+                transition: opacity .6s;
             }
             
-            &.prev:before {
-                content: 'Previous work';
+            .detail_btn_title {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                color: #aaa;
+                font-size: 16px;
+                font-weight: 300;
+                letter-spacing: -0.015rem;
+                transition: opacity 1s, transform .3s;
             }
             
-            &.next:before {
-                content: 'Next work';
+            &.prev {
+                padding-right: 26px;
+                
+                &:before {
+                    left: 0px;
+                    content: 'Previous work';
+                }
+                
+                .detail_btn_title {
+                    left: 0;
+                    transform: translateX(-100%);
+                }
+                
+            }
+            
+            &.next {
+                padding-left: 26px;
+                
+                &:before {
+                    right: 0px;
+                    content: 'Next work';
+                    text-align: right;
+                }
+                
+                .detail_btn_title {
+                    right: 0;
+                    transform: translateX(100%);
+                }
+                
             }
             
             &:hover {
                 color: $color-main;
                 transition: color .2s;
+            }
+            
+            &:hover .detail_btn_title {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity 1s, transform .5s easeOutBack;
+            }
+            
+            &:hover:before {
+                opacity: 0;
             }
         } //end of .detail_btn
         
@@ -208,3 +266,161 @@
     } //end of .detail_bottom
     
 } // end of .article_detail
+
+
+
+
+
+//////////////////
+// !미디어 쿼리! //
+/////////////////
+
+
+
+// =============================================
+
+@include pc-lg {
+}
+
+// =============================================
+
+@include pc-sm {     
+
+    .article_detail {
+
+        .detail_top { // 설명 부분
+            font-size: 62px;
+            outline: 2px solid red;
+        
+            .detail_info {
+                font-size: 17px;
+                line-height: 160%;
+                margin-left: 8em;
+            }
+        } 
+        
+        
+
+        .detail_main {
+
+            .shots {
+                padding: 0 $pd-md;
+            }
+
+            .slider {
+                padding: 0 9em;
+                font-size: 16px;
+
+                .swiper-button-prev {
+                    left: ($pd-md - 3em) !important;
+                }
+
+                .swiper-button-next {
+                    right: ($pd-md - 3em) !important;
+                }
+
+                /// -- swiper -- ///
+            }
+        }
+
+
+        .detail_bottom {
+            padding: 5em $pd-md;
+            font-size: 16px;
+
+            .detail_btn {
+                font-size: 24px;
+                
+                &.prev {
+                    padding-right: 30px;
+                }
+
+                &.next {
+                    padding-left: 30px;
+                }
+            } 
+        }
+    }
+    
+}
+
+
+// =============================================
+
+@include tablet {     
+
+    .article_detail {
+
+        .detail_top { // 설명 부분
+            flex-direction: column;
+            font-size: 55px;
+            padding-left: 2em;
+            padding-right: 2em;
+        
+            .detail_info {
+                font-size: 15px;
+                line-height: 160%;
+                margin-left: 0em;
+                
+                .detail_info_text .detail_line {
+                    width: 3em;
+                    top: -1em;
+                    left: 0;
+                    background-color: #c4c4c4;
+                }
+            }
+        } 
+        
+
+
+        .detail_main {
+
+            .shots {
+                padding: 0 $pd-tb;
+            }
+
+            .slider {
+                padding: 0 8em;
+                font-size: 16px;
+
+                .swiper-button-prev {
+                    left: ($pd-tb - 2em) !important;
+                }
+
+                .swiper-button-next {
+                    right: ($pd-tb - 2em) !important;
+                }
+
+                /// -- swiper -- ///
+            }
+        }
+
+
+        .detail_bottom {
+            padding: 5em $pd-tb;
+            font-size: 15px;
+
+            .detail_btn {
+                margin-top: 0;
+                font-size: 22px;
+                
+                &.prev {
+                    padding-right: 10px;
+                }
+
+                &.next {
+                    padding-left: 10px;
+                }
+                
+                &.prev:before, 
+                &.next:before, {
+                    display: none;
+                }
+            } 
+        }
+    }
+    
+}
+
+// =============================================
+
