@@ -20,16 +20,17 @@
     height: 100%;
     
     .inner {
-       
     }
     
     .detail_top {
+        @include display-flex;
+        justify-content: center;
         position: relative;
-        width: 100%;
+        width: auto;
         height: auto;
         max-width: 1920px;
         margin: 0 auto;
-        padding: 6em 9em 5em;
+        padding: 5em 0 11em;
         box-sizing: border-box;
         
         &:after {
@@ -39,8 +40,8 @@
         }
         
         .detail_title {
-            float: left;
-            width: 30%;
+           // float: left;
+            width: auto;
             color: rgb(140, 221, 235);
             font-size: 60px;
             
@@ -56,21 +57,22 @@
         } // end of .dtail_title
         
         .detail_info {
-            float: right;
+          //  float: left;
             font-size: 16px;
             line-height: 150%;
+            margin-left: 9em;
             
             .detail_info_text {
                 position: relative;
                 width: auto;
-                margin-top: 4.3em;
+                margin-top: 4.8em;
                 
                 .detail_line {
                     display: block;
                     position: absolute;
-                    top: 12px;
-                    left: -8.5em;
-                    width: 8em;
+                    top: 11px;
+                    left: -8em;
+                    width: 7em;
                     height: 1px;
                     background-color: #696969;
                 }
@@ -80,17 +82,20 @@
     } // end of .detail_top
     
     .detail_main {
+        width: 100%;
         background-color: #feeeff;
         
         .shots {
             width: 100%;
             max-width: 1920px;
-            overflow-x: hidden;
             margin: 0 auto;
+            padding: 0 5em;
+            box-sizing: border-box;
+            background-color: rgba(140, 253, 236, 0.46);
             
             .shots_item {
                 display: block;
-                width: 80%;
+                width: 88%;
                 margin: 1.5em auto;
                 
                 img { //171101 | 클래스 추가 예정
@@ -99,13 +104,39 @@
                 }
             }
             
+            .shots_item:first-child {
+                position: relative;
+                top: -6em;
+            }
+            
         } //end of .shots
         
         .slider {
+            overflow-x: hidden;
             width: 100%;
+            max-width: 1920px;
             min-height: 400px;
+            padding: 0 5em;
+            margin: 0 auto;
+            box-sizing: border-box;
             background-color: #9ba7ff;
-        }
+            
+            /// -- swiper-- ///
+            .swiper-slide {
+                width: 60% !important;
+                height: auto !important;
+                max-height: 500px;
+                padding: 0px 5px;
+                background-color: #faa;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            /// -- swiper -- ///
+            
+        } //end of .slider 
         
     } //end of .detail_main
     

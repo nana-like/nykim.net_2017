@@ -35,7 +35,9 @@
 	
 	<script src="https://code.jquery.com/jquery.min.js"></script>
 	<script src="js/footer.js"></script>
+	<script src="js/swiper.min.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/swiper.min.css"/>
 	
     <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
     h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
@@ -169,9 +171,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                      <li class="shots_item"><img src="../images/temp_04.png" alt="test"/></li>
                 </ul>
                 <div class="slider">
-                   <!-- <img src="../images/temp_03.png" alt="test"/>
-                    <img src="../images/temp_01.png" alt="test"/>-->
+                
+                  <!-- Swiper -->
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                          <strong>SLIDER1</strong>
+                          <img src="../images/temp_03.png" alt="slider"/>
+                      </div>
+                      <div class="swiper-slide">
+                          <strong>SLIDER1</strong>
+                          <img src="../images/temp_05.png" alt="slider"/>
+                      </div>
+                      <div class="swiper-slide">
+                          <strong>SLIDER1</strong>
+                          <img src="../images/temp_04.png" alt="slider"/>
+                      </div>
+                    </div>
+                    
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+                  </div>
                 </div>
+                
+                  <!-- Initialize Swiper -->
+                  <script>
+                    var swiper = new Swiper('.swiper-container', {
+                      slidesPerView: 'auto',
+                      spaceBetween: 30,
+                      centeredSlides: true,
+                      nextButton: '.swiper-button-next',
+                      prevButton: '.swiper-button-prev',
+
+					  breakpoints: {
+							768: {
+								slidesPerView: 'auto',
+								spaceBetween: 0
+							},
+						}
+
+                    });
+                  </script>
+                
             </div>
            <div class="detail_bottom">
                <a href="#" class="detail_btn prev">Prev.</a>

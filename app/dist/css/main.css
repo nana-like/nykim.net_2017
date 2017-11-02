@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
 /*  
 *   RESET STYLE
@@ -14,8 +15,9 @@ button { cursor: pointer; font-family: 'Lato', 'LotteMartDream',  AppleGothic, s
 
 input { margin: 0; padding: 0; box-sizing: content-box; vertical-align: top; border-radius: 0; -webkit-border-radius: 1px; -webkit-apprearance: none; }
 
-html, body { width: 100%; min-width: 100%; font-size: 100%; font-family: 'Lato', 'LotteMartDream',  AppleGothic, sans-serif, Helvetica; line-height: 1.3; }
+html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; font-family: 'Lato', 'LotteMartDream',  AppleGothic, sans-serif, Helvetica; line-height: 1.3; }
 
+/*** html, body에 overflow:hidden + height: 100%를 지정하면 버벅거림이 없어진다는 얘기가 있는데.....height:100%를 하면 사파리에서 푸터가 안나온다 ㅠㅠ 어쩌죠..? ***/
 /*  
 *   COMMON STYLE
 */
@@ -395,7 +397,7 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 		.article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title:before { right: -20px; font-size: 12px; } }
 
 /* hero (work detail) */
-.hero { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 740px; margin: 0 auto; color: #fff; background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; background-color: #a2a2a2; }
+.hero { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 720px; margin: 0 auto; color: #fff; background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; background-color: #a2a2a2; }
 
 .hero .inner { position: relative; width: 100%; max-width: 1920px; margin: 0 auto; padding: 8% 9em 0 9em; height: 100vh; height: 100%; box-sizing: border-box; transition: padding .5s; }
 
@@ -483,28 +485,34 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 /* work detail  */
 .article_detail { position: relative; width: 100%; min-height: 800px; max-height: 100%; height: 100vh; height: 100%; }
 
-.article_detail .detail_top { position: relative; width: 100%; height: auto; max-width: 1920px; margin: 0 auto; padding: 6em 9em 5em; box-sizing: border-box; }
+.article_detail .detail_top { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; width: auto; height: auto; max-width: 1920px; margin: 0 auto; padding: 5em 0 11em; box-sizing: border-box; }
 
 .article_detail .detail_top:after { display: block; content: ''; clear: both; }
 
-.article_detail .detail_top .detail_title { float: left; width: 30%; color: #8cddeb; font-size: 60px; }
+.article_detail .detail_top .detail_title { width: auto; color: #8cddeb; font-size: 60px; }
 
 .article_detail .detail_top .detail_title .detail_title_sm { display: block; padding-left: 8px; font-family: 'NotoSans', AppleGothic, sans-serif, Helvetica; color: #696969; font-style: normal; font-size: 25%; letter-spacing: 0.06rem; }
 
-.article_detail .detail_top .detail_info { float: right; font-size: 16px; line-height: 150%; }
+.article_detail .detail_top .detail_info { font-size: 16px; line-height: 150%; margin-left: 9em; }
 
-.article_detail .detail_top .detail_info .detail_info_text { position: relative; width: auto; margin-top: 4.3em; }
+.article_detail .detail_top .detail_info .detail_info_text { position: relative; width: auto; margin-top: 4.8em; }
 
-.article_detail .detail_top .detail_info .detail_info_text .detail_line { display: block; position: absolute; top: 12px; left: -8.5em; width: 8em; height: 1px; background-color: #696969; }
+.article_detail .detail_top .detail_info .detail_info_text .detail_line { display: block; position: absolute; top: 11px; left: -8em; width: 7em; height: 1px; background-color: #696969; }
 
-.article_detail .detail_main { background-color: #feeeff; }
+.article_detail .detail_main { width: 100%; background-color: #feeeff; }
 
-.article_detail .detail_main .shots { width: 100%; max-width: 1920px; overflow-x: hidden; margin: 0 auto; }
+.article_detail .detail_main .shots { width: 100%; max-width: 1920px; margin: 0 auto; padding: 0 5em; box-sizing: border-box; background-color: rgba(140, 253, 236, 0.46); }
 
-.article_detail .detail_main .shots .shots_item { display: block; width: 80%; margin: 1.5em auto; }
+.article_detail .detail_main .shots .shots_item { display: block; width: 88%; margin: 1.5em auto; }
 
 .article_detail .detail_main .shots .shots_item img { width: 100%; height: auto; }
 
-.article_detail .detail_main .slider { width: 100%; min-height: 400px; background-color: #9ba7ff; }
+.article_detail .detail_main .shots .shots_item:first-child { position: relative; top: -6em; }
+
+.article_detail .detail_main .slider { overflow-x: hidden; width: 100%; max-width: 1920px; min-height: 400px; padding: 0 5em; margin: 0 auto; box-sizing: border-box; background-color: #9ba7ff; }
+
+.article_detail .detail_main .slider .swiper-slide { width: 60% !important; height: auto !important; max-height: 500px; padding: 0px 5px; background-color: #faa; }
+
+.article_detail .detail_main .slider .swiper-slide img { display: block; width: 100%; }
 
 .article_detail .detail_bottom { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; align-items: center; justify-content: center; }
