@@ -31,8 +31,8 @@
 .br_m {display: none;}
 
 @media screen and (max-width:769px) {
-    .br_m {display: block;}
-    .text_hide_m {display: none;}
+    .br_m {display: block !important;}
+    .text_hide_m {display: none !important;}
 }
 
 .wrap {position: relative;background-color: #fafafa;}

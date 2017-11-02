@@ -59,7 +59,30 @@
     margin-left: 0.8em;
     line-height: 3.31em;
     border-radius: 50%;
-    background-color: #ffda6e;
+    background-color: $color-sub;
     box-shadow: 0 0.5em 0.938em #ccc;
     transition: width .5s, height .5s;
+}
+
+// view web page button
+@mixin btn-web {
+        display: inline-block;
+        position: relative;
+        width: auto;
+        height: 3em;
+        padding: 0 2.5em 0 1.5em;
+        line-height: 3em;
+        color: #fff;
+        letter-spacing: 0.05rem;
+        border: 1px solid #fff;
+        transition: margin-bottom .5s;
+
+        &:after { //임시 (이미지 교체 예정)
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 1em;
+            content: '&';
+            transform: translateY(-50%)
+        }
 }

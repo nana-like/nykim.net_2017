@@ -96,26 +96,8 @@
         transition: margin-top .5s, font-size .5s;
     
         .hero_link {
-            display: inline-block;
-            position: relative;
-            width: auto;
-            height: 3em;
-            padding: 0 2.5em 0 1.5em;
+            @include btn-web;
             margin-bottom: 0.8em;
-            line-height: 3em;
-            color: #fff;
-            letter-spacing: 0.05rem;
-            border: 1px solid #fff;
-            transition: margin-bottom .5s;
-            
-            &:after { //임시 (이미지 교체 예정)
-                display: block;
-                position: absolute;
-                top: 50%;
-                right: 1em;
-                content: '&';
-                transform: translateY(-50%)
-            }
         } //end of .hero_link
         
         .hero_scroll {

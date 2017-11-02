@@ -172,8 +172,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                 </ul>
                 <div class="slider">
                 
-                  <!-- Swiper -->
+                  <!-- ---Swiper--- -->
                   <div class="swiper-container">
+                   
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                           <strong>SLIDER1</strong>
@@ -188,38 +189,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
                           <img src="../images/temp_04.png" alt="slider"/>
                       </div>
                     </div>
-                    
-
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
 
                   </div>
+                  <!-- //.swiper-container -->
+                  
+                  <div class="slider_btn swiper-button-next"></div>
+                  <div class="slider_btn swiper-button-prev"></div>
+                  
                 </div>
-                
-                  <!-- Initialize Swiper -->
-                  <script>
-                    var swiper = new Swiper('.swiper-container', {
-                      slidesPerView: 'auto',
-                      spaceBetween: 30,
-                      centeredSlides: true,
-                      nextButton: '.swiper-button-next',
-                      prevButton: '.swiper-button-prev',
+                <!-- //.slider-->
 
-					  breakpoints: {
-							768: {
-								slidesPerView: 'auto',
-								spaceBetween: 0
-							},
-						}
+              <script>
+                var swiper = new Swiper('.swiper-container', {
+                  slidesPerView: 'auto',
+                  spaceBetween: 30,
+                  centeredSlides: true,
+                  nextButton: '.swiper-button-next',
+                  prevButton: '.swiper-button-prev',
 
-                    });
-                  </script>
+                  breakpoints: {
+                        768: {
+                            slidesPerView: 'auto',
+                            spaceBetween: 0
+                        },
+                    }
+
+                });
+              </script>
                 
             </div>
            <div class="detail_bottom">
                <a href="#" class="detail_btn prev">Prev.</a>
-               <a href="#" class="detail_link">view wev page</a>
+               <a href="#" class="detail_link">view web page</a>
                <a href="#" class="detail_btn next">Next.</a>
            </div>
         </div>
@@ -249,7 +250,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <li class="social_item"><a href="#">codepen</a></li>
             <li class="social_item"><a href="#">github</a></li>
         </ul>
-        <p class="update">Last updated on October 30th, 2017</p> <!-- 171029 | 자바스크립트로 제어 예정 -->
+        <p class="update">Last updated on November 2, 2017</p> <!-- 171029 | 자바스크립트로 제어 예정 -->
         <p class="copyright">&copy; 2017 NY KIM</p>
     </div>
     
