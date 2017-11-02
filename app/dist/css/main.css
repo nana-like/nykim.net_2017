@@ -43,7 +43,7 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 /* 
 *   FONT FACE
 */
-@font-face { font-family: 'LotteMartDream'; font-style: normal; font-weight: 300; src: url(../font/dreamL.eot); src: url(../font/dreamL.eot?#iefix) format("embedded-opentype"), url(../font/dreamL.woff2) format("woff2"), url(../font/dreamL.woff) format("woff"), url(../font/dreamL.ttf) format("truetype"); }
+@font-face { font-family: 'LotteMartDream'; font-style: normal; font-weight: 300; src: url(../font/dreamL.eot); src: url(../font/dreamL.eot?#iefix) format("embedded-opentype"), url(../font/dreamL.woff) format("woff"), url(../font/dreamL.ttf) format("truetype"); }
 
 @font-face { font-family: 'NotoSans'; font-style: normal; font-weight: 400; src: url(../font/NotoSansLight.eot?#iefix) format("embedded-opentype"), url(../font/NotoSansLight.woff2) format("woff2"), url(../font/NotoSansLight.woff) format("woff"); }
 
