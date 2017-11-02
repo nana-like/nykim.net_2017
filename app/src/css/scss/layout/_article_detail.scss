@@ -29,7 +29,7 @@
         height: auto;
         max-width: 1920px;
         margin: 0 auto;
-        padding: 6em 4.5em 5em;
+        padding: 6em 9em 5em;
         box-sizing: border-box;
         
         &:after {
@@ -80,13 +80,13 @@
     } // end of .detail_top
     
     .detail_main {
-        max-width: 1920px;
-        overflow-x: hidden;
-        margin: 0 auto;
         background-color: #feeeff;
         
         .shots {
             width: 100%;
+            max-width: 1920px;
+            overflow-x: hidden;
+            margin: 0 auto;
             
             .shots_item {
                 display: block;
