@@ -92,21 +92,21 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .header .fixed .menu .menu_burger .line { position: absolute; right: 0; background-color: #777; height: 2px; width: 80%; pointer-events: none; }
 
-.header .fixed .menu .menu_burger .line_1 { top: 0; transition: all .2s ease-in-out; }
+.header .fixed .menu .menu_burger .line_01 { top: 0; transition: all .2s ease-in-out; }
 
-.header .fixed .menu .menu_burger .line_2 { width: 100%; top: 0; bottom: 0; margin: auto; transition: transform .2s ease-in-out; }
+.header .fixed .menu .menu_burger .line_02 { width: 100%; top: 0; bottom: 0; margin: auto; transition: transform .2s ease-in-out; }
 
-.header .fixed .menu .menu_burger .line_2:before { content: ''; position: absolute; width: 100%; height: 2px; background-color: #777; transition: transform .2s ease-in-out; }
+.header .fixed .menu .menu_burger .line_02:before { content: ''; position: absolute; width: 100%; height: 2px; background-color: #777; transition: transform .2s ease-in-out; }
 
-.header .fixed .menu .menu_burger .line_3 { bottom: 0; transition: all .2s ease-in-out; }
+.header .fixed .menu .menu_burger .line_03 { bottom: 0; transition: all .2s ease-in-out; }
 
-.header .fixed .menu_burger.open .line_1 { opacity: 0; transform: translate3d(-18px, 0, 0); transition: all .2s ease-in-out; }
+.header .fixed .menu_burger.open .line_01 { opacity: 0; transform: translate3d(-18px, 0, 0); transition: all .2s ease-in-out; }
 
-.header .fixed .menu_burger.open .line_2 { transform: rotate(45deg); transition: transform .2s ease-in-out; }
+.header .fixed .menu_burger.open .line_02 { transform: rotate(45deg); transition: transform .2s ease-in-out; }
 
-.header .fixed .menu_burger.open .line_2:before { transform: rotate(-90deg); transition: transform .2s ease-in-out; }
+.header .fixed .menu_burger.open .line_02:before { transform: rotate(-90deg); transition: transform .2s ease-in-out; }
 
-.header .fixed .menu_burger.open .line_3 { opacity: 0; transform: translate3d(18px, 0, 0); transition: all .2s ease-in-out; }
+.header .fixed .menu_burger.open .line_03 { opacity: 0; transform: translate3d(18px, 0, 0); transition: all .2s ease-in-out; }
 
 @media screen and (min-width: 1601px) { .header .fixed .logo { left: 18px; width: 46px; height: 46px; }
 		.header .fixed .menu { top: 42px; right: 36px; }
@@ -196,13 +196,13 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .visual .visual_elem { opacity: 1; position: absolute; }
 
-.visual .visual_tree1 { left: 0; width: 30%; height: 100%; background-image: url(../images/visual_elem_1.png); background-size: 400px; background-repeat: no-repeat; background-position: -10% bottom; }
+.visual .visual_tree01 { left: 0; width: 30%; height: 100%; background-image: url(../images/visual_elem_1.png); background-size: 400px; background-repeat: no-repeat; background-position: -10% bottom; }
 
-.visual .visual_tree2 { right: 0; width: 12%; height: 100%; background-image: url(../images/visual_elem_2.png); background-size: 400px; background-repeat: no-repeat; background-position: 0 bottom; }
+.visual .visual_tree02 { right: 0; width: 12%; height: 100%; background-image: url(../images/visual_elem_2.png); background-size: 400px; background-repeat: no-repeat; background-position: 0 bottom; }
 
-.visual .visual_fog1 { right: 5%; opacity: 0.4; width: 70%; height: 100%; background-image: url(../images/visual_elem_3.png); background-size: 100%; background-repeat: no-repeat; background-position: 0 110%; }
+.visual .visual_fog01 { right: 5%; opacity: 0.4; width: 70%; height: 100%; background-image: url(../images/visual_elem_3.png); background-size: 100%; background-repeat: no-repeat; background-position: 0 110%; }
 
-.visual .visual_fog2 { left: 5%; opacity: 0.6; width: 60%; height: 100%; background-image: url(../images/visual_elem_4.png); background-size: 100%; background-repeat: no-repeat; background-position: 0 100%; }
+.visual .visual_fog02 { left: 5%; opacity: 0.6; width: 60%; height: 100%; background-image: url(../images/visual_elem_4.png); background-size: 100%; background-repeat: no-repeat; background-position: 0 100%; }
 
 .visual .scroll_text { position: relative; margin-left: -6px; font-family: 'Lato', AppleGothic, sans-serif, Helvetica; font-weight: 300; color: rgba(255, 255, 255, 0.45); font-size: 12px; letter-spacing: 0.12rem; text-transform: uppercase; }
 

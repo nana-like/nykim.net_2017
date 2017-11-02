@@ -68,12 +68,12 @@
                 pointer-events: none;
             }
 
-            .line_1 {
+            .line_01 {
                 top: 0;
                 transition: all .2s ease-in-out;
             }
 
-            .line_2 {
+            .line_02 {
                 width: 100%;
                 top: 0;
                 bottom: 0;
@@ -81,7 +81,7 @@
                 transition: transform .2s ease-in-out;
             }
 
-            .line_2:before {
+            .line_02:before {
                 content: '';
                 position: absolute;
                 width: 100%;
@@ -90,7 +90,7 @@
                 transition: transform .2s ease-in-out;
             }
 
-            .line_3 {
+            .line_03 {
                 bottom: 0;
                 transition: all .2s ease-in-out;
             }
@@ -103,23 +103,23 @@
 
     .menu_burger.open {
 
-        .line_1 {
+        .line_01 {
             opacity: 0;
             transform: translate3d(-2*$burgerTranslate,0,0);
             transition: all .2s ease-in-out;
         }
 
-        .line_2 {
+        .line_02 {
             transform: rotate(45deg);
             transition: transform .2s ease-in-out;
         }
 
-        .line_2:before {
+        .line_02:before {
             transform: rotate(-90deg);
             transition: transform .2s ease-in-out;
         }
 
-        .line_3 {
+        .line_03 {
             opacity: 0;
             transform: translate3d(2*$burgerTranslate,0,0);
             transition: all .2s ease-in-out;     
