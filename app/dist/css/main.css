@@ -536,3 +536,28 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 .article_detail .detail_bottom .detail_link { display: inline-block; position: relative; width: auto; height: 3em; padding: 0 2.5em 0 1.5em; line-height: 3em; color: #fff; letter-spacing: 0.05rem; border: 1px solid #fff; transition: margin-bottom .5s; border-color: #111f6f; color: #111f6f; }
 
 .article_detail .detail_bottom .detail_link:after { display: block; position: absolute; top: 50%; right: 1em; content: '&'; transform: translateY(-50%); }
+
+/* article about */
+.article_about { position: relative; width: 100%; min-height: 600px; max-height: 100%; height: 100vh; }
+
+.article_about .inner { position: relative; padding: 0 4rem; text-align: center; background-color: #f2f2f2; background-color: rgba(255, 215, 0, 0.37); }
+
+.article_about .about_header { /*            outline:3px solid red; transition: margin .5s; position: absolute; top: 50%; width: 100%; height: auto; margin-top: -9em; */ }
+
+.article_about .about_motto { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; outline: 2px solid navy; margin: 0 auto; }
+
+.article_about .about_motto .motto_text { font-size: 24px; text-align: right; line-height: 150%; }
+
+.article_about .about_motto .motto_image { width: 70%; height: 200px; background-color: #eaf9fd; }
+
+.article_about .about_main { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; outline: 2px solid #87ffa7; margin: 0 auto; }
+
+.article_about .about_main .about_link .social { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; }
+
+.article_about .about_main .about_link .social .social_item { overflow: hidden; width: 2.5em; height: 2.5em; font-size: 14px; background-color: #848484; text-indent: -999em; margin-left: 1em; transition: width .5s, height .5s, margin-left .5s; }
+
+.article_about .about_main .about_link .social .social_item:first-child { margin-left: 0; }
+
+.article_about .about_main .about_link .social .social_item a { display: block; width: 100%; height: 100%; }
+
+.article_about .about_main .about_text { width: 70%; text-align: left; }

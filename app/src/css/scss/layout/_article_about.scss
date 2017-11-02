@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/*
+*   article about
+*/
+
+
+////////////////
+// about 부분 //
+///////////////
+
+
+.article_about {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    max-height: 100%;
+    height: 100vh;
+    
+    .inner {
+        position: relative;
+        //padding-bottom: 2em;
+        //margin: -1.5em auto 0;
+        padding: 0 4rem;
+        text-align: center;
+        background-color: $color-bg;
+        background-color: rgba(255, 215, 0, 0.37);
+    }
+     
+    .about_header {
+/*            outline:3px solid red;
+        transition: margin .5s;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: auto;
+        margin-top: -9em; */
+    }
+
+    .about_motto {
+        @include display-flex;
+        justify-content: center;
+        position: relative;
+        outline: 2px solid navy;
+        margin: 0 auto;
+
+        .motto_text {
+            font-size: 24px;
+            text-align: right;
+            line-height: 150%;
+        }
+
+        .motto_image {
+            width: 70%;
+            height: 200px;
+            background-color: #eaf9fd;
+        }
+
+    } //end of .about_motto
+    
+    .about_main {
+        @include display-flex;
+        justify-content: center;
+        position: relative;
+        outline: 2px solid #87ffa7;
+        margin: 0 auto;
+        
+        .about_link {
+            .social {
+                @include display-flex;
+                justify-content: center;
+                
+                .social_item {
+                    @include social-item(2.5em);
+                }
+            }
+        } //end of .about_link
+        
+        .about_text {
+            width: 70%;
+            text-align: left;
+        } //end of .about_text
+        
+    } //end of .about_main
+    
+}

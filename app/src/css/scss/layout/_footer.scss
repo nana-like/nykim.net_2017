@@ -65,22 +65,7 @@ footer {
             @include display-flex;
             
             .social_item {
-                overflow: hidden;
-                width: 2em;
-                height: 2em;
-                font-size: 14px;
-                background-color: #848484;
-                text-indent: -999em;
-                margin-left: 1em;
-                transition: width .5s, height .5s, margin-left .5s;
-                
-                &:first-child {
-                    margin-left: 0;
-                }
-                
-                a {
-                    @include block-anchor
-                }
+                @include social-item;
             }
         } //end of .social
         
