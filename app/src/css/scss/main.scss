@@ -7,6 +7,7 @@
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/mediaQueries";
+@import "helpers/animations";
 
 // 기본 스타일
 @import "base/reset";
@@ -27,5 +28,3 @@
 @import "layout/hero";
 @import "layout/article_detail";
 @import "layout/article_about";
-
-//밴더

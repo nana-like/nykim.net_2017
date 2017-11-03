@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+// **** ANIMATIONS **** //
+
+
+@mixin key-bounce($color:#ffe079) {
+    
+    @keyframes bounceOutline {
+        0%{ box-shadow: 0 0 0 4px $color;}
+        25%{ box-shadow: 0 0 0 2px $color;}
+        50%{ box-shadow: 0 0 0 6px $color;}
+        75%{ box-shadow: 0 0 0 4px $color;}
+        100%{ box-shadow: 0 0 0 5px $color;}
+    }
+
+}
+
+@include key-bounce;
+
+@mixin ani-bounce{
+     animation: bounceOutline .55s ease-in-out;
+}

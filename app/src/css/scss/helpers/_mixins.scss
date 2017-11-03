@@ -17,6 +17,21 @@
 }
 
 
+// auto prefix
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+ 
+  // Output standard non-prefixed declaration
+  #{$property}: $value;
+}
+
+// Usage:
+// .selector {
+//   @include prefix(transform, rotate(45deg), webkit ms);
+// }
+
 
 // font //@include font-lato;
 @mixin font-dream { //롯데마트드림체
@@ -70,13 +85,6 @@
             
 }
 
-@keyframes bounceOut2 {
-        0%{ box-shadow: 0 0 0 4px $color-sub;}
-        25%{ box-shadow: 0 0 0 2px $color-sub;}
-        50%{ box-shadow: 0 0 0 6px $color-sub;}
-        75%{ box-shadow: 0 0 0 4px $color-sub;}
-        100%{ box-shadow: 0 0 0 5px $color-sub;}
-}
 
 // yellow circle
 @mixin icon-circle {
@@ -102,10 +110,6 @@
             box-shadow: 0 0.5em 0.938em #ccc;
             content: '';
         }
-       /* &:hover {
-            cursor: pointer; 
-            animation:bounceOut2 .55s ease-in-out;
-        }*/
 }
 
 

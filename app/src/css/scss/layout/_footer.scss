@@ -38,12 +38,25 @@
             color: #484848;
             letter-spacing: 0.08rem;
             align-items: center;
+            transition: color .2s ease-in-out;
             
             .icon_circle {
                 @include icon-circle;
                 font-size: 80%;
                 margin-right: 1em;
             }
+            
+            &:hover {
+                color: #ffd563;
+                transition: color .2s ease-in-out;
+            }
+            
+            &:hover .icon_circle {
+                cursor: pointer; 
+                @include ani-bounce;
+            }
+
+            
         } //end of .footer_link
         
         .link_phone {
