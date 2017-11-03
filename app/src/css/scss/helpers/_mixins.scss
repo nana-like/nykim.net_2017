@@ -70,9 +70,17 @@
             
 }
 
+@keyframes bounceOut2 {
+        0%{ box-shadow: 0 0 0 4px $color-sub;}
+        25%{ box-shadow: 0 0 0 2px $color-sub;}
+        50%{ box-shadow: 0 0 0 6px $color-sub;}
+        75%{ box-shadow: 0 0 0 4px $color-sub;}
+        100%{ box-shadow: 0 0 0 5px $color-sub;}
+}
 
 // yellow circle
 @mixin icon-circle {
+    position: relative;
     display: block;
     width: 3.31em;
     height: 3.31em;
@@ -80,9 +88,27 @@
     line-height: 3.31em;
     border-radius: 50%;
     background-color: $color-sub;
-    box-shadow: 0 0.5em 0.938em #ccc;
+    box-shadow: 0 0 0 5px $color-sub;
     transition: width .5s, height .5s;
+        &:after {
+            z-index: -1;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0.5em 0.938em #ccc;
+            content: '';
+        }
+       /* &:hover {
+            cursor: pointer; 
+            animation:bounceOut2 .55s ease-in-out;
+        }*/
 }
+
+
 
 // view web page button
 @mixin btn-web {

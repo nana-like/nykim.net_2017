@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@keyframes bounceOut2 { 0% { box-shadow: 0 0 0 4px #ffe079; }
+		25% { box-shadow: 0 0 0 2px #ffe079; }
+		50% { box-shadow: 0 0 0 6px #ffe079; }
+		75% { box-shadow: 0 0 0 4px #ffe079; }
+		100% { box-shadow: 0 0 0 5px #ffe079; } }
+
 /*  
 *   RESET STYLE
 */
@@ -199,7 +205,7 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 		.gnb .contact .contact_link .contact_heading { width: 60px; margin-right: 0.6em; } }
 
 /* visual */
-.visual { z-index: 1; position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 740px; margin: 0 auto; background-image: url(../images/visual_lg.jpg); background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; }
+.visual { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 740px; margin: 0 auto; background-image: url(../images/visual_lg.jpg); background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; }
 
 .visual .inner { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100%; height: 100%; background-color: rgba(36, 33, 33, 0.46); }
 
@@ -236,7 +242,9 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .footer .footer_address .footer_link { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; font-family: 'NotoSans', AppleGothic, sans-serif, Helvetica; font-size: 20px; color: #484848; letter-spacing: 0.08rem; align-items: center; }
 
-.footer .footer_address .footer_link .icon_circle { display: block; width: 3.31em; height: 3.31em; margin-left: 0.8em; line-height: 3.31em; border-radius: 50%; background-color: #ffe079; box-shadow: 0 0.5em 0.938em #ccc; transition: width .5s, height .5s; font-size: 80%; margin-right: 1em; }
+.footer .footer_address .footer_link .icon_circle { position: relative; display: block; width: 3.31em; height: 3.31em; margin-left: 0.8em; line-height: 3.31em; border-radius: 50%; background-color: #ffe079; box-shadow: 0 0 0 5px #ffe079; transition: width .5s, height .5s; /* &:hover { cursor: pointer;  animation:bounceOut2 .55s ease-in-out; }*/ font-size: 80%; margin-right: 1em; }
+
+.footer .footer_address .footer_link .icon_circle:after { z-index: -1; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 0.5em 0.938em #ccc; content: ''; }
 
 .footer .footer_address .link_phone { margin-left: 2em; text-align: justify; }
 
@@ -307,7 +315,9 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .article_hello .more .more_link { position: relative; font-family: 'NotoSans', AppleGothic, sans-serif, Helvetica; padding: 0 3em 0 0; letter-spacing: 0.12rem; color: #999; }
 
-.article_hello .more .more_link .icon_circle { display: block; width: 3.31em; height: 3.31em; margin-left: 0.8em; line-height: 3.31em; border-radius: 50%; background-color: #ffe079; box-shadow: 0 0.5em 0.938em #ccc; transition: width .5s, height .5s; position: absolute; top: -1em; right: -1em; }
+.article_hello .more .more_link .icon_circle { position: relative; display: block; width: 3.31em; height: 3.31em; margin-left: 0.8em; line-height: 3.31em; border-radius: 50%; background-color: #ffe079; box-shadow: 0 0 0 5px #ffe079; transition: width .5s, height .5s; /* &:hover { cursor: pointer;  animation:bounceOut2 .55s ease-in-out; }*/ position: absolute; top: -1em; right: -1em; }
+
+.article_hello .more .more_link .icon_circle:after { z-index: -1; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 0.5em 0.938em #ccc; content: ''; }
 
 .article_hello .more .more_link .icon_circle:after { position: absolute; top: 24px; right: 16px; width: 20px; height: 4px; outline: 1px solid #fff; content: ''; }
 
@@ -336,7 +346,7 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 		.article_hello .more .more_link .icon_circle { position: static; margin: 1em auto 0; font-size: 11px; transition: margin .5s; } }
 
 /* article_work */
-.article_work { z-index: 1; position: relative; width: 100%; min-height: 700px; max-height: auto; height: auto; }
+.article_work { position: relative; width: 100%; min-height: 700px; max-height: auto; height: auto; }
 
 .article_work .inner { transition: margin .5s; position: relative; margin-top: 3em; width: 100%; height: auto; }
 
@@ -506,7 +516,7 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .article_detail .detail_top .detail_title { width: auto; color: #8cddeb; font-size: 100%; }
 
-.article_detail .detail_top .detail_title .detail_title_sm { display: block; padding-left: 8px; color: #696969; font-style: normal; font-size: 25%; letter-spacing: 0.06rem; }
+.article_detail .detail_top .detail_title .detail_title_sm { display: block; padding-left: 8px; color: #696969; font-style: normal; font-size: 25%; font-weight: 400; letter-spacing: 0.06rem; }
 
 .article_detail .detail_top .detail_info { font-size: 19px; line-height: 160%; margin-left: 11em; font-family: 'NotoSans', AppleGothic, sans-serif, Helvetica; transition: margin-left .5s; }
 
@@ -631,7 +641,9 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .article_about .about_main .more .more_link { position: relative; font-family: 'NotoSans', AppleGothic, sans-serif, Helvetica; padding: 0 3em 0 0; letter-spacing: 0.12rem; line-height: 156%; color: #999; text-align: center; }
 
-.article_about .about_main .more .more_link .icon_circle { display: block; width: 3.31em; height: 3.31em; margin-left: 0.8em; line-height: 3.31em; border-radius: 50%; background-color: #ffe079; box-shadow: 0 0.5em 0.938em #ccc; transition: width .5s, height .5s; position: relative; margin: 14px auto 0; }
+.article_about .about_main .more .more_link .icon_circle { position: relative; display: block; width: 3.31em; height: 3.31em; margin-left: 0.8em; line-height: 3.31em; border-radius: 50%; background-color: #ffe079; box-shadow: 0 0 0 5px #ffe079; transition: width .5s, height .5s; /* &:hover { cursor: pointer;  animation:bounceOut2 .55s ease-in-out; }*/ position: relative; margin: 14px auto 0; }
+
+.article_about .about_main .more .more_link .icon_circle:after { z-index: -1; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 0.5em 0.938em #ccc; content: ''; }
 
 .article_about .about_main .more .more_link .icon_circle:after { position: absolute; top: 24px; right: 16px; width: 20px; height: 4px; outline: 1px solid #fff; content: ''; }
 
