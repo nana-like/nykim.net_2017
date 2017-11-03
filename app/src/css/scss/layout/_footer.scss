@@ -6,7 +6,7 @@
 
 footer {
     position: fixed;
-    z-index: -2;
+    z-index: 0; //기존 -2에서 0으로 변경
     left: 0;
     right: 0;
     bottom: 0;

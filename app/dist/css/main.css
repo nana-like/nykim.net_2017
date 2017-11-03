@@ -36,7 +36,7 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 @media screen and (max-width: 769px) { .br_m { display: block !important; }
 		.text_hide_m { display: none !important; } }
 
-.wrap { position: relative; background-color: #fafafa; }
+.wrap { z-index: 1; position: relative; background-color: #fafafa; }
 
 .inner { position: relative; }
 
@@ -47,9 +47,7 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 @font-face { font-family: 'NotoSans'; font-style: normal; font-weight: 400; src: url(../font/NotoSansLight.eot?#iefix) format("embedded-opentype"), url(../font/NotoSansLight.woff2) format("woff2"), url(../font/NotoSansLight.woff) format("woff"); }
 
-/*
-*   title for section, aricle
-*/
+/* title for section, aricle */
 .title_line { position: absolute; top: -3.5em; left: 50%; display: block; content: ''; width: 1px; height: 5em; background-color: #67ceeb; }
 
 .title { position: relative; color: #8cddeb; z-index: 1; text-align: center; padding-top: 0.5em; font-size: 60px; font-weight: 700; transition: font-size .5s; }
@@ -81,9 +79,7 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 		.article_hello .more_link, .article_work .more_link { font-size: 12px; }
 		.article_hello .icon_circle, .article_work .icon_circle { font-size: 10px; } }
 
-/*
-*   fixed (logo, menu)
-*/
+/* fixed (logo, menu) */
 .header { z-index: 300; width: 100%; position: fixed; top: 0; left: 0; }
 
 .header .fixed { position: relative; width: 100%; height: 40px; max-width: 1920px; margin: 0 auto; }
@@ -128,9 +124,7 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 		.header .fixed .menu { top: 30px; right: 24px; }
 		.header .fixed .menu .menu_burger { width: 26px; height: 18px; right: 10px; } }
 
-/*
-*   gnb
-*/
+/* gnb */
 .gnb { z-index: 200; display: none; width: 100%; height: 100%; min-height: 490px; position: fixed; top: 0; left: 0; text-align: center; background-color: #fafafa; }
 
 .gnb .nav { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 390px; margin-top: -2em; }
@@ -189,10 +183,8 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 @media screen and (max-width: 375px) { .gnb .contact .contact_link { width: 200px; font-size: 13px; }
 		.gnb .contact .contact_link .contact_heading { width: 60px; margin-right: 0.6em; } }
 
-/*
-*   visual
-*/
-.visual { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 740px; margin: 0 auto; background-image: url(../images/visual_lg.jpg); background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; }
+/* visual */
+.visual { z-index: 1; position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 740px; margin: 0 auto; background-image: url(../images/visual_lg.jpg); background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; }
 
 .visual .inner { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100%; height: 100%; background-color: rgba(36, 33, 33, 0.46); }
 
@@ -218,10 +210,8 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .visual .scroll_text:after { top: 0rem; }
 
-/*
-*   footer
-*/
-footer { position: fixed; z-index: -2; left: 0; right: 0; bottom: 0; width: 100%; height: auto; font-size: 16px; }
+/* footer */
+footer { position: fixed; z-index: 0; left: 0; right: 0; bottom: 0; width: 100%; height: auto; font-size: 16px; }
 
 footer .footer_title { padding-top: 1em; }
 
@@ -286,15 +276,11 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 		.footer .footer_address .link_phone { margin-top: 1em; }
 		.footer .footer_bottom { font-size: 14px; } }
 
-/*
-*   contents
-*/
-.contents { position: relative; width: 100%; height: auto; box-shadow: 0 10px 60px rgba(20, 20, 20, 0.1), 0 10px 50px rgba(30, 30, 30, 0.06); }
+/* contents */
+.contents { z-index: 1; position: relative; width: 100%; height: auto; box-shadow: 0 10px 60px rgba(20, 20, 20, 0.1), 0 10px 50px rgba(30, 30, 30, 0.06); }
 
-/*
-*   article_hello
-*/
-.article_hello { position: relative; width: 100%; min-height: 800px; max-height: 100%; height: 100vh; }
+/* article_hello */
+.article_hello { z-index: 1; position: relative; width: 100%; min-height: 800px; max-height: 100%; height: 100vh; background-color: #fafafa; }
 
 .article_hello .inner { transition: margin .5s; position: absolute; top: 50%; width: 100%; height: auto; margin-top: -9em; }
 
@@ -334,10 +320,8 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 @media screen and (max-width: 375px) { .article_hello .more .more_link { padding: 0; font-size: 12px; }
 		.article_hello .more .more_link .icon_circle { position: static; margin: 1em auto 0; font-size: 11px; transition: margin .5s; } }
 
-/*
-*   article_work
-*/
-.article_work { position: relative; width: 100%; min-height: 700px; max-height: auto; height: auto; }
+/* article_work */
+.article_work { z-index: 1; position: relative; width: 100%; min-height: 700px; max-height: auto; height: auto; }
 
 .article_work .inner { transition: margin .5s; position: relative; margin-top: 3em; width: 100%; height: auto; }
 
@@ -412,9 +396,7 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 		.article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title { font-size: 22px; }
 		.article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title:before { right: -20px; font-size: 12px; } }
 
-/*
-*   hero (work detail)
-*/
+/* hero (work detail) */
 .hero { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 720px; margin: 0 auto; color: #fff; background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; background-color: #a2a2a2; }
 
 .hero .inner { position: relative; width: 100%; max-width: 1920px; margin: 0 auto; padding: 8% 9em 0 9em; height: 100vh; height: 100%; box-sizing: border-box; transition: padding .5s; }
@@ -500,9 +482,7 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 		.hero .hero_bottom { right: 3em; }
 		.hero .hero_bottom .hero_page { font-size: 24px; } }
 
-/*
-*   work detail 
-*/
+/* work detail  */
 .article_detail { position: relative; width: 100%; min-height: 800px; max-height: 100%; height: 100vh; height: 100%; }
 
 .article_detail .detail_top { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; width: auto; height: auto; max-width: 1600px; margin: 0 auto; padding: 1.5em 0 3em; box-sizing: border-box; font-size: 68px; transition: font-size .5s; }
@@ -597,22 +577,26 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 		.article_detail .detail_bottom .detail_btn.next { padding-left: 10px; }
 		.article_detail .detail_bottom .detail_btn.prev:before, .article_detail .detail_bottom .detail_btn.next:before { display: none; } }
 
-/*
-*   article about
-*/
-.article_about { position: relative; width: 100%; min-height: 600px; max-height: 100%; height: 100vh; }
+/* article about */
+.article_about { position: relative; width: 100%; min-height: 600px; max-height: 100%; padding-top: 12em; }
 
-.article_about .inner { position: relative; padding: 0 4rem; text-align: center; background-color: #f2f2f2; background-color: rgba(255, 215, 0, 0.37); }
+.article_about .inner { position: relative; padding: 0 4rem; text-align: center; background-color: #f7f7f7; }
 
-.article_about .about_header { /*            outline:3px solid red; transition: margin .5s; position: absolute; top: 50%; width: 100%; height: auto; margin-top: -9em; */ }
+.article_about .about_header .title { top: -1.3em; }
 
-.article_about .about_motto { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; outline: 2px solid navy; margin: 0 auto; }
+.article_about .about_header .title_line { top: -8em; }
 
-.article_about .about_motto .motto_text { font-size: 24px; text-align: right; line-height: 150%; }
+.article_about .about_motto { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; align-items: center; position: relative; outline: 2px solid navy; margin: 0em auto 3em; font-size: 24px; }
 
-.article_about .about_motto .motto_image { width: 70%; height: 200px; background-color: #eaf9fd; }
+.article_about .about_motto .motto_left { margin-right: 4%; text-align: right; line-height: 150%; }
 
-.article_about .about_main { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; outline: 2px solid #87ffa7; margin: 0 auto; }
+.article_about .about_motto .motto_right { width: 70%; max-width: 800px; }
+
+.article_about .about_motto .motto_right .motto_image { position: relative; top: 2%; display: block; width: 100%; height: auto; margin: 4% 0 0 4%; }
+
+.article_about .about_main { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; margin: 0 auto; }
+
+.article_about .about_main .about_link { margin-right: 4%; }
 
 .article_about .about_main .about_link .social { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; }
 
@@ -622,4 +606,6 @@ footer .footer_bottom .copyright { color: #868686; font-size: 1em; transition: f
 
 .article_about .about_main .about_link .social .social_item a { display: block; width: 100%; height: 100%; }
 
-.article_about .about_main .about_text { width: 70%; text-align: left; }
+.article_about .about_main .about_text { width: 64%; margin: 0 0 7em 5%; text-align: left; font-size: 16px; line-height: 160%; }
+
+.article_about .about_main .about_text .about_text_para { margin-bottom: 1.3em; }

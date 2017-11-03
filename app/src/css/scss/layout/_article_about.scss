@@ -15,7 +15,7 @@
     width: 100%;
     min-height: 600px;
     max-height: 100%;
-    height: 100vh;
+    padding-top: 12em;
     
     .inner {
         position: relative;
@@ -23,37 +23,46 @@
         //margin: -1.5em auto 0;
         padding: 0 4rem;
         text-align: center;
-        background-color: $color-bg;
-        background-color: rgba(255, 215, 0, 0.37);
+        background-color: lighten( $color-bg, 2% );
     }
      
     .about_header {
-/*            outline:3px solid red;
-        transition: margin .5s;
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        height: auto;
-        margin-top: -9em; */
+        .title {
+            top: -1.3em;
+        }
+        
+        .title_line {
+            top: -8em;
+        }
     }
 
     .about_motto {
         @include display-flex;
         justify-content: center;
+        align-items: center;
         position: relative;
         outline: 2px solid navy;
-        margin: 0 auto;
+        margin: 0em auto 3em;
+        font-size: 24px;
 
-        .motto_text {
-            font-size: 24px;
+        .motto_left {
+            margin-right: 4%;
             text-align: right;
             line-height: 150%;
         }
 
-        .motto_image {
+        .motto_right {
             width: 70%;
-            height: 200px;
-            background-color: #eaf9fd;
+            max-width: 800px;
+            
+            .motto_image {
+                position: relative;
+                top: 2%;
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 4% 0 0 4%;
+            }
         }
 
     } //end of .about_motto
@@ -62,10 +71,10 @@
         @include display-flex;
         justify-content: center;
         position: relative;
-        outline: 2px solid #87ffa7;
         margin: 0 auto;
         
         .about_link {
+            margin-right: 4%;
             .social {
                 @include display-flex;
                 justify-content: center;
@@ -77,8 +86,15 @@
         } //end of .about_link
         
         .about_text {
-            width: 70%;
+            width: 64%;
+            margin: 0 0 7em 5%;
             text-align: left;
+            font-size: 16px;
+            line-height: 160%;
+            
+            .about_text_para {
+                margin-bottom: 1.3em;
+            }
         } //end of .about_text
         
     } //end of .about_main
