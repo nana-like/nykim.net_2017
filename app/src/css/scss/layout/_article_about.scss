@@ -80,20 +80,76 @@
                 justify-content: center;
                 
                 .social_item {
-                    @include social-item(2.5em);
+                    @include social-item(2em);
                 }
             }
         } //end of .about_link
+        
+        .more {
+            position: relative;
+            margin-top: 4.2em;
+            font-size: 15px;
+        
+            &:before {
+                display: block;
+                position: absolute;
+                top: -1.3em;
+                left: 50%;
+                width: 4em;
+                height: 1px;
+                transform: translateX(-50%);
+                background-color: #888;
+                content: '';
+            }
+        
+            .more_link {
+                position: relative;
+                @include font-noto;
+                padding: 0 3em 0 0;
+                letter-spacing: 0.12rem;
+                line-height: 156%;
+                color: #999;
+                text-align: center;    
+
+
+                .icon_circle {
+                    @include icon-circle;
+                    position: relative;
+                    margin: 14px auto 0;
+
+                    &:after { //임시 (삭제예정))
+                        position: absolute;
+                        top: 24px;
+                        right: 16px;    
+                        width: 20px;
+                        height: 4px;
+                        outline: 1px solid #fff;
+                        content: '';
+                    }
+                }
+            }
+        }
         
         .about_text {
             width: 64%;
             margin: 0 0 7em 5%;
             text-align: left;
-            font-size: 16px;
-            line-height: 160%;
+            font-size: 18px;
+            line-height: 180%;
             
             .about_text_para {
                 margin-bottom: 1.3em;
+            }
+            
+            .about_text_accent {
+                display: inline-block;
+                margin-top: 2em;
+                padding: 2px 8px;
+                color: #fff;
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 0.04rem;
+                background-color: #87d6e2;
             }
         } //end of .about_text
         

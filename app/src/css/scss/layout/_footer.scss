@@ -4,7 +4,7 @@
 *   footer
 */
 
-footer {
+.footer {
     position: fixed;
     z-index: 0; //기존 -2에서 0으로 변경
     left: 0;
@@ -59,7 +59,7 @@ footer {
         max-width: 1920px;
         margin: 0 auto;
         padding: 0.6em 1em;
-        transition: margin .5s, padding .5s;
+        //transition: margin .5s, padding .5s;
         
         .social {
             @include display-flex;
@@ -74,13 +74,13 @@ footer {
             color: #ccc;
             font-size: 0.8em;
             letter-spacing: 0.06em;
-            transition: font-size .5s;
+            //transition: font-size .5s;
         }
         
         .copyright {
             color: #868686;
             font-size: 1em;
-            transition: font-size .5s;
+            //transition: font-size .5s;
         }
         
     } //end of .footer_bottom

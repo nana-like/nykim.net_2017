@@ -27,7 +27,7 @@
         height: 100vh;
         height: 100%;
         box-sizing: border-box;
-        transition: padding .5s;
+        //transition: padding .5s;
     }
     
     .hero_title {
@@ -45,7 +45,7 @@
             font-style: normal;
             font-weight: 300;
             text-transform: uppercase;
-            transition: font-size .5s, top .5s;
+            //transition: font-size .5s, top .5s;
         }
         
         &:after {
@@ -69,7 +69,7 @@
             font-size: 13px;
             font-weight: 300;
             letter-spacing: 0.05rem;
-            transition: margin-right .5s, font-size .5s;
+            //transition: margin-right .5s;
             
             .info_text {
                 @include font-noto;
@@ -78,7 +78,7 @@
                 font-size: 17px;
                 font: 400;
                 letter-spacing: 0;
-                transition: margin-left .5s, font-size .5s;
+                //transition: margin-left .5s, font-size .5s;
                 
                 .info_percentage {
                     padding-left: 6px;
@@ -112,7 +112,7 @@
         position: absolute;
         right: 9em;
         bottom: 5%;
-        transition: right .5s, bottom .5s;
+        //transition: right .5s, bottom .5s;
         
         .hero_page {
             display: inline-block;

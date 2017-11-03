@@ -33,7 +33,7 @@
         padding: 1.5em 0 3em;
         box-sizing: border-box;
         font-size: 68px;
-        transition: font-size .5s;
+        //transition: font-size .5s;
         
         &:after {
             display: block;
@@ -61,6 +61,7 @@
             line-height: 160%;
             margin-left: 11em;
             @include font-noto;
+            transition: margin-left .5s;
             
             .detail_info_text {
                 position: relative;
@@ -311,12 +312,16 @@
                 padding: 0 9em;
                 font-size: 16px;
 
+                .slider_inner {
+                    padding: 0 3em;
+                }
+                
                 .swiper-button-prev {
-                    left: ($pd-md - 3em) !important;
+                    left: -4em !important;
                 }
 
                 .swiper-button-next {
-                    right: ($pd-md - 3em) !important;
+                    right: -4em !important;
                 }
 
                 /// -- swiper -- ///
@@ -329,7 +334,11 @@
             font-size: 16px;
 
             .detail_btn {
-                font-size: 24px;
+                font-size: 30px;
+                
+                .detail_btn_title {
+                    font-size: 14px;
+                }
                 
                 &.prev {
                     padding-right: 30px;
@@ -382,13 +391,17 @@
             .slider {
                 padding: 0 8em;
                 font-size: 16px;
+                
+                .slider_inner {
+                    padding: 0 0em;
+                }
 
                 .swiper-button-prev {
-                    left: ($pd-tb - 2em) !important;
+                    left: -4em !important;
                 }
 
                 .swiper-button-next {
-                    right: ($pd-tb - 2em) !important;
+                    right: -4em !important;
                 }
 
                 /// -- swiper -- ///
@@ -402,8 +415,12 @@
 
             .detail_btn {
                 margin-top: 0;
-                font-size: 22px;
+                font-size: 28px;
                 
+                .detail_btn_title {
+                    font-size: 13px;
+                }
+
                 &.prev {
                     padding-right: 10px;
                 }
