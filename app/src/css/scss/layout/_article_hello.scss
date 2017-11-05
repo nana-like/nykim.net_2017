@@ -60,29 +60,71 @@
             }
         
         .more_link {
+            @include display-flex;
+            align-items: center;
             position: relative;
             @include font-noto;
-            padding: 0 3em 0 0;
             letter-spacing: 0.12rem;
-            color: #999;
+            color: #7b7b7b;
+            
+            .more_link_text {
+                position: relative;
+                padding: 0 4px;
+                
+                &:after {
+                  display: block;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  bottom: 0;
+                  right: 0;
+                  margin: auto;
+                  width: 100%;
+                  height: 1px;
+                  content: '.';
+                  color: transparent;
+                  background: #e5e5e5;
+                  opacity: 0;
+                  z-index: -1;
+                  transition: height .5s, opacity .5s;
+                }
+            }
 
 
             .icon_circle {
                 @include icon-circle;
-                position: absolute;
-                top: -1em;
-                right: -1em;
-
-                &:after { //임시 (삭제예정))
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                
+                &:before {
+                    display: block;
                     position: absolute;
-                    top: 24px;
-                    right: 16px;    
-                    width: 20px;
-                    height: 4px;
-                    outline: 1px solid #fff;
+                    top: 50%;
+                    left: 50%;
                     content: '';
+                    width: 44%;
+                    height: 44%;
+                    transform: translateX(-50%) translateY(-50%);
+                    background-image: url(../images/ico_move.svg);
+                    background-size: cover;
+                    //@include ani-moveToRight(infinite);
                 }
+
             }
+            
+            
+            &:hover .more_link_text:after {
+              opacity: 1;
+              height: 100%;
+              transition: height .5s, opacity .5s;
+            }
+            
+            &:hover .icon_circle {
+                cursor: pointer; 
+                @include ani-bounce;
+            }
+            
         }
     }
     
@@ -170,7 +212,7 @@
 
 // =============================================
 
-@include mo-lg {     // mo-lg : ~540px
+@include mo-lg { 
     .article_hello {
         
         .inner {
@@ -185,9 +227,16 @@
         
         .more .more_link {
             font-size: 12px;
+            display: table;
+                        
+            .more_link_text:after {
+              opacity: 1;
+              height: 100%;
+            }
             
-                    
             .icon_circle {
+                display: block;
+                margin: 1.5em auto 0;
                 font-size: 12px;
             }
         }
@@ -206,12 +255,11 @@
             font-size: 12px;
             
                     
-            .icon_circle {
-                position: static;
+         /*   .icon_circle {
                 margin: 1em auto 0;
                 font-size: 11px;
                 transition: margin .5s;
-            }
+            }*/
         }
 
     } 

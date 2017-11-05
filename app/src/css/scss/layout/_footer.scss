@@ -34,6 +34,7 @@
         .footer_link {
             @include display-flex;
             @include font-noto;
+            position: relative;
             font-size: 20px;
             color: #484848;
             letter-spacing: 0.08rem;
@@ -44,6 +45,17 @@
                 @include icon-circle;
                 font-size: 80%;
                 margin-right: 1em;
+                
+                &:before {
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 54%;
+                    height: 54%;
+                    transform: translateX(-50%) translateY(-50%);
+                    
+                }
             }
             
             &:hover {
@@ -59,9 +71,22 @@
             
         } //end of .footer_link
         
+        .link_mail {
+            .icon_circle:before {
+                background-image: url(../images/ico_mail.svg);
+                background-size: cover;
+                content: '';
+            }
+        }
+        
         .link_phone {
             margin-left: 2em;
             text-align: justify;
+            .icon_circle:before {
+                background-image: url(../images/ico_phone.svg);
+                background-size: cover;
+                content: '';
+            }
         }
     } //end of .footer_address
     

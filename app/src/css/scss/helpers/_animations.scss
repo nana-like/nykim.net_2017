@@ -11,12 +11,34 @@
         50%{ box-shadow: 0 0 0 6px $color;}
         75%{ box-shadow: 0 0 0 4px $color;}
         100%{ box-shadow: 0 0 0 5px $color;}
+    }    
+    @-webkit-keyframes bounceOutline {
+        0%{ box-shadow: 0 0 0 4px $color;}
+        25%{ box-shadow: 0 0 0 2px $color;}
+        50%{ box-shadow: 0 0 0 6px $color;}
+        75%{ box-shadow: 0 0 0 4px $color;}
+        100%{ box-shadow: 0 0 0 5px $color;}
     }
 
 }
 
-@include key-bounce;
 
-@mixin ani-bounce{
-     animation: bounceOutline .55s ease-in-out;
+@mixin key-moveToRight {
+    
+    @keyframes moveToRight {
+        3%{margin-left: -2px;}
+        50%{ margin-left: 6px;}
+        100%{ margin-left: -2px;}
+    }    
+
+}
+
+@include key-bounce;
+@include key-moveToRight;
+
+@mixin ani-bounce($count:1){
+     animation: bounceOutline .55s ease-in-out $count ;
+}
+@mixin ani-moveToRight($count:1){
+     animation: moveToRight 1.6s ease-in-out -1s $count;
 }

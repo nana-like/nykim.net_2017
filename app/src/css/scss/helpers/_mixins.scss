@@ -66,17 +66,29 @@
 }
 
 // social icon
-@mixin social-item($size:2em) {
+@mixin social-item($size:1.6em) {
     overflow: hidden;
     width: $size;
     height: $size;
     font-size: 14px;
-    background-color: #848484;
     text-indent: -999em;
-    margin-left: 1em;
+    margin-left: 1.3em;
 
     &:first-child {
         margin-left: 0;
+    }
+    
+    &.social_github {
+        background-image: url(../images/ico_github.svg);
+        background-size: cover;
+    }
+    &.social_codepen {
+        background-image: url(../images/ico_codepen.svg);
+        background-size: cover;
+    }
+    &.social_pinterest {
+        background-image: url(../images/ico_pinterest.svg);
+        background-size: cover;
     }
 
     a {
