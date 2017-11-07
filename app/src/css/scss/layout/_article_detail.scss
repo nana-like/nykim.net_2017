@@ -30,7 +30,7 @@
         height: auto;
         max-width: 1600px;
         margin: 0 auto;
-        padding: 1.5em 0 2em;
+        padding: 1.2em 0 1.2em;
         box-sizing: border-box;
         font-size: 68px;
         //transition: font-size .5s;
@@ -98,10 +98,10 @@
             .shots_item {
                 display: block;
                 width: 100%;
-                margin: 6em auto 0;
-                box-shadow: 0px 10px 30px rgba(41, 37, 37, 0.3);
+                margin: 9% auto 0;
+                box-shadow: 0px 10px 30px rgba(41, 37, 37, 0.1);
                 
-                img { //171101 | 클래스 추가 예정
+                .shots_item_img { 
                     display: block;
                     width: 100%;
                     height: auto;
@@ -122,9 +122,7 @@
         .slider {
             position: relative;
             padding: 3em 0;
-            margin: 2em 0;
             background-color: $color-work-01;
-                box-shadow: 0px 10px 30px rgba(41, 37, 37, 0.3);
             
             .slider_inner {
                 position: relative;
@@ -185,9 +183,11 @@
         text-transform: uppercase;
         box-sizing: border-box;
         max-width: 1920px;
-        margin: 0 auto;
-        padding: 5em ($pd-lg + 2em);
+        margin: 1em auto;
+        padding: 5em ($pd-lg + 2em) 5em;
         font-size: 18px;
+        border-top: 1px solid #e3e3e3;
+        border-bottom: 1px solid #e3e3e3;
         
         .detail_btn {
             position: relative;
@@ -392,7 +392,6 @@
 
 
         .detail_main {
-            outline: 4px solid #7b2b78;
 
             .shots {
                 padding: 5em $pd-tb 5em;
@@ -529,7 +528,7 @@
 
 
         .detail_bottom {
-            padding: 7em 3em 4em;
+            padding: 8em 3em 3em;
             font-size: 13px;
             
             .detail_link {
