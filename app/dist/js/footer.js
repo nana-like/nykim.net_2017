@@ -55,6 +55,22 @@ $(function(){
         //  사이즈 조절 시 이미지 크기에 맞춰 li크기도 줄어들어야 하는데 조절이 어려움 ㅠㅠㅓ이러마ㅣ너뱌ㅔ3@)$#)84
         
         ///////////////////////////////
+        
+    //문서 2/3이상 스크롤 시 맨 위/아래 버튼 전환 함수
+	var scrollBottom = 0;
+    var bodyHeight = $(document).height();
+	var scrollOverBodyHeight = (bodyHeight/3)*2
+	function toTop_or_toBottom(){
+		scrollBottom = $(window).scrollTop()+$(window).height();
+		if ( scrollBottom >= scrollOverBodyHeight ){
+			$('.footer').addClass("on");
+		}else{
+			$('.footer').removeClass("on");
+		}
+	}
+        
+       $(window).on("scroll",function(){toTop_or_toBottom()}); 
+        
      
         
     });

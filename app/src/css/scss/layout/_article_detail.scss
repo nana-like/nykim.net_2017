@@ -30,7 +30,7 @@
         height: auto;
         max-width: 1600px;
         margin: 0 auto;
-        padding: 1.5em 0 3em;
+        padding: 1.5em 0 2em;
         box-sizing: border-box;
         font-size: 68px;
         //transition: font-size .5s;
@@ -91,31 +91,40 @@
             width: 100%;
             max-width: 1920px;
             margin: 0 auto;
-            padding: 0 $pd-lg;
+            padding: 6em $pd-lg 6em;
             box-sizing: border-box;
             background-color: $color-bg;
             
             .shots_item {
                 display: block;
                 width: 100%;
-                margin: 5% auto;
+                margin: 6em auto 0;
+                box-shadow: 0px 10px 30px rgba(41, 37, 37, 0.3);
                 
                 img { //171101 | 클래스 추가 예정
+                    display: block;
                     width: 100%;
                     height: auto;
+                }
+                
+                &:first-child {
+                    margin-top: 0;
                 }
             }
             
             .shots_item:first-child {
-                position: relative;
-                top: -6em;
+                // position: relative;
+                // top: -5em;
             }
             
         } //end of .shots
         
         .slider {
             position: relative;
+            padding: 3em 0;
+            margin: 2em 0;
             background-color: $color-work-01;
+                box-shadow: 0px 10px 30px rgba(41, 37, 37, 0.3);
             
             .slider_inner {
                 position: relative;
@@ -133,7 +142,7 @@
                 .swiper-wrapper {
                     
                     .swiper-slide {
-                        width: 60% !important;
+                        width: 70% !important;
                         height: auto !important;
                         max-height: 500px;
 
@@ -170,6 +179,7 @@
     
     .detail_bottom {
         @include display-flex;
+        position: relative;
         align-items: center;
         justify-content: space-between;
         text-transform: uppercase;
@@ -292,7 +302,6 @@
 
         .detail_top { // 설명 부분
             font-size: 62px;
-            outline: 2px solid red;
         
             .detail_info {
                 font-size: 17px;
@@ -304,13 +313,12 @@
         
 
         .detail_main {
-
             .shots {
-                padding: 0 $pd-md;
+                padding: 5em $pd-md 5em;
             }
 
             .slider {
-                padding: 0 9em;
+                padding: 3em 9em;
                 font-size: 16px;
 
                 .slider_inner {
@@ -384,24 +392,37 @@
 
 
         .detail_main {
+            outline: 4px solid #7b2b78;
 
             .shots {
-                padding: 0 $pd-tb;
+                padding: 5em $pd-tb 5em;
             }
 
             .slider {
-                padding: 0 8em;
+                padding: 3em 8em;
                 font-size: 16px;
                 
                 .slider_inner {
                     padding: 0 0em;
                 }
+                
+                .swiper-container .swiper-wrapper .swiper-slide {
+                    width: 80% !important;
+                }
 
                 .swiper-button-prev {
+                    width: 1.4em;
+                    height: 1.4em;
+                    margin-top: 0;
+                    transform: translateY(-50%);
                     left: -4em !important;
                 }
 
                 .swiper-button-next {
+                    width: 1.4em;
+                    height: 1.4em;
+                    margin-top: 0;
+                    transform: translateY(-50%);
                     right: -4em !important;
                 }
 
@@ -442,3 +463,117 @@
 
 // =============================================
 
+
+@include mo-lg {     
+
+    .article_detail {
+
+        .detail_top { // 설명 부분
+            flex-direction: column;
+            font-size: 50px;
+            padding-left: 1em;
+            padding-right: 1em;
+        
+            .detail_info {
+                font-size: 14px;
+                margin-left: 0em;
+                
+                .detail_info_text .detail_line {
+                    width: 3em;
+                    top: -1em;
+                    left: 0;
+                    background-color: #c4c4c4;
+                }
+            }
+        } 
+        
+
+
+        .detail_main {
+
+            .shots {
+                padding: 3em 3em;
+            }
+
+            .slider {
+                padding: 2em 4em;
+                font-size: 16px;
+                
+                .slider_inner {
+                    padding: 0 0em;
+                }
+            
+                .swiper-container .swiper-wrapper .swiper-slide {
+                    width: 88% !important;
+                }
+
+                .swiper-button-prev {
+                    width: 1.2em;
+                    height: 1.2em;
+                    margin-top: 0;
+                    transform: translateY(-50%);
+                    left: -2em !important;
+                }
+
+                .swiper-button-next {
+                    width: 1.2em;
+                    height: 1.2em;
+                    margin-top: 0;
+                    transform: translateY(-50%);
+                    right: -2em !important;
+                }
+
+                /// -- swiper -- ///
+            }
+        }
+
+
+        .detail_bottom {
+            padding: 7em 3em 4em;
+            font-size: 13px;
+            
+            .detail_link {
+                position: absolute;
+                top: 3em;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .detail_btn {
+                margin-top: 0;
+                font-size: 24px;
+                
+                .detail_btn_title {
+                    display: none;
+                }
+
+                &.prev {
+                    padding-right: 10px;
+                }
+
+                &.next {
+                    padding-left: 10px;
+                }
+                
+                &.prev:before, 
+                &.next:before, {
+                    display: none;
+                }
+            } 
+        }
+    }
+    
+}
+
+
+// =============================================
+
+
+@include mo-sm {
+    .article_detail .detail_main .slider {
+        padding: 0 3em;
+    }
+    .article_detail .detail_bottom {
+        font-size: 12px;
+    }
+}

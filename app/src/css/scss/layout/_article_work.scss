@@ -97,6 +97,7 @@
 
                     .caption_desc {
                         @include font-noto;
+                        letter-spacing: -0.01rem;
                     }
                 }
                 
