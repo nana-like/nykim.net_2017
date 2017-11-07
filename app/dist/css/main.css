@@ -653,12 +653,12 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 		.article_detail .detail_main .shots { padding: 3em 3em; }
 		.article_detail .detail_main .slider { padding: 2em 4em; font-size: 16px; }
 		.article_detail .detail_main .slider .slider_inner { padding: 0 0em; }
-		.article_detail .detail_main .slider .swiper-container .swiper-wrapper .swiper-slide { width: 88% !important; }
-		.article_detail .detail_main .slider .swiper-button-prev { width: 1.2em; height: 1.2em; margin-top: 0; transform: translateY(-50%); left: -2em !important; }
-		.article_detail .detail_main .slider .swiper-button-next { width: 1.2em; height: 1.2em; margin-top: 0; transform: translateY(-50%); right: -2em !important; }
+		.article_detail .detail_main .slider .swiper-container .swiper-wrapper .swiper-slide { width: 85% !important; }
+		.article_detail .detail_main .slider .swiper-button-prev { width: 1em; height: 1em; margin-top: 0; transform: translateY(-50%); left: -2.2em !important; }
+		.article_detail .detail_main .slider .swiper-button-next { width: 1em; height: 1em; margin-top: 0; transform: translateY(-50%); right: -2.2em !important; }
 		.article_detail .detail_bottom { padding: 8em 3em 3em; font-size: 13px; }
 		.article_detail .detail_bottom .detail_link { position: absolute; top: 3em; left: 50%; transform: translateX(-50%); }
-		.article_detail .detail_bottom .detail_btn { margin-top: 0; font-size: 24px; }
+		.article_detail .detail_bottom .detail_btn { margin-top: 0; font-size: 18px; }
 		.article_detail .detail_bottom .detail_btn .detail_btn_title { display: none; }
 		.article_detail .detail_bottom .detail_btn.prev { padding-right: 10px; }
 		.article_detail .detail_bottom .detail_btn.next { padding-left: 10px; }

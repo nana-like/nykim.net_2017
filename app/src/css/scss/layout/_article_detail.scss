@@ -503,23 +503,23 @@
                 }
             
                 .swiper-container .swiper-wrapper .swiper-slide {
-                    width: 88% !important;
+                    width: 85% !important;
                 }
 
                 .swiper-button-prev {
-                    width: 1.2em;
-                    height: 1.2em;
+                    width: 1em;
+                    height: 1em;
                     margin-top: 0;
                     transform: translateY(-50%);
-                    left: -2em !important;
+                    left: -2.2em !important;
                 }
 
                 .swiper-button-next {
-                    width: 1.2em;
-                    height: 1.2em;
+                    width: 1em;
+                    height: 1em;
                     margin-top: 0;
                     transform: translateY(-50%);
-                    right: -2em !important;
+                    right: -2.2em !important;
                 }
 
                 /// -- swiper -- ///
@@ -540,7 +540,7 @@
 
             .detail_btn {
                 margin-top: 0;
-                font-size: 24px;
+                font-size: 18px;
                 
                 .detail_btn_title {
                     display: none;
