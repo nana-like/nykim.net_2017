@@ -56,6 +56,12 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .inner { position: relative; }
 
+.btn_effect:before { display: block; position: absolute; top: 0; left: 0; bottom: 0; right: 0; margin: auto; width: 100%; height: 1px; content: '.'; color: transparent; background-color: #fff; opacity: 0; transition: height .5s, opacity .5s; }
+
+.btn_effect:hover span { color: #222; }
+
+.btn_effect:hover:before { opacity: 1; height: 100%; transition: height .5s, opacity .5s; }
+
 /* 
 *   FONT FACE
 */
@@ -156,7 +162,9 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 		.header .fixed .menu .menu_burger { width: 26px; height: 18px; right: 10px; } }
 
 /* gnb */
-.gnb { z-index: 200; display: none; width: 100%; height: 100%; min-height: 490px; position: fixed; top: 0; left: 0; text-align: center; background-color: #fafafa; }
+.gnb.open { opacity: 1; bottom: 0; transition: all 0.65s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
+
+.gnb { opacity: 0; z-index: 200; position: fixed; overflow: hidden; width: 100%; height: auto; top: 0; left: 0; right: 0; bottom: 100%; text-align: center; transition: all 0.65s cubic-bezier(0.785, 0.135, 0.15, 0.86); background-color: #fafafa; }
 
 .gnb .nav { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 390px; margin-top: -2em; }
 
@@ -484,6 +492,8 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .hero .hero_center .hero_link { display: inline-block; position: relative; width: auto; height: 3em; padding: 0 2.5em 0 1.5em; line-height: 3em; color: #fff; letter-spacing: 0.05rem; border: 1px solid #fff; transition: margin-bottom .5s; margin-bottom: 0.8em; }
 
+.hero .hero_center .hero_link span { position: relative; z-index: 2; }
+
 .hero .hero_center .hero_link:after { display: block; position: absolute; top: 50%; right: 1em; content: '&'; transform: translateY(-50%); }
 
 .hero .hero_center .hero_scroll { color: rgba(255, 255, 255, 0.8); font-weight: 300; font-size: 95%; letter-spacing: 0.07rem; }
@@ -615,6 +625,8 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 .article_detail .detail_bottom .detail_btn:hover:before { opacity: 0; }
 
 .article_detail .detail_bottom .detail_link { display: inline-block; position: relative; width: auto; height: 3em; padding: 0 2.5em 0 1.5em; line-height: 3em; color: #fff; letter-spacing: 0.05rem; border: 1px solid #fff; transition: margin-bottom .5s; border-color: #111f6f; color: #111f6f; }
+
+.article_detail .detail_bottom .detail_link span { position: relative; z-index: 2; }
 
 .article_detail .detail_bottom .detail_link:after { display: block; position: absolute; top: 50%; right: 1em; content: '&'; transform: translateY(-50%); }
 
