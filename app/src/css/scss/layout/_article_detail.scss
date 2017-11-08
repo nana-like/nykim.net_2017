@@ -176,18 +176,23 @@
     
     
     .detail_bottom {
-        @include display-flex;
-        position: relative;
-        align-items: center;
-        justify-content: space-between;
-        text-transform: uppercase;
-        box-sizing: border-box;
-        max-width: 1920px;
         margin: 1em auto;
-        padding: 5em ($pd-lg + 2em) 5em;
-        font-size: 18px;
+        padding: 0 6em;
         border-top: 1px solid #e3e3e3;
         border-bottom: 1px solid #e3e3e3;
+        
+        .bottom_inner {
+            @include display-flex;
+            position: relative;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: uppercase;
+            box-sizing: border-box;
+            max-width: 1920px;
+            margin: 0 auto;
+            padding: 5em 0;
+            font-size: 18px;
+        }
         
         .detail_btn {
             position: relative;
@@ -339,7 +344,7 @@
 
 
         .detail_bottom {
-            padding: 5em $pd-md;
+            padding: 0em $pd-md;
             font-size: 16px;
 
             .detail_btn {
@@ -431,7 +436,7 @@
 
 
         .detail_bottom {
-            padding: 5em $pd-tb;
+            padding: 0em $pd-tb;
             font-size: 15px;
 
             .detail_btn {
@@ -528,30 +533,36 @@
 
 
         .detail_bottom {
-            padding: 8em 3em 3em;
-            font-size: 13px;
+            padding: 2em 0;
+            
+            .bottom_inner {
+                padding: 0 0 3em;
+            }
             
             .detail_link {
-                position: absolute;
-                top: 3em;
+                display: block;
                 left: 50%;
                 transform: translateX(-50%);
+                font-size: 14px;
+                
             }
 
             .detail_btn {
+                position: absolute;
+                bottom: 0;
                 margin-top: 0;
-                font-size: 18px;
+                font-size: 22px;
                 
                 .detail_btn_title {
                     display: none;
                 }
 
                 &.prev {
-                    padding-right: 10px;
+                    left: 1.2em;
                 }
 
                 &.next {
-                    padding-left: 10px;
+                    right: 1.2em;
                 }
                 
                 &.prev:before, 
@@ -567,12 +578,9 @@
 
 // =============================================
 
-
-@include mo-sm {
-    .article_detail .detail_main .slider {
-        padding: 0 3em;
-    }
-    .article_detail .detail_bottom {
+@include mo-sm {     // mo-sm : ~375px
+    .article_detail .detail_bottom .detail_link {
         font-size: 12px;
+        //letter-spacing: -0.01rem;
     }
 }

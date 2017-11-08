@@ -299,6 +299,7 @@
                 
                 .social_item {
                     font-size: 14px;
+                    margin-left: 1.5em;
                 }
             }
             
@@ -314,7 +315,7 @@
 
 // =============================================
 
-@include mo-sm {     // mob-lg : ~375px
+@include mo-sm {     // mo-sm : ~375px
     .footer {
         
         
