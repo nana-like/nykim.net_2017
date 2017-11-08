@@ -165,25 +165,20 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 		.header .fixed .menu { top: 30px; right: 28px; }
 		.header .fixed .menu .menu_burger { width: 26px; height: 18px; right: 10px; } }
 
-<<<<<<< HEAD
 /*
 *   gnb
 */
-.gnb { z-index: 200; display: none; width: 100%; height: 100%; min-height: 490px; position: fixed; top: 0; left: 0; text-align: center; background-color: #fafafa; }
-=======
-/* gnb */
 .gnb.open { opacity: 1; bottom: 0; transition: all 0.65s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
-.gnb { opacity: 0; z-index: 200; position: fixed; overflow: hidden; width: 100%; height: auto; top: 0; left: 0; right: 0; bottom: 100%; text-align: center; transition: all 0.65s cubic-bezier(0.785, 0.135, 0.15, 0.86); background-color: #fafafa; }
->>>>>>> 5e2d750f25099f3d78a9ad25d1a2c5d358e33d9e
+.gnb { opacity: 0; z-index: 200; position: fixed; overflow: hidden; width: 100%; height: auto; top: 0; left: 0; right: 0; bottom: 100%; text-align: center; transition: all 0.65s cubic-bezier(0.785, 0.135, 0.15, 0.86); background-color: #f2f2f2; }
 
 .gnb .nav { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 390px; margin-top: -2em; }
 
-.gnb .nav .menu_item { text-align: center; margin-top: 1.8em; }
+.gnb .nav .menu_item { text-align: center; margin-top: 3%; }
 
 .gnb .nav .menu_item a { display: block; color: #c5c3c0; font-family: 'Lato'; font-weight: 700; text-transform: uppercase; }
 
-.gnb .nav .menu_item:after { opacity: 0; display: block; margin-top: -4px; letter-spacing: 1px; color: #ddd; font-weight: 300; text-transform: uppercase; transition: opacity .3s; }
+.gnb .nav .menu_item:after { opacity: 0; display: block; margin-top: -4px; letter-spacing: 1px; color: #cccccc; font-weight: 300; text-transform: uppercase; transition: opacity .3s; }
 
 .gnb .nav .menu_item:hover a { color: #8cddeb; }
 
@@ -209,9 +204,13 @@ html, body { overflow-x: hidden; width: 100%; min-width: 100%; font-size: 100%; 
 
 .gnb .contact .contact_link:hover .contact_info { color: #ffde7d; }
 
-@media screen and (min-width: 1601px) { .gnb .nav .menu_item a { font-size: 70px; }
+@media screen and (min-width: 1921px) { .gnb .nav .menu_item a { font-size: 70px; }
 		.gnb .nav .menu_item:after { font-size: 14px; }
 		.gnb .contact .contact_link { font-size: 19px; } }
+
+@media screen and (min-width: 1601px) { .gnb .nav .menu_item a { font-size: 76px; }
+		.gnb .nav .menu_item:after { font-size: 15px; }
+		.gnb .contact .contact_link { font-size: 20px; } }
 
 @media screen and (min-width: 1201px) and (max-width: 1600px) { .gnb .nav .menu_item a { font-size: 64px; }
 		.gnb .nav .menu_item:after { font-size: 13px; }

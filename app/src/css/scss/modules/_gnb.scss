@@ -23,7 +23,7 @@
     bottom: 100%;
     text-align: center;
     transition: all .65s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-    background-color: #fafafa;
+    background-color: #f2f2f2;
     
     .nav {
         @include display-flex;
@@ -36,7 +36,7 @@
         
         .menu_item {
             text-align: center;
-            margin-top: 1.8em;
+            margin-top: 3%;
             
             a {
                 display: block;
@@ -51,7 +51,7 @@
                 display: block;
                 margin-top: -4px;
                 letter-spacing: 1px;
-                color: #ddd;
+                color: #cccccc;
                 font-weight: 300;
                 text-transform: uppercase;
                 transition: opacity .3s;
@@ -139,7 +139,7 @@
 /////////////////
 
 
-@include pc-md {     // pc-md : 1601px~
+@include pc-lg {     
     .gnb {
         .nav {
             //height: 85%;
@@ -155,6 +155,29 @@
 
             .contact .contact_link {
                 font-size: 19px;
+            }
+
+        } // end of .gnb
+} 
+
+// =============================================
+
+@include pc-md {     // pc-md : ~1600px
+    .gnb {
+        .nav {
+            //height: 85%;
+
+                .menu_item a { //메뉴 아이템 폰트 크기
+                    font-size: 76px;
+                }
+
+                .menu_item:after { //롤오버시 나오는 문구 크기
+                    font-size: 15px;
+                }
+            } //end of .nav
+
+            .contact .contact_link {
+                font-size: 20px;
             }
 
         } // end of .gnb
