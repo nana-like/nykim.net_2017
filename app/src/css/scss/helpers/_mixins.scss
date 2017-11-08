@@ -138,6 +138,11 @@
         letter-spacing: 0.05rem;
         border: 1px solid #fff;
         transition: margin-bottom .5s;
+    
+        span {
+            position: relative;
+            z-index: 2;
+        }
 
         &:after { //임시 (이미지 교체 예정)
             display: block;
