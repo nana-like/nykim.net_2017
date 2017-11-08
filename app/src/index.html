@@ -25,10 +25,6 @@
 	
 	<title>NY KIM (TEST)</title>
 	
-	<script src="https://code.jquery.com/jquery.min.js"></script>
-	<script src="js/footer.js"></script>
-	<script src="js/header.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
@@ -143,92 +139,112 @@
             </h2>
             <i class="title_sm">Featured Work</i>
             <div class="work_wrap">
-                <ul class="work_list">
-                    <li class="work_item"> <!-- li는 자바스크립트로 뿌릴 예정 -->
-                        <figure>
-                            <img src="images/temp_09.png" alt="image" class="work_image"/>
-                            <figcaption class="work_caption">
-                                <div class="caption_textWrap">
-                                    <strong class="caption_title">Coinone Admin</strong>
-                                    <p class="caption_desc">코인원의 어드민 유저를 위한 관리자 페이지</p>
-                                </div>
-                                <a href="#"></a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="work_item"> <!-- li는 자바스크립트로 뿌릴 예정 -->
-                        <figure>
-                            <img src="images/temp_05.png" alt="image" class="work_image"/>
-                            <figcaption class="work_caption external">
-                                <div class="caption_textWrap">
-                                    <strong class="caption_title">3M HCA</strong>
-                                    <p class="caption_desc">반응형 | 웹퍼블리싱 | 구축&middot;유지보수</p>
-                                </div>
-                                <a href="#"></a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="work_item"> <!-- li는 자바스크립트로 뿌릴 예정 -->
-                        <figure>
-                            <img src="images/temp_03.png" alt="image" class="work_image"/>
-                            <figcaption class="work_caption external">
-                                <div class="caption_textWrap">
-                                    <strong class="caption_title">SBI BANK</strong>
-                                    <p class="caption_desc">웹앱 | 웹퍼블리싱 | 유지보수</p>
-                                </div>
-                                <a href="#"></a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="work_item"> <!-- li는 자바스크립트로 뿌릴 예정 -->
-                        <figure>
-                            <img src="images/temp_00.png" alt="image" class="work_image"/>
-                            <figcaption class="work_caption external">
-                                <div class="caption_textWrap">
-                                    <strong class="caption_title">Old Portfolio</strong>
-                                    <p class="caption_desc">과거 포트폴리오 | 웹퍼블리싱 | 구축 </p>
-                                </div>
-                                <a href="#"></a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="work_item"> <!-- li는 자바스크립트로 뿌릴 예정 -->
-                        <figure>
-                            <img src="images/temp_01.png" alt="image" class="work_image"/>
-                            <figcaption class="work_caption">
-                                <div class="caption_textWrap">
-                                    <strong class="caption_title">3M VR Page</strong>
-                                    <p class="caption_desc">웹퍼블리싱 | 구축</p>
-                                </div>
-                                <a href="#"></a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="work_item"> <!-- li는 자바스크립트로 뿌릴 예정 -->
-                        <figure>
-                            <img src="images/temp_04.png" alt="image" class="work_image"/>
-                            <figcaption class="work_caption">
-                                <div class="caption_textWrap">
-                                    <strong class="caption_title">ICON Randing</strong>
-                                    <p class="caption_desc">웹퍼블리싱 | 구축</p>
-                                </div>
-                                <a href="#"></a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="work_item"> <!-- li는 자바스크립트로 뿌릴 예정 -->
-                        <figure>
-                            <img src="images/temp_08.png" alt="image" class="work_image"/>
-                            <figcaption class="work_caption external">
-                                <div class="caption_textWrap">
-                                    <strong class="caption_title">Old Portfolio</strong>
-                                    <p class="caption_desc">과거 포트폴리오 | 웹퍼블리싱 | 구축 </p>
-                                </div>
-                                <a href="#"></a>
-                            </figcaption>
-                        </figure>
-                    </li>
-                </ul>
+                <div class="work_list" data-columns="3">
+                       <!-- work_item -->
+                        <div class="work_item">
+                            <figure>
+                                <img src="images/temp_09.png" alt="image" class="work_image" />
+                                <figcaption class="work_caption">
+                                    <div class="caption_textWrap">
+                                        <strong class="caption_title">Coinone Admin</strong>
+                                        <p class="caption_desc">코인원의 관리자 계정 페이지</p>
+                                    </div>
+                                    <a href="#"></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- //work_item -->
+                       <!-- work_item -->
+                        <div class="work_item">
+                            <figure>
+                                <img src="images/temp_05.png" alt="image" class="work_image" />
+                                <figcaption class="work_caption external">
+                                    <div class="caption_textWrap">
+                                        <strong class="caption_title">3M HCA</strong>
+                                        <p class="caption_desc">반응형 | 웹퍼블리싱 | 구축&middot;유지보수</p>
+                                    </div>
+                                    <a href="#"></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- //work_item -->
+                       <!-- work_item -->
+                        <div class="work_item">
+                            <figure>
+                                <img src="images/temp_08.png" alt="image" class="work_image" />
+                                <figcaption class="work_caption external">
+                                    <div class="caption_textWrap">
+                                        <strong class="caption_title">Old Portfolio</strong>
+                                        <p class="caption_desc">과거 포트폴리오 | 웹퍼블리싱 | 구축 </p>
+                                    </div>
+                                    <a href="#"></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <!-- //work_item -->
+                        <div class="work_item">
+                            <figure>
+                                <img src="images/temp_03.png" alt="image" class="work_image" />
+                                <figcaption class="work_caption external">
+                                    <div class="caption_textWrap">
+                                        <strong class="caption_title">SBI BANK</strong>
+                                        <p class="caption_desc">웹앱 | 웹퍼블리싱 | 유지보수</p>
+                                    </div>
+                                    <a href="#"></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <div class="work_item">
+                            <figure>
+                                <img src="images/temp_06.png" alt="image" class="work_image" />
+                                <figcaption class="work_caption external">
+                                    <div class="caption_textWrap">
+                                        <strong class="caption_title">Old Portfolio</strong>
+                                        <p class="caption_desc">과거 포트폴리오 | 웹퍼블리싱 | 구축 </p>
+                                    </div>
+                                    <a href="#"></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="work_item">
+                            <figure>
+                                <img src="images/temp_04.png" alt="image" class="work_image" />
+                                <figcaption class="work_caption">
+                                    <div class="caption_textWrap">
+                                        <strong class="caption_title">ICON Randing</strong>
+                                        <p class="caption_desc">웹퍼블리싱 | 구축</p>
+                                    </div>
+                                    <a href="#"></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="work_item">
+                            <figure>
+                                <img src="images/temp_07.png" alt="image" class="work_image" />
+                                <figcaption class="work_caption">
+                                    <div class="caption_textWrap">
+                                        <strong class="caption_title">3M VR Page</strong>
+                                        <p class="caption_desc">웹퍼블리싱 | 구축</p>
+                                    </div>
+                                    <a href="#"></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="work_item">
+                            <figure>
+                                <img src="images/temp_01.png" alt="image" class="work_image" />
+                                <figcaption class="work_caption">
+                                    <div class="caption_textWrap">
+                                        <strong class="caption_title">3M VR Page</strong>
+                                        <p class="caption_desc">웹퍼블리싱 | 구축</p>
+                                    </div>
+                                    <a href="#"></a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                </div>
+               <!-- //work_list -->
             </div>
             <!-- //work_wrap -->
         </div>
@@ -268,5 +284,14 @@
     </div>
     
 </footer>
+   
+
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+	<script src="js/footer.js"></script>
+	<script src="js/header.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="js/salvattore.min.js"></script>
+    
 </body>
+
 </html>

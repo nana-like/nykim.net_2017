@@ -35,25 +35,39 @@
         background-color: $color-bg;
     }
     
+
     .work_wrap .work_list { //ul
+        position: relative;
+        width: 100%;
         max-width: 1920px;
         box-sizing: border-box;
         margin: 0 auto;
         padding: 1em 3.5em;
         //outline: 3px solid navy;
         padding-top: 5em;
-        -webkit-column-count: 3;
-        -webkit-column-gap: 1em; 
-        -moz-column-count: 3; 
-        -moz-column-gap: 1em; 
-        column-count: 3; 
-        column-gap: 1em;
         transition: margin-top .5s;
         
-        .work_item { //li
+        .column {
+            float: left;
+            padding: 1em 0.5em;
+            box-sizing: border-box;
+        }
+        
+        .size-1of3 {
+            width: 33.333%;
+        }
+        .size-1of2 {
+            width: 50%;
+        }
+        .size-1of1 {
+            width: 100%;
+        }
+        
+        
+        .work_item { //개별 목록
             position: relative;
             width: 100%;
-            height: 100%;
+            height: auto;
             margin-bottom: 1em;
             background-color: #000;
             transition: margin-bottom .5s;
@@ -168,7 +182,20 @@
                 }
             }
         }
+    } //end of .work_list
+    
+    
+    
+    .work_wrap .work_list[data-columns]::before {
+        content: '3 .column.size-1of3';
     }
+    
+    .work_wrap .work_list[data-columns]:after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+    
 
 }
 
@@ -195,7 +222,13 @@
         .work_item {
             font-size: 24px; // 이미지 간격 조절
         }
-
+        
+            
+        .work_wrap .work_list[data-columns]::before {
+            content: '3 .column.size-1of3';
+        }
+        
+        
         .caption_title {
             font-size: 42px; // 캡션 타이틀 조절
         }
@@ -220,11 +253,22 @@
         
         .work_wrap {
             font-size: 38px;
+            
+            .work_list {
+                .column {
+                    padding: 0em 0.5em;
+                }
+            }
         }
         
         .work_wrap .work_list,
         .work_item {
             font-size: 22px;
+        }
+        
+            
+        .work_wrap .work_list[data-columns]::before {
+            content: '2 .column.size-1of2';
         }
 
         .caption_title {
@@ -234,6 +278,8 @@
         .caption_desc {
             font-size: 14px;
         }
+        
+        
         
     } 
     
@@ -250,15 +296,21 @@
         
         .work_wrap {
             font-size: 34px;
+                        
+            .work_list {
+                .column {
+                    padding: 0em 0.3em;
+                }
+            }
         }
         
+        
         .work_wrap .work_list {
-            -moz-column-count: 2;
-            -webkit-column-count: 2;
-            column-count: 2;
+            
             font-size: 18px;
             
             .work_item  {
+                margin-bottom: 0.6em;
                 font-size: 18px;
             }
             
@@ -280,6 +332,11 @@
                 
             }
         }
+                
+            
+        .work_wrap .work_list[data-columns]::before {
+            content: '2 .column.size-1of2';
+        }
         
     } 
     
@@ -297,12 +354,12 @@
         
         .work_wrap {
             font-size: 28px;
+
         }
         
+        
         .work_wrap .work_list {
-            -moz-column-count: 1;
-            -webkit-column-count: 1;
-            column-count: 1;
+            
             font-size: 14px;
             
             .work_item  {
@@ -333,6 +390,12 @@
             }
             
         }
+        
+                    
+        .work_wrap .work_list[data-columns]::before {
+            content: '1 .column.size-1of1';
+        }
+
 
         .work_wrap .work_list .work_item .work_caption:before,
         .work_wrap .work_list .work_item .work_caption:after {
