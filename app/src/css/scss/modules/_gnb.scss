@@ -7,12 +7,12 @@
 .gnb.open {
     opacity: 1;
     bottom: 0;
-    transition: all .65s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: all .5s cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .gnb {
     opacity: 0;
-    z-index: 200;
+    z-index: 300;
     position: fixed;
     overflow: hidden;
     width: 100%;

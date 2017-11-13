@@ -18,6 +18,7 @@
     width: 100%;
     height: auto;
     font-size: 16px;
+    box-sizing: border-box;
     
     .footer_title {
         padding-top: 1em;
@@ -64,7 +65,7 @@
             }
             
             &:hover {
-                color: #ffd563;
+                color: #ffcd47;
                 transition: color .2s ease-in-out;
             }
             
