@@ -66,6 +66,8 @@
         background-size: 400px;
         background-repeat: no-repeat;
         background-position: -10% bottom;
+       // outline: 4px solid #ff0000;
+       // background-color: rgba(255, 255, 255, 0.28);
     }
     
     .visual_tree02 {
@@ -76,6 +78,7 @@
         background-size: 400px;
         background-repeat: no-repeat;
         background-position: 0 bottom;
+        outline: 4px solid #75bf3e;
     }
     
     .visual_fog01 {
@@ -87,6 +90,7 @@
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: 0 110%;
+        outline: 4px solid #9b2f8f;
     }
     
     .visual_fog02 {
@@ -98,6 +102,7 @@
         background-size: 100%;
         background-repeat: no-repeat;
         background-position: 0 100%;
+        outline: 4px solid gold;
     }
     
     .scroll_text { //SCROLL DOWN 문구
