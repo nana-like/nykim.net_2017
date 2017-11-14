@@ -27,25 +27,25 @@ $(function(){
                 .addLabel("label_01")
                 .to(
                     $tree.tr02, //왼쪽 앞
-                    2, //듀레이션
-                    {left: -80, top: 80}
+                    3, //듀레이션
+                    {left: -80, top: 80, ease: Power1.easeOut}
                 )
                 .to(
                     $tree.tr01, //왼쪽 뒤
-                    3,
-                    {left: -40, top: 40}, //왼쪽 아래로 이동
+                    4,
+                    {left: -40, top: 40, ease: Power2.easeOut}, //왼쪽 아래로 이동
                     "label_01+=0.3"
                 )
                 .to(
                     $tree.tr04, //오른쪽 앞
-                    2,
-                    {right: -70, top: 70}, //오른쪽 아래로 이동
+                    3,
+                    {right: -70, top: 70, ease: Power1.easeOut}, //오른쪽 아래로 이동
                     "label_01"
                 )
                 .to(
                     $tree.tr03, //왼쪽 뒤
-                    3,
-                    {right: -30, top: 30}, //왼쪽 아래로 이동
+                    4,
+                    {right: -30, top: 30, ease: Power2.easeOut}, //왼쪽 아래로 이동
                     "label_01+=0.3"
                 );
                /* .to(
