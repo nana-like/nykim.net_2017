@@ -15,6 +15,81 @@
     width: 100%;
     min-height: 600px;
     max-height: 100%;
+    padding-top: 80px;
+    
+    .inner {
+        transition: margin .5s;
+        position: relative;
+        margin-top: 3em;
+        width: 100%;
+        height: auto;
+    }
+    
+    .about_header {
+        outline:3px solid purple;
+    }
+    
+    .about_wrap{
+        @include display-flex;
+        position: relative;
+        max-width: 1920px;
+        margin: -3em auto 0;
+        padding: 6em 0 2em;
+        text-align: center;
+        transition: padding .5s;
+        background-color: $color-bg;
+        
+        .about_col_left {
+            width: 30%;
+            background-color: rgba(255, 176, 176, 0.45);
+        }
+        
+        .about_col_right {
+            width: 70%;
+            background-color: rgba(117, 191, 255, 0.45);
+            
+            .about_image {
+                position: relative;
+                width: 100%;
+                height: auto;
+                img {
+                    display: block;
+                }
+            }
+            
+            .about_text {
+                outline:3px solid #fd3e87;
+                height: auto;
+                text-align: left;
+                font-size: 18px;
+                line-height: 180%;
+            }
+            
+            .about_text_para {
+                margin-bottom: 1.3em;
+            }
+        }
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+.article_about {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    max-height: 100%;
     padding-top: 12em;
     
     .inner {
@@ -27,6 +102,7 @@
     }
      
     .about_header {
+        outline:3px solid purple;
         .title {
             top: -1.3em;
         }
@@ -46,47 +122,31 @@
         font-size: 24px;
 
         .motto_left {
+            outline:3px solid #5d8fb4;
             margin-right: 4%;
+            
+            .motto_text_left {
+                outline:3px solid #0adb7b;
             text-align: right;
             line-height: 150%;
-        }
-
-        .motto_right {
-            width: 70%;
-            max-width: 800px;
+            }
             
-            .motto_image {
-                position: relative;
-                top: 2%;
-                display: block;
-                width: 100%;
-                height: auto;
-                margin: 4% 0 0 4%;
-            }
-        }
+            .about_link {
+                outline:3px solid #5740d6;
+                .social {
+                    @include display-flex;
+                    justify-content: center;
 
-    } //end of .about_motto
-    
-    .about_main {
-        @include display-flex;
-        justify-content: center;
-        position: relative;
-        margin: 0 auto;
-        
-        .about_link {
-            margin-right: 4%;
-            .social {
-                @include display-flex;
-                justify-content: center;
-                
-                .social_item {
-                    @include social-item(2em);
+                    .social_item {
+                        @include social-item(2em);
+                    }
                 }
-            }
-        } //end of .about_link
-        
+                      
         .more {
+            outline:3px solid #463f6a;
             position: relative;
+            
+            margin-right: 4%;
             margin-top: 4.2em;
             font-size: 15px;
         
@@ -129,9 +189,56 @@
                 }
             }
         }
+                
+            } //end of .about_link
+            
+        }
+
+        .motto_right {
+            outline:3px solid #fdd13e;
+            width: 70%;
+            max-width: 800px;
+            
+            .motto_image {
+                position: relative;
+                top: 2%;
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 4% 0 0 4%;
+            }
+            
+            .motto_text_right {
+                outline:3px solid #fd3e87;
+                width: 100%;
+                height: auto;
+                margin: 4% 0 0 4%;
+                text-align: left;
+                font-size: 18px;
+                line-height: 180%;
+            }
+            
+            .about_text_para {
+                margin-bottom: 1.3em;
+            }
+        }
+
+    } //end of .about_motto
+    
+    
+    .about_main {
+        outline:3px solid #40d6d0;
+        @include display-flex;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
+
+  
         
         .about_text {
-            width: 64%;
+            outline:3px solid #fd3e87;
+            width: 70%;
+            max-width: 800px;
             margin: 0 0 7em 5%;
             text-align: left;
             font-size: 18px;
@@ -155,4 +262,4 @@
         
     } //end of .about_main
     
-}
+}*/

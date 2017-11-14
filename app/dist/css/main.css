@@ -86,9 +86,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 @font-face { font-family: 'NotoSans'; font-style: normal; font-weight: 400; src: url(../font/NotoSansLight.eot?#iefix) format("embedded-opentype"), url(../font/NotoSansLight.woff2) format("woff2"), url(../font/NotoSansLight.woff) format("woff"); }
 
-/*
-*   title for section, aricle
-*/
+/* title for section, aricle */
 .title_line { position: absolute; top: -3.5em; left: 50%; display: block; content: ''; width: 1px; height: 5em; background-color: #67ceeb; }
 
 .title { position: relative; color: #8cddeb; z-index: 1; text-align: center; padding-top: 0.5em; font-size: 60px; font-weight: 700; transition: font-size .5s; }
@@ -120,9 +118,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.article_hello .more_link, .article_work .more_link { font-size: 12px; }
 		.article_hello .icon_circle, .article_work .icon_circle { font-size: 10px; } }
 
-/*
-*   fixed (logo, menu)
-*/
+/* fixed (logo, menu) */
 .header { z-index: 300; width: 100%; position: fixed; top: 0; left: 0; }
 
 .header .fixed { position: relative; width: 100%; height: 40px; max-width: 1920px; margin: 0 auto; }
@@ -167,9 +163,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.header .fixed .menu { top: 30px; right: 28px; }
 		.header .fixed .menu .menu_burger { width: 26px; height: 18px; right: 10px; } }
 
-/*
-*   gnb
-*/
+/* gnb */
 .gnb.open { opacity: 1; bottom: 0; transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
 .gnb { opacity: 0; z-index: 300; position: fixed; overflow: hidden; width: 100%; height: auto; top: 0; left: 0; right: 0; bottom: 100%; text-align: center; transition: all 0.65s cubic-bezier(0.785, 0.135, 0.15, 0.86); background-color: #f2f2f2; }
@@ -234,9 +228,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 @media screen and (max-width: 375px) { .gnb .contact .contact_link { width: 200px; font-size: 13px; }
 		.gnb .contact .contact_link .contact_heading { width: 60px; margin-right: 0.6em; } }
 
-/*
-*   visual
-*/
+/* visual */
 .visual { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 740px; margin: 0 auto; background-image: url(../images/visual_lg.jpg); background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; }
 
 .visual .inner { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; width: 100%; height: 100%; background-color: rgba(36, 33, 33, 0.46); }
@@ -263,9 +255,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .visual .scroll_text:after { top: 0rem; }
 
-/*
-*   footer
-*/
+/* footer */
 .footer.on { opacity: 1; }
 
 .footer { position: fixed; z-index: 0; left: 0; right: 0; bottom: 0; width: 100%; height: auto; font-size: 16px; box-sizing: border-box; }
@@ -355,14 +345,10 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.footer .footer_address .link_phone { margin-top: 1em; }
 		.footer .footer_bottom { font-size: 14px; } }
 
-/*
-*   contents
-*/
+/* contents */
 .contents { z-index: 1; position: relative; width: 100%; height: auto; box-shadow: 0 10px 60px rgba(20, 20, 20, 0.1), 0 10px 50px rgba(30, 30, 30, 0.06); }
 
-/*
-*   article_hello
-*/
+/* article_hello */
 .article_hello { z-index: 1; position: relative; width: 100%; min-height: 800px; max-height: 100%; height: 100vh; background-color: #fafafa; }
 
 .article_hello .inner { transition: margin .5s; position: absolute; top: 50%; width: 100%; height: auto; margin-top: -9em; }
@@ -415,9 +401,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.article_hello .hello_text { font-size: 14px; }
 		.article_hello .more .more_link { padding: 0; font-size: 12px; } }
 
-/*
-*   article_work
-*/
+/* article_work */
 .article_work { position: relative; width: 100%; min-height: 700px; max-height: auto; height: auto; }
 
 .article_work .inner { transition: margin .5s; position: relative; margin-top: 3em; width: 100%; height: auto; }
@@ -511,9 +495,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title { font-size: 22px; }
 		.article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title:before { right: -20px; font-size: 12px; } }
 
-/*
-*   hero (work detail)
-*/
+/* hero (work detail) */
 .hero { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 720px; margin: 0 auto; color: #fff; background-position: 50% 80%; background-repeat: no-repeat; background-size: cover; background-color: #a2a2a2; }
 
 .hero .inner { position: relative; width: 100%; max-width: 1920px; margin: 0 auto; padding: 8% 9em 0 9em; height: 100vh; height: 100%; box-sizing: border-box; }
@@ -601,9 +583,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.hero .hero_bottom { right: 3em; }
 		.hero .hero_bottom .hero_page { font-size: 24px; } }
 
-/*
-*   work detail 
-*/
+/* work detail  */
 .article_detail { position: relative; width: 100%; min-height: 800px; max-height: 100%; height: 100vh; height: 100%; }
 
 .article_detail .detail_top { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; width: auto; height: auto; max-width: 1600px; margin: 0 auto; padding: 1.2em 0 1.2em; box-sizing: border-box; font-size: 68px; }
@@ -727,57 +707,203 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 @media screen and (max-width: 375px) { .article_detail .detail_bottom .detail_link { font-size: 12px; } }
 
+/* article about */
+.article_about { position: relative; width: 100%; min-height: 600px; max-height: 100%; padding-top: 80px; }
+
+.article_about .inner { transition: margin .5s; position: relative; margin-top: 3em; width: 100%; height: auto; }
+
+.article_about .about_header { outline: 3px solid purple; }
+
+.article_about .about_wrap { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; position: relative; max-width: 1920px; margin: -3em auto 0; padding: 6em 0 2em; text-align: center; transition: padding .5s; background-color: #f2f2f2; }
+
+.article_about .about_wrap .about_col_left { width: 30%; background-color: rgba(255, 176, 176, 0.45); }
+
+.article_about .about_wrap .about_col_right { width: 70%; background-color: rgba(117, 191, 255, 0.45); }
+
+.article_about .about_wrap .about_col_right .about_image { position: relative; width: 100%; height: auto; }
+
+.article_about .about_wrap .about_col_right .about_image img { display: block; }
+
+.article_about .about_wrap .about_col_right .about_text { outline: 3px solid #fd3e87; height: auto; text-align: left; font-size: 18px; line-height: 180%; }
+
+.article_about .about_wrap .about_col_right .about_text_para { margin-bottom: 1.3em; }
+
 /*
-*   article about
-*/
-.article_about { position: relative; width: 100%; min-height: 600px; max-height: 100%; padding-top: 12em; }
+.article_about {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    max-height: 100%;
+    padding-top: 12em;
+    
+    .inner {
+        position: relative;
+        //padding-bottom: 2em;
+        //margin: -1.5em auto 0;
+        padding: 0 4rem;
+        text-align: center;
+        background-color: lighten( $color-bg, 2% );
+    }
+     
+    .about_header {
+        outline:3px solid purple;
+        .title {
+            top: -1.3em;
+        }
+        
+        .title_line {
+            top: -8em;
+        }
+    }
 
-.article_about .inner { position: relative; padding: 0 4rem; text-align: center; background-color: #f7f7f7; }
+    .about_motto {
+        @include display-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        outline: 2px solid navy;
+        margin: 0em auto 3em;
+        font-size: 24px;
 
-.article_about .about_header .title { top: -1.3em; }
+        .motto_left {
+            outline:3px solid #5d8fb4;
+            margin-right: 4%;
+            
+            .motto_text_left {
+                outline:3px solid #0adb7b;
+            text-align: right;
+            line-height: 150%;
+            }
+            
+            .about_link {
+                outline:3px solid #5740d6;
+                .social {
+                    @include display-flex;
+                    justify-content: center;
 
-.article_about .about_header .title_line { top: -8em; }
+                    .social_item {
+                        @include social-item(2em);
+                    }
+                }
+                      
+        .more {
+            outline:3px solid #463f6a;
+            position: relative;
+            
+            margin-right: 4%;
+            margin-top: 4.2em;
+            font-size: 15px;
+        
+            &:before {
+                display: block;
+                position: absolute;
+                top: -1.3em;
+                left: 50%;
+                width: 4em;
+                height: 1px;
+                transform: translateX(-50%);
+                background-color: #888;
+                content: '';
+            }
+        
+            .more_link {
+                position: relative;
+                @include font-noto;
+                padding: 0 3em 0 0;
+                letter-spacing: 0.12rem;
+                line-height: 156%;
+                color: #999;
+                text-align: center;    
 
-.article_about .about_motto { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; align-items: center; position: relative; outline: 2px solid navy; margin: 0em auto 3em; font-size: 24px; }
 
-.article_about .about_motto .motto_left { margin-right: 4%; text-align: right; line-height: 150%; }
+                .icon_circle {
+                    @include icon-circle;
+                    position: relative;
+                    margin: 14px auto 0;
 
-.article_about .about_motto .motto_right { width: 70%; max-width: 800px; }
+                    &:after { //임시 (삭제예정))
+                        position: absolute;
+                        top: 24px;
+                        right: 16px;    
+                        width: 20px;
+                        height: 4px;
+                        outline: 1px solid #fff;
+                        content: '';
+                    }
+                }
+            }
+        }
+                
+            } //end of .about_link
+            
+        }
 
-.article_about .about_motto .motto_right .motto_image { position: relative; top: 2%; display: block; width: 100%; height: auto; margin: 4% 0 0 4%; }
+        .motto_right {
+            outline:3px solid #fdd13e;
+            width: 70%;
+            max-width: 800px;
+            
+            .motto_image {
+                position: relative;
+                top: 2%;
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 4% 0 0 4%;
+            }
+            
+            .motto_text_right {
+                outline:3px solid #fd3e87;
+                width: 100%;
+                height: auto;
+                margin: 4% 0 0 4%;
+                text-align: left;
+                font-size: 18px;
+                line-height: 180%;
+            }
+            
+            .about_text_para {
+                margin-bottom: 1.3em;
+            }
+        }
 
-.article_about .about_main { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; position: relative; margin: 0 auto; }
+    } //end of .about_motto
+    
+    
+    .about_main {
+        outline:3px solid #40d6d0;
+        @include display-flex;
+        justify-content: center;
+        position: relative;
+        margin: 0 auto;
 
-.article_about .about_main .about_link { margin-right: 4%; }
-
-.article_about .about_main .about_link .social { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; justify-content: center; }
-
-.article_about .about_main .about_link .social .social_item { overflow: hidden; width: 2em; height: 2em; font-size: 14px; text-indent: -999em; margin-left: 1.3em; }
-
-.article_about .about_main .about_link .social .social_item:first-child { margin-left: 0; }
-
-.article_about .about_main .about_link .social .social_item.social_github { background-image: url(../images/ico_github.svg); background-size: cover; }
-
-.article_about .about_main .about_link .social .social_item.social_codepen { background-image: url(../images/ico_codepen.svg); background-size: cover; }
-
-.article_about .about_main .about_link .social .social_item.social_pinterest { background-image: url(../images/ico_pinterest.svg); background-size: cover; }
-
-.article_about .about_main .about_link .social .social_item a { display: block; width: 100%; height: 100%; }
-
-.article_about .about_main .more { position: relative; margin-top: 4.2em; font-size: 15px; }
-
-.article_about .about_main .more:before { display: block; position: absolute; top: -1.3em; left: 50%; width: 4em; height: 1px; transform: translateX(-50%); background-color: #888; content: ''; }
-
-.article_about .about_main .more .more_link { position: relative; font-family: 'NotoSans', AppleGothic, sans-serif, Helvetica; padding: 0 3em 0 0; letter-spacing: 0.12rem; line-height: 156%; color: #999; text-align: center; }
-
-.article_about .about_main .more .more_link .icon_circle { position: relative; display: block; width: 3.31em; height: 3.31em; margin-left: 0.8em; line-height: 3.31em; border-radius: 50%; background-color: #ffe079; box-shadow: 0 0 0 5px #ffe079; transition: width .5s, height .5s; position: relative; margin: 14px auto 0; }
-
-.article_about .about_main .more .more_link .icon_circle:after { z-index: -10; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; box-shadow: 0 0.5em 0.938em #ccc; content: ''; }
-
-.article_about .about_main .more .more_link .icon_circle:after { position: absolute; top: 24px; right: 16px; width: 20px; height: 4px; outline: 1px solid #fff; content: ''; }
-
-.article_about .about_main .about_text { width: 64%; margin: 0 0 7em 5%; text-align: left; font-size: 18px; line-height: 180%; }
-
-.article_about .about_main .about_text .about_text_para { margin-bottom: 1.3em; }
-
-.article_about .about_main .about_text .about_text_accent { display: inline-block; margin-top: 2em; padding: 2px 8px; color: #fff; font-weight: 400; font-size: 13px; letter-spacing: 0.04rem; background-color: #87d6e2; }
+  
+        
+        .about_text {
+            outline:3px solid #fd3e87;
+            width: 70%;
+            max-width: 800px;
+            margin: 0 0 7em 5%;
+            text-align: left;
+            font-size: 18px;
+            line-height: 180%;
+            
+            .about_text_para {
+                margin-bottom: 1.3em;
+            }
+            
+            .about_text_accent {
+                display: inline-block;
+                margin-top: 2em;
+                padding: 2px 8px;
+                color: #fff;
+                font-weight: 400;
+                font-size: 13px;
+                letter-spacing: 0.04rem;
+                background-color: #87d6e2;
+            }
+        } //end of .about_text
+        
+    } //end of .about_main
+    
+}*/
