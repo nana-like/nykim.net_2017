@@ -49,6 +49,7 @@ $(function(){
     }
     
     function openBurgerMenu(){
+            $gnb.addClass('open'); //GNB배경 보이기
             $burger.addClass('open'); //버거 아이콘 바꾸기
             tl_nav_show.play().timeScale(1); //애니메이션 실행
             $gnb.addClass('open'); //GNB배경 보이기
@@ -97,11 +98,14 @@ $(function(){
         
            setTimeout(function(){
                allowScroll();
-           },500);
+               
+           },520);
         
     }
     
     function initEvent(){
+        
+        $gnb.show();
         
         //타임라인 애니메이션 (GSAP)
         timeline_nav();
@@ -124,7 +128,6 @@ $(function(){
     $(window).on('load',function(){
         init();
         initEvent();
-            
     });
     
     console.log('--->> header.js 끝났습니닷 <<---');
