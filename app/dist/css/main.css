@@ -257,17 +257,17 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .visual .visual_elem { opacity: 1; position: absolute; }
 
-.visual .visual_tree01 { left: 0; width: 22%; height: 100%; max-width: 360px; background-image: url(../images/visual_elem_1.png); background-size: 100%; background-repeat: no-repeat; background-position: -5% bottom; outline: 4px solid #ff0000; }
+.visual .visual_tree01 { left: 0; width: 22%; height: 100%; max-width: 360px; background-image: url(../images/visual_elem_1.png); background-size: 100%; background-repeat: no-repeat; background-position: -5% bottom; }
 
 .visual .visual_tree02 { left: 0; width: 20%; max-width: 280px; height: 100%; background-image: url(../images/visual_elem_2.png); background-size: 100%; background-repeat: no-repeat; background-position: -10% bottom; }
 
-.visual .visual_tree03 { right: 0; width: 22%; max-width: 300px; height: 100%; background-image: url(../images/visual_elem_3.png); background-size: 100%; background-repeat: no-repeat; background-position: 0% bottom; outline: 4px solid #75bf3e; }
+.visual .visual_tree03 { right: 0; width: 22%; max-width: 300px; height: 100%; background-image: url(../images/visual_elem_3.png); background-size: 100%; background-repeat: no-repeat; background-position: 0% bottom; }
 
-.visual .visual_tree04 { right: 0; width: 20%; max-width: 250px; height: 100%; background-image: url(../images/visual_elem_4.png); background-size: 100%; background-repeat: no-repeat; background-position: 0 bottom; outline: 4px solid #626a77; }
+.visual .visual_tree04 { right: 0; width: 20%; max-width: 250px; height: 100%; background-image: url(../images/visual_elem_4.png); background-size: 100%; background-repeat: no-repeat; background-position: 0 bottom; }
 
-.visual .visual_fog01 { animation: visualFog01 28s ease-in-out infinite alternate; right: 0%; opacity: 0.6; width: 70%; height: 100%; background-image: url(../images/visual_elem_5.png); background-size: 90%; background-repeat: no-repeat; background-position: 0 100%; outline: 4px solid #9b2f8f; }
+.visual .visual_fog01 { animation: visualFog01 28s ease-in-out infinite alternate; right: 0%; opacity: 0.6; width: 70%; height: 100%; background-image: url(../images/visual_elem_5.png); background-size: 90%; background-repeat: no-repeat; background-position: 0 100%; }
 
-.visual .visual_fog02 { animation: visualFog02 18s linear infinite alternate; bottom: 15%; left: 0; opacity: 0.25; width: 50%; height: 50%; background-image: url(../images/visual_elem_6.png); background-size: 100%; background-repeat: no-repeat; background-position: 50% 50%; outline: 4px solid #0014ff; }
+.visual .visual_fog02 { animation: visualFog02 18s linear infinite alternate; bottom: 15%; left: 0; opacity: 0.25; width: 50%; height: 50%; background-image: url(../images/visual_elem_6.png); background-size: 100%; background-repeat: no-repeat; background-position: 50% 50%; }
 
 .visual .scroll_text { position: relative; margin-left: -6px; font-family: 'Lato', AppleGothic, sans-serif, Helvetica; font-weight: 300; color: rgba(255, 255, 255, 0.45); font-size: 12px; letter-spacing: 0.12rem; text-transform: uppercase; }
 
