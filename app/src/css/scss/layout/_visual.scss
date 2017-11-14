@@ -11,13 +11,15 @@
 ////////////////
 
 .visual {
+    overflow: hidden;
     position: relative;
     width: 100%;
     max-width: 2560px;
     height: 100vh;
     min-height: 740px;
     margin: 0 auto;
-    background-image:url(../images/visual_lg.jpg);
+   // background-image:url(../images/visual_lg.jpg);
+    background-image:url(../images/visual_blue_1920.png);
     background-position: 50% 80%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,11 +38,17 @@
     .visual_title { //비주얼 h2
         margin-top: -1.5em;
         text-align: center;
+        text-transform: uppercase;
         
         .title_text { //비주얼 문구
             @include font-lato(300);
             font-size: 40px;
             color: rgba(255,255,255,0.8);
+            
+            i {
+                font-style: normal;
+                text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6);
+            }
         }
 
         .title_logo { //비주얼 로고
@@ -58,51 +66,78 @@
         position: absolute;
     }
     
-    .visual_tree01 {
+    .visual_tree01 { //왼쪽 뒤
         left: 0;
-        width: 30%;
+        width: 22%;
         height: 100%;
+        max-width: 360px;
         background-image: url(../images/visual_elem_1.png);
-        background-size: 400px;
+        background-size: 100%;
         background-repeat: no-repeat;
-        background-position: -10% bottom;
-       // outline: 4px solid #ff0000;
-       // background-color: rgba(255, 255, 255, 0.28);
+        background-position: -5% bottom;
+        outline: 4px solid #ff0000;
     }
     
-    .visual_tree02 {
-        right: 0;
-        width: 12%;
+    .visual_tree02 { //왼쪽 앞
+        left: 0;
+        width: 20%;
+        max-width: 280px;
         height: 100%;
         background-image: url(../images/visual_elem_2.png);
-        background-size: 400px;
+        background-size: 100%;
         background-repeat: no-repeat;
-        background-position: 0 bottom;
-        outline: 4px solid #75bf3e;
+        background-position: -10% bottom;
     }
     
-    .visual_fog01 {
-        right: 5%;
-        opacity: 0.4;
-        width: 70%;
+    .visual_tree03 { // 오른쪽 뒤
+        right: 0;
+        width: 22%;
+        max-width: 300px;
         height: 100%;
         background-image: url(../images/visual_elem_3.png);
         background-size: 100%;
         background-repeat: no-repeat;
-        background-position: 0 110%;
-        outline: 4px solid #9b2f8f;
+        background-position: 0% bottom;
+        outline: 4px solid #75bf3e;
     }
     
-    .visual_fog02 {
-        left: 5%;
-        opacity: 0.6;
-        width: 60%;
+    .visual_tree04 { // 오른쪽 앞
+        right: 0;
+        width: 20%;
+        max-width: 250px;
         height: 100%;
         background-image: url(../images/visual_elem_4.png);
         background-size: 100%;
         background-repeat: no-repeat;
+        background-position: 0 bottom;
+        outline: 4px solid #626a77;
+    }
+    
+    .visual_fog01 {
+        @include ani-visualFog01;
+        right: 0%;
+        opacity: 0.6;
+        width: 70%;
+        height: 100%;
+        background-image: url(../images/visual_elem_5.png);
+        background-size: 90%;
+        background-repeat: no-repeat;
         background-position: 0 100%;
-        outline: 4px solid gold;
+        outline: 4px solid #9b2f8f;
+    }
+    
+    .visual_fog02 {
+        @include ani-visualFog02;
+        bottom: 15%;
+        left: 0;
+        opacity: 0.25;
+        width: 50%;
+        height: 50%;
+        background-image: url(../images/visual_elem_6.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        outline: 4px solid #0014ff;
     }
     
     .scroll_text { //SCROLL DOWN 문구

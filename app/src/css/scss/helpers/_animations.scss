@@ -33,12 +33,33 @@
 
 }
 
+@mixin key-visualFog01 {
+    @keyframes visualFog01 {
+        0%{right: 0%;}
+        100%{right: 30%;}
+    }
+}
+@mixin key-visualFog02 {
+    @keyframes visualFog02 {
+        0%{left: 0%;}
+        100%{left: 10%;}
+    }
+}
+
 @include key-bounce;
 @include key-moveToRight;
+@include key-visualFog01;
+@include key-visualFog02;
 
 @mixin ani-bounce($count:1){
      animation: bounceOutline .55s ease-in-out $count ;
 }
 @mixin ani-moveToRight($count:1){
      animation: moveToRight 1.6s ease-in-out -1s $count;
+}
+@mixin ani-visualFog01($count:infinite){
+     animation: visualFog01 28s ease-in-out $count alternate;
+}
+@mixin ani-visualFog02($count:infinite){
+     animation: visualFog02 18s linear $count alternate;
 }

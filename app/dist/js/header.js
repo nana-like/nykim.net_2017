@@ -61,7 +61,7 @@ $(function(){
                 $(".menu").css({right:'+='+scrollBarWidth()});
             }
         
-        	//브라우저별로 달라지는 스크롤바 너비 구하는 함수 (javascript)
+        	//브라우저별로 달라지는 스크롤바 너비 구하기
             function scrollBarWidth() {
                 document.body.style.overflow = 'hidden'; 
                 var width = document.body.clientWidth;
@@ -81,17 +81,24 @@ $(function(){
     }
     
     function closeBurgerMenu(){
-           $burger.removeClass('open'); //버거 아이콘 바꾸기
-           tl_nav_show.reverse().timeScale(1.8); //애니메이션 실행
-           setTimeout(function(){
-               $gnb.removeClass('open'); //GNB배경 숨기기
-               allowScroll();
-           },340);
         
            function allowScroll(){
                 $(".wrap, .menu, .footer").removeAttr("style");
                 $("html").removeClass("no_scroll");
            }
+        
+           $burger.removeClass('open'); //버거 아이콘 바꾸기
+        
+           tl_nav_show.reverse().timeScale(1.8); //애니메이션 실행
+        
+           setTimeout(function(){
+               $gnb.removeClass('open'); //GNB배경 숨기기
+           },300);
+        
+           setTimeout(function(){
+               allowScroll();
+           },500);
+        
     }
     
     function initEvent(){
