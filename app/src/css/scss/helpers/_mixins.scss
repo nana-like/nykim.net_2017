@@ -149,7 +149,16 @@
             position: absolute;
             top: 50%;
             right: 1em;
-            content: '&';
+            content: '';
+            width: 1.2em;
+            height: 1.2em;
+            font-size: 100%;
+            background-image: url(../images/ico_link.svg);
+            background-size: 100%;
             transform: translateY(-50%)
         }
+}
+
+.svg_ico_link g {
+    fill: red;
 }

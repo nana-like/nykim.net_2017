@@ -43,14 +43,15 @@
             width: 100%;
             max-width: 1920px;
             margin: 5em auto 4em;
-            //background-color: #bcbcbc;
+            font-size: 24px;
         
             .about_motto_text {
-                width: 30%;
+                width: 27%;
+                padding-right: 3%;
                 text-align: right;
-                font-size: 24px;
-                line-height: 150%;
-                //outline:3px solid #0adb7b;
+                font-size: 100%;
+                line-height: 160%;
+                transition: font-size .5s;
                 
             } //end of .about_motto_text
         
@@ -101,7 +102,7 @@
                 &:before {
                     display: block;
                     position: absolute;
-                    top: -1.3em;
+                    top: -1.8em;
                     left: 50%;
                     width: 4em;
                     height: 1px;
@@ -119,12 +120,13 @@
                     color: #747474;
                     text-align: center;    
                     justify-content: center;
+                    transition: font-size .5s;
 
 
                     .icon_circle {
                         @include icon-circle;
                         position: absolute;
-                        top: 4em;
+                        top: 4.5em;
                         margin-left: 0;
 
                         &:before {
@@ -161,7 +163,7 @@
             text-align: left;
             font-size: 18px;
             line-height: 180%;
-            //outline:3px solid #fd3e87;
+            transition: font-size .5s;
 
             .about_text_para {
                 margin-bottom: 1.3em;
@@ -189,188 +191,125 @@
 
 
 
+//////////////////
+// !미디어 쿼리! //
+/////////////////
 
 
+@include pc-md {     // pc-md : 1601px~
+
+    
+} 
+
+// =============================================
+
+@include pc-sm {     // pc-sm : 1201px ~ 
 
 
+    
+}
 
+// =============================================
 
-/*
+@include tablet {     // tablet : 641px~
+
 .article_about {
-    position: relative;
-    width: 100%;
-    min-height: 600px;
-    max-height: 100%;
-    padding-top: 12em;
+    //padding-top: 80px;
     
     .inner {
-        position: relative;
-        //padding-bottom: 2em;
-        //margin: -1.5em auto 0;
-        padding: 0 4rem;
-        text-align: center;
-        background-color: lighten( $color-bg, 2% );
+        //font-size: 14px;
     }
-     
+    
     .about_header {
-        outline:3px solid purple;
-        .title {
-            top: -1.3em;
-        }
         
-        .title_line {
-            top: -8em;
+        .title {
+            font-size: 70px;
         }
     }
-
+    
+    .about_wrap {
+        font-size: 16px;
+        padding-top: 1em;
+    }
+    
     .about_motto {
-        @include display-flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        outline: 2px solid navy;
-        margin: 0em auto 3em;
-        font-size: 24px;
-
-        .motto_left {
-            outline:3px solid #5d8fb4;
-            margin-right: 4%;
-            
-            .motto_text_left {
-                outline:3px solid #0adb7b;
-            text-align: right;
-            line-height: 150%;
-            }
-            
-            .about_link {
-                outline:3px solid #5740d6;
-                .social {
-                    @include display-flex;
-                    justify-content: center;
-
-                    .social_item {
-                        @include social-item(2em);
-                    }
-                }
-                      
-        .more {
-            outline:3px solid #463f6a;
-            position: relative;
-            
-            margin-right: 4%;
-            margin-top: 4.2em;
-            font-size: 15px;
+            font-size: 21px;
         
-            &:before {
-                display: block;
-                position: absolute;
-                top: -1.3em;
-                left: 50%;
-                width: 4em;
-                height: 1px;
-                transform: translateX(-50%);
-                background-color: #888;
-                content: '';
-            }
-        
-            .more_link {
-                position: relative;
-                @include font-noto;
-                padding: 0 3em 0 0;
-                letter-spacing: 0.12rem;
-                line-height: 156%;
-                color: #999;
-                text-align: center;    
-
-
-                .icon_circle {
-                    @include icon-circle;
-                    position: relative;
-                    margin: 14px auto 0;
-
-                    &:after { //임시 (삭제예정))
-                        position: absolute;
-                        top: 24px;
-                        right: 16px;    
-                        width: 20px;
-                        height: 4px;
-                        outline: 1px solid #fff;
-                        content: '';
-                    }
-                }
-            }
-        }
+            .about_motto_text {
+                width: 25%;
+                padding-right: 5%;
                 
-            } //end of .about_link
-            
-        }
-
-        .motto_right {
-            outline:3px solid #fdd13e;
-            width: 70%;
-            max-width: 800px;
-            
-            .motto_image {
-                position: relative;
-                top: 2%;
-                display: block;
-                width: 100%;
-                height: auto;
-                margin: 4% 0 0 4%;
-            }
-            
-            .motto_text_right {
-                outline:3px solid #fd3e87;
-                width: 100%;
-                height: auto;
-                margin: 4% 0 0 4%;
-                text-align: left;
-                font-size: 18px;
-                line-height: 180%;
-            }
-            
-            .about_text_para {
-                margin-bottom: 1.3em;
-            }
-        }
-
+            } 
+        
+            .about_motto_image {
+                
+                img {
+                    display: block;
+                    width: 90%;
+                }
+            }    
     } //end of .about_motto
     
-    
-    .about_main {
-        outline:3px solid #40d6d0;
-        @include display-flex;
-        justify-content: center;
-        position: relative;
-        margin: 0 auto;
+    .about_main{
+        
+       .about_link {
+            width: 26%;
+            margin: 0 0 0 4%;
+           
+            .social {
+                .social_item {
+                    width: 1.8em;
+                    height: 1.8em;
+                }
+            }
 
-  
+            .more {
+                font-size: 13px;
+                
+                .more_link {
+                    letter-spacing: 0.06rem;
+
+                    .icon_circle {
+                        top: 5em;
+                        font-size: 11px;
+                        
+                    }
+                    
+                } 
+                
+            } 
+
+        } //end of .about_link
         
         .about_text {
-            outline:3px solid #fd3e87;
-            width: 70%;
-            max-width: 800px;
-            margin: 0 0 7em 5%;
-            text-align: left;
-            font-size: 18px;
-            line-height: 180%;
-            
-            .about_text_para {
-                margin-bottom: 1.3em;
-            }
-            
+            width: 64%;
+            margin: 0 0 0 2%;
+            padding: 0 4% 0 0;
+            font-size: 16px;
+
             .about_text_accent {
-                display: inline-block;
-                margin-top: 2em;
-                padding: 2px 8px;
-                color: #fff;
-                font-weight: 400;
                 font-size: 13px;
-                letter-spacing: 0.04rem;
-                background-color: #87d6e2;
             }
         } //end of .about_text
         
     } //end of .about_main
     
-}*/
+}
+    
+}
+
+// =============================================
+
+@include mo-lg { 
+
+    
+}
+
+// =============================================
+
+@include mo-sm {     
+
+    
+}
+
+// =============================================
