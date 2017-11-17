@@ -46,10 +46,18 @@
     }
 }
 
+@mixin key-titleLine {
+    @keyframes titleLine {
+        0% {height: 0;}
+        100%{height: 5.5em;}
+    }
+}
+
 @include key-bounce;
 @include key-moveToRight;
 @include key-visualFog01;
 @include key-visualFog02;
+@include key-titleLine;
 
 @mixin ani-bounce($count:1){
      animation: bounceOutline .55s ease-in-out $count ;
@@ -62,4 +70,7 @@
 }
 @mixin ani-visualFog02($count:infinite){
      animation: visualFog02 18s linear $count alternate;
+}
+@mixin ani-titleLine($count:1){
+     animation: titleLine 1.8s cubic-bezier(.79, -0.03, .3, .96) $count;
 }

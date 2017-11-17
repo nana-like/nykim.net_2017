@@ -15,6 +15,7 @@
         width: 1px;
         height: 5.5em;
         background-color: #67ceeb;
+        @include ani-titleLine;
 }
 
 .title {
