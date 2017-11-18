@@ -19,14 +19,33 @@
 }
 
 .title {
+    display: table;
     position: relative;
-    color: $color-main;
+    width: auto;
+    color: #ffe079;
     z-index: 1;
-    text-align: center;
+    margin: 0 auto;
     padding-top: 0.5em;
     font-size: 60px;
     font-weight: 700;
+    text-align: center;
     transition: font-size .5s;
+    
+    
+    &:before {
+        overflow: hidden;
+        position: absolute;
+        width: 0;
+        color: $color-main;
+        content: attr(data-ani);
+        transition: width .8s;
+    }
+    
+    &.on:before {
+        width: 100%;
+        text-align: center;
+        transition: width .8s;
+    }
 }
 
 
