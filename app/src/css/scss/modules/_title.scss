@@ -15,14 +15,15 @@
         width: 1px;
         height: 5.5em;
         background-color: #67ceeb;
-        @include ani-titleLine;
+
 }
+
 
 .title {
     display: table;
     position: relative;
     width: auto;
-    color: #ffe079;
+    color: $color-main;
     z-index: 1;
     margin: 0 auto;
     padding-top: 0.5em;
@@ -31,6 +32,11 @@
     text-align: center;
     transition: font-size .5s;
     
+    &[data-ani] {
+         top: 10px;
+         color: #e3e1e1;
+    }
+    
     
     &:before {
         overflow: hidden;
@@ -38,18 +44,19 @@
         width: 0;
         color: $color-main;
         content: attr(data-ani);
-        transition: width .8s;
+        transition: width .55s;
     }
     
     &.on:before {
         width: 100%;
         text-align: center;
-        transition: width .8s;
+        transition: width .55s;
     }
 }
 
 
 .title_sm {
+    opacity: 0;
     display: block;
     position: relative;
     z-index: 1;
@@ -61,6 +68,11 @@
     font-weight: 300;
     text-transform: uppercase;
     transition: font-size .5s;
+    
+    &.on {
+         opacity: 1;
+    }
+    
 }
 
 

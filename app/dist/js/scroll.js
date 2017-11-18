@@ -22,11 +22,11 @@ $(function(){
      function showElem(){
         $("[data-ani]").each(function(){
             var objectBottom = $(this).offset().top + $(this).outerHeight();
-            var windowBottom = $(window).scrollTop() + $(window).height();
+            var windowBottom = $(window).scrollTop() + ( $(window).height() / 1.5);
             
-            if ( windowBottom-300 > objectBottom ) {
+            if ( windowBottom > objectBottom ) {
                 console.log('발동!!');
-                TweenLite.to($(this),1,{className:'+=on'});
+                TweenLite.to($(this),1,{className:'+=on', top:-10});
             }
         });
     }
