@@ -34,9 +34,11 @@
 }
 
 .br_m {display: none;}
+.br_pc {display: block;}
 
-@media screen and (max-width:769px) {
+@media screen and (max-width:640px) {
     .br_m {display: block !important;}
+    .br_pc {display: none !important;}
     .text_hide_m {display: none !important;}
 }
 

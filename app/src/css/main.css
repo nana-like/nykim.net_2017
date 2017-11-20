@@ -66,7 +66,10 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .br_m { display: none; }
 
-@media screen and (max-width: 769px) { .br_m { display: block !important; }
+.br_pc { display: block; }
+
+@media screen and (max-width: 640px) { .br_m { display: block !important; }
+		.br_pc { display: none !important; }
 		.text_hide_m { display: none !important; } }
 
 .wrap { z-index: 1; position: relative; background-color: #fafafa; }
@@ -854,15 +857,20 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.article_about .about_main .about_link .more .more_link .icon_circle { top: 5em; font-size: 11px; }
 		.article_about .about_main .about_text { width: 64%; margin: 0 0 0 2%; padding: 0 4% 0 0; font-size: 16px; } }
 
-@media screen and (max-width: 640px) { .article_about .inner { font-size: 26px; }
-		.article_about .about_header { outline: 3px solid #11ffa3; }
-		.article_about .about_header .title { font-size: 90px; }
-		.article_about .about_wrap { font-size: 16px; margin-top: -3.5em; }
-		.article_about .about_motto { font-size: 28px; }
-		.article_about .about_motto .about_motto_text { width: 29%; padding-right: 3%; }
-		.article_about .about_motto .about_motto_image img { display: block; width: 90%; }
-		.article_about .about_main .about_link { width: 17%; margin: 0 0 0 15%; }
-		.article_about .about_main .about_link .social .social_item { width: 2em; height: 2em; }
-		.article_about .about_main .about_link .more { font-size: 16px; }
-		.article_about .about_main .about_link .more .more_link .icon_circle { top: 6em; font-size: 13px; }
-		.article_about .about_main .about_text { width: 62%; margin: 0 0 0 2%; padding: 0 4% 0 0; font-size: 19px; } }
+@media screen and (max-width: 640px) { .article_about .inner { font-size: 22px; }
+		.article_about .about_header .title { font-size: 60px; }
+		.article_about .about_wrap { font-size: 14px; margin-top: -3em; padding-top: 2em; }
+		.article_about .about_motto { display: block; font-size: 20px; }
+		.article_about .about_motto .about_motto_text { width: 100%; padding: 0; text-align: center; }
+		.article_about .about_motto .about_motto_image { display: block; width: 100%; padding: 0; margin: 0; }
+		.article_about .about_motto .about_motto_image img { display: block; width: 78%; margin: 40px auto 0; }
+		.article_about .about_main .about_link { display: none; /*position: absolute; bottom: 0; left: 0; width: 100%; margin: 0; .social { justify-content: flex-start; width: 80%; margin: 0 auto; .social_item { width: 2em; height: 2em; margin-left: 1.8em; } } .more { width: 80%; margin: 60px auto 0; font-size: 16px; &:before { position: relative; left: 0; transform: none; } .more_link { display: block; text-align: left; .icon_circle { top: 6em; font-size: 13px; } }  }*/ }
+		.article_about .about_main .about_text { width: 78%; margin: 0 auto 8em; padding: 0em; font-size: 16px; line-height: 170%; }
+		.article_about .about_main .about_text .about_text_para { margin-bottom: 1em; } }
+
+@media screen and (max-width: 375px) { .article_about .inner { font-size: 20px; }
+		.article_about .about_header .title { font-size: 56px; }
+		.article_about .about_motto { font-size: 19px; }
+		.article_about .about_motto .about_motto_image img { width: 73%; }
+		.article_about .about_main .about_text { width: 73%; font-size: 15px; line-height: 170%; margin-bottom: 8em; }
+		.article_about .about_main .about_text .about_text_para { margin-bottom: 1em; } }

@@ -210,7 +210,6 @@
 @include pc-sm {     
 
     .article_about {
-    //padding-top: 80px;
     
     .inner {
         font-size: 26px;
@@ -380,59 +379,83 @@
 @include mo-lg { 
 
 .article_about {
-    //padding-top: 80px;
     
     .inner {
-        font-size: 26px;
+        font-size: 22px;
     }
     
     .about_header {
-        outline: 3px solid #11ffa3;
         .title {
-            font-size: 90px;
+            font-size: 60px;
         }
     }
     
     .about_wrap {
-        font-size: 16px;
-        margin-top: -3.5em;
+        font-size: 14px;
+        margin-top: -3em;
+        padding-top: 2em;
     }
     
     .about_motto {
-            font-size: 28px;
+            display: block;
+            font-size: 20px;
         
-            .about_motto_text { //32%
-                width: 29%;
-                padding-right: 3%;
+            .about_motto_text { 
+                width: 100%;
+                padding: 0;
+                text-align: center;
                 
             } 
         
             .about_motto_image {
+                display: block;
+                width: 100%;
+                padding: 0;
+                margin: 0;
                 
                 img {
                     display: block;
-                    width: 90%;
+                    width: 78%;
+                    margin: 40px auto 0;
                 }
             }    
     } //end of .about_motto
     
     .about_main{
         
-       .about_link { //32%
-            width: 17%;
-            margin: 0 0 0 15%;
+       .about_link {
+           display: none;
+           /*position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           margin: 0;
            
             .social {
+                justify-content: flex-start;
+                width: 80%;
+                margin: 0 auto;
                 .social_item {
                     width: 2em;
                     height: 2em;
+                    margin-left: 1.8em;
                 }
             }
 
             .more {
+                width: 80%;
+                margin: 60px auto 0;
                 font-size: 16px;
                 
+                &:before {
+                    position: relative;
+                    left: 0;
+                    transform: none;
+                }
+                
                 .more_link {
+                    display: block;
+                    text-align: left;
 
                     .icon_circle {
                         top: 6em;
@@ -442,15 +465,20 @@
                     
                 } 
                 
-            } 
+            }*/ 
 
         } //end of .about_link
         
-        .about_text { //68%
-            width: 62%;
-            margin: 0 0 0 2%;
-            padding: 0 4% 0 0;
-            font-size: 19px;
+        .about_text { 
+            width: 78%;
+            margin: 0 auto 8em;
+            padding: 0em;
+            font-size: 16px;
+            line-height: 170%;
+            
+            .about_text_para {
+                margin-bottom: 1em;
+            }
 
         } //end of .about_text
         
@@ -465,6 +493,60 @@
 
 @include mo-sm {     
 
+    
+.article_about {
+    
+    .inner {
+        font-size: 20px;
+    }
+    
+    .about_header {
+        .title {
+            font-size: 56px;
+        }
+    }
+    
+    .about_wrap {
+    }
+    
+    .about_motto {
+            font-size: 19px;
+        
+            .about_motto_text { 
+                
+            } 
+        
+            .about_motto_image {
+                
+                img {
+                    width: 73%;
+                }
+            }    
+    } //end of .about_motto
+    
+    .about_main{
+        
+       .about_link {
+          
+
+        } //end of .about_link
+        
+        .about_text { 
+            width: 73%;
+            font-size: 15px;
+            line-height: 170%;
+            margin-bottom: 8em;
+            
+            .about_text_para {
+                margin-bottom: 1em;
+            }
+
+        } //end of .about_text
+        
+    } //end of .about_main
+    
+}
+    
     
 }
 
