@@ -15,7 +15,7 @@
     z-index: 1; //푸터보다 위에 있어야 함
     position: relative;
     width: 100%;
-    min-height: 800px;
+    min-height: 850px;
     max-height: 100%;
     height: 100vh;
     background-color: $color-wrap;
@@ -32,7 +32,7 @@
     .hello_text {
         @include font-noto;
         transition: margin .5s, font-size .5s;
-        margin: 3em 0 1em;
+        margin: 2.5em 0 1em;
         padding: 0 3.5em;
         font-family: 'LotteMartDream', sans-serif;
         text-align: center;

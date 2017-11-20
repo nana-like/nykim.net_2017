@@ -76,6 +76,23 @@ $(function(){
     
     
     
+    ////////////////////////////////////////////////
+    
+    function visualTitle_ani(){
+        var visualTitleArr = [];
+        $(".title_text").children().each(function(idx){
+            visualTitleArr[idx] = $(this).html;
+        });
+        
+        console.log( visualTitleArr[idx] );
+        console.log( '-- Test --' );
+    }
+    
+    ////////////////////////////////////////////////
+    
+    
+    
+    
     function initEvent(){
         
 
@@ -88,6 +105,7 @@ $(function(){
         init();
         visual_ani();
         visualTitleFindN();    
+        visualTitle_ani();
     });
     
     

@@ -1,34 +1,38 @@
 
 
+$(function(){
     
-/*    function showElem(){
-        $('.ani_show').each(function(){
+    // 전역변수 선언 
+    var $burger = null;
+    var scrollTop = 0;
+    
+    // 전역에서 사용할 요소 초기화
+    function init(){
+        $burger = $(".menu");
+    }
+    
+     function showTitle(){
+        $("[data-ani]").each(function(){
+            
+            
             var objectBottom = $(this).offset().top + $(this).outerHeight();
-            var windowBottom = $(window).scrollTop() + $(window).height();
+            var windowBottom = $(window).scrollTop() + ( $(window).height() / 1.5);
+            var $titleLine = $(this).next('.title_line');
+            
+            function showElemLine(){
+                $titleLine.addClass('on');
+            }
             
             if ( windowBottom > objectBottom ) {
-                console.log('발동!!');
-                TweenLite.to($(this),1,{opacity:1});
+                TweenLite.to($(this),1.5,{className:'+=on', top:-10, ease: Power2.easeOut, onComplete: showElemLine()});
+                
             }
         });
     }
-    */
-
-
-
-$(function(){
     
-    
-     function showElem(){
-        $("[data-ani]").each(function(){
-            var objectBottom = $(this).offset().top + $(this).outerHeight();
-            var windowBottom = $(window).scrollTop() + ( $(window).height() / 1.5);
-            
-            if ( windowBottom > objectBottom ) {
-                console.log('발동!!');
-                TweenLite.to($(this),1,{className:'+=on', top:-10});
-            }
-        });
+    function burgerColor(){
+        
+        console.log( 'ㅇㅅㅇ' );
     }
     
     
@@ -37,12 +41,13 @@ $(function(){
     function initEvent(){
         
         $(window).on('scroll',function(){
-            showElem();
+            showTitle();
+            burgerColor();
         });
     }
     
     $(window).on('load',function(){
-        //$("[data-ani]").css({border:'3px solid red'})
+        init();
         initEvent();
     });
     

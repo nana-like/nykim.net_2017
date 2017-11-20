@@ -14,8 +14,12 @@
         content: '';
         width: 1px;
         height: 5.5em;
+        background-color: #e3e1e1;
+        transition: background-color 2s;
+    
+    &.on {
         background-color: #67ceeb;
-
+    }
 }
 
 
@@ -33,9 +37,12 @@
     transition: font-size .5s;
     
     &[data-ani] {
-         top: 10px;
          color: #e3e1e1;
     }
+    
+  /*  &.on {
+        top: -10px;
+    }*/
     
     
     &:before {
@@ -56,7 +63,6 @@
 
 
 .title_sm {
-    opacity: 0;
     display: block;
     position: relative;
     z-index: 1;
@@ -67,10 +73,14 @@
     color: #aaa;
     font-weight: 300;
     text-transform: uppercase;
-    transition: font-size .5s;
+    transition: font-size .5s, opacity .5s;
     
+    &[data-ani] {
+        opacity: 0;
+    }
     &.on {
          opacity: 1;
+         transition: opacity .5s;
     }
     
 }

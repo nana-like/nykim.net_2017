@@ -22,13 +22,18 @@
     margin: 0 auto;
     
     .logo {
+        opacity: 1;
         z-index: 300;
         position: absolute;
         top: 20px;
         left: 16px;
         width: 40px;
         height: 40px;
-        transition: width .5s, height .5s, top .5s, left .5s;
+        transition: width .5s, height .5s, top .5s, left .5s, opacity .3s;
+        
+        &.onTop {
+            opacity: 0;
+        }
     }
     
     
@@ -58,6 +63,10 @@
             left: 50%;
             transform: translate(-50%, -50%);
             transition: transform 750ms ease-in-out, width .5s, height .5s, top .5s, left .5s;
+            
+            &:focus {
+                outline: 0;
+            }
 
             .line {
                 position: absolute;
@@ -66,11 +75,11 @@
                 height: $burgerLineSize;
                 width: 80%;
                 pointer-events: none;
+                transition: transform .35s ease-in-out, background-color .2s;
             }
 
             .line_01 {
                 top: 0;
-                transition: all .35s ease-in-out;
             }
 
             .line_02 {
@@ -78,7 +87,6 @@
                 top: 0;
                 bottom: 0;
                 margin: auto;
-                transition: transform .35s ease-in-out;
             }
 
             .line_02:before {
@@ -87,18 +95,23 @@
                 width: 100%;
                 height: $burgerLineSize;
                 background-color: $burgerLineColor;
-                transition: transform .35s ease-in-out;
+                transition: transform .35s ease-in-out, background-color .2s;
             }
 
             .line_03 {
                 bottom: 0;
-                transition: all .35s ease-in-out;
             }
 
 
         }
+        
+        &.onTop .line,
+        &.onTop .line_02:before, {
+            background-color: rgba(242, 234, 234, 0.9);
+        }
 
-    }
+    } //end of .menu
+    
 
 
     .menu.open .menu_burger {
@@ -123,6 +136,10 @@
             opacity: 0;
             transform: translate3d(2*$burgerTranslate,0,0);
             transition: all .35s ease-in-out;     
+        }
+        
+        &:focus {
+            outline: 0;
         }
 
     }

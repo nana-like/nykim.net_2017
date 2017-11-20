@@ -41,13 +41,22 @@
         text-transform: uppercase;
         
         .title_text { //비주얼 문구
+            position: relative;
+            left: 10px;
             @include font-lato(300);
             font-size: 40px;
             color: rgba(255,255,255,0.8);
             
             i {
+                position: relative;
+                opacity: 0;
                 font-style: normal;
                 text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6);
+            }
+            
+            & > span {
+                position: relative;
+                opacity: 0;
             }
         }
 
@@ -152,15 +161,15 @@
         &:before, &:after {
             display: block;
             position: absolute;
-            top: 0.35rem;
+            top: 0.29rem;
             right: -14px;
             font-size: 10px;
-            font-family: sans-serif;
+            font-family: serif;
             content: '>';
             transform: rotate(90deg);
         }       
         &:after {
-            top: 0rem;
+            top: -0.03rem;
         }
     } //end of .scroll_text
     
