@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new -467 269 24 24" version="1.1" viewBox="-467 269 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+	.st0{fill:none;stroke:#A9A9A9;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}
+</style>
+<polygon class="st0" points="-455 271 -445 277.5 -445 284.5 -455 291 -465 284.5 -465 277.5"/>
+<line class="st0" x1="-455" x2="-455" y1="291" y2="284.5"/>
+<polyline class="st0" points="-445 277.5 -455 284.5 -465 277.5"/>
+<polyline class="st0" points="-465 284.5 -455 277.5 -445 284.5"/>
+<line class="st0" x1="-455" x2="-455" y1="271" y2="277.5"/>
+</svg>

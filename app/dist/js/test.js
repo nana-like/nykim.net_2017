@@ -502,7 +502,7 @@ $(function(){
     
     
     $(window).on('resize',function(){
-        topAreaHeight = $('.topArea').outerHeight()
+        topAreaHeight = $('.topArea').outerHeight();
         console.log(topAreaHeight);
     });
     
