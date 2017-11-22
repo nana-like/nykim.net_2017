@@ -440,7 +440,7 @@ $(function(){
     function init(){
         $burger = $(".menu");
         $logo = $(".logo");
-        topAreaHeight = $('.topArea').outerHeight();
+        topAreaHeight = $('.topArea').height();
     }
     
      function showTitle(){
@@ -499,13 +499,6 @@ $(function(){
         burgerColor();
         console.log(topAreaHeight);
     });
-    
-    
-    $(window).on('resize',function(){
-        topAreaHeight = $('.topArea').outerHeight()
-        console.log(topAreaHeight);
-    });
-    
     
     
     
