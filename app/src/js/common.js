@@ -71,9 +71,9 @@ $(function(){
         html += ' </address> ';
         html += ' <div class="footer_bottom"> ';
             html += ' <ul class="social"> ';
-                html += ' <li class="social_item social_pinterest"><a href="https://www.pinterest.co.kr/ppphlox/">pinterest</a></li> ';
-                html += ' <li class="social_item social_codepen"><a href="#">codepen</a></li> ';
-                html += ' <li class="social_item social_github"><a href="#">github</a></li> ';
+                html += ' <li class="social_item social_pinterest"><a href="https://www.pinterest.co.kr/ppphlox/" target="_blank">pinterest</a></li> ';
+                html += ' <li class="social_item social_codepen"><a href="https://codepen.io/nykim_/" target="_blank">codepen</a></li> ';
+                html += ' <li class="social_item social_github"><a href="https://github.com/AnnYKim" target="_blank">github</a></li> ';
             html += ' </ul> ';
             html += ' <p class="update">Last updated on November 7th, 2017</p> ';
             html += ' <p class="copyright">&copy; 2017 NY KIM</p> ';
@@ -87,24 +87,48 @@ $(function(){
 
     
     // Work Item 생성 함수
-    function worItemMaker(){
+    function workItemMaker(){
         
       
         
         var obj = {
-            "workitem" : [
+            "list_01" :
                 {
                     'number': twolength(0),
                     'title': 'Coinone Admin',
                     'desc': '코인원의 관리자 계정 페이지'
                 },
+            "list_02" : 
                 {
                     'number': twolength(1),
                     'title': '3M HCA',
                     'desc': '3M 제품 사용자를 위한 플랫폼'
+                },
+            "list_03" : 
+                {
+                    'number': twolength(2),
+                    'title': 'Old Portfolio',
+                    'desc': '과거 포트폴리오 (반전매력!)'
+                },
+            "list_04" : 
+                {
+                    'number': twolength(3),
+                    'title': 'SBI BANK',
+                    'desc': 'SBI저축은행 하이브리드앱 '
+                },
+            "list_05" : 
+                {
+                    'number': twolength(4),
+                    'title': ' ICON LANDING',
+                    'desc': ' 가상화폐 ICON 랜딩 페이지 '
+                },
+            "list_06" : 
+                {
+                    'number': twolength(5),
+                    'title': ' 3M VR ',
+                    'desc': ' 가상현실 체험 예약 페이지 '
                 }
-            ]
-        }
+        };
         
         
         function twolength(n) { //인덱스에 1을 더하고 두 자리수로 만듦
@@ -114,28 +138,35 @@ $(function(){
         
         
         function showItems(){
-            var html = '';
             
-
-            // object는 JSON 방식으로 워크 아이템 정보를 담을 듯
-            // (for x in obj) 를 써서 루프 돌려서 출력하는 코드 작성!
+            var myTurn = 0; //아이템이 삽입될 컬럼의 인덱스
             
-
-            html += ' <div class="work_item"> ';
-                html += ' <figure> ';
-                    html += ' <img src="images/temp_'+obj.workitem[0].number+'.png" alt="'+obj.workitem[0].desc+'" class="work_image" /> ';
-                    html += ' <figcaption class="work_caption"> ';
-                        html += ' <div class="caption_textWrap"> ';
-                            html += ' <strong class="caption_title">'+obj.workitem[0].title+'</strong> ';
-                            html += ' <p class="caption_desc">'+obj.workitem[0].desc+'</p> ';
-                        html += ' </div> ';
-                        html += ' <a href="#"></a> ';
-                    html += ' </figcaption> ';
-                html += ' </figure> ';
-            html += ' </div> ';
-
-            //console.log(html);
-            $(".work_list .column:last").append(html);
+            for (var i in obj) {
+                
+                var html = '';
+                
+                 html += ' <div class="work_item"> ';
+                    html += ' <figure> ';
+                        html += ' <img src="images/temp_'+obj[i].number+'.png" alt="'+obj[i].desc+'" class="work_image" /> ';
+                        html += ' <figcaption class="work_caption"> ';
+                            html += ' <div class="caption_textWrap"> ';
+                                html += ' <strong class="caption_title">'+obj[i].title+'</strong> ';
+                                html += ' <p class="caption_desc">'+obj[i].desc+'</p> ';
+                            html += ' </div> ';
+                            html += ' <a href="#"></a> ';
+                        html += ' </figcaption> ';
+                    html += ' </figure> ';
+                html += ' </div> ';
+                
+               $(".work_list .column").eq(myTurn).append(html); //인덱스 번호에 맞춰 아이템 삽입
+                
+               if(myTurn<$(".work_list .column").length-1){ //컬럼 개수에 맞춰 인덱스 증가
+                   myTurn++;
+               }else{
+                   myTurn = 0;
+               }
+                
+            }
 
         }
 
@@ -147,7 +178,7 @@ $(function(){
         gnbMaker();
         footerMaker();
         
-        worItemMaker();
+        workItemMaker();
     });
         
         

@@ -10,6 +10,8 @@
 // work 부분 //
 //////////////
 
+$itemSpace : 1.3em; //아이템 간격 조절용 변수
+
 
 .article_work {
     position: relative;
@@ -43,13 +45,12 @@
         box-sizing: border-box;
         margin: 0 auto;
         padding: 1em 3.5em;
-        //outline: 3px solid navy;
         padding-top: 5em;
         transition: margin-top .5s;
         
         .column {
             float: left;
-            padding: 1em 0.5em;
+            padding: 1em ($itemSpace/2); //간격 조절!!
             box-sizing: border-box;
         }
         
@@ -68,7 +69,7 @@
             position: relative;
             width: 100%;
             height: auto;
-            margin-bottom: 1em;
+            margin-bottom: $itemSpace; //간격 조절!!
             background-color: #000;
             transition: margin-bottom .5s;
             -webkit-backface-visibility: hidden;
