@@ -83,31 +83,63 @@ $(function(){
         
     }
     
-        
+    
+
     
     // Work Item 생성 함수
     function worItemMaker(){
-        var html = '';
-        var object = '09';
         
-        // object는 JSON 방식으로 워크 아이템 정보를 담을 듯
-        // (for x in obj) 를 써서 루프 돌려서 출력하는 코드 작성!
+      
         
-        html += ' <div class="work_item"> ';
-            html += ' <figure> ';
-                html += ' <img src="images/temp_'+object+'.png" alt="'+object+'" class="work_image" /> ';
-                html += ' <figcaption class="work_caption"> ';
-                    html += ' <div class="caption_textWrap"> ';
-                        html += ' <strong class="caption_title">T E S T</strong> ';
-                        html += ' <p class="caption_desc">테스트!!</p> ';
-                    html += ' </div> ';
-                    html += ' <a href="#"></a> ';
-                html += ' </figcaption> ';
-            html += ' </figure> ';
-        html += ' </div> ';
+        var obj = {
+            "workitem" : [
+                {
+                    'number': twolength(0),
+                    'title': 'Coinone Admin',
+                    'desc': '코인원의 관리자 계정 페이지'
+                },
+                {
+                    'number': twolength(1),
+                    'title': '3M HCA',
+                    'desc': '3M 제품 사용자를 위한 플랫폼'
+                }
+            ]
+        }
         
-        //console.log(html);
-        $(".work_list .column:last").append(html);
+        
+        function twolength(n) { //인덱스에 1을 더하고 두 자리수로 만듦
+          var n = parseInt(n+1);
+          return (n < 10 ? '0' : '') + n;
+        }
+        
+        
+        function showItems(){
+            var html = '';
+            
+
+            // object는 JSON 방식으로 워크 아이템 정보를 담을 듯
+            // (for x in obj) 를 써서 루프 돌려서 출력하는 코드 작성!
+            
+
+            html += ' <div class="work_item"> ';
+                html += ' <figure> ';
+                    html += ' <img src="images/temp_'+obj.workitem[0].number+'.png" alt="'+obj.workitem[0].desc+'" class="work_image" /> ';
+                    html += ' <figcaption class="work_caption"> ';
+                        html += ' <div class="caption_textWrap"> ';
+                            html += ' <strong class="caption_title">'+obj.workitem[0].title+'</strong> ';
+                            html += ' <p class="caption_desc">'+obj.workitem[0].desc+'</p> ';
+                        html += ' </div> ';
+                        html += ' <a href="#"></a> ';
+                    html += ' </figcaption> ';
+                html += ' </figure> ';
+            html += ' </div> ';
+
+            //console.log(html);
+            $(".work_list .column:last").append(html);
+
+        }
+
+        showItems();
     }
     
     
