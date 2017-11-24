@@ -1,92 +1,135 @@
-
-
-/*
-$(function(){
-
-
-
-            $(function(){
-               $('.burger').on('click', function(){
-                  $(this).toggleClass('open');
-                   $('nav').stop().fadeToggle();
-                   $('html,body').css({'top': -(document.documentElement.scrollTop) + 'px', 'position':'fixed'}).addClass('noScroll')
-
-                });
-
-            });
-            
-            
-            
-            
-    
-    function getRandomSize(min, max) {
-      return Math.round(Math.random() * (max - min) + min);
-    }
-
-    var allImages = "";
-    
-
-    for (var i = 0; i < 6; i++) {
-      var width = getRandomSize(200, 420);
-      var height =  getRandomSize(300, 420);
-      var idx = Math.floor( Math.random()*6 );
-      allImages += '<a href="#"><img src="https://unsplash.it/'+width+'/'+height+'/?image=8'+idx+'" alt="nykim"></a>';
-    }
-    
-    var temp = '<a href="#"><img src="images/temp.jpeg"></a>';
-   
-    $('#photos').append(allImages);
-    $('#photos').append(temp);
- 
-    
-    console.log(allImages);
-    
-});
-*/
-
-
-//background-image: url(https://unsplash.it/1600/800/?image=674)
-$(function(){}),$(window).load(function(){function o(o){WIDTH=window.innerWidth,window.orientation%180?HEIGHT=window.innerHeight:o&&"orientationchange"!=o.type||(HEIGHT=window.innerHeight+60)}function n(o){WIDTH=window.outerWidth/rate,HEIGHT=window.outerHeight/rate}function e(){var o=$("#main"),n=o.height(),e=o.width(),t=$("footer"),i=t.height(),d=t.width();console.log("Content Height = "+n+"px"),console.log("Content Width = "+e+"px"),console.log("Footer Height = "+i+"px"),console.log("Footer Width = "+d+"px"),o.css({"margin-bottom":i})}window.addEventListener("orientationchange",o),window.addEventListener("resize",o),o(),window.outerWidth==screen.width?rate=window.devicePixelRatio:rate=1,window.addEventListener("resize",n),n(),e(),$(window).resize(function(){e()}),$(function(){$(".burger").on("click",function(){$(this).toggleClass("open"),$("nav").stop().fadeToggle(),$("html,body").css({top:-document.documentElement.scrollTop+"px",position:"fixed"}).addClass("noScroll")})})});
+onsole.log('--->> header.js 시작합니닷 <<---');
 $(function(){
     
-
-
-
-
-    $(window).load(function() {
+    
+    
+    // GNB 생성 함수
+    function gnbMaker(){
         
-        consnole.log("꼬고")
+        var html = '';
 
-        // INITIATE THE FOOTER
-      siteFooter();
-        // COULD BE SIMPLIFIED FOR THIS PEN BUT I WANT TO MAKE IT AS EASY TO PUT INTO YOUR SITE AS POSSIBLE
-        $(window).resize(function() {
-            siteFooter();
-        });
+        html += ' <div class="fixed"> ';
+            html += ' <h1 class="logo"> ';
+                html += ' <span class="text_hide">웹퍼블리셔 N의 포트폴리오</span> ';
+                html += ' <a href="#"> ';
+                    html += ' <svg class="title_logo" enable-background="new 0 0 240 236" version="1.1" viewBox="0 0 300 260" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"> ';
+                    html += ' <polygon points="49 236 49 52.2 178.9 236 240 236 240 0 191 0 191 174.7 69.8 0 0 0 0 236" fill="#ffd40a"/> ';
+                    html += ' </svg> ';
+                html += ' </a> ';
+            html += ' </h1> ';
+            html += ' <div class="menu" role="button" tabindex="0"> ';
+                html += ' <div class="menu_burger" tabindex="0"> ';
+                    html += ' <div class="line line_01"></div> ';
+                    html += ' <div class="line line_02"></div> ';
+                    html += ' <div class="line line_03"></div> ';
+                html += ' </div> ';
+            html += ' </div> ';
+        html += ' </div> ';
+        html += ' <nav class="gnb" style="display:none"> ';
+            html += ' <h2 class="text_hide">Navigation</h2> ';
+            html += ' <ul class="nav"> ';
+                html += ' <li class="menu_item"><a href="#">HOME.</a></li> ';
+                html += ' <li class="menu_item"><a href="#">WORK.</a></li> ';
+                html += ' <li class="menu_item"><a href="#">ABOUT.</a></li> ';
+            html += ' </ul> ';
+            html += ' <div class="contact"> ';
+                html += ' <a href="mailto:nykim@nykim.net" class="contact_link">  ';
+                    html += ' <span class="contact_heading">MAIL</span>    ';
+                    html += ' <span class="contact_info">nykim@nykim.net</span> ';
+                html += ' </a> ';
+                html += ' <a href="tel:01027285936" class="contact_link"> ';
+                    html += ' <span class="contact_heading">PHONE</span>';
+                    html += ' <span class="contact_info">82.10.2728.5936</span> ';
+                html += ' </a> ';
+                html += ' <a href="https://github.com/AnnYKim/" class="contact_link"> ';
+                    html += ' <span class="contact_heading">GITHUB</span>  ';
+                    html += ' <span class="contact_info">AnnYKim</span> ';
+                html += ' </a> ';
+            html += ' </div> ';
+        html += ' </nav> ';
 
-        function siteFooter() {
-            var siteContent = $('.contents');
-            var siteContentHeight = siteContent.height();
-            var siteContentWidth = siteContent.width();
 
-            var siteFooter = $('.footer');
-            var siteFooterHeight = siteFooter.height();
-            var siteFooterWidth = siteFooter.width();
+        $(".header").append(html);
+    }
+    
+    
+    // Footer 생성 함수
+    function footerMaker(){
+        var html = '';
 
-            console.log('Content Height = ' + siteContentHeight + 'px');
-            console.log('Content Width = ' + siteContentWidth + 'px');
-            console.log('Footer Height = ' + siteFooterHeight + 'px');
-            console.log('Footer Width = ' + siteFooterWidth + 'px');
+        html += ' <h2 class="title footer_title">Let&acute;s start right Now!</h2> ';
+        html += ' <p class="footer_text">작업 준비 완료됐습니다. 편하실 때 연락 주세요!</p> ';
+        html += ' <address class="footer_address"> ';
+            html += ' <a href="mailto:nykim@nykim.net" class="footer_link link_mail"> ';
+                html += ' <span class="icon_circle"></span> ';
+                html += ' <span class="footer_link_text"></span> ';
+            html += ' </a> ';
+            html += ' <a href="tel:01027285936" class="footer_link link_phone"> ';
+                html += ' <span class="icon_circle"></span> ';
+                html += ' <span class="footer_link_text"></span> ';
+            html += ' </a> ';
+        html += ' </address> ';
+        html += ' <div class="footer_bottom"> ';
+            html += ' <ul class="social"> ';
+                html += ' <li class="social_item social_pinterest"><a href="https://www.pinterest.co.kr/ppphlox/">pinterest</a></li> ';
+                html += ' <li class="social_item social_codepen"><a href="#">codepen</a></li> ';
+                html += ' <li class="social_item social_github"><a href="#">github</a></li> ';
+            html += ' </ul> ';
+            html += ' <p class="update">Last updated on November 7th, 2017</p> ';
+            html += ' <p class="copyright">&copy; 2017 NY KIM</p> ';
+        html += ' </div> ';
 
-            siteContent.css({
-                "margin-bottom" : siteFooterHeight
-            });
-        };
-
-
-
+        $(".footer").append(html);
+        
+    }
+    
+        
+    
+    // Work Item 생성 함수
+    function worItemMaker(){
+        var html = '';
+        var object = '09';
+        
+        // object는 JSON 방식으로 워크 아이템 정보를 담을 듯
+        // (for x in obj) 를 써서 루프 돌려서 출력하는 코드 작성!
+        
+        html += ' <div class="work_item"> ';
+            html += ' <figure> ';
+                html += ' <img src="images/temp_'+object+'.png" alt="'+object+'" class="work_image" /> ';
+                html += ' <figcaption class="work_caption"> ';
+                    html += ' <div class="caption_textWrap"> ';
+                        html += ' <strong class="caption_title">T E S T</strong> ';
+                        html += ' <p class="caption_desc">테스트!!</p> ';
+                    html += ' </div> ';
+                    html += ' <a href="#"></a> ';
+                html += ' </figcaption> ';
+            html += ' </figure> ';
+        html += ' </div> ';
+        
+        //console.log(html);
+        $(".work_list .column:last").append(html);
+    }
+    
+    
+    $(window).on('load',function(){
+        gnbMaker();
+        footerMaker();
+        
+        worItemMaker();
     });
-
-
-
+        
+        
+               
+    
+        
+                
+            
+                  
+                
+           
+        
+    
+    
+    
 });
+console.log('--->> 커먼js 가장 하단입니다 <<---');
