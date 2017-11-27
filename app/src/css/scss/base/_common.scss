@@ -71,6 +71,10 @@
     height: 100%;
     transition: height .5s, opacity .5s;
 }
+.btn_effect:hover:after {
+    background-image: url(../images/ico_link_dark.svg) !important;
+    transition: background-image .5s;
+}
 
 .ani_elem {
     opacity: 0;

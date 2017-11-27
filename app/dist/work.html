@@ -11,9 +11,8 @@
     <meta name="theme-color" content="#fcd500">
     <meta name="msapplication-navbutton-color" content="#fcd500">
     <meta name="apple-mobile-web-app-status-bar-style" content="#fcd500">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	
-	<!-- 171101 | 페이지별로 다르게 설정할 예정..? -->
     <meta name="description" content="웹퍼블리셔 N의 포트폴리오" />
 	<meta name="keywords" content="웹퍼블리셔 N의 포트폴리오" />
     <meta name="title" content="NY KIM's portfolio" />
@@ -37,21 +36,21 @@
 </head>
 <body>
 
-<div class="wrap">
+<div class="wrap work_01">
   
 <header class="header"></header>
 
 <section class="hero topArea">
     <div class="inner">
         <h2 class="hero_title">
-            Happy Days
+            Coinone Admin
             <i class="hero_title_sm">
                 <span class="text_hide_m">featured</span> work #1
             </i>
         </h2>
         <div class="hero_top">
-            <p class="info_heading info_client">CLIENT<span class="info_text">nykim</span></p>
-            <p class="info_heading info_role">ROLE<span class="info_text">UI Development<i class="info_percentage">(100%)</i></span></p>
+            <p class="info_heading info_client">CLIENT<span class="info_text">Coinone</span></p>
+            <p class="info_heading info_role">ROLE<span class="info_text">UI Development &middot; Design<i class="info_percentage">(100% &middot; 70%)</i></span></p>
         </div>
         <div class="hero_center">
             <a href="#" class="hero_link btn_effect"><span>VIEW WEB PAGE</span></a>
@@ -64,7 +63,6 @@
     </div>
     <!-- //.inner -->
 </section>
-<!-- 171101 | 페이지마다 데이터 달라짐 -->
 
 <div class="contents">
     <article class="article_detail">
@@ -85,8 +83,25 @@
            </div>
            <div class="detail_main">
                 <ul class="shots">
-                     <li class="shots_item"><img src="../images/temp.jpeg" alt="test" class="shots_item_img"/></li>
-                     <li class="shots_item"><img src="../images/temp_08.png" alt="test" class="shots_item_img"/></li>
+                     <li class="shots_item">
+                         <a href="#" class="item_link">
+                             <img src="../images/coinone_01.png" alt="Coinone Admin Page" class="shots_item_img"/>
+                         </a>
+                     </li>
+                     <!--모바일에서는 이미지가 너무 커서 깨져보임.
+                     따라서 유저 에이전트로 분기한 다음,
+                     모바일의 경우 작은 이미지를 불러오도록 스크립트 짜야 할 듯 
+                     https://github.com/aFarkas/lazysizes/blob/gh-pages/README.md-->
+                     <li class="shots_item">
+                         <a href="#" class="item_link">
+                             <img src="../images/coinone_02.png" alt="Coinone Admin Page" class="shots_item_img"/>
+                         </a>
+                     </li>
+                     <li class="shots_item">
+                         <a href="#" class="item_link">
+                             <img src="../images/coinone_03.png" alt="Coinone Admin Page" class="shots_item_img"/>
+                         </a>
+                     </li>
                 </ul>
                 <div class="slider">
                     <div class="slider_inner">
@@ -101,13 +116,13 @@
 
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                              <img src="../images/temp_04.png" alt="slider"/>
+                              <img src="../images/coinone_04.png" alt="Coinone Admin Page"/>
                             </div>
                             <div class="swiper-slide">
-                              <img src="../images/temp_06.png" alt="slider"/>
+                              <img src="../images/coinone_05.png" alt="Coinone Admin Page"/>
                             </div>
                             <div class="swiper-slide">
-                              <img src="../images/temp_07.png" alt="slider"/>
+                              <img src="../images/coinone_06.png" alt="Coinone Admin Page"/>
                             </div>
                         </div>
 
@@ -159,32 +174,6 @@
 <!-- //.wrap -->
 
 
-<footer class="footer">
-
-    <h2 class="title footer_title">
-        Let's start right Now!
-    </h2>
-    <p class="footer_text">작업 준비 완료됐습니다. 편하실 때 연락 주세요!</p>
-    <address class="footer_address">
-        <a href="mailto:ppphlox@gmail.com" class="footer_link link_mail">
-                <span class="icon_circle"></span>
-                <span class="footer_link_text"></span>
-        </a>
-        <a href="tel:01027285936" class="footer_link link_phone">
-            <span class="icon_circle"></span>
-            <span class="footer_link_text"></span>
-        </a>
-    </address>
-    <div class="footer_bottom">
-        <ul class="social">
-            <li class="social_item social_pinterest"><a href="https://www.pinterest.co.kr/ppphlox/">pinterest</a></li>
-            <li class="social_item social_github"><a href="#">github</a></li>
-            <li class="social_item social_codepen"><a href="#">codepen</a></li>
-        </ul>
-        <p class="update">Last updated on November 7th, 2017</p> <!-- 171029 | 자바스크립트로 제어 예정 -->
-        <p class="copyright">&copy; 2017 NY KIM</p>
-    </div>
-    
-</footer>
+<footer class="footer"></footer>
 </body>
 </html>
