@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAZY LOADER</title>
+    <style>
+        #wrap {width: 90%; margin: 0 auto; text-align: center;}
+        header {padding: 30% 0;}
+        img {display: block; width: 100%;}
+        article.text {padding: 20% 0; color: #fff; background-color: #9b9b9b;}
+    </style>
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="js/jquery.lazy.js"></script>
+    <script src="js/jquery.lazy.plugins.js"></script>
+    <script src="js/myLazy.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1>~ LAZY LOADING ~</h1>
+        </header>
+        <article>
+            <h2>Look!</h2>
+             <img class="lazy" data-src="images/coinone_01.png" />
+            <img class="lazy" data-src="images/coinone_02.png" />
+            <img class="lazy" data-src="images/coinone_03.png" />
+        </article>
+        <article class="text">
+            <h2>Text</h2>
+            <div data-loader="ajax" data-src="about.html"></div>
+        </article>
+        <article>
+             <img class="lazy" data-src="images/coinone_04.png" />
+            <img class="lazy" data-src="images/coinone_05.png" />
+            <img class="lazy" data-src="images/coinone_06.png" />
+        </article>
+    </div>
+</body>
+</html>

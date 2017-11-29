@@ -108,7 +108,8 @@ $(function(){
                 {
                     'number': twolength(2),
                     'title': 'Old Portfolio',
-                    'desc': '과거 포트폴리오 (반전매력!)'
+                    'desc': '과거 포트폴리오 (feat. 풋풋함)',
+                    'link': true
                 },
             "list_04" : 
                 {
@@ -120,7 +121,8 @@ $(function(){
                 {
                     'number': twolength(4),
                     'title': ' ICON LANDING',
-                    'desc': ' 가상화폐 ICON 랜딩 페이지 '
+                    'desc': ' 가상화폐 ICON 랜딩 페이지 ',
+                    'link': true
                 },
             "list_06" : 
                 {
@@ -149,8 +151,7 @@ $(function(){
                     html += ' <figure> ';
                         html += ' <img src="images/temp_'+obj[i].number+'.png" alt="'+obj[i].desc+'" class="work_image" /> ';
                         html += ' <figcaption class="work_caption"> ';
-                            html += ' <div class="caption_textWrap"> ';
-                                html += ' <strong class="caption_title">'+obj[i].title+'</strong> ';
+                            html += ' <div class="caption_textWrap"> ';+= ' <strong class="caption_title">'+obj[i].title+'</strong> ';
                                 html += ' <p class="caption_desc">'+obj[i].desc+'</p> ';
                             html += ' </div> ';
                             html += ' <a href="#"></a> ';
