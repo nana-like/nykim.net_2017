@@ -41,7 +41,7 @@ gulp.task('webserver', function () {
 
 
 ////////// js 압축 //////////
-gulp.task('combine:js', function(){ 
+/*gulp.task('combine:js', function(){ 
     return gulp.src(paths.js)                                   
        .pipe(concat('test.js')) //하나로 합치기
        .pipe(gulp.dest(dist + '/js')) //합친 파일 보내기
@@ -49,7 +49,7 @@ gulp.task('combine:js', function(){
        .pipe(rename('test.min.js')) //압축한 파일 min으로 생성
        .pipe(gulp.dest(dist + '/js')) //압축한 파일 보내기
        .pipe(livereload());
-});
+});*/
 //////////////////////////////
 
 
@@ -82,7 +82,7 @@ gulp.task('move:html',function(){
 gulp.task('watch', function(){
     livereload.listen();
     gulp.watch(paths.html, ['move:html']);
-    gulp.watch(paths.js, ['combine:js']);
+/*    gulp.watch(paths.js, ['combine:js']);*/
     gulp.watch(paths.scss, ['compile:scss']);
 	gulp.watch(dist + '/**').on('change', livereload.changed);
 });
@@ -91,5 +91,5 @@ gulp.task('watch', function(){
 
 
 ///////// default 정의 /////////
-gulp.task('default', ['webserver', 'move:html', 'combine:js', 'compile:scss', 'watch']);
+gulp.task('default', ['webserver', 'move:html', 'compile:scss', 'watch']);
 //////////////////////////////

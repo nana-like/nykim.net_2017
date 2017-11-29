@@ -27,9 +27,22 @@ $(function(){
                 $titleLine.addClass('on');
             }
             
+            
             if ( windowBottom > objectBottom ) {
                 TweenLite.to($(this),1.5,{className:'+=on', top:-10, ease: Power2.easeOut, onComplete: showElemLine()});
+            }
                 
+            
+        });
+         
+         
+        $('.shots_item:not(.unveiled)').each(function(){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_object ){
+                
+                TweenLite.to($(this),1,{opacity:1, y:-30, className:'+=unveiled'});
             }
         });
     }

@@ -11,7 +11,7 @@
     <meta name="theme-color" content="#fcd500">
     <meta name="msapplication-navbutton-color" content="#fcd500">
     <meta name="apple-mobile-web-app-status-bar-style" content="#fcd500">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, shrink-to-fit=yes, user-scalable=yes" />
 	
     <meta name="description" content="웹퍼블리셔 N의 포트폴리오" />
 	<meta name="keywords" content="웹퍼블리셔 N의 포트폴리오" />
@@ -32,6 +32,7 @@
 	<script src="js/scroll.js"></script>
 	<script src="js/src.js"></script>
 	<script src="js/swiper.min.js"></script>
+	<script src="js/lazyload.min.js"></script>
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
@@ -53,7 +54,7 @@
             <p class="info_heading info_role">ROLE<span class="info_text">UI Development &middot; Design<i class="info_percentage">(100% &middot; 70%)</i></span></p>
         </div>
         <div class="hero_center">
-            <a href="#" class="hero_link btn_effect"><span>VIEW WEB PAGE</span></a>
+            <a href="#" class="hero_link btn_effect"><span>VIEW CODE</span></a>
             <p class="hero_scroll">or just scroll down to see screenshots!</p>
         </div>
         <div class="hero_bottom">
@@ -83,18 +84,14 @@
            </div>
            <div class="detail_main">
                 <ul class="shots">
-                     <li class="shots_item">
+                     <li class="shots_item unveiled" data-work="workItem">
                          <a href="#" class="item_link">
-                             <img src="../images/coinone_01.png" alt="Coinone Admin Page" class="shots_item_img"/>
+                             <img class="shots_item_img lazyload" src="images/loading.gif" data-src="images/coinone_01.png" data-srcset="images/coinone_01.png 1200w, images/coinone_01_sm.png 640w" alt="Coinone Admin Page"/>
                          </a>
                      </li>
-                     <!--모바일에서는 이미지가 너무 커서 깨져보임.
-                     따라서 유저 에이전트로 분기한 다음,
-                     모바일의 경우 작은 이미지를 불러오도록 스크립트 짜야 할 듯 
-                     https://github.com/aFarkas/lazysizes/blob/gh-pages/README.md-->
                      <li class="shots_item">
                          <a href="#" class="item_link">
-                             <img src="../images/coinone_02.png" alt="Coinone Admin Page" class="shots_item_img"/>
+                             <img class="shots_item_img lazyload" src="images/loading.gif" data-src="images/coinone_02.png" data-srcset="images/coinone_02.png 1200w, images/coinone_02_sm.png 640w" alt="Coinone Admin Page"/>
                          </a>
                      </li>
                      <li class="shots_item">
@@ -152,6 +149,7 @@
 
                 });
               </script>
+               
                 
             </div>
            <div class="detail_bottom">
@@ -160,7 +158,7 @@
                    <span class="detail_btn_title">WORK #6</span>
                    Prev.
                </a>
-               <a href="#" class="detail_link btn_effect"><span>view web page</span></a>
+               <a href="#" class="detail_link btn_effect"><span>view code</span></a>
                <a href="#" class="detail_btn next">
                    <span class="detail_btn_title">WORK #2</span>
                    Next.</a>
@@ -173,6 +171,11 @@
 
 <!-- //.wrap -->
 
+<script>
+
+     $('.lazyload').lazyload();
+    
+</script>
 
 <footer class="footer"></footer>
 </body>

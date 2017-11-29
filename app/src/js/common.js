@@ -1,6 +1,10 @@
 console.log('--->> header.js 시작합니닷 <<---');
 $(function(){
     
+    //로딩 이미지 제거
+    function removeLoading(){
+       $(".loading").fadeOut(800);
+    }
     
     
     // GNB 생성 함수
@@ -174,11 +178,22 @@ $(function(){
     }
     
     
+    function showOriginalImg(){
+        $('.item_link').on('click',function(evt){evt.preventDefault()});
+    }
+    
+    
     $(window).on('load',function(){
+        
+        setTimeout(function(){
+            removeLoading();
+        },100);
+        
         gnbMaker();
         footerMaker();
         
         workItemMaker();
+        showOriginalImg();
     });
         
         

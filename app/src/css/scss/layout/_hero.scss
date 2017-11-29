@@ -311,6 +311,10 @@
                 
                 .info_text {
                     font-size: 15px;
+                    
+                    .info_percentage {
+                        display: none;
+                    }
                 }
             }
         } 
@@ -359,9 +363,6 @@
                 .info_text {
                     font-size: 14px;
                     
-                    .info_percentage {
-                        display: none;
-                    }
                 }
             }
         } 

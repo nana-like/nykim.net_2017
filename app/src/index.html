@@ -8,12 +8,11 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="format-detection" content="telephone=no" />
-    <meta name="theme-color" content="#fcd500">
-    <meta name="msapplication-navbutton-color" content="#fcd500">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#fcd500">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no" />
+    <meta name="theme-color" content="#fce253">
+    <meta name="msapplication-navbutton-color" content="#fce253">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fce253">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, shrink-to-fit=yes, user-scalable=yes" />
 	
-	<!-- 171027 | 페이지별로 다르게 설정할 예정 -->
     <meta name="description" content="웹퍼블리셔 N의 포트폴리오" />
 	<meta name="keywords" content="웹퍼블리셔 N의 포트폴리오" />
     <meta name="title" content="NY KIM's portfolio" />
@@ -26,11 +25,83 @@
 	<title>NY KIM (TEST)</title>
 	
     <link rel="stylesheet" href="css/main.css"/>
+    
+    <style>
+        .loading {z-index: 1000; position: fixed; top: 0%; width: 100%; height: 100%; background-color: #f8f8f8;}
+        .loading_img {position: relative;
+            display: inline-block;
+            top: 50%;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            transform: translateY(-50%) translateX(-50%);}
+        .circle {
+  position: absolute;
+  border: 3px solid transparent;
+  border-top-color: #ffca38;
+  border-radius: 50%;
+  -webkit-animation: rotate linear infinite;
+          animation: rotate linear infinite;
+}
+.circle.one {
+  height: 50px;
+  width: 50px;
+  left: 50px;
+  top: 50px;
+  -webkit-animation-duration: 0.85s;
+          animation-duration: 0.85s;
+}
+.circle.two {
+  height: 75px;
+  width: 75px;
+  top: 38px;
+  left: 38px;
+  -webkit-animation-duration: 0.95s;
+          animation-duration: 0.95s;
+}
+.circle.three {
+  height: 100px;
+  width: 100px;
+  top: 25px;
+  left: 25px;
+  -webkit-animation-duration: 1.05s;
+          animation-duration: 1.05s;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+  to {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+}
+
+    </style>
 </head>
 <body>
 
 
 <div class="wrap">
+ 
+<div class="loading">
+    <div class="loading_img">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+    </div>
+</div>
   
 <header class="header"></header>
 
@@ -78,7 +149,7 @@
                 제 작업물이 마음에 드신다면 언제든 연락 주세요 ;)</p>
             </div>
             <div class="more">
-                <a href="" class="more_link">
+                <a href="about.html" class="more_link">
                     <span class="more_link_text">감성 퍼블리셔 N에 대해 더 궁금하신가요?</span>
                     <span class="icon_circle"></span>
                 </a>

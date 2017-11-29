@@ -84,6 +84,8 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .ani_elem { opacity: 0; }
 
+.item_link { cursor: default; }
+
 /* 
 *   FONT FACE
 */
@@ -634,6 +636,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.hero .hero_top { flex-direction: column; margin-top: 12px; }
 		.hero .hero_top .info_heading { margin-bottom: 2px; font-size: 11px; }
 		.hero .hero_top .info_heading .info_text { font-size: 15px; }
+		.hero .hero_top .info_heading .info_text .info_percentage { display: none; }
 		.hero .hero_center { margin-top: 6em; text-align: center; font-size: 12px; }
 		.hero .hero_bottom { right: 3.5em; }
 		.hero .hero_bottom .hero_page { font-size: 28px; } }
@@ -644,7 +647,6 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.hero .hero_top { margin-top: 10px; }
 		.hero .hero_top .info_heading { margin-bottom: 2px; }
 		.hero .hero_top .info_heading .info_text { font-size: 14px; }
-		.hero .hero_top .info_heading .info_text .info_percentage { display: none; }
 		.hero .hero_center { font-size: 12px; }
 		.hero .hero_bottom { right: 3em; }
 		.hero .hero_bottom .hero_page { font-size: 24px; } }
@@ -672,13 +674,15 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .article_detail .detail_main .shots { width: 100%; max-width: 1920px; margin: 0 auto; padding: 8em 10em 8em; box-sizing: border-box; background-color: #f5f5f5; }
 
-.article_detail .detail_main .shots .shots_item { display: block; width: 100%; margin: 12% auto 0; box-shadow: 0px 10px 30px rgba(54, 49, 49, 0.15); }
+.article_detail .detail_main .shots .shots_item { opacity: 0; display: block; width: 100%; margin: 12% auto 0; box-shadow: 0px 10px 30px rgba(54, 49, 49, 0.15); }
+
+.article_detail .detail_main .shots .shots_item.unveiled { opacity: 1; }
 
 .article_detail .detail_main .shots .shots_item .shots_item_link { display: block; width: 100%; }
 
 .article_detail .detail_main .shots .shots_item .shots_item_img { display: block; width: 100%; height: auto; }
 
-.article_detail .detail_main .shots .shots_item:first-child { margin-top: 0; }
+.article_detail .detail_main .shots .shots_item:first-child { margin-top: 10%; transform: matrix(1, 0, 0, 1, 0, -30); }
 
 .article_detail .detail_main .slider { position: relative; padding: 3em 0; background-color: #111f6f; }
 
@@ -754,13 +758,13 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 @media screen and (min-width: 641px) and (max-width: 1200px) { .article_detail .detail_top { flex-direction: column; font-size: 55px; padding-left: 2em; padding-right: 2em; }
 		.article_detail .detail_top .detail_info { font-size: 15px; line-height: 160%; margin-left: 0em; }
 		.article_detail .detail_top .detail_info .detail_info_text .detail_line { width: 3em; top: -1em; left: 0; background-color: #c4c4c4; }
-		.article_detail .detail_main .shots { padding: 5em 6em 5em; }
+		.article_detail .detail_main .shots { padding: 5em 4.6em 5em; }
 		.article_detail .detail_main .slider { padding: 3em 8em; font-size: 16px; }
 		.article_detail .detail_main .slider .slider_inner { padding: 0 0em; }
 		.article_detail .detail_main .slider .swiper-container .swiper-wrapper .swiper-slide { width: 80% !important; }
 		.article_detail .detail_main .slider .swiper-button-prev { width: 1.4em; height: 1.4em; margin-top: 0; transform: translateY(-50%); left: -4em !important; }
 		.article_detail .detail_main .slider .swiper-button-next { width: 1.4em; height: 1.4em; margin-top: 0; transform: translateY(-50%); right: -4em !important; }
-		.article_detail .detail_bottom { padding: 0em 6em; font-size: 15px; }
+		.article_detail .detail_bottom { padding: 0em 4.6em; font-size: 15px; }
 		.article_detail .detail_bottom .detail_btn { margin-top: 0; font-size: 28px; }
 		.article_detail .detail_bottom .detail_btn .detail_btn_title { font-size: 13px; }
 		.article_detail .detail_bottom .detail_btn.prev { padding-right: 10px; }
@@ -770,7 +774,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 @media screen and (max-width: 640px) { .article_detail .detail_top { flex-direction: column; font-size: 50px; padding-left: 1em; padding-right: 1em; }
 		.article_detail .detail_top .detail_info { font-size: 14px; margin-left: 0em; }
 		.article_detail .detail_top .detail_info .detail_info_text .detail_line { width: 3em; top: -1em; left: 0; background-color: #c4c4c4; }
-		.article_detail .detail_main .shots { padding: 2em 2em; }
+		.article_detail .detail_main .shots { padding: 2em 1.8em; }
 		.article_detail .detail_main .slider { padding: 2em 4em; font-size: 16px; }
 		.article_detail .detail_main .slider .slider_inner { padding: 0 0em; }
 		.article_detail .detail_main .slider .swiper-container .swiper-wrapper .swiper-slide { width: 85% !important; }

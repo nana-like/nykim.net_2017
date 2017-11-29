@@ -88,12 +88,12 @@ $(function(){
         }
         
         function animation(){
-            TweenLite.to(visualTitleArr[idx],1,{opacity:0});
+            TweenLite.to(visualTitleArr[idx],1.2,{opacity:0});
         }
         
         setInterval(function(){
             if(idx<visualTitleArr.length){
-                TweenLite.to(visualTitleArr[idx],0.5,{opacity:1, left:-10, rotationY:-180});
+                TweenLite.to(visualTitleArr[idx],1,{opacity:1, left:-10, rotationY:-180, ease: Power2.easeOut});
                 idx++;
             }
         },100);
@@ -123,10 +123,18 @@ $(function(){
     
     
     $(window).on('load',function(){
+        
         init();
-        visual_ani();
-        visualTitleFindN();    
-        visualTitle_ani();
+        
+        visualTitleFindN(); 
+        
+        setTimeout(function(){
+            visualTitle_ani();
+        },1300); 
+        setTimeout(function(){
+            visual_ani();  
+        },900); 
+        
     });
     
     
