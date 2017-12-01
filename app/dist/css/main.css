@@ -652,7 +652,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .article_detail .detail_main .shots { width: 100%; max-width: 1920px; margin: 0 auto; padding: 8em 10em 8em; box-sizing: border-box; background-color: #f5f5f5; }
 
-.article_detail .detail_main .shots .shots_item { opacity: 0; display: block; width: 100%; margin: 12% auto 0; box-shadow: 0px 10px 30px rgba(54, 49, 49, 0.15); }
+.article_detail .detail_main .shots .shots_item { display: block; width: 100%; margin: 12% auto 0; box-shadow: 0px 10px 30px rgba(54, 49, 49, 0.15); }
 
 .article_detail .detail_main .shots .shots_item.unveiled { opacity: 1; }
 
@@ -774,7 +774,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .article_about .inner { transition: margin .5s; position: relative; margin-top: 3em; width: 100%; height: auto; font-size: 29px; }
 
-.article_about .about_header .title { font-size: 100px; }
+.article_about .about_header .title { position: relative; top: 10px; font-size: 100px; }
 
 .article_about .about_wrap { background-color: #f5f5f5; padding-top: 3em; padding-bottom: 9%; margin-top: -2.1em; }
 

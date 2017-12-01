@@ -36,7 +36,7 @@ $(function(){
         });
          
          
-        $('.shots_item:not(.unveiled)').each(function(){
+ /*       $('.shots_item:not(.unveiled)').each(function(){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
@@ -44,7 +44,7 @@ $(function(){
                 
                 TweenLite.to($(this),1,{opacity:1, y:-30, className:'+=unveiled'});
             }
-        });
+        });*/
     }
     
     function burgerColor(){
