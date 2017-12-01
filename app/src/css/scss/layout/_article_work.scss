@@ -147,18 +147,21 @@ $itemSpace : 1.3em; //아이템 간격 조절용 변수
             } //end of .work_caption
             
             .external .caption_title { //외부 사이트로 바로 연결되는 경우 나타나는 외부 링크 아이콘
-                margin-left: -25px;
+                margin-left: -0.6em;
                 
                 &:before {
+                    //outline: 3px solid red;
                     display: block;
                     position: absolute;
-                    bottom: 9px;
-                    right: -32px;
-                    font-size: 22px;
+                    bottom: 0.2em;
+                    right: -0.6em;
                     width: 1em;
+                    max-width: 30px;
                     height: 1em;
-                    outline: 2px solid #fff;
+                    max-height: 30px;
                     content: '';
+                    background-image: url(../images/ico_link.svg);
+                    background-size: 100%;
                 }
             } //end of .external .caption_title
 
@@ -238,6 +241,15 @@ $itemSpace : 1.3em; //아이템 간격 조절용 변수
             font-size: 16px;
         }
         
+        .external .caption_title { //외부 사이트로 바로 연결되는 경우 나타나는 외부 링크 아이콘
+            margin-left: -1em !important;
+            
+            &:before {
+                right: -1em !important;
+            }
+        }
+
+        
     } 
     
 } 
@@ -280,7 +292,13 @@ $itemSpace : 1.3em; //아이템 간격 조절용 변수
             font-size: 14px;
         }
         
-        
+        .external .caption_title { //외부 사이트로 바로 연결되는 경우 나타나는 외부 링크 아이콘
+            margin-left: -1.2em !important;
+            
+            &:before {
+                right: -1.2em !important;
+            }
+        }
         
     } 
     

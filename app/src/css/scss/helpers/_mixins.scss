@@ -144,7 +144,7 @@
             z-index: 2;
         }
 
-        &:after { //임시 (이미지 교체 예정)
+        &:after { 
             display: block;
             position: absolute;
             top: 50%;
@@ -155,7 +155,7 @@
             font-size: 100%;
             background-image: url(../images/ico_link.svg);
             background-size: 100%;
-            transform: translateY(-50%)
+            transform: translateY(-50%);
         }
 }
 

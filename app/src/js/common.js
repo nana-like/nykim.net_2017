@@ -112,7 +112,8 @@ $(function(){
                 {
                     'number': twolength(2),
                     'title': 'Old Portfolio',
-                    'desc': '과거 포트폴리오 (반전매력!)'
+                    'desc': '과거 포트폴리오 (반전매력!)',
+                    'link': true
                 },
             "list_04" : 
                 {
@@ -124,7 +125,8 @@ $(function(){
                 {
                     'number': twolength(4),
                     'title': ' ICON LANDING',
-                    'desc': ' 가상화폐 ICON 랜딩 페이지 '
+                    'desc': ' 가상화폐 ICON 랜딩 페이지 ',
+                    'link': true
                 },
             "list_06" : 
                 {
@@ -152,7 +154,13 @@ $(function(){
                  html += ' <div class="work_item"> ';
                     html += ' <figure> ';
                         html += ' <img src="images/temp_'+obj[i].number+'.png" alt="'+obj[i].desc+'" class="work_image" /> ';
-                        html += ' <figcaption class="work_caption"> ';
+                
+                        if (obj[i].hasOwnProperty('link')) {
+                            console.log(i, '--yes!')
+                             html += ' <figcaption class="work_caption external"> ';
+                        }else{
+                             html += ' <figcaption class="work_caption"> ';
+                        }
                             html += ' <div class="caption_textWrap"> ';
                                 html += ' <strong class="caption_title">'+obj[i].title+'</strong> ';
                                 html += ' <p class="caption_desc">'+obj[i].desc+'</p> ';
@@ -162,6 +170,7 @@ $(function(){
                     html += ' </figure> ';
                 html += ' </div> ';
                 
+                
                $(".work_list .column").eq(myTurn).append(html); //인덱스 번호에 맞춰 아이템 삽입
                 
                if(myTurn<$(".work_list .column").length-1){ //컬럼 개수에 맞춰 인덱스 증가
@@ -170,7 +179,7 @@ $(function(){
                    myTurn = 0;
                }
                 
-            }
+            } //end of for (var i in obj)
 
         }
 
