@@ -84,7 +84,7 @@ gulp.task('watch', function(){
     gulp.watch(paths.html, ['move:html']);
 /*    gulp.watch(paths.js, ['combine:js']);*/
     gulp.watch(paths.scss, ['compile:scss']);
-	gulp.watch(dist + '/**').on('change', livereload.changed);
+	gulp.watch(src + '/**').on('change', livereload.changed);
 });
 //////////////////////////////
 
