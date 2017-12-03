@@ -81,9 +81,8 @@ gulp.task('move:html',function(){
 ///////// watch 업무 /////////
 gulp.task('watch', function(){
     livereload.listen();
-    gulp.watch(paths.html, ['move:html']);
-/*    gulp.watch(paths.js, ['combine:js']);*/
-    gulp.watch(paths.scss, ['compile:scss']);
+    gulp.watch(paths.html, {interval:1000}, ['move:html']);
+    gulp.watch(paths.scss, {interval:1000}, ['compile:scss']);
 	gulp.watch(src + '/**').on('change', livereload.changed);
 });
 //////////////////////////////

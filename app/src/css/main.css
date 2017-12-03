@@ -277,7 +277,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .visual .visual_title .title_text > span { position: relative; opacity: 0; }
 
-.visual .visual_title .title_logo { display: block; width: 240px; height: 240px; margin: 0.5em auto 1.5em; text-align: center; }
+.visual .visual_title .title_logo { opacity: 0; display: block; width: 240px; height: 240px; margin: 0.5em auto 1.5em; text-align: center; }
 
 .visual .visual_elem { opacity: 1; position: absolute; }
 
