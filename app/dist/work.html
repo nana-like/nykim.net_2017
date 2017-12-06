@@ -8,9 +8,9 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="format-detection" content="telephone=no" />
-    <meta name="theme-color" content="#fcd500">
-    <meta name="msapplication-navbutton-color" content="#fcd500">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#fcd500">
+    <meta name="theme-color" content="#fce253">
+    <meta name="msapplication-navbutton-color" content="#fce253">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#fce253">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, shrink-to-fit=yes, user-scalable=yes" />
 	
     <meta name="description" content="웹퍼블리셔 N의 포트폴리오" />
@@ -23,20 +23,25 @@
 	<meta property="og:description" content="웹퍼블리셔 N의 사심 가득한 포트폴리오 작품을 확인해 보세요."/>
 	
 	<title>웹퍼블리셔 N | 포트폴리오</title>
-
-	<script src="https://code.jquery.com/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-	<script src="js/common.js"></script>
-	<script src="js/header.js"></script>
-	<script src="js/footer.js"></script>
-	<script src="js/scroll.js"></script>
-	<script src="js/swiper.min.js"></script>
-	<script src="js/lazyload.min.js"></script>
+   
     <link rel="stylesheet" href="css/main.css"/>
+    
+    <style>
+     .loading{z-index:1000;position:fixed;top:0;width:100%;height:100%;background-color:#f8f8f8}.loading_img{position:relative;display:inline-block;top:50%;left:50%;width:150px;height:150px;transform:translateY(-50%) translateX(-50%)}.circle{position:absolute;border:3px solid transparent;border-top-color:#ffca38;border-radius:50%;-webkit-animation:rotate linear infinite;animation:rotate linear infinite}.circle.one{height:50px;width:50px;left:50px;top:50px;-webkit-animation-duration:.85s;animation-duration:.85s}.circle.two{height:75px;width:75px;top:38px;left:38px;-webkit-animation-duration:.95s;animation-duration:.95s}.circle.three{height:100px;width:100px;top:25px;left:25px;-webkit-animation-duration:1.05s;animation-duration:1.05s}@-webkit-keyframes rotate{from{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}to{-webkit-transform:rotateZ(0);transform:rotateZ(0)}}@keyframes rotate{from{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}to{-webkit-transform:rotateZ(0);transform:rotateZ(0)}}
+    </style>
+
 </head>
 <body>
 
 <div class="wrap work_01">
+ 
+ <div class="loading">
+    <div class="loading_img">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+    </div>
+</div>
   
 <header class="header"></header>
 
@@ -51,15 +56,15 @@
                 </h2>
                 <div class="hero_top">
                     <p class="info_heading info_client">CLIENT<span class="info_text">Coinone</span></p>
-                    <p class="info_heading info_role">ROLE<span class="info_text">UI Development &middot; Design<i class="info_percentage">(100% &middot; 70%)</i></span></p>
+                    <p class="info_heading info_role">ROLE<span class="info_text">UI Development &middot; Design<i class="info_percentage">(100% &middot; 80%)</i></span></p>
                 </div>
                 <div class="hero_center">
                     <a href="#" class="hero_link btn_effect"><span>VIEW CODE</span></a>
                     <p class="hero_scroll">or just scroll down to see screenshots!</p>
                 </div>
                 <div class="hero_bottom">
-                    <p class="hero_page"><span class="text_hide">Current Page:</span><span class="page_current">01</span></p>
-                    <p class="hero_page"><span class="text_hide">Entire Page:</span><span class="page_entire">6</span></p>
+                    <p class="hero_page"><span class="text_hide">Current Page:</span><i class="hash">&#x23;</i><span class="page_current">01</span></p>
+                    <!--<p class="hero_page"><span class="text_hide">Entire Page:</span><span class="page_entire">6</span></p>-->
                 </div>
             </div>
             <!-- //.inner -->
@@ -86,17 +91,17 @@
                         <ul class="shots">
                              <li class="shots_item unveiled" data-work="workItem">
                                  <a href="#" class="item_link">
-                                     <img class="shots_item_img lazyload" src="images/loading.gif" data-src="images/coinone_01.png" data-srcset="images/coinone_01.png 1200w, images/coinone_01_sm.png 640w" alt="Coinone Admin Page"/>
+                                     <img class="shots_item_img lazyload" src="images/loading.png" data-src="images/coinone_01.png" data-srcset="images/coinone_01.png 1200w, images/coinone_01_sm.png 640w" alt="Coinone Admin Page"/>
                                  </a>
                              </li>
                              <li class="shots_item">
                                  <a href="#" class="item_link">
-                                     <img class="shots_item_img lazyload" src="images/loading.gif" data-src="images/coinone_02.png" data-srcset="images/coinone_02.png 1200w, images/coinone_02_sm.png 640w" alt="Coinone Admin Page"/>
+                                     <img class="shots_item_img lazyload" src="images/loading.png" data-src="images/coinone_02.png" data-srcset="images/coinone_02.png 1200w, images/coinone_02_sm.png 640w" alt="Coinone Admin Page"/>
                                  </a>
                              </li>
                              <li class="shots_item">
                                  <a href="#" class="item_link">
-                                     <img src="../images/coinone_03.png" alt="Coinone Admin Page" class="shots_item_img"/>
+                                     <img class="shots_item_img lazyload" src="images/loading.png" data-src="images/coinone_03.png" data-srcset="images/coinone_03.png 1200w, images/coinone_03_sm.png 640w" alt="Coinone Admin Page"/>
                                  </a>
                              </li>
                         </ul>
@@ -113,13 +118,13 @@
 
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                      <img src="../images/coinone_04.png" alt="Coinone Admin Page"/>
+                                        <img class="shots_item_img lazyload" src="images/loading.png"  data-src="images/coinone_04.png" data-srcset="images/coinone_04.png 1200w, images/coinone_04_sm.png 640w" alt="Coinone Admin Page"/>
                                     </div>
                                     <div class="swiper-slide">
-                                      <img src="../images/coinone_05.png" alt="Coinone Admin Page"/>
+                                        <img class="shots_item_img lazyload"  src="images/loading.png" data-src="images/coinone_05.png" data-srcset="images/coinone_05.png 1200w, images/coinone_05_sm.png 640w" alt="Coinone Admin Page"/>
                                     </div>
                                     <div class="swiper-slide">
-                                      <img src="../images/coinone_06.png" alt="Coinone Admin Page"/>
+                                        <img class="shots_item_img lazyload"  src="images/loading.png" data-src="images/coinone_06.png" data-srcset="images/coinone_06.png 1200w, images/coinone_06_sm.png 640w" alt="Coinone Admin Page"/>
                                     </div>
                                 </div>
 
@@ -131,24 +136,7 @@
                         </div>
                         <!-- //.slider-->
 
-                      <script>
-                        var swiper = new Swiper('.swiper-container', {
-                          slidesPerView: 'auto',
-                          spaceBetween: 30,
-                          centeredSlides: true,
-                          grabCursor: true,
-                          nextButton: '.swiper-button-next',
-                          prevButton: '.swiper-button-prev',
-
-                          breakpoints: {
-                                640: {
-                                    slidesPerView: 'auto',
-                                    spaceBetween: 10
-                                },
-                            }
-
-                        });
-                      </script>
+                     
 
 
                     </div>
@@ -179,5 +167,36 @@
 <!-- //.wrap -->
 </div>
 <footer class="footer"></footer>
+
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="js/lazyload.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/salvattore.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	
+	 <script>
+        var swiper = new Swiper('.swiper-container', {
+          slidesPerView: 'auto',
+          spaceBetween: 30,
+          centeredSlides: true,
+          grabCursor: true,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+
+          breakpoints: {
+                640: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 10
+                },
+            }
+
+        });
+         
+         $(".lazyload").lazyload();
+     </script>
 </body>
 </html>

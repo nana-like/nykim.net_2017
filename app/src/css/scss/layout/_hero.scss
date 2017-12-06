@@ -120,7 +120,7 @@
         
         .page_current {
             letter-spacing: -0.06rem;
-            font-size: 100%;
+            font-size: 90%;
         }
         
         .page_entire {
@@ -133,6 +133,13 @@
                 content: '/';
                 font-weight: 300;
             }
+        }
+        
+        .hash {
+            display: inline-block;
+            margin-right: 0.3em;
+            font-size: 60%;
+            font-style: normal;
         }
     } //end of .hero_bottom
 }

@@ -576,11 +576,13 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .hero .hero_bottom .hero_page { display: inline-block; }
 
-.hero .hero_bottom .page_current { letter-spacing: -0.06rem; font-size: 100%; }
+.hero .hero_bottom .page_current { letter-spacing: -0.06rem; font-size: 90%; }
 
 .hero .hero_bottom .page_entire { font-weight: 300; font-size: 70%; }
 
 .hero .hero_bottom .page_entire:before { display: inline-block; padding: 0 2px 0 4px; content: '/'; font-weight: 300; }
+
+.hero .hero_bottom .hash { display: inline-block; margin-right: 0.3em; font-size: 60%; font-style: normal; }
 
 @media screen and (min-width: 1921px) { .hero .inner { padding-top: 6%; } }
 
