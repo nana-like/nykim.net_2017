@@ -142,7 +142,7 @@ $(function(){
             closeBurgerMenu();
                 setTimeout(function(){
                    window.location.href = href;
-                }, 750);
+                }, 600);
         });
     }
     
