@@ -59,19 +59,6 @@ $(function(){
         $('html,body').stop().animate({scrollTop:0});
     }
     
-    
-    
-    
-    $(".wrap.home").ready(function(){
-        console.log('나는 홈화면!');
-        
-        $(window).on('load',function(){
-            $('h1').on('click',function(){
-                scrollToTop();
-            });
-        });
-    });
-    
         
     // 이벤트 초기화
     function initEvent(){
@@ -95,6 +82,17 @@ $(function(){
         scrollTop = $(window).scrollTop();
         burgerColor();
         console.log(topAreaHeight);
+        
+       if ($(".wrap.home").length){
+            $('h1').on('click',function(){
+                scrollToTop();
+            });
+        } 
+       if ($(".wrap.about").length){
+            $('h1').on('click',function(){
+                window.location.href = '/';
+            });
+        }
     });
     
     
