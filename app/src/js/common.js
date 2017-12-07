@@ -15,11 +15,11 @@ $(function(){
         html += ' <div class="fixed"> ';
             html += ' <h1 class="logo"> ';
                 html += ' <span class="text_hide">웹퍼블리셔 N의 포트폴리오</span> ';
-                html += ' <a href="#"> ';
+                html += ' <div> ';
                     html += ' <svg class="title_logo" enable-background="new 0 0 240 236" version="1.1" viewBox="0 0 300 260" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"> ';
                     html += ' <polygon points="49 236 49 52.2 178.9 236 240 236 240 0 191 0 191 174.7 69.8 0 0 0 0 236" fill="#ffd40a"/> ';
                     html += ' </svg> ';
-                html += ' </a> ';
+                html += ' </div> ';
             html += ' </h1> ';
             html += ' <div class="menu" role="button" tabindex="0"> ';
                 html += ' <div class="menu_burger" tabindex="0"> ';
@@ -32,9 +32,9 @@ $(function(){
         html += ' <nav class="gnb" style="display:none"> ';
             html += ' <h2 class="text_hide">Navigation</h2> ';
             html += ' <ul class="nav"> ';
-                html += ' <li class="menu_item"><a href="#">HOME.</a></li> ';
+                html += ' <li class="menu_item"><a href="/">HOME.</a></li> ';
                 html += ' <li class="menu_item"><a href="#">WORK.</a></li> ';
-                html += ' <li class="menu_item"><a href="#">ABOUT.</a></li> ';
+                html += ' <li class="menu_item"><a href="about.html">ABOUT.</a></li> ';
             html += ' </ul> ';
             html += ' <div class="contact"> ';
                 html += ' <a href="mailto:nykim@nykim.net" class="contact_link">  ';
@@ -190,6 +190,7 @@ $(function(){
     function showOriginalImg(){
         $('.item_link').on('click',function(evt){evt.preventDefault()});
     }
+    
     
     
     $(window).on('load',function(){

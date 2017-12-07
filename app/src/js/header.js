@@ -6,6 +6,7 @@ $(function(){
     var $body = null;
     var $burger = null;
     var $gnb = null;
+    var $gnb_item = null;
     var tl_nav_show = null;
     var isOnTop = false;
     
@@ -14,6 +15,7 @@ $(function(){
         $body = $("body");
         $burger = $(".menu");
         $gnb = $(".gnb");
+        $gnb_item = $(".menu_item");
         
         tl_nav_show = new TimelineLite({paused:true, reversed:true});
         
@@ -113,6 +115,7 @@ $(function(){
         
     }
     
+    
     function initEvent(){
         
         $gnb.show();
@@ -131,6 +134,16 @@ $(function(){
            }
         });
         
+        //메뉴 아이템 클릭 시 버거 닫고 이동
+        $gnb_item.on('click',function(evt){
+            var href = $(this).children('a').attr('href');
+            console.log(href);
+            evt.preventDefault();
+            closeBurgerMenu();
+                setTimeout(function(){
+                   window.location.href = href;
+                }, 750);
+        });
     }
     
     

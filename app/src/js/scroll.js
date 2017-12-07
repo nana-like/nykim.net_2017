@@ -60,6 +60,18 @@ $(function(){
     }
     
     
+    
+    
+    $(".wrap.home").ready(function(){
+        console.log('나는 홈화면!');
+        
+        $(window).on('load',function(){
+            $('h1').on('click',function(){
+                scrollToTop();
+            });
+        });
+    });
+    
         
     // 이벤트 초기화
     function initEvent(){
@@ -73,7 +85,7 @@ $(function(){
         });
         
         $('h1').on('click',function(){
-            scrollToTop();
+           // scrollToTop();
         });
     }
     

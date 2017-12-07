@@ -93,7 +93,7 @@ $(function(){
         
         setInterval(function(){
             if(idx<visualTitleArr.length){
-                TweenLite.to(visualTitleArr[idx],1,{opacity:1, left:-10, rotationY:-180, ease: Power2.easeOut});
+                TweenLite.to(visualTitleArr[idx],1,{opacity:1, left:-10, ease: Power2.easeOut});
                 idx++;
             }
         },100);

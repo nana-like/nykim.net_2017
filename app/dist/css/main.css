@@ -202,7 +202,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 /* gnb */
 .gnb.open { visibility: visible; opacity: 1; bottom: 0; transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86); }
 
-.gnb { visibility: hidden; opacity: 0; z-index: 300; position: fixed; overflow: hidden; width: 100%; height: auto; top: 0; left: 0; right: 0; bottom: 100%; text-align: center; transition: all 0.65s cubic-bezier(0.785, 0.135, 0.15, 0.86); background-color: #f2f2f2; }
+.gnb { visibility: hidden; opacity: 0; z-index: 300; position: fixed; overflow: hidden; width: 100%; height: auto; top: 0; left: 0; right: 0; bottom: 100%; text-align: center; transition: all 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86); background-color: #f2f2f2; }
 
 .gnb .nav { display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; min-height: 390px; margin-top: -2em; }
 
