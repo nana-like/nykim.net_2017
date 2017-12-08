@@ -55,8 +55,9 @@ $(function(){
         }
     }
     
-    function scrollToTop(){
-        $('html,body').stop().animate({scrollTop:0});
+    function scrollTo(where){
+            $('html,body').stop().animate({scrollTop:where});
+        
     }
     
         
@@ -81,11 +82,17 @@ $(function(){
         initEvent();
         scrollTop = $(window).scrollTop();
         burgerColor();
-        console.log(topAreaHeight);
         
        if ($(".wrap.home").length){
+           
+           var posWork = $('.article_work').offset().top;
+           
             $('h1').on('click',function(){
-                scrollToTop();
+                scrollTo(0);
+            });
+            $('.menu_work').on('click',function(){
+                console.log('홈 화면에서 워크 메뉴 클릭');
+                scrollTo(posWork);
             });
         } 
        if ($(".wrap.about").length){
