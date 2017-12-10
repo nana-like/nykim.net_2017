@@ -113,7 +113,7 @@ $(function(){
                     'number': twolength(2),
                     'title': 'Old Portfolio',
                     'desc': '과거 포트폴리오 (반전매력!)',
-                    'link': true
+                    'link': 'old'
                 },
             "list_04" : 
                 {
@@ -126,7 +126,7 @@ $(function(){
                     'number': twolength(4),
                     'title': ' ICON LANDING',
                     'desc': ' 가상화폐 ICON 랜딩 페이지 ',
-                    'link': true
+                    'link': 'icon'
                 },
             "list_06" : 
                 {
@@ -156,16 +156,23 @@ $(function(){
                         html += ' <img src="images/temp_'+obj[i].number+'.png" alt="'+obj[i].desc+'" class="work_image" /> ';
                 
                         if (obj[i].hasOwnProperty('link')) {
-                            console.log(i, '--yes!')
+                             // link 프로퍼티가 있는 경우 external 클래스 추가
                              html += ' <figcaption class="work_caption external"> ';
                         }else{
                              html += ' <figcaption class="work_caption"> ';
                         }
+                
                             html += ' <div class="caption_textWrap"> ';
                                 html += ' <strong class="caption_title">'+obj[i].title+'</strong> ';
                                 html += ' <p class="caption_desc">'+obj[i].desc+'</p> ';
                             html += ' </div> ';
-                            html += ' <a href="#"></a> ';
+                
+                        if(obj[i].hasOwnProperty('link')){
+                            html += ' <a href=" work/work_'+ obj[i].link +'.html "></a> ';
+                        }else{
+                            html += ' <a href=" work/work_'+ obj[i].number +'.html "></a> ';
+                        }
+                            
                         html += ' </figcaption> ';
                     html += ' </figure> ';
                 html += ' </div> ';
