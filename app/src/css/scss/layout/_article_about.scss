@@ -38,7 +38,7 @@
         background-color: $color-bg;
         padding-top: 3em;
         padding-bottom: 9%;
-        margin-top: -2.1em;
+        margin-top: -2em;
     }
     
     .about_motto {
@@ -117,7 +117,7 @@
                 }
 
                 .more_link {
-                    @include display-flex;
+                    //@include display-flex;
                     @include font-noto;
                     position: relative;
                     letter-spacing: 0.12rem;
@@ -130,9 +130,15 @@
 
                     .icon_circle {
                         @include icon-circle;
-                        position: absolute;
+                        outline: 3px solid red;
+                        display: inline-block;
+                        position: absolute !important;
+                        left: 0;
+                        margin-left: 4.5em;
+                        //left: 50%;
+                        //margin-left: -1.5em;
                         top: 4.5em;
-                        margin-left: 0;
+                        //margin-left: 0;
                         font-size: 16px;
 
                         &:before {
@@ -225,7 +231,7 @@
     
     .about_wrap {
         font-size: 16px;
-        margin-top: -3.5em;
+        margin-top: -3em;
     }
     
     .about_motto {
@@ -267,7 +273,8 @@
                     .icon_circle {
                         top: 6em;
                         font-size: 13px;
-                        
+                        margin-left: 5.8em;
+                        outline: 3px solid blue;
                     }
                     
                 } 
@@ -353,7 +360,8 @@
                     .icon_circle {
                         top: 5em;
                         font-size: 11px;
-                        
+                        outline: 3px solid green;
+                        margin-left: 5.1em;
                     }
                     
                 } 
