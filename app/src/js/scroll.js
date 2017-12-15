@@ -30,6 +30,7 @@ $(function(){
             
             if ( windowBottom > objectBottom ) {
                 TweenLite.to($(this),1.5,{className:'+=on', top:-10, ease: Power2.easeOut, onComplete: showElemLine()});
+                
             }
                 
             
@@ -91,11 +92,18 @@ $(function(){
                 scrollTo(0);
             });
             $('.menu_work').on('click',function(){
-                console.log('홈 화면에서 워크 메뉴 클릭');
                 scrollTo(posWork);
+            });
+            $('.menu_about').on('click',function(){
+                window.location.href = 'about.html';
             });
         } 
        if ($(".wrap.about").length){
+            $('h1').on('click',function(){
+                window.location.href = '/';
+            });
+        }
+       if ($(".wrap.work").length){
             $('h1').on('click',function(){
                 window.location.href = '/';
             });
