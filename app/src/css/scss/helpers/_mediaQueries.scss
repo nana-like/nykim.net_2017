@@ -13,6 +13,7 @@ $tablet-s-width		: 768px;
 $mob-l-width		: 640px;
 $mob-m-width		: 425px;
 $mob-s-width		: 375px;
+$mob-ip5-width		: 320px;
  
 
 // ! 사용법 !
@@ -72,6 +73,12 @@ $mob-s-width		: 375px;
 // Mobile small (~375px)
 @mixin mo-sm {
 	@media screen and (max-width: #{$mob-s-width}) {
+		@content;
+	}
+}
+// Mobile iphon5 (~320px)
+@mixin mo-ip5 {
+	@media screen and (max-width: #{$mob-ip5-width}) {
 		@content;
 	}
 }

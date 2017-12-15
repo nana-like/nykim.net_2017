@@ -544,7 +544,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.article_work .work_wrap .work_list .work_item .work_caption .caption_textWrap .caption_title:before { right: -20px; font-size: 12px; } }
 
 /* hero (work detail) */
-.hero { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 720px; margin: 0 auto; color: #fff; background-image: url(../images/hero_coinone.png); background-position: 60% 80%; background-repeat: no-repeat; background-size: cover; background-color: #a2a2a2; }
+.hero { position: relative; width: 100%; max-width: 2560px; height: 100vh; min-height: 720px; margin: 0 auto; color: #fff; background-position: 60% 80%; background-repeat: no-repeat; background-size: cover; background-color: #a2a2a2; }
 
 .hero .inner { position: relative; width: 100%; max-width: 1920px; margin: 0 auto; padding: 8% 9em 0 9em; height: 100vh; height: 100%; box-sizing: border-box; }
 
@@ -583,6 +583,8 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 .hero .hero_bottom .page_entire:before { display: inline-block; padding: 0 2px 0 4px; content: '/'; font-weight: 300; }
 
 .hero .hero_bottom .hash { display: inline-block; margin-right: 0.3em; font-size: 60%; font-style: normal; }
+
+.work_01 .hero { background-image: url(../images/hero_coinone.png); }
 
 @media screen and (min-width: 1921px) { .hero .inner { padding-top: 6%; } }
 
@@ -647,6 +649,10 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 .article_detail .detail_top .detail_info { font-size: 19px; line-height: 160%; margin-left: 11em; font-family: 'NotoSans', AppleGothic, sans-serif, Helvetica; transition: margin-left .5s; }
 
 .article_detail .detail_top .detail_info .detail_info_text { position: relative; width: auto; margin-top: 5em; }
+
+.article_detail .detail_top .detail_info .detail_info_text .detail_mobile { margin-top: 3.5em; color: #5a5a5a; font-size: 11px; line-height: 130%; padding: 0.5em 0 0.5em 4.2em; border: 1px solid #d4d4d4; }
+
+.article_detail .detail_top .detail_info .detail_info_text .detail_mobile .detail_ico { position: absolute; bottom: 0.8em; left: 1.2em; display: block; width: 2em; height: 2em; background-image: url(../images/ico_expand.svg); background-position: 0 0; background-size: 100%; background-repeat: no-repeat; }
 
 .article_detail .detail_top .detail_info .detail_info_text .detail_line { display: block; position: absolute; top: 14px; left: -8em; width: 7em; height: 1px; background-color: #696969; }
 
@@ -770,6 +776,9 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 		.article_detail .detail_bottom .detail_btn.prev:before, .article_detail .detail_bottom .detail_btn.next:before { display: none; } }
 
 @media screen and (max-width: 375px) { .article_detail .detail_bottom .detail_link { font-size: 12px; } }
+
+@media screen and (max-width: 320px) { .article_detail .detail_top .detail_info .detail_info_text .detail_mobile { padding: 0.5em; }
+		.article_detail .detail_top .detail_info .detail_info_text .detail_mobile .detail_ico { display: none; } }
 
 /* article about */
 .article_about { position: relative; width: 100%; min-height: 600px; max-height: 100%; padding-top: 80px; }

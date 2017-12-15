@@ -12,7 +12,6 @@
     min-height: 720px;
     margin: 0 auto;
     color: #fff;
-    background-image:url(../images/hero_coinone.png);
     background-position: 60% 80%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -144,6 +143,11 @@
     } //end of .hero_bottom
 }
 
+
+
+.work_01 .hero {
+    background-image:url(../images/hero_coinone.png);
+}
 
 
 
