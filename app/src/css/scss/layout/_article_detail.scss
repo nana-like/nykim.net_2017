@@ -156,8 +156,7 @@
         .slider {
             position: relative;
             padding: 3em 0;
-            background-color: $color-work-01;
-            
+                
             .slider_inner {
                 position: relative;
                 max-width: 1920px;
@@ -182,6 +181,12 @@
                         img {
                             display: block;
                             width: 100%;
+                        }
+                        
+                        &.slide_mo {
+                            //모바일 이미지의 경우
+                            max-height: 100% !important;
+                            width: 45% !important;
                         }
                     }
                 }
@@ -327,12 +332,62 @@
 } // end of .article_detail
 
 
+
+
+/////////////////////////////
+// !각 work 페이지별 컬러링! //
+////////////////////////////
+
+.work_01 .article_detail .detail_main .slider {
+    background-color: $color-work-01;
+}
+
+
+.work_02 .article_detail .detail_main .slider {
+    background-color: $color-work-02;
+}
+
+.work_06 .article_detail .detail_main .slider {
+    background-color: $color-work-06;
+}
+
+
+
+
+
 .work_01 .article_detail .detail_bottom .detail_link {
     border-color: $color-work-01;
     color: $color-work-01;
     
     &:before {
         background-color: $color-work-01;
+    }
+    
+    &:hover span {
+        color: #fff;
+    }
+}
+
+.work_02 .article_detail .detail_bottom .detail_link {
+    border-color: $color-work-02;
+    color: $color-work-02;
+    
+    &:before {
+        background-color: $color-work-02;
+    }
+    
+    &:hover span {
+        color: #fff;
+    }
+}
+
+
+.work_06 .article_detail .detail_bottom .detail_link {
+    border-color: $color-work-06;
+    color: $color-work-06;
+    
+    &:before {
+        background-color: $color-work-06;
     }
     
     &:hover span {

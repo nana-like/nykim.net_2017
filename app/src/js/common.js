@@ -153,7 +153,7 @@ $(function(){
                 
                  html += ' <div class="work_item"> ';
                     html += ' <figure> ';
-                        html += ' <img src="images/temp_'+obj[i].number+'.png" alt="'+obj[i].desc+'" class="work_image" /> ';
+                        html += ' <img src="images/thumb_'+obj[i].number+'.png" alt="'+obj[i].desc+'" class="work_image" /> ';
                 
                         if (obj[i].hasOwnProperty('link')) {
                              // link 프로퍼티가 있는 경우 external 클래스 추가

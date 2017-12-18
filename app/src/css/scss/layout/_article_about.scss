@@ -130,7 +130,6 @@
 
                     .icon_circle {
                         @include icon-circle;
-                        outline: 3px solid red;
                         display: inline-block;
                         position: absolute !important;
                         left: 0;
@@ -274,7 +273,7 @@
                         top: 6em;
                         font-size: 13px;
                         margin-left: 5.8em;
-                        outline: 3px solid blue;
+                       // outline: 3px solid blue;
                     }
                     
                 } 
@@ -360,7 +359,7 @@
                     .icon_circle {
                         top: 5em;
                         font-size: 11px;
-                        outline: 3px solid green;
+                        //outline: 3px solid green;
                         margin-left: 5.1em;
                     }
                     
