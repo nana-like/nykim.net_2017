@@ -54,7 +54,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .clearfix:after { display: block; content: ''; clear: both; }
 
-.ly_mt_sm { margin-top: 1em; }
+.ly_mt_sm { display: block; margin-top: 1em; }
 
 .br_m { display: none; }
 

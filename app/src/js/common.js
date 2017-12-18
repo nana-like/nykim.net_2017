@@ -125,7 +125,7 @@ $(function(){
                 {
                     'number': twolength(4),
                     'title': ' ICON LANDING',
-                    'desc': ' 가상화폐 ICON 랜딩 페이지 ',
+                    'desc': ' 가상화폐 ICON 랜딩 페이지 (반응형)',
                     'link': 'icon'
                 },
             "list_06" : 
@@ -168,7 +168,7 @@ $(function(){
                             html += ' </div> ';
                 
                         if(obj[i].hasOwnProperty('link')){ //link 프로퍼티가 있는 경우 링크 주소 변경
-                            html += ' <a href=" work/work_'+ obj[i].link +'.html "></a> ';
+                            html += ' <a href=" work/work_'+ obj[i].link +'/index.html " target="_blank"></a> ';
                         }else{
                             html += ' <a href=" work/work_'+ obj[i].number +'.html "></a> ';
                         }
