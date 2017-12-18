@@ -13,7 +13,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#fcd500">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no" />
 	
-	<!-- 171027 | 페이지별로 다르게 설정할 예정 -->
     <meta name="description" content="웹퍼블리셔 N의 포트폴리오" />
 	<meta name="keywords" content="웹퍼블리셔 N의 포트폴리오" />
     <meta name="title" content="NY KIM's portfolio" />
@@ -23,78 +22,18 @@
 	<meta property="og:image" content="images/og_img.png"/>
 	<meta property="og:description" content="웹퍼블리셔 N의 사심 가득한 포트폴리오 작품을 확인해 보세요."/>
 	
-	<title>어바웃2</title>
+	<title>웹퍼블리셔 N | About Me</title>
 	
     <link rel="stylesheet" href="css/main.css"/>
 
     <style>
-        .loading {z-index: 1000; position: fixed; top: 0%; width: 100%; height: 100%; background-color: #f8f8f8; }
-        .loading_img {position: relative;
-            display: inline-block;
-            top: 50%;
-            left: 50%;
-            width: 150px;
-            height: 150px;
-            transform: translateY(-50%) translateX(-50%);}
-        .circle {
-  position: absolute;
-  border: 3px solid transparent;
-  border-top-color: #ffca38;
-  border-radius: 50%;
-  -webkit-animation: rotate linear infinite;
-          animation: rotate linear infinite;
-}
-.circle.one {
-  height: 50px;
-  width: 50px;
-  left: 50px;
-  top: 50px;
-  -webkit-animation-duration: 0.85s;
-          animation-duration: 0.85s;
-}
-.circle.two {
-  height: 75px;
-  width: 75px;
-  top: 38px;
-  left: 38px;
-  -webkit-animation-duration: 0.95s;
-          animation-duration: 0.95s;
-}
-.circle.three {
-  height: 100px;
-  width: 100px;
-  top: 25px;
-  left: 25px;
-  -webkit-animation-duration: 1.05s;
-          animation-duration: 1.05s;
-}
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-  to {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-}
-@keyframes rotate {
-  from {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-  to {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
-  }
-}
-
+     .loading{z-index:1000;position:fixed;top:0;width:100%;height:100%;background-color:#f8f8f8}.loading_img{position:relative;display:inline-block;top:50%;left:50%;width:150px;height:150px;transform:translateY(-50%) translateX(-50%)}.circle{position:absolute;border:3px solid transparent;border-top-color:#ffca38;border-radius:50%;-webkit-animation:rotate linear infinite;animation:rotate linear infinite}.circle.one{height:50px;width:50px;left:50px;top:50px;-webkit-animation-duration:.85s;animation-duration:.85s}.circle.two{height:75px;width:75px;top:38px;left:38px;-webkit-animation-duration:.95s;animation-duration:.95s}.circle.three{height:100px;width:100px;top:25px;left:25px;-webkit-animation-duration:1.05s;animation-duration:1.05s}@-webkit-keyframes rotate{from{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}to{-webkit-transform:rotateZ(0);transform:rotateZ(0)}}@keyframes rotate{from{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}to{-webkit-transform:rotateZ(0);transform:rotateZ(0)}}
     </style>
 </head>
 <body>
 
 
-<div class="wrap">
+<div class="wrap about">
  
 <div class="loading">
     <div class="loading_img">
@@ -112,11 +51,11 @@
            
                
             <div class="about_header">
-                <h2 class="title">
+                <h2 class="title" data-ani="About&nbsp;Me.">
                    About Me.
                 </h2>
                 <div class="title_line"></div>
-                <i class="title_sm">Nice to meet you</i>
+                <i class="title_sm" data-ani="title_sm">Nice to meet you</i>
             </div>
             <!-- //about_header -->
             
@@ -205,9 +144,10 @@
 
 	<script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="js/common.js"></script>
 	<script src="js/header.js"></script>
 	<script src="js/footer.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/scroll.js"></script>
     
 </body>
 

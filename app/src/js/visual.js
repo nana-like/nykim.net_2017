@@ -93,7 +93,7 @@ $(function(){
         
         setInterval(function(){
             if(idx<visualTitleArr.length){
-                TweenLite.to(visualTitleArr[idx],1,{opacity:1, left:-10, rotationY:-180, ease: Power2.easeOut});
+                TweenLite.to(visualTitleArr[idx],1,{opacity:1, left:-10, ease: Power2.easeOut});
                 idx++;
             }
         },100);
@@ -111,7 +111,12 @@ $(function(){
     
     ////////////////////////////////////////////////
     
-    
+    function visualLogo_ani(){
+        
+        $logo = $(".visual_title .title_logo");
+        TweenLite.to($logo,2,{opacity:1});
+        
+    }
     
     
     function initEvent(){
@@ -129,11 +134,14 @@ $(function(){
         visualTitleFindN(); 
         
         setTimeout(function(){
+            visualLogo_ani();
+        },800); 
+        setTimeout(function(){
             visualTitle_ani();
-        },1300); 
+        },1200); 
         setTimeout(function(){
             visual_ani();  
-        },900); 
+        },1000); 
         
     });
     

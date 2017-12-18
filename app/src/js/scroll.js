@@ -30,13 +30,14 @@ $(function(){
             
             if ( windowBottom > objectBottom ) {
                 TweenLite.to($(this),1.5,{className:'+=on', top:-10, ease: Power2.easeOut, onComplete: showElemLine()});
+                
             }
                 
             
         });
          
          
-        $('.shots_item:not(.unveiled)').each(function(){
+ /*       $('.shots_item:not(.unveiled)').each(function(){
             var bottom_of_object = $(this).offset().top + $(this).outerHeight();
             var bottom_of_window = $(window).scrollTop() + $(window).height();
             
@@ -44,7 +45,7 @@ $(function(){
                 
                 TweenLite.to($(this),1,{opacity:1, y:-30, className:'+=unveiled'});
             }
-        });
+        });*/
     }
     
     function burgerColor(){
@@ -55,10 +56,10 @@ $(function(){
         }
     }
     
-    function scrollToTop(){
-        $('html,body').stop().animate({scrollTop:0});
+    function scrollTo(where){
+            $('html,body').stop().animate({scrollTop:where});
+        
     }
-    
     
         
     // 이벤트 초기화
@@ -73,7 +74,7 @@ $(function(){
         });
         
         $('h1').on('click',function(){
-            scrollToTop();
+           // scrollToTop();
         });
     }
     
@@ -82,7 +83,31 @@ $(function(){
         initEvent();
         scrollTop = $(window).scrollTop();
         burgerColor();
-        console.log(topAreaHeight);
+        
+       if ($(".wrap.home").length){
+           
+           var posWork = $('.article_work').offset().top;
+           
+            $('h1').on('click',function(){
+                scrollTo(0);
+            });
+            $('.menu_work').on('click',function(){
+                scrollTo(posWork);
+            });
+            $('.menu_about').on('click',function(){
+                window.location.href = 'about.html';
+            });
+        } 
+       if ($(".wrap.about").length){
+            $('h1').on('click',function(){
+                window.location.href = '/';
+            });
+        }
+       if ($(".wrap.work").length){
+            $('h1').on('click',function(){
+                window.location.href = '/';
+            });
+        }
     });
     
     

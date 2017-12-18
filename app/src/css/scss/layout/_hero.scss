@@ -12,7 +12,6 @@
     min-height: 720px;
     margin: 0 auto;
     color: #fff;
-    background-image:url(../images/hero_coinone.png);
     background-position: 60% 80%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -120,7 +119,7 @@
         
         .page_current {
             letter-spacing: -0.06rem;
-            font-size: 100%;
+            font-size: 90%;
         }
         
         .page_entire {
@@ -134,9 +133,21 @@
                 font-weight: 300;
             }
         }
+        
+        .hash {
+            display: inline-block;
+            margin-right: 0.3em;
+            font-size: 60%;
+            font-style: normal;
+        }
     } //end of .hero_bottom
 }
 
+
+
+.work_01 .hero {
+    background-image:url(../images/hero_coinone.png);
+}
 
 
 

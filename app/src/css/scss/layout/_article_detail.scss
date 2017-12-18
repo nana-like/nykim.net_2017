@@ -69,6 +69,29 @@
                 width: auto;
                 margin-top: 5em;
                 
+                .detail_mobile {
+                    margin-top: 3.5em;
+                    color: #5a5a5a;
+                    font-size: 11px;
+                    line-height: 130%;
+                    padding: 0.8em 0 0.8em 4.2em;
+                    border: 1px solid #d4d4d4;
+                    
+                    
+                    .detail_ico {
+                        position: absolute;
+                        bottom: 1em;
+                        left: 1.2em;
+                        display: block;
+                        width: 2em;
+                        height: 2em;
+                        background-image: url(../images/ico_expand.svg);
+                        background-position: 0 0;
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+                }
+                
                 .detail_line {
                     display: block;
                     position: absolute;
@@ -96,7 +119,7 @@
             background-color: $color-bg;
             
             .shots_item {
-                opacity: 0;
+                //opacity: 0;
                 display: block;
                 width: 100%;
                 margin: 12% auto 0;
@@ -116,11 +139,11 @@
                     width: 100%;
                     height: auto;
                 }
-                
+                /*
                 &:first-child {
                     margin-top: 10%;
                     transform: matrix(1, 0, 0, 1, 0, -30);
-                }
+                }*/
             }
             
             .shots_item:first-child {
@@ -614,4 +637,18 @@
         font-size: 12px;
         //letter-spacing: -0.01rem;
     }
+    
+}
+// =============================================
+
+@include mo-ip5 { 
+    
+    .article_detail .detail_top .detail_info .detail_info_text .detail_mobile {
+        padding: 0.5em;
+        
+        .detail_ico {
+            display: none;
+        }
+    }
+    
 }

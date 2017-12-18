@@ -30,6 +30,7 @@
 }
 
 .ly_mt_sm {
+    display: block;
     margin-top: 1em;
 }
 
@@ -84,4 +85,13 @@
     cursor: default;
 }
 
+::-moz-selection { 
+    //color: red;
+    background-color: #ffecaf;
+}
+
+::selection {
+    //color: red;
+    background-color: #ffecaf;
+}
 //end of _common.scss
