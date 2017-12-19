@@ -1,0 +1,784 @@
+@charset "UTF-8";
+@import "compass";
+@import url( "http://fonts.googleapis.com/earlyaccess/notosanskr.css" );
+
+// ------------------------------------------------------ //
+// ---------------------COMMON STYLE--------------------- //
+
+/* RESET STYLE */
+html,body,div,span,h1,h2,h3,h4,h5,h6,p,em,img,article,aside,footer,header,nav,address,section,main,time,ol,ul,li,hr,strong{
+    margin:0; 
+    padding:0; 
+    border:0; 
+    vertical-align:baseline; 
+    -webkit-text-size-adjust:none; 
+    font-weight:400; 
+    font-style:normal;
+}
+
+ul,ol,li,dl{
+    list-style:none
+}
+
+a:link,a:visited,a:hover,a:active{
+    text-decoration:none;
+}
+
+hr{
+    display:none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* COMMON STYLE */
+.text_indent{
+    text-indent: -9999px;
+}
+.text_hide{
+    position: absolute;
+    left: -999em;
+}
+.clearfix{
+    *zoom:1;
+}
+.clearfix:after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+
+
+@font-face {
+    font-family: 'CircularStd Book';
+    src: url('../fonts/couture-bld.eot');
+    src: local('Circular Std Book'), url('../fonts/CircularStd-Book.woff') format('woff');
+}
+@font-face {
+    font-family: 'CircularStd Bold';
+    src: url('../fonts/CircularStd-Bold.eot');
+    src: local('Circular Std Book'), url('../fonts/CircularStd-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'CircularStd Medium';
+    src: url('../fonts/CircularStd-Medium.eot');
+    src: local('Circular Std Book'), url('../fonts/CircularStd-Medium.woff') format('woff');
+}
+
+@mixin font_NotoSans($weight) {
+    font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif;
+    font-weight: $weight;
+}
+@mixin font_CircularStd-Book {
+    font-family: 'CircularStd Book', Helvetica, Arial, sans-serif;
+}
+
+@mixin font_CircularStd-Bold {
+    font-family: 'CircularStd Bold', Helvetica, Arial, sans-serif;
+}
+@mixin font_CircularStd-Medium {
+    font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif;
+}
+
+
+@mixin full-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+// ------------------------------------------------------ //
+
+
+/* ====== 1. BODY STYLE ====== */
+
+html,body{
+    position: relative;
+    overflow-y: auto;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+
+#wrap {
+    width: 100%;
+    height: auto;
+    min-width: 300px;
+    max-width: 768px;
+    
+    @include font_CircularStd-Book;
+}
+
+
+
+header h1.logo_sm {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 20px;
+    background-image: url(../images/3m_logo_sm@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+footer p.copyright {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.02em;
+}
+
+
+
+// ------------------------------------------------------ //
+
+
+/* ====== 2. SELECTION_MENU ====== */
+
+
+#selection_menu {
+    @include full-bg;
+    background-image: url(../images/selection_menu_bg.png);
+    
+}
+#selection_menu #wrap {
+    width: 96%;
+    margin: 0 auto;
+}
+
+#selection_menu .title {
+    width: 100%;
+    margin-top: 80px;
+    text-align: center;
+    color: #fff;
+    
+    h2 {
+        font-size: 38px;
+        @include font_CircularStd-Medium;
+        line-height: 28px;
+        
+
+        span {
+            font-size: 18px;
+            @include font-NotoSans(400);
+        }
+    }
+    
+    
+    /* Diamond Icon */
+    h2:before {
+        display: block;
+        content: '';
+        width: 40px;
+        height: 34px;
+        margin: 0 auto 24px;
+        background-image: url(../images/icon_club@2x.png);
+        background-size: 100%;
+    }
+    
+    
+    
+}
+
+#selection_menu .main {
+    
+    width: 100%;
+    margin: 40px auto 60px;
+    
+    .btn {
+		display: block;
+        position: relative;
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 40px 0;
+        box-sizing: border-box;
+        border-radius: 8px;
+        background-color: #fff;
+        text-align: center;
+        box-shadow: 0 7px 15px 4px #5f3ed6;
+        
+        
+        &.reserv {
+            margin-bottom: 30px;
+        }
+
+        strong {
+            display: block;
+            color: #000;
+            margin-bottom: 12px;
+            font-size: 39px;
+            @include font_NotoSans(400);
+        }
+        
+        p {
+            color: #777;
+            font-size: 14px;
+            line-height: 20px;
+            @include font_NotoSans(300);
+        }
+        
+        P.hover {
+            display: none !important;
+            opacity: 0;
+        }
+    }
+	
+
+}
+
+
+
+
+// ------------------------------------------------------ //
+
+
+/* ====== 3. RESERVATION_MAIN ====== */
+
+
+#reservation_main {
+    @include full-bg;
+    background-image: url(../images/reservation_dim.png);
+    
+}
+#reservation_main #wrap {
+    width: 100%;
+    height: auto;
+    margin: 5% auto;
+}
+
+
+#reservation_main .title {
+    
+    padding: 0 25px;
+	color: #fff;
+	
+	h2 {
+		padding: 30px 0;
+		font-size: 30px;
+		line-height: 30px;
+    	@include font_CircularStd-Medium;
+		
+		span {
+			font-size: 18px;
+			@include font_NotoSans(400);
+		}
+		
+	}
+}
+
+
+#reservation_main .main {
+    
+    padding: 0 25px;
+    padding-bottom: 20px;
+	
+	ol > li {
+		margin-bottom: 36px;
+	}
+	
+	.date {
+		width: 42px;
+        margin: 16px 0 10px;
+		text-align: center;
+		font-size: 60px;
+    	@include font_CircularStd-Medium;
+		color: #fff;
+		line-height: 40px;
+		
+		
+		span {
+            margin-left: 8px;
+			font-size: 14px;
+			color: #9b9b9b;
+		}
+		
+		
+		&.full {
+			color: #545359;
+			
+			span {
+				color: #545359;
+			}
+		}
+		
+	}
+	
+	.time_list {
+		
+		
+		li {
+			float: left;
+			width: 80px;
+			margin-right: 12px;
+		}
+		a.time {
+			display: block;
+			width: 82px;
+			height: 30px;
+			font-size: 14px;
+			color: #dbdbdb;
+            display:table-cell;
+            line-height: 22px;
+            vertical-align: middle;
+			text-align: center;
+			border-radius: 50px;
+			box-sizing: border-box;
+			border: 2px solid #aeaeae;
+    		@include font_CircularStd-Book;
+		}
+		p.capacity {
+			margin-top: 4px;
+            margin-bottom: 10px;
+			text-align: center;
+			font-size: 12px;
+			color: #9b9b9b;
+    		@include font_CircularStd-Medium;
+		}
+		
+		a:hover {
+			background-color: #464646;
+		}
+		
+		
+		
+		a.active {
+		    display: block;
+            background-color: rgba(0,0,0,0);
+			background-image: url(../images/res_btn_c.png);
+			background-position: 0 0px;
+			background-size: 110%;
+			background-repeat: no-repeat;
+			border: 0 !important;
+            line-height: 30px;
+		}
+		
+		a.full {
+			color: #545359;
+			background-color: #1f1e23;
+  			border: solid 2px #545359;
+			cursor: default;
+		}
+		
+		
+		
+	}
+
+	
+}
+
+footer .back_btn {
+    display: block;
+    float: right;
+    @include clearfix;
+	width: 110px;
+	height: 40px;
+    margin: 40px 25px 25px 0;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background-color: #4c4c4c;
+	border-radius: 20px;
+	@include font_NotoSans(400);
+}
+
+
+
+// ------------------------------------------------------ //
+
+
+/* ====== 4. Reservation_POPUP ====== */
+
+.dim {
+    display: none;
+    z-index: 100;
+	position: fixed;
+	overflow: auto; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup {
+    display: none;
+	position: fixed; 
+	top: 50%; 
+	left: 5%;
+	width: 90%;
+    height: 400px;
+    margin: -200px auto 0;
+	background-color:#fff;
+        @include clearfix;
+    
+    
+    
+    .popup_inner {
+        @include clearfix;
+        position: relative;
+        overflow-y: auto;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        padding: 30px 30px !important;
+        box-sizing: border-box !important;
+        background-color: #fff;
+    }
+    
+    
+    
+    
+    
+    
+    
+}
+
+.popup h3{
+        margin-top: 10px;
+        margin-bottom: 30px;
+		font-size: 26px;
+		line-height: 24px;
+    	@include font_CircularStd-Medium;
+		
+		span {
+			font-size: 16px;
+			@include font_NotoSans(400);
+		}
+		
+}
+
+.popup form ol li {
+    
+    margin-bottom: 20px;
+    
+    
+    &:last-child {
+        margin-bottom: 10px;
+        
+        
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 4px;
+        @include font_CircularStd-Medium;
+        font-size: 16px;
+    }
+    
+    input {
+        width: 100%;
+        height: 46px;
+        padding-left: 2%;
+        box-sizing: border-box;
+        font-size: 15px;
+		@include font_NotoSans(400);
+        background-color: #eee;
+        border: 0;
+        outline: 0;
+
+        /*iPhone innerShadow Fix*/
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        
+    }
+    
+    input:-ms-input-placeholder { color: #b1b1b1; letter-spacing: -0.02em;} 
+    input::-webkit-input-placeholder { color: #b1b1b1; letter-spacing: -0.02em;} 
+    input::-moz-placeholder { color: #b1b1b1;  letter-spacing: -0.02em;} 
+    input::-moz-placeholder { color: #b1b1b1;  letter-spacing: -0.02em;} 
+
+    input:focus {
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        outline: 0;
+    }
+    
+    
+    input.done {
+        @extend input:focus;
+    }
+    
+    input.colored{
+        color: #ff5900;
+        
+    }
+    
+    /*누락되었습니다 표시*/
+    label.alert {
+        
+        color: #ff5900;
+        
+        &:after{
+            display: inline-block;
+            content: '필수 입력 항목이 누락되었습니다. ';
+            margin-left: 6px;
+            color: #ff5900;
+            font-size: 12px;
+            @include font_NotoSans(400);
+            
+        }
+    }
+    
+
+}
+
+.popup p {
+        margin-top: 10px;
+        font-size: 11px;
+        color: #b1b1b1;
+        letter-spacing: -0.02em;
+		@include font_NotoSans(300);
+
+
+    
+}
+
+.popup .res_btn {
+    cursor: default;
+    display: block;
+    float: right;
+    @include clearfix;
+	width: 110px;
+	height: 40px;
+    margin: 40px 0px 0px 0;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background-color: #4c4c4c;
+	border-radius: 20px;
+	@include font_NotoSans(400);
+    &.on { 
+        cursor: pointer;
+        background-color: #ff5900;
+    }
+}
+
+.popup .clse {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    background-image: url(../images/x_btn.png);
+    background-size: 100%;
+}
+
+.popup_res p.complete {
+        font-size: 28px;
+        line-height: 480px;
+        text-align: center;
+        color: #000;
+}
+
+.popup_res p.fail {
+        margin-top: 140px;
+        font-size: 24px;
+        line-height: 42px;
+        text-align: center;
+        color: #000;
+}
+
+.popup_res a.complete_btn, a.fail_btn  {
+        display: block;
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        width: 130px;
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+        color: #fff;
+        border-radius: 27px;
+        background-color: #4c4c4c;
+        @include font_NotoSans(400);
+        cursor: pointer;
+        left: 50%;
+        bottom: 200px;
+        margin-left: -60px;
+        
+    
+}
+
+
+
+
+// ------------------------------------------------------ //
+
+/* ====== 5. Resevation Lookup Page ====== */
+
+
+.popup_lookup form ol li {
+    
+   margin-bottom: 20px;
+    
+    
+    &:last-child {
+        margin-bottom: 10px;
+        
+        
+    }
+        
+}
+
+
+.popup .lookup_btn {
+    cursor: default;
+    display: block;
+    float: right;
+    @include clearfix;
+	width: 110px;
+	height: 40px;
+    margin: 40px 0px 0px 0;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background-color: #4c4c4c;
+	border-radius: 20px;
+	@include font_NotoSans(400);
+    &.on { 
+        cursor: pointer;
+        background-color: #ff5900;
+    }
+}
+
+
+// ------------------------------------------------------ //
+
+/* ====== 6. Resevation Lookup Result Page ====== */
+
+
+
+
+.popup .cancel_btn {
+    display: block;
+    float: right;
+    @include clearfix;
+	width: 110px;
+	height: 40px;
+    margin: 40px 0px 0px 0;
+	line-height: 40px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	background-color: #4c4c4c;
+	border-radius: 20px;
+	@include font_NotoSans(400);
+
+}
+
+.popup .res_date {
+    display: block;
+    margin-top: 14px;
+    font-size: 17px;
+    @include font_NotoSans(500);
+    letter-spacing: -0.02em;
+}
+
+
+
+
+// ------------------------------------------------------ //
+
+
+/* ====== 7. Admin Key Stroke Verification Page ====== */
+
+
+
+
+#admin_key_stroke_verification {
+    @include full-bg;
+    background-image: url(../images/selection_menu_bg.png);
+    
+}
+#admin_key_stroke_verification section {
+    width: 96%;
+    margin: 0 auto;
+}
+
+#admin_key_stroke_verification .title {
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #fff;
+    
+    h2 {
+        font-size: 40px;
+        @include font_CircularStd-Medium;
+        line-height: 32px;
+        
+
+        span {
+            font-size: 18px;
+            @include font-NotoSans(400);
+        }
+    }
+    
+
+    
+    
+}
+
+#admin_key_stroke_verification .main {
+  
+    
+    input {
+        display: block;
+        width: 90%;
+        height: 46px;
+        margin: 0 auto 20px;
+        color: #7e7e7e;
+        font-size: 14px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        background-color: #fff;
+        border: 1px solid #dbdbdb;
+        outline: 0;
+    }
+    
+    p {
+        text-align: center;
+    }
+	
+    .verify_btn {
+        display: inline-block;
+        padding-bottom: 2px;
+        color: #fff;
+        text-align: center;
+        font-size: 16px;
+        @include font-NotoSans(400);
+        border-bottom: 1px solid #fff;
+    }
+		
+
+}

@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@import url("http://fonts.googleapis.com/earlyaccess/notosanskr.css");
+/* RESET STYLE */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, article, aside, footer, header, nav, address, section, main, time, ol, ul, li, hr, strong { margin: 0; padding: 0; border: 0; vertical-align: baseline; -webkit-text-size-adjust: none; font-weight: 400; font-style: normal; }
+
+ul, ol, li, dl { list-style: none; }
+
+a:link, a:visited, a:hover, a:active { text-decoration: none; }
+
+hr { display: none; }
+
+button { cursor: pointer; }
+
+/* COMMON STYLE */
+.text_indent { text-indent: -9999px; }
+
+.text_hide { position: absolute; left: -999em; }
+
+.clearfix { *zoom: 1; }
+
+.clearfix:after { display: block; content: ''; clear: both; }
+
+@font-face { font-family: 'CircularStd Book'; src: url("../fonts/couture-bld.eot"); src: local("Circular Std Book"), url("../fonts/CircularStd-Book.woff") format("woff"); }
+@font-face { font-family: 'CircularStd Bold'; src: url("../fonts/CircularStd-Bold.eot"); src: local("Circular Std Book"), url("../fonts/CircularStd-Bold.woff") format("woff"); }
+@font-face { font-family: 'CircularStd Medium'; src: url("../fonts/CircularStd-Medium.eot"); src: local("Circular Std Book"), url("../fonts/CircularStd-Medium.woff") format("woff"); }
+/* ====== 1. BODY STYLE ====== */
+html, body { position: relative; overflow-y: auto; overflow-x: hidden; width: 100%; min-width: 100%; height: 100%; min-height: 100%; }
+
+#wrap { width: 100%; height: auto; min-width: 960px; font-family: 'CircularStd Book', Helvetica, Arial, sans-serif; }
+
+header h1.logo_sm { position: absolute; top: 20px; left: 20px; width: 169px; height: 33px; background-image: url(../images/3m_logo_sm.png); background-repeat: no-repeat; }
+header h1.logo_sm a { display: block; width: 100%; height: 100%; }
+
+footer p.copyright { position: fixed; left: 50%; bottom: 3%; margin-left: -104px; color: #fff; font-size: 15px; letter-spacing: 0.02em; }
+
+/* ====== 2. SPLASH STYLE ====== */
+#splash { width: 100%; height: 100%; }
+
+#splash .splash_bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+#splash .splash_bg.bg_1 { background-image: url(../images/splash_bg_02.png); }
+#splash .splash_bg.bg_2 { opacity: 0; background-image: url(../images/splash_bg_03.png); }
+
+#splash .title_logo { opacity: 0; position: fixed; top: 50%; left: 50%; margin-top: -67px; margin-left: -125px; }
+#splash .title_logo img { width: 250px; height: 134px; }
+
+#splash p.title { display: none; position: fixed; top: 50%; left: 50%; width: 850px; height: 170px; margin-top: -90px; margin-left: -425px; color: #fff; font-size: 134px; letter-spacing: -0.02em; font-family: 'CircularStd Bold', Helvetica, Arial, sans-serif; }
+
+#splash p.copyright { position: fixed; left: 50%; bottom: 14px; margin-left: -104px; color: #fff; font-size: 15px; letter-spacing: 0.02em; }
+
+/* ====== 4. SELECTION_MENU ====== */
+#selection_menu { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-image: url(../images/selection_menu_bg.png); }
+
+#selection_menu #wrap { width: 1200px; height: 95%; margin: 0 auto; }
+
+#selection_menu .title { margin-top: 12%; margin-bottom: 66px; text-align: center; color: #fff; /* 다이아몬드 아이콘입니다. 필요 없을 경우 지워 주세요! */ }
+#selection_menu .title h2 { margin-top: 70px; font-size: 43px; font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif; line-height: 39px; }
+#selection_menu .title h2 span { font-size: 21px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+#selection_menu .title h2:before { display: block; content: ''; width: 54px; height: 46px; margin: 0 auto 30px; background-image: url(../images/icon_club.png); background-size: 100%; }
+
+#selection_menu .main { width: 920px; margin: 0 auto; }
+#selection_menu .main .btn { position: relative; width: 450px; height: 300px; padding: 90px 0; box-sizing: border-box; border-radius: 8px; background-color: #fff; text-align: center; box-shadow: 0 7px 15px 4px #5f3ed6; }
+#selection_menu .main .btn.reserv { float: left; margin-right: 20px; }
+#selection_menu .main .btn.search { float: right; }
+#selection_menu .main .btn a:link { display: block; width: 450px; height: 300px; color: #000; }
+#selection_menu .main .btn strong { display: block; color: #000; margin-bottom: 17px; font-size: 43px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+#selection_menu .main .btn p { color: #777; font-size: 17px; line-height: 24px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 300; }
+#selection_menu .main p.hover { display: none; position: absolute; top: 0; left: 0; width: 450px; height: 300px; padding: 100px 0; font-size: 24px; color: #fff; box-sizing: border-box; border-radius: 8px; background-color: rgba(0, 0, 0, 0.9); font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+#selection_menu .main p.hover:before { display: block; content: ''; width: 50px; height: 50px; margin: 0 auto 6px; }
+#selection_menu .main .reserv > p.hover:before { background-image: url(../images/icon_reserve.png); }
+#selection_menu .main .search > p.hover:before { background-image: url(../images/icon_search.png); }
+
+/* ====== 5. RESERVATION_MAIN ====== */
+#reservation_main { overflow-y: auto; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-image: url(../images/reservation_bg.png); }
+
+#reservation_main #wrap { margin-top: 5%; width: 100%; height: 740px; background-color: rgba(0, 0, 0, 0.5); }
+
+#reservation_main section { width: 1000px; height: 740px; margin: 0 auto; }
+
+#reservation_main .title { color: #fff; }
+#reservation_main .title h2 { padding: 70px 0; font-size: 30px; line-height: 33px; font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif; }
+#reservation_main .title h2 span { font-size: 18px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+
+#reservation_main .main ol > li { margin-bottom: 40px; }
+#reservation_main .main .date { float: left; width: 42px; margin-right: 90px; text-align: center; font-size: 75px; font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif; color: #fff; line-height: 40px; }
+#reservation_main .main .date span { display: block; font-size: 14px; color: #9b9b9b; }
+#reservation_main .main .date.full { color: #545359; }
+#reservation_main .main .date.full span { color: #545359; }
+#reservation_main .main .time_list { float: left; }
+#reservation_main .main .time_list li { float: left; width: 129px; margin-right: 26px; }
+#reservation_main .main .time_list a.time { display: block; width: 129px; height: 47px; font-size: 22px; color: #dbdbdb; line-height: 47px; text-align: center; border-radius: 80px; box-sizing: border-box; border: 2px solid #aeaeae; font-family: 'CircularStd Book', Helvetica, Arial, sans-serif; }
+#reservation_main .main .time_list p.capacity { margin-top: 8px; text-align: center; font-size: 14px; color: #9b9b9b; font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif; }
+#reservation_main .main .time_list a:hover { background-color: #464646; }
+#reservation_main .main .time_list a.active { background-image: url(../images/res_btn_c.png); background-position: 0 0px; background-size: 100%; background-repeat: no-repeat; border: 0 !important; padding-top: 2px; }
+#reservation_main .main .time_list a.full { color: #545359; background-color: #1f1e23; border: solid 2px #545359; cursor: default; }
+
+footer .back_btn { position: fixed; right: 2%; bottom: 3%; display: block; width: 152px; height: 54px; line-height: 54px; text-align: center; font-size: 18px; color: #fff; background-color: #4c4c4c; border-radius: 27px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+
+/* ====== 6. Reservation_POPUP ====== */
+.dim { display: none; /*제이쿼리에 팝업 이벤트 있습니다*/ z-index: 100; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); }
+
+.popup { display: none; /*제이쿼리에 팝업 이벤트 있습니다*/ position: absolute; overflow-y: auto; overflow-x: hidden; top: 50%; left: 50%; width: 844px; height: 640px; padding: 54px 45px 0; box-sizing: border-box; margin-top: -320px; margin-left: -422px; background-color: #fff; }
+
+.popup h3 { margin-bottom: 56px; font-size: 28px; line-height: 28px; font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif; }
+.popup h3 span { font-size: 18px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+
+.popup form ol li { float: left; margin-right: 34px; margin-bottom: 27px; /*누락되었습니다 표시*/ }
+.popup form ol li:nth-child(2n) { margin-right: 0; }
+.popup form ol li:last-child { margin-bottom: 10px; }
+.popup form ol li:last-child input { width: 754px; }
+.popup form ol li label { display: block; margin-bottom: 4px; font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif; font-size: 16px; }
+.popup form ol li input { width: 360px; height: 60px; padding-left: 20px; box-sizing: border-box; font-size: 18px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; background-color: #eee; border: 0; }
+.popup form ol li input:-ms-input-placeholder { color: #b1b1b1; letter-spacing: -0.02em; }
+.popup form ol li input::-webkit-input-placeholder { color: #b1b1b1; letter-spacing: -0.02em; }
+.popup form ol li input::-moz-placeholder { color: #b1b1b1; letter-spacing: -0.02em; }
+.popup form ol li input::-moz-placeholder { color: #b1b1b1; letter-spacing: -0.02em; }
+.popup form ol li input:focus, .popup form ol li input.done { background-color: #fff; border: 1px solid #dbdbdb; outline: 0; }
+.popup form ol li input.colored { color: #ff5900; }
+.popup form ol li label.alert { color: #ff5900; }
+.popup form ol li label.alert:after { display: inline-block; content: '필수 입력 항목이 누락되었습니다. '; margin-left: 6px; color: #ff5900; font-size: 14px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+
+.popup p { font-size: 12px; color: #b1b1b1; letter-spacing: -0.02em; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 300; }
+
+.popup .res_btn { cursor: default; display: block; position: absolute; right: 43px; bottom: 37px; width: 130px; height: 46px; line-height: 46px; text-align: center; color: #fff; border-radius: 27px; background-color: #4c4c4c; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; /* 활성화 된 예약하기 버튼 */ }
+.popup .res_btn.on { cursor: pointer; background-color: #ff5900; }
+
+.popup .clse { /* 닫기 버튼 */ display: block; position: absolute; top: 54px; right: 43px; width: 28px; height: 28px; background-image: url(../images/x_btn.png); background-size: 100%; }
+
+.popup_res p.complete { /* 완료되었습니다 문구 */ font-size: 28px; line-height: 480px; text-align: center; color: #000; }
+
+.popup_res p.fail { /* 통신 실패 문구 */ margin-top: 140px; font-size: 24px; line-height: 42px; text-align: center; color: #000; }
+
+.popup_res a.complete_btn, a.fail_btn { display: block; position: absolute; right: 43px; bottom: 37px; width: 130px; height: 46px; line-height: 46px; text-align: center; color: #fff; border-radius: 27px; background-color: #4c4c4c; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; cursor: pointer; left: 50%; bottom: 200px; margin-left: -60px; }
+
+/* ====== 7. Resevation Lookup Page ====== */
+.popup_lookup form ol li { float: none; clear: both; margin-right: 0; margin-bottom: 27px; }
+.popup_lookup form ol li input { width: 754px; }
+
+.popup .lookup_btn { cursor: default; display: block; position: absolute; right: 43px; bottom: 37px; width: 130px; height: 46px; line-height: 46px; text-align: center; color: #fff; border-radius: 27px; background-color: #4c4c4c; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+.popup .lookup_btn.on { cursor: pointer; background-color: #ff5900; }
+
+/* ====== 8. Resevation Lookup Result Page ====== */
+.popup .cancel_btn { display: block; position: absolute; right: 43px; bottom: 37px; width: 130px; height: 46px; line-height: 46px; text-align: center; color: #fff; border-radius: 27px; background-color: #4c4c4c; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+
+.popup .res_date { display: block; position: absolute; left: 43px; bottom: 53px; font-size: 18px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 500; letter-spacing: -0.02em; }
+
+/* ====== 9. Admin Key Stroke Verification Page ====== */
+#admin_key_stroke_verification { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-image: url(../images/selection_menu_bg.png); }
+
+#admin_key_stroke_verification section { position: absolute; top: 50%; left: 50%; width: 360px; height: 340px; margin-top: -220px; margin-left: -170px; }
+
+#admin_key_stroke_verification .title { /*margin-top: 20%;*/ margin-bottom: 66px; text-align: center; color: #fff; }
+#admin_key_stroke_verification .title h2 { margin-top: 84px; font-size: 43px; font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif; line-height: 36px; }
+#admin_key_stroke_verification .title h2 span { font-size: 21px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+
+#admin_key_stroke_verification .main input { display: block; width: 360px; height: 60px; margin: 0 auto 20px; color: #7e7e7e; font-size: 18px; padding-left: 14px; box-sizing: border-box; background-color: #fff; border: 1px solid #dbdbdb; outline: 0; }
+#admin_key_stroke_verification .main p { text-align: center; }
+#admin_key_stroke_verification .main .verify_btn { display: inline-block; padding-bottom: 2px; color: #fff; text-align: center; font-size: 18px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; border-bottom: 1px solid #fff; }
+
+/* ====== 9. Admin Key Stroke Verification Page ====== */
+#admin_key_stroke_verification { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-image: url(../images/selection_menu_bg.png); }
+
+#admin_key_stroke_verification section { position: absolute; top: 50%; left: 50%; width: 360px; height: 340px; margin-top: -220px; margin-left: -170px; }
+
+#admin_key_stroke_verification .title { /*margin-top: 20%;*/ margin-bottom: 66px; text-align: center; color: #fff; }
+#admin_key_stroke_verification .title h2 { margin-top: 84px; font-size: 43px; font-family: 'CircularStd Medium', Helvetica, Arial, sans-serif; line-height: 36px; }
+#admin_key_stroke_verification .title h2 span { font-size: 21px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; }
+
+#admin_key_stroke_verification .main input { display: block; width: 360px; height: 60px; margin: 0 auto 20px; color: #7e7e7e; font-size: 18px; padding-left: 14px; box-sizing: border-box; background-color: #fff; border: 1px solid #dbdbdb; outline: 0; }
+#admin_key_stroke_verification .main p { text-align: center; }
+#admin_key_stroke_verification .main .verify_btn { display: inline-block; padding-bottom: 2px; color: #fff; text-align: center; font-size: 18px; font-family: 'Noto Sans KR',dotum, gulim, Helvetica, Arial, sans-serif; font-weight: 400; border-bottom: 1px solid #fff; }
