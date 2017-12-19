@@ -42,30 +42,63 @@
         
         .title_text { //비주얼 문구
             position: relative;
-            left: 10px;
+            left: 0px;
             @include font-lato(300);
             font-size: 40px;
             color: rgba(255,255,255,0.8);
             
-            i {
-                position: relative;
-                opacity: 0;
-                font-style: normal;
-                text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6);
-            }
             
             & > span {
                 position: relative;
+                @include ani-visualTxtAni;
                 opacity: 0;
+
+
+                i {
+                    position: relative;
+                    font-style: normal;
+                    text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6);
+                }
+
+                &:nth-child(1){
+                    animation-delay: .1s;
+                }
+                &:nth-child(2){
+                    animation-delay: .2s;
+                }
+                &:nth-child(3){
+                    animation-delay: .3s;
+                }
+                &:nth-child(4){
+                    animation-delay: .4s;
+                }
+                &:nth-child(5){
+                    animation-delay: .5s;
+                }
+                &:nth-child(6){
+                    animation-delay: .6s;
+                }
+                &:nth-child(7){
+                    animation-delay: .7s;
+                }
+                &:nth-child(8){
+                    animation-delay: .8s;
+                }
+                &:nth-child(9){
+                    animation-delay: .9s;
+                }
             }
         }
 
         .title_logo { //비주얼 로고
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
             opacity: 0;
             display: block;
             width: 240px;
             height: 240px;
-            margin: 0.5em auto 1.5em;
             text-align: center;
         }
     } // end of .visual_title
@@ -151,7 +184,9 @@
     }
     
     .scroll_text { //SCROLL DOWN 문구
-        position: relative;
+        position: absolute;
+	top: 50%;
+	margin-top: 11em;
         margin-left: -6px;
         @include font-lato(300);
         color: rgba(255,255,255,0.45);

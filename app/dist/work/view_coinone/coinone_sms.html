@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"/>
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+    
+</head>
+<body>
+    <div id="wrap">
+       
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active"> <!-- 활성화 시 active class -->
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li> <!-- 활성화 시 active class -->
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section id="main">
+           <div class="main-container">
+              
+               <div class="main-top">
+                   <h2>SMS 발송</h2> 
+               </div>
+               
+               <div class="main-board smsArea">
+                       <div class="smsFromTo clearfix">
+                          
+                           <div class="sms-from">
+                                    <div class="tit">
+                                        <strong>보낸 사람 <em>1577-8000</em></strong>
+                                        <button type="reset">내용 초기화</button>
+                                    </div>
+                                    <textarea placeholder="발신 내용을 입력해 주세요."></textarea>
+                           </div>
+                           <!--//end of sms-from -->
+                           
+                           <div class="sms-to">
+                                    <div class="tit">
+                                        <strong>받는 사람</strong>
+                                        <button type="reset">번호 초기화</button>
+                                    </div>
+                                    <div class="sms-to-list">
+                                        <input type="text" placeholder="전화번호를 입력해 주세요."/>
+
+                                        <button type="button" class="btn-add">추가 +</button>
+                                    </div>
+                           </div>
+                           <!--//end of sms-to -->
+                           
+                       </div>
+                       <!-- //end of .smsFromTo -->
+
+                       <div class="sms-btn">
+                           <button type="button">발송</button>
+                           <button type="button">전체 초기화</button>
+                       </div>
+               </div>
+               <!--//.end of main-board -->
+               
+               
+               <div class="main-top">
+                   <h2>SMS 발송 내역</h2> 
+                   
+                   <div class="filterArea">
+                       <div class="dateSelect clearfix">
+                           <strong>기간</strong>
+
+                           <div class="btnWrap">
+                               <button type="button" class="active">전체</button>
+                               <button type="button">오늘</button>
+                               <button type="button">어제</button>
+                               <button type="button">1주</button>
+                           </div>
+
+
+                           <div class="datePicker">
+                            <!-- 여기에 날짜 선택창을 넣어 주세요 -->
+                              <input type="text" value="01/01/2017"/>
+                                 ~
+                              <input type="text" value="01/01/2017"/>
+                           </div>
+
+                       </div>
+                       <!-- //end of .dateSelect -->
+
+                       <div class="innerSearch clearfix">
+                           <strong>검색</strong>
+
+                           <form action="" class="clearfix">
+                               <select name="" id="">
+                                   <option value="">발신자</option>
+                                   <option value="">수신자</option>
+                                   <option value="">연락처</option>
+                                   <option value="">메시지 내용</option>
+                               </select>
+                               <input type="text" placeholder="검색어를 입력해 주세요."/>
+                               <button type="button" class="btn-search">조회</button>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+               <!-- //.end of main-top -->
+               
+               
+               <div class="main-board">
+
+                   <table>
+                        <caption>SMS 발송 내역 테이블</caption>
+                        <colgroup>
+                            <col class="smallCol"/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                        </colgroup>
+                        <thead>
+                            <tr class="tableLabel" >
+                                <th scope="col">No.</th>
+                                <th scope="col">발신자</th>
+                                <th scope="col">수신자</th>
+                                <th scope="col">연락처</th>
+                                <th scope="col">메시지 내용</th>
+                                <th scope="col">수신 날짜</th>
+                            </tr>
+                       </thead>
+                       <tbody>
+                          
+                           <tr>
+                               <td>1</td>
+                               <td>자동발신</td>
+                               <td>코인원</td>
+                               <td>010-123-1231</td>
+                               <td class="text-left">[Coinone] 0.00050097 BTC 입금이 확인되었습니다.</td>
+                               <td>7/24/2017 5:43:17PM</td>
+                           </tr>
+                           
+                          
+                           <tr>
+                               <td>2</td>
+                               <td>로그인된 관리자명</td>
+                               <td>코인원</td>
+                               <td>010-1234-1232</td>
+                               <td class="text-left">계좌 출금제한 해지가 처리되었습니다.</td>
+                               <td>7/24/2017 5:43:15PM</td>
+                           </tr>
+                           
+                          
+                           
+                           
+                       </tbody>
+                   </table>
+                   
+                   
+                   <div class="pagination">
+                      <a href="" class="btn_prev text-indent">이전</a>
+                      <a href="" class="active">1</a>
+                      <a href="">2</a>
+                      <a href="">3</a>
+                      <a href="">4</a>
+                      <a href="">5</a>
+                      <a href="">6</a>
+                      <a href="">7</a>
+                      <a href="">8</a>
+                      <a href="">9</a>
+                      <a href="">10</a>
+                      <a href="" class="btn_next text-indent">다음</a>
+                   </div>
+                   
+               </div>
+               <!--//.end of main-board -->
+           </div>
+           <!-- //end of .main-container -->
+            
+        </section>
+    </div>
+</body>
+</html>

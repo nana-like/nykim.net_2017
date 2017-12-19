@@ -3,8 +3,11 @@ $(function(){
     
     // 전역변수 선언
     var tl_visual = null;
+    var $title_text = null;
     
     // 전역에서 사용할 요소 초기화
+	
+        $title_text = $(".title_text");
     function init(){
         tl_visual = new TimelineLite();
     }
@@ -57,9 +60,17 @@ $(function(){
         
     }
     
+    
+    function visualTitle_ani(){
+	
+        var visualTxt = ['unique', 'brilliant', 'notable'];
+        $title_text.text(visualTxt[1]);
+
+        visualTitleFindN(); 
+	}
+    
     function visualTitleFindN(){
         
-        var $title_text = $(".title_text");
         
         
         $title_text.html( //비주얼 타이틀 쪼개기
@@ -68,7 +79,7 @@ $(function(){
         
         $title_text.children().each(function(){ //N을 찾아서 i 태그로 감싸기
             if($(this).text().indexOf('N')>-1 || $(this).text().indexOf('n')>-1){
-                $(this).wrap('<i></i>');
+                $(this).wrapInner('<i></i>');
             }
         });
         
@@ -77,7 +88,8 @@ $(function(){
     
     
     ////////////////////////////////////////////////
-    
+   
+/* 
     function visualTitle_ani(){
         var visualTitleArr = [];
         var idx = 0;
@@ -97,17 +109,13 @@ $(function(){
                 idx++;
             }
         },100);
+         //기존 텍스트 애니메이션
         
-        
-        /*var tl_visualTitle = new TimelineLite();
-        
-        tl_visualTitle
-            .to(
-                [$('.title_text')],
-                1,
-                {opacity:0}
-            );*/
     }
+*/
+
+
+
     
     ////////////////////////////////////////////////
     
@@ -131,7 +139,6 @@ $(function(){
         
         init();
         
-        visualTitleFindN(); 
         
         setTimeout(function(){
             visualLogo_ani();

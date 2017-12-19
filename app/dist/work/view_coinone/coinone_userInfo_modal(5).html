@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+    
+</head>
+<body> 
+    <div id="wrap">
+      
+      
+      
+       <!-- ------- 스크립트 ------- -->
+       <script>
+
+            /*
+            *   모달창 여닫기 동작 테스트용
+            */
+
+            $(function(){
+
+
+                var $modal = $("#modal"),
+                  $modalDim = $(".dim");
+
+
+                var openPopup = function openPopupFunc() { //모달창 열기
+                    var $elem = $("#modal");
+                    $modalDim.fadeIn(500,function(){
+                        $elem.fadeIn();
+                    });
+                    $("body").css('top', -(document.documentElement.scrollTop) + 'px')
+                         .addClass("noScroll");
+                }
+
+                var closePopup = function closePopupFunc() { //모달창 닫기
+                    $modalDim.fadeOut();
+                    $("body").removeAttr("style").removeClass("noScroll");
+                }
+
+
+                $modal.find(".modal-clse").add("#modal .btn-cancel").on("click",function(evt){ //닫기 버튼으로 닫기
+                     evt.preventDefault();
+                     closePopup();
+
+                });
+
+                $modalDim.on("click",function(){ //dim 눌러 닫기
+                    if($modal.is(":visible")){
+                     closePopup();
+                    }	
+                });
+
+
+                $modal.find(".modal-container").on("click",function(evt){ //버블링 방지
+                    evt.stopPropagation();
+                });
+
+
+                window.onload = function(){ openPopup(); } /* ** 동작 확인용 :) ** */
+
+            });  
+        
+       </script>
+       <!-- ------- //스크립트 마침 ------- -->
+
+       
+       <div id="modal">
+           <div class="dim">
+               <div class="modal-container modalLarge">
+                   <strong class="modal-heading">출금한도 변경</strong>
+                   <div class="modal-body modal-task">
+                      <div class="task-check">
+                            <ul>
+                               <li>
+
+                                    <p class="tit">화면 용도</p>
+                                   <div class="alert">
+                                       <p>이 화면은 가상화폐 출금한도를 변경하고자 하는 고객의 요청에 따라 처리하는 화면입니다.</p>
+                                   </div>
+                                   <div class="customCheckbox clearfix">
+                                       <input type="checkbox" id="checkfor-purpose"/>
+                                       <label for="checkfor-purpose">확인</label>
+                                   </div>
+                               </li>
+                               <li>
+
+                                   <p class="tit">업무처리 절차</p>
+                                   <div class="alert">
+                                        <p>1. 출금한도 하향변경 : 별도 서류없이 처리
+                                        <br/>2. 출금한도 상향변경 : 불가 (추후 정책 결정에 따라 변경 가능)</p>
+                                    </div>
+                                   <div class="customCheckbox clearfix">
+                                       <input type="checkbox" id="checkfor-procedure"/>
+                                       <label for="checkfor-procedure">확인</label>
+                                   </div>
+                               </li>
+                               <li>
+                                   <p class="tit">확인 서류</p>
+                                   <div class="alert">
+                                        <p>없음</p>
+                                   </div>
+                                   <div class="customCheckbox clearfix">
+                                       <input type="checkbox" id="checkfor-documents"/>
+                                       <label for="checkfor-documents">확인</label>
+                                   </div>
+                               </li>
+                           </ul>
+                           <div class="task-cont">
+                               <ul>
+                                   <li>
+                                       <label for="veirfyName-memo">메모입력(사유)</label>
+                                       <textarea id="veirfyName-memo" placeholder="(업무처리 시 필요한 경우 작성)"></textarea>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="btnWrap clearfix">
+                       <button type="button" class="btn-cancel">닫기</button>
+                       <button type="button">완료</button>
+                   </div>
+                   <a href="" class="modal-clse">×</a>
+               </div>
+               <!--//end of .moda-container-->
+           </div>
+           <!--//end of .dim-->
+        </div>
+        <!-- //end of #modal -->
+        
+      
+      
+       
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active"> 
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li>
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section id="main">
+            
+        </section>
+    </div>
+</body>
+</html>

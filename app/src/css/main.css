@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
-/* @mixin key-titleLine { @keyframes titleLine { 0% {height: 0;} 100%{height: 5.5em;} } }*/
 @keyframes bounceOutline { 0% { box-shadow: 0 0 0 4px #ffe079; }
 		25% { box-shadow: 0 0 0 2px #ffe079; }
 		50% { box-shadow: 0 0 0 6px #ffe079; }
@@ -22,6 +21,15 @@
 
 @keyframes visualFog02 { 0% { left: 0%; }
 		100% { left: 10%; } }
+
+@keyframes visualTxtAni { 0% { opacity: 0;
+				left: 80px; }
+		30% { opacity: 1;
+				left: 0; }
+		70% { opacity: 1;
+				left: 0; }
+		100% { opacity: 0;
+				left: -80px; } }
 
 /*  
 *   RESET STYLE
@@ -87,23 +95,32 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 /* 
 *   FONT FACE
 */
+@font-face { font-family: 'LotteMartDream'; font-style: normal; font-weight: 300; src: url(../font/dreamL.eot); src: url(../font/dreamL.eot?#iefix) format("embedded-opentype"), url(../font/dreamL.woff) format("woff"), url(../font/dreamL.ttf) format("truetype"); }
+
 /*
-@font-face {
-	font-family: 'LotteMartDream'; //롯데마트 드림체
-    font-style: normal;
-    font-weight: 300;
-	src: url(../font/dreamL.eot);
-    src: url(../font/dreamL.eot?#iefix) format('embedded-opentype'),
-         url(../font/dreamL.woff) format('woff'),
-         url(../font/dreamL.ttf) format('truetype');
+
+@font-face{
+ font-family:'LotteMartDream';
+ font-style:normal;
+ font-weight:500;
+ src:url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2') format('woff2'),
+     url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff') format('woff');
+}
+@font-face{
+ font-family:'LotteMartDream';
+ font-style:normal;
+ font-weight:700;
+ src:url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2') format('woff2'),
+     url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff') format('woff');
+}
+@font-face{
+ font-family:'LotteMartDream';
+ font-style:normal;
+ font-weight:400;
+ src:url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'),
+     url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
 }
 */
-@font-face { font-family: 'LotteMartDream'; font-style: normal; font-weight: 500; src: url("http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff2") format("woff2"), url("http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamMedium.woff") format("woff"); }
-
-@font-face { font-family: 'LotteMartDream'; font-style: normal; font-weight: 700; src: url("http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff2") format("woff2"), url("http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamBold.woff") format("woff"); }
-
-@font-face { font-family: 'LotteMartDream'; font-style: normal; font-weight: 400; src: url("http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2") format("woff2"), url("http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff") format("woff"); }
-
 @font-face { font-family: 'NotoSans'; font-style: normal; font-weight: 400; src: url(../font/NotoSansLight.eot?#iefix) format("embedded-opentype"), url(../font/NotoSansLight.woff2) format("woff2"), url(../font/NotoSansLight.woff) format("woff"); }
 
 /* title for section, aricle */
@@ -275,13 +292,31 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .visual .visual_title { margin-top: -1.5em; text-align: center; text-transform: uppercase; }
 
-.visual .visual_title .title_text { position: relative; left: 10px; font-family: 'Lato', AppleGothic, sans-serif, Helvetica; font-weight: 300; font-size: 40px; color: rgba(255, 255, 255, 0.8); }
+.visual .visual_title .title_text { position: relative; left: 0px; font-family: 'Lato', AppleGothic, sans-serif, Helvetica; font-weight: 300; font-size: 40px; color: rgba(255, 255, 255, 0.8); }
 
-.visual .visual_title .title_text i { position: relative; opacity: 0; font-style: normal; text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6); }
+.visual .visual_title .title_text > span { position: relative; animation: visualTxtAni 4s ease-in-out 1; opacity: 0; }
 
-.visual .visual_title .title_text > span { position: relative; opacity: 0; }
+.visual .visual_title .title_text > span i { position: relative; font-style: normal; text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6); }
 
-.visual .visual_title .title_logo { opacity: 0; display: block; width: 240px; height: 240px; margin: 0.5em auto 1.5em; text-align: center; }
+.visual .visual_title .title_text > span:nth-child(1) { animation-delay: .1s; }
+
+.visual .visual_title .title_text > span:nth-child(2) { animation-delay: .2s; }
+
+.visual .visual_title .title_text > span:nth-child(3) { animation-delay: .3s; }
+
+.visual .visual_title .title_text > span:nth-child(4) { animation-delay: .4s; }
+
+.visual .visual_title .title_text > span:nth-child(5) { animation-delay: .5s; }
+
+.visual .visual_title .title_text > span:nth-child(6) { animation-delay: .6s; }
+
+.visual .visual_title .title_text > span:nth-child(7) { animation-delay: .7s; }
+
+.visual .visual_title .title_text > span:nth-child(8) { animation-delay: .8s; }
+
+.visual .visual_title .title_text > span:nth-child(9) { animation-delay: .9s; }
+
+.visual .visual_title .title_logo { position: absolute; top: 30%; left: 50%; transform: translateX(-50%); opacity: 0; display: block; width: 240px; height: 240px; text-align: center; }
 
 .visual .visual_elem { opacity: 1; position: absolute; }
 
@@ -297,7 +332,7 @@ html, body { position: relative; overflow-x: hidden; width: 100%; min-width: 100
 
 .visual .visual_fog02 { animation: visualFog02 18s linear infinite alternate; bottom: 15%; left: 0; opacity: 0.25; width: 50%; height: 50%; background-image: url(../images/visual_elem_6.png); background-size: 100%; background-repeat: no-repeat; background-position: 50% 50%; }
 
-.visual .scroll_text { position: relative; margin-left: -6px; font-family: 'Lato', AppleGothic, sans-serif, Helvetica; font-weight: 300; color: rgba(255, 255, 255, 0.45); font-size: 12px; letter-spacing: 0.12rem; text-transform: uppercase; }
+.visual .scroll_text { position: absolute; top: 50%; margin-top: 11em; margin-left: -6px; font-family: 'Lato', AppleGothic, sans-serif, Helvetica; font-weight: 300; color: rgba(255, 255, 255, 0.45); font-size: 12px; letter-spacing: 0.12rem; text-transform: uppercase; }
 
 .visual .scroll_text:before, .visual .scroll_text:after { display: block; position: absolute; top: 0.29rem; right: -14px; font-size: 10px; font-family: serif; content: '>'; transform: rotate(90deg); }
 

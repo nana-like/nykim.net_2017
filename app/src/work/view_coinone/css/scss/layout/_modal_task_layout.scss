@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+
+/*
+*   mistakes modal layout
+*/
+
+// 고객상세정보조회 내 업무처리 모달
+
+
+#modal .modal-task {
+    padding-right: 15px;
+}
+#modal .modal-task .task-check {
+    
+    
+    li {
+        position: relative;
+        margin-top: 20px;
+        
+
+        p.tit {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .alert {
+            font-weight: 400;
+            font-size: 14px;
+            padding: 12px 22px;
+            
+            p {
+                margin: 10px 0;
+            }
+        }
+        
+        .customCheckbox {
+            
+            input[type="checkbox"] { 
+                float: right;
+            }
+            
+            input+label {
+                float: right;
+                width: auto;
+                padding-right: 0;
+                font-weight: 400;
+            }
+            
+            input+label:before {
+                left: 6px;
+            }
+            
+        } //end of .customCheckbox
+
+    }
+    
+    li:first-child {
+        margin-top: 0;
+    }
+    
+
+}
+
+
+#modal .modal-task .task-cont {
+    
+    margin: 30px auto 0;
+    margin-bottom: 10px;
+    padding: 22px;
+    background-color: #fff;
+    
+    
+    li {
+        
+        &:after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+        
+        label {
+            margin-top: 6px;
+            float: left;
+            width: 160px;
+        }
+        
+        input {
+            float: left;
+            width: calc(100% - 160px);
+            height: 40px;
+            font-weight: 400;
+        }
+        
+        textarea {
+            width: calc(100% - 160px);
+            height: 90px;
+            padding: 10px;
+            resize: none;
+            box-sizing: border-box;
+            border: 1px solid #bbb;
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}

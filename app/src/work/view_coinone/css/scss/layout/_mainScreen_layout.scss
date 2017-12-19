@@ -1,0 +1,113 @@
+@charset "utf-8";
+
+
+/*
+*   mainScreen layout
+*/
+// 메인 페이지 전용 레이아웃
+
+
+
+.mainScreen article {
+    padding: 0; //재정의
+    border: none; //재정의
+    
+    position: relative;
+    float: left;
+    width: 44%; 
+    margin-top: 30px;
+    padding: 30px; 
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    
+    
+    
+    &.frequent {
+        float: right;
+        ul {
+            height: 561px;
+        }
+    }
+    
+    
+}
+    
+.mainScreen article {
+    
+    h2 {
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-bottom: 4px;
+        font-size: 30px;
+        color: $color-tit;
+        border-bottom: 2px solid $color-tit;
+    }
+
+
+    h2+ul {
+        height: 200px;
+
+        li {
+            position: relative;
+            height: 38px;
+            border-bottom: 1px solid #cacaca;
+            
+            span { //제목 좌측의 숫자
+                display: block;
+                position: absolute;
+                width: 15px;
+                height: 100%;
+                text-align: center;
+                font-size: 11px;
+                font-weight: 300;
+                line-height: 38px;
+                letter-spacing: -0.04rem;
+                color: #818181;
+            }
+
+            a { //제목 영역
+                display: block;
+                width: 548px; //calc(100% - 24px);
+                height: 100%;
+                padding-left: 24px;
+                font-size: 15px;
+                line-height: 38px;
+                color: #141414;
+                font-weight: 400;
+                @include txt-ellipsis;
+            }
+
+        }
+
+        li:hover {
+            background-color: #f4f4f4;
+            
+            span {
+                background-color: $color-btn;
+                color: #fff;
+            }
+        }
+    }
+
+    .btn-more { //더 보기 버튼
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        padding: 4px 8px;
+        color: #3e3e3e;
+        font-size: 14px;
+        font-weight: 500;
+        background-color: #fff;
+        border: 1px solid #3e3e3e;
+        border-radius: 4px;
+        
+    }
+    
+    .btn-more:hover {
+        border: 1px solid $color-num;
+        color: $color-num;
+    }
+
+    
+}
+

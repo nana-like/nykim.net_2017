@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"/>
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+    
+</head>
+<body>
+    <div id="wrap">
+       
+       
+       
+       <!-- ------- 스크립트 ------- -->
+       <script>
+
+            /*
+            *   모달창 여닫기 동작 테스트용
+            */
+
+            $(function(){
+
+
+                var $modal = $("#modal"),
+                  $modalDim = $(".dim");
+
+
+                var openPopup = function openPopupFunc() { //모달창 열기
+                    var $elem = $("#modal");
+                    $modalDim.fadeIn(500,function(){
+                        $elem.fadeIn();
+                    });
+                    $("body").css('top', -(document.documentElement.scrollTop) + 'px')
+                         .addClass("noScroll");
+                }
+
+                var closePopup = function closePopupFunc() { //모달창 닫기
+                    $modalDim.fadeOut();
+                    $("body").removeAttr("style").removeClass("noScroll");
+                }
+
+
+                $modal.find(".modal-clse").add("#modal .btn-cancel").on("click",function(evt){ //닫기 버튼으로 닫기
+                     evt.preventDefault();
+                     closePopup();
+
+                });
+
+                $modalDim.on("click",function(){ //dim 눌러 닫기
+                    if($modal.is(":visible")){
+                     closePopup();
+                    }	
+                });
+
+
+                $modal.find(".modal-container").on("click",function(evt){ //버블링 방지
+                    evt.stopPropagation();
+                });
+
+
+                window.onload = function(){ openPopup(); } /* ** 동작 확인용 :) ** */
+
+            });  
+        
+       </script>
+       <!-- ------- //스크립트 마침 ------- -->
+       
+       
+       <div id="modal" class="modal-approval-mistakes">
+           <div class="dim">
+               <div class="modal-container modalLarge">
+                   <strong class="modal-heading">잘못입금 승인</strong>
+                   <div class="modal-body">
+
+                       <div class="approval-info">
+                            <strong class="info-heading">현재 입금 정보</strong>
+                            <div class="info-body">
+                                <ul class="clearfix">
+                                    <li>
+                                        <em>입금자명</em>
+                                        <span>이현명</span>
+                                    </li>
+                                    <li>
+                                        <em>은행</em>
+                                        <span>신한은행</span>
+                                    </li>
+                                    <li>
+                                        <em>금액</em>
+                                        <span>100,000</span>
+                                    </li>
+                                    <li>
+                                        <em>잘못입금 일자</em>
+                                        <span>1/2/2017</span>
+                                    </li>
+                                    <li>
+                                        <em>OTP 인증</em>
+                                        <span>미완료</span>
+                                    </li>
+                                </ul>
+                           </div>
+                       </div> 
+                       
+                       <div class="info-float clearfix">
+                           <div class="approval-info">
+                                <strong class="info-heading">변경 전 가상계좌 소유주 정보</strong>
+                                <div class="info-body">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <em>소유주명</em>
+                                            <span>코인원</span>
+                                        </li>
+                                        <li>
+                                            <em>휴대폰번호</em>
+                                            <span>010-123-4567</span>
+                                        </li>
+                                        <li>
+                                            <em>계좌번호</em>
+                                            <span>123-45-678901</span>
+                                        </li>
+                                    </ul>
+                               </div>
+                           </div> 
+                           
+
+                           <div class="approval-info">
+                                <strong class="info-heading">변경 후 가상계좌 소유주 정보</strong>
+                                <div class="info-body">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <em>소유주명</em>
+                                            <span>테스트</span>
+                                        </li>
+                                        <li>
+                                            <em>휴대폰번호</em>
+                                            <span>010-123-4567</span>
+                                        </li>
+                                        <li>
+                                            <em>계좌번호</em>
+                                            <span>9876-54-3210</span>
+                                        </li>
+                                    </ul>
+                               </div>
+                           </div> 
+                       </div>
+
+                       <div class="alert">
+                           승인 시 <span class="text-alert">[1,004원]</span>이 <span class="text-alert">[테스트]</span> 소유의 <span class="text-alert">[9876-54-3210]</span> 계좌로 변경 입금처리될 예정입니다. 
+                           <br/>처리에 유의하시기 바랍니다.
+                       </div>
+                   </div>
+                   <div class="btnWrap clearfix">
+                       <button type="button" class="btn-cancel">닫기</button>
+                       <button type="button">승인</button>
+                   </div>
+                   <a href="" class="modal-clse">×</a>
+               </div>
+               <!--//end of .moda-container-->
+           </div>
+           <!--//end of .dim-->
+        </div>
+        <!-- //end of #modal -->
+        
+        
+       
+       
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active"> 
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li>
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section id="main">
+           <div class="main-container">
+              
+               <div class="main-top">
+               
+                  
+                   <h2>승인 관리</h2>
+                   <ul class="userCount">
+                       <li>전체 내역 개수: <span>12</span></li>
+                   </ul>
+                   
+                   
+                   <div class="filterArea">
+                       <div class="dateSelect clearfix">
+                           <strong>기간</strong>
+
+                           <div class="btnWrap">
+                               <button type="button" class="active">전체</button>
+                               <button type="button">오늘</button>
+                               <!--
+                               <button type="button">어제</button>
+                               <button type="button">1주</button>
+                               -->
+                           </div>
+
+
+                           <div class="datePicker">
+                            <!-- 여기에 날짜 선택창을 넣어 주세요 -->
+                              <input type="text" value="01/01/2017"/>
+                                 ~
+                              <input type="text" value="01/01/2017"/>
+                           </div>
+
+                       </div>
+                       <!-- //end of .dateSelect -->
+
+                       <div class="typeList clearfix">
+                           <strong>승인<br>상태</strong>
+
+                           <button type="button" class="active">전체</button>
+                           <button type="button">요청</button>
+                           <button type="button">승인</button>
+                           <button type="button">반려</button>
+                       </div>
+                       
+                       <button type="button" class="queryInfilter">조회</button>
+                   </div>
+                   
+                   
+               </div>
+               
+               
+               <div class="main-board">
+                                      
+                   <table>
+                        <caption>요청/승인 내역 테이블</caption>
+                        <colgroup>
+                            <col class="smallCol"/><col/><col/>
+                            <col/><col/><col/>
+                            <col/><col/><col/>
+                            <col/><col/><col/>
+                            <col/>
+                        </colgroup>
+                        <thead>
+                            <tr class="tableLabel" >
+                                <th colspan="2" scope="col">고객 정보</th>
+                                <th colspan="4" scope="col">요청 내역</th>
+                                <th colspan="4" scope="col">요청자</th>
+                                <th colspan="3" scope="col">승인 상태</th>
+                            </tr>
+                            <tr class="tableCate">
+                                <th>IDX</th>
+                                <th>이름</th>
+                                <th class="th_bg">처리구분</th>
+                                <th class="th_bg">처리내용</th>
+                                <th class="th_bg">변경 전</th>
+                                <th class="th_bg">변경 후</th>
+                                <th>ID</th>
+                                <th>이름</th>
+                                <th>일시</th>
+                                <th>메모</th>
+                                <th class="th_bg">이름</th>
+                                <th class="th_bg">일시</th>
+                                <th class="th_bg">상태</th>
+                            </tr>
+                       </thead>
+                       <tbody> 
+                           <tr> 
+                               <td>2111</td>
+                               <td>코인원</td>
+                               <td>입출금</td>
+                               <td>잘못입금계좌변경</td>
+                               <td>123-45678-9001</td>
+                               <td>9876-54-3210</td>
+                               <td>hello123</td>
+                               <td>테스트</td>
+                               <td>
+                                   1/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td><textarea readonly="readonly">123메모321</textarea></td>
+                               <td colspan="3">
+                                   <button type="button" class="btn-inTable btn-inline">승인</button>
+                                   <button type="button" class="btn-inTable btn-inline">반려</button>
+                               </td>
+                           </tr>
+                           <tr> 
+                               <td>1222</td>
+                               <td>코인원</td>
+                               <td>입출금</td>
+                               <td>출금한도변경(KRW)</td>
+                               <td>200</td>
+                               <td>3,000</td>
+                               <td>abcdefg_1</td>
+                               <td>홍길동</td>
+                               <td>
+                                   1/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td><textarea readonly="readonly"></textarea></td>
+                               <td colspan="3">
+                                   <button type="button" class="btn-inTable btn-inline">승인</button>
+                                   <button type="button" class="btn-inTable btn-inline">반려</button>
+                               </td>
+                           </tr>
+                           <tr> 
+                               <td>3333</td>
+                               <td>원인코</td>
+                               <td>계정</td>
+                               <td>휴대폰초기화</td>
+                               <td></td>
+                               <td></td>
+                               <td>qwerty</td>
+                               <td>테스트</td>
+                               <td>
+                                   5/1/2017
+                                   <br/>
+                                   09:30:00AM
+                               </td>
+                               <td><textarea readonly="readonly"></textarea></td>
+                               <td>가나다</td>
+                               <td>
+                                   5/5/2017
+                                   <br/>
+                                   09:30:00AM
+                               </td>
+                               <td>승인</td>
+                           </tr>
+                           
+                           <tr> 
+                               <td>3333</td>
+                               <td>원인코</td>
+                               <td>보안</td>
+                               <td>계정잠금해제</td>
+                               <td>1(잠금/제한/동결)</td>
+                               <td>0(잠금해제/제한해제/정상)</td>
+                               <td>qwerty</td>
+                               <td>테스트</td>
+                               <td>
+                                   5/1/2017
+                                   <br/>
+                                   09:30:00AM
+                               </td>
+                               <td><textarea readonly="readonly"></textarea></td>
+                               <td>라마바</td>
+                               <td>
+                                   5/5/2017
+                                   <br/>
+                                   09:30:00AM
+                               </td>
+                               <td>반려</td>
+                           </tr>
+                           
+                           
+                       </tbody>
+                   </table>
+                   
+                   <div class="pagination">
+                      <a href="" class="btn_prev text-indent">이전</a>
+                      <a href="" class="active">1</a> <!-- 활성화 시 active class -->
+                      <a href="">2</a>
+                      <a href="">3</a>
+                      <a href="">4</a>
+                      <a href="">5</a>
+                      <a href="" class="btn_next text-indent">다음</a>
+                   </div>
+                   
+                   
+                   
+               </div>
+               <!-- //end of .main-board -->
+               
+           </div>
+           <!-- //end of .main-container -->
+            
+        </section>
+    </div>
+</body>
+</html>

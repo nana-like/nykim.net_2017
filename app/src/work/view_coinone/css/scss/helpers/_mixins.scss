@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+
+// **** MIXINS **** //
+
+
+// all *-container
+// @include container;
+@mixin container {
+    position: relative;
+    width: 1300px;
+    margin: 0 auto;
+}
+
+// anchor tag
+@mixin block-anchor {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+@mixin btn-default {
+    padding: 4px 10px;
+    color: $color-main;
+    font-size: 15px;
+    background-color: rgba(255,255,255,0);
+    border: 1px solid $color-btn;
+    border-radius: 4px;
+}
+
+//@include btn-active;
+@mixin btn-active {
+    background-color: $color-main;
+    color: #fff;
+}
+
+
+// background gradient
+// @include background-gradient;
+@mixin background-gradient {
+    background: #111e48;
+    background: -moz-linear-gradient(-45deg, #111e48 0%, #1d3075 100%);
+    background: -webkit-linear-gradient(-45deg, #111e48 0%,#1d3075 100%);
+    background: linear-gradient(135deg, #111e48 0%,#1d3075 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#111e48', endColorstr='#1d3075',GradientType=1 );
+}
+
+// text-overflow : ellipsis
+@mixin txt-ellipsis {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+//center
+@mixin align-center {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-align-item: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+

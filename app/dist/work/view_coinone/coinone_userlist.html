@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div id="wrap">
+       
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active"> <!-- 활성화 시 active class -->
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li> <!-- 활성화 시 active class -->
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section id="main">
+           <div class="main-container">
+              
+               <div class="main-top">
+                    <div class="tit">
+                        <h2>고객 정보 조회</h2>
+                    </div>
+                    <ul class="userCount">
+                        <li>전체 고객 수: <span>328</span></li>
+                        <li>검색된 고객 수: <span>328</span></li>
+                    </ul>
+               </div>
+               
+               <div class="main-board">
+                   
+                   <table>
+                        <caption>고객 정보 조회</caption>
+                        <colgroup>
+                            <col width="80px"/>
+                            <col/>
+                            <col width="80px"/>
+                            <col/>
+                            <col width="80px"/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col width="80px"/>
+                            <col/>
+                            <col/>
+                        </colgroup>
+                        <thead>
+                            <tr class="tableLabel" >
+                                <th colspan="4" scope="col">고객 식별정보</th>
+                                <th colspan="4" scope="col">기타정보</th>
+                                <th colspan="3" scope="col">등록계좌</th>
+                                <th colspan="2" scope="col">가상계좌</th>
+                            </tr>
+                            <tr class="tableCate">
+                                <th>IDX</th>
+                                <th>E-mail</th>
+                                <th>이름</th>
+                                <th>휴대폰번호</th>
+                                <th class="th_bg">성별</th>
+                                <th class="th_bg">생년월일</th>
+                                <th class="th_bg">가입일시</th>
+                                <th class="th_bg">최근접속일시</th>
+                                <th>은행명</th>
+                                <th>계좌번호</th>
+                                <th>계좌주명</th>
+                                <th class="th_bg">은행명</th>
+                                <th class="th_bg">계좌번호</th>
+                            </tr>
+                       </thead>
+                       <tbody> <!-- 2, 4, 6, 7, 8, 10, 13번째 td에 class="text-left"를 붙여 주세요 (08-07) -->
+                           <tr>
+                               <td>1111</td>
+                               <td class="text-left">test@test.com</td>
+                               <td>김태규</td>
+                               <td class="text-left">010-1234-5678</td>
+                               <td>남</td>
+                               <td>
+                                   3/22/1990
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                   12/1/2016
+                                   <br/>
+                                   18:40:00PM
+                               </td>
+                               <td>
+                                   7/17/2016
+                                   <br/>
+                                   18:40:00PM
+                               </td>
+                               <td>국민은행</td>
+                               <td class="text-left">088201-04-015678</td>
+                               <td>김태규</td>
+                               <td>기업은행</td>
+                               <td class="text-left">088201-04-015678</td>
+                           </tr>
+                           <tr>
+                               <td>1111</td>
+                               <td class="text-left">test@test.com</td>
+                               <td>김태규</td>
+                               <td class="text-left">010-1234-5678</td>
+                               <td>남</td>
+                               <td>
+                                   3/22/1990
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                   12/1/2016
+                                   <br/>
+                                   18:40:00PM
+                               </td>
+                               <td>
+                                   7/17/2016
+                                   <br/>
+                                   18:40:00PM
+                               </td>
+                               <td>국민은행</td>
+                               <td class="text-left">088201-04-015678</td>
+                               <td>김태규</td>
+                               <td>기업은행</td>
+                               <td class="text-left">088201-04-015678</td>
+                           </tr>
+                           
+                       </tbody>
+                   </table>
+                   
+                   <div class="pagination">
+                      <a href="" class="btn_prev text-indent">이전</a>
+                      <a href="" class="active">1</a> <!-- 활성화 시 active class -->
+                      <a href="">2</a>
+                      <a href="">3</a>
+                      <a href="">4</a>
+                      <a href="">5</a>
+                      <a href="" class="btn_next text-indent">다음</a>
+                   </div>
+                   
+               </div>
+               
+           </div>
+            
+        </section>
+    </div>
+</body>
+</html>

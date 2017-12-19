@@ -168,7 +168,7 @@ $(function(){
                             html += ' </div> ';
                 
                         if(obj[i].hasOwnProperty('link')){ //link 프로퍼티가 있는 경우 링크 주소 변경
-                            html += ' <a href=" work/work_'+ obj[i].link +'/index.html " target="_blank"></a> ';
+                            html += ' <a href=" work/view_'+ obj[i].link +'/index.html " target="_blank"></a> ';
                         }else{
                             html += ' <a href=" work/work_'+ obj[i].number +'.html "></a> ';
                         }

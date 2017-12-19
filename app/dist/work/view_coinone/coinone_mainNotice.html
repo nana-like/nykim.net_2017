@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"/>
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+    
+</head>
+<body>
+    <div id="wrap">
+       
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active"> <!-- 활성화 시 active class -->
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li> <!-- 활성화 시 active class -->
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section id="main" class="mainList">
+            <div class="main-container">
+
+            <div class="main-top">
+
+                <h2>공지사항</h2>
+
+                <div class="filterArea">
+                    <div class="dateSelect clearfix">
+                        <strong>기간</strong>
+
+                        <div class="btnWrap">
+                            <button type="button" class="active">전체</button>
+                            <button type="button">오늘</button>
+                            <button type="button">어제</button>
+                            <button type="button">1주</button>
+                        </div>
+
+
+                        <div class="datePicker">
+                            <input type="text" value="01/01/2017"/>
+                            ~
+                            <input type="text" value="01/01/2017"/>
+                        </div>
+
+                    </div>
+                    <!-- //end of .dateSelect -->
+
+                    <div class="innerSearch clearfix">
+                        <strong>검색</strong>
+
+                        <form action="" class="clearfix">
+                            <select name="" id="">
+                                <option value="">작성자</option>
+                                <option value="">글 제목</option>
+                                <option value="">글 내용</option>
+                            </select>
+                            <input type="text" placeholder="검색어를 입력해 주세요."/>
+                            <button type="button" class="btn-search">조회</button>
+                        </form>
+                    </div>
+                </div>
+                <!--//end of .filterArea -->
+
+            </div>
+            <!--//end of .main-top -->
+
+
+                <div class="main-board">
+                    <div class="list-container">
+                        <button type="button" class="btn-write">+ 새 공지사항 작성</button>
+                        <ul class="list-preview">
+                            <li>
+                               <a href="">
+                                    <strong class="tit-1">[공지] 6월 리플 거래량 인센티브 이벤트 결과 안내 관련</strong>
+                                    <div class="list-contents">
+                                        <p class="list-info">
+                                            <em>작성자 : <span>코인원</span></em>
+                                            <em>작성일 : <i>08/08/2017 10:00:00</i></em>
+                                        </p>
+                                        <p class="list-txt">
+                                        안녕하세요. 코인원입니다. 이더리움 하드포크 이후 ETC에 대한 코인원의 공식 입장과 대응방안을 다시 안내드립니다. 
+                                        <br>지난 7월 25일, 코인원은 이더리움 커뮤니티의 투표와 합의를 통해 진행된 하드포크(ETH)를 지지하며...
+                                        </p>
+                                        <p class="list-commentsNum on">댓글 <span>113</span></p> <!--첨부파일이 있으면 on class를 붙여 주세요-->
+                                    </div>
+                                </a>
+                                    <button type="button" class="btn-deleteItems">삭제</button>
+                            </li>
+                            <li>
+                               <a href="">
+                                    <strong class="tit-1">[긴급공지] 제목란</strong>
+                                    <div class="list-contents">
+                                        <p class="list-info">
+                                            <em>작성자 : <span>코인원</span></em>
+                                            <em>작성일 : <i>08/08/2017 10:00:00</i></em>
+                                        </p>
+                                        <p class="list-txt">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra mattis hendrerit. Aenean at augue accumsan enim sagittis lacinia. Nunc sodales sapien rhoncus, vestibulum neque non, posuere nulla. Vivamus velit enim, convallis vel finibus a, elementum in odio. Sed elit orci, semper nec rhoncus non, ultrices eu orci....
+                                        </p>
+                                        <p class="list-commentsNum on">댓글 <span>1</span></p> <!--첨부파일이 있으면 on class를 붙여 주세요-->
+                                    </div>
+                                </a>
+                                <button type="button" class="btn-deleteItems">삭제</button>
+                            </li>
+                            <li>
+                               <a href="">
+                                    <strong class="tit-1">[안내사항] 6월 리플 거래량 인센티브 이벤트 결과 안내 관련</strong>
+                                    <div class="list-contents">
+                                        <p class="list-info">
+                                            <em>작성자 : <span>코인원</span></em>
+                                            <em>작성일 : <i>08/08/2017 10:00:00</i></em>
+                                        </p>
+                                        <p class="list-txt">
+                                        안내사항 게시글입니다.
+                                        </p>
+                                        <p class="list-commentsNum">댓글 <span>0</span></p>
+                                    </div>
+                                </a>
+                                <button type="button" class="btn-deleteItems">삭제</button>
+                            </li>
+                            <li>
+                               <a href="">
+                                    <strong class="tit-1">[테스트] 제목</strong>
+                                    <div class="list-contents">
+                                        <p class="list-info">
+                                            <em>작성자 : <span>코인원</span></em>
+                                            <em>작성일 : <i>08/08/2017 10:00:00</i></em>
+                                        </p>
+                                        <p class="list-txt">
+                                        지난 7월 25일, 코인원은 이더리움 커뮤니티의 투표와 합의를 통해 진행된 하드포크(ETH)를 지지하며, 안정성과 신뢰성이 확보되지 않은 ETC에 대해서는 당분간 지원할 계획이 없음을 공지했습니다. 이는 불완전한 블록체인 시장이 형성되고 있는 와중에, ETC 유저들이 해킹/유실/도난 등의 피해에 노출될 수 있다는 가능성을 염두에 두어 내린 결정이었습니다. 해당 공지 이후...
+
+                                        </p>
+                                        <p class="list-commentsNum">댓글 <span>1</span></p>
+                                    </div>
+                                </a>
+                                <button type="button" class="btn-deleteItems">삭제</button>
+                            </li>
+                        </ul>
+                        
+
+                    </div>
+
+
+                    <div class="pagination">
+                        <a href="" class="btn_prev text-indent">이전</a>
+                        <a href="" class="active">1</a>
+                        <a href="">2</a>
+                        <a href="">3</a>
+                        <a href="">4</a>
+                        <a href="">5</a>
+                        <a href="" class="btn_next text-indent">다음</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //end of .main-container -->
+            
+        </section>
+    </div>
+</body>
+</html>

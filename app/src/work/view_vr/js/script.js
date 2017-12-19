@@ -216,12 +216,12 @@ $(function(){
     });
     
     
-    $(".lookup_btn").on("click",function(evt){
+/*    $(".lookup_btn").on("click",function(evt){
          evt.preventDefault();
          closePopup();
         
     });
-    
+    */
     
     //팝업창 내 x버튼 클릭 시
     $(".popup .clse").on("click",function(evt){

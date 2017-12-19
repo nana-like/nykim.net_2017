@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+
+
+/*
+*   pagination
+*/
+
+// (공통) 페이지네이션
+
+
+
+#main .pagination {
+    
+    position: relative;
+    margin: 38px auto 30px;
+    text-align: center;
+    
+    a {
+        display: inline-block;
+        padding: 2px 4px;
+        margin-right: 8px;
+        font-weight: 300;
+        font-size: 13px;
+        color: #404040;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        &.active {
+            color: $color-num;
+            font-weight: 500 !important;
+        }
+        
+        &.btn_prev {
+            background-image: url(../images/page_ico.png);
+            background-position: center;
+            background-repeat: no-repeat;
+        } 
+        
+        &.btn_next {
+            background-image: url(../images/page_2_ico.png);
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+    }
+}

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>3M Science. Applied to Life.™ | 한국쓰리엠</title>
+		
+        <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"/>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../js/common.js"></script>
+		<script type="text/javascript" src="../js/swiper.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.easing.1.3.js"></script>
+		<!--[if lt IE 9]> <script src="../js/respond.min.js"></script> <![endif]-->
+		<link rel="stylesheet" type='text/css' media='all' href="../css/common.css" />
+		<link rel="stylesheet" type='text/css' media='all' href="../css/swiper.min.css" />
+		<link rel="stylesheet" type='text/css' media='all' href="../css/content.css" />
+	</head>
+	<body>
+
+
+		<div class="wrap">
+			<!-- header -->
+			<header>
+				<div class="headerIn">
+					<h1><a href="/">HCA</a></h1>
+					<a href="#" class="menu">MENU</a>
+					<div class="gnbList">
+						<ul>
+							<li><a href="#"><strong>컨텐츠</strong><span>CONTENTS</span></a></li>
+							<li><a href="#"><strong>커리큘럼</strong><span>CURRICULUM</span></a></li>
+							<li><a href="#"><strong>비디오</strong><span>VIDEOS</span></a></li>
+							<li><a href="#"><strong>제품</strong><span>PRODUCTS</span></a></li>
+							<li><a href="#"><strong>고객지원</strong><span>SUPPORT</span></a></li>
+						</ul>
+						<div class="joinArea">
+							<ul>
+								<li><a href="#">로그인</a></li>
+								<li><a href="#">회원가입</a></li>
+							</ul>
+						</div>
+					</div>
+
+					<ul class="util">
+						<li><a href="#">로그인</a></li>
+						<li><a href="#">회원가입</a></li>
+						<li><a href="#" class="btnSearch">검색</a></li>
+					</ul>
+					<div class="searchArea">
+						<input type="text" placeholder="검색어를 입력하세요." >
+					</div>
+				</div>
+			</header>
+			<!-- //header -->
+			
+			<!-- container -->
+			<div class="container">
+			
+			
+			    
+            <script>
+                $(function(){
+
+                    // ** 변수
+                    var $provinceSelect = $('.formSelect'),
+                      $provinceList = $provinceSelect.find('ul'), //PC용 옵션 리스트
+                      $provinceList_mo = $provinceSelect.find('select'), //모바일용 옵션 리스트
+                      $provinceSelectArrow =  $provinceSelect.find('span'), //위아래 바뀌는 화살표
+                      $provinceInput = $provinceSelect.find('input'); //선택된 값이 나타날 input
+                    
+
+                    var $body = $('body');
+                    var winW = $(window).width();
+
+                    
+                    // ** PC용 - 근무지역 리스트 보이는 함수
+                    var pc_provinceShow = function pc_provinceShowFunc(){
+                        $provinceList.toggle();
+                        $provinceSelectArrow.toggleClass('active');
+                    }
+
+                    
+                    // ** MOBILE용 - 근무지역 리스트 보이는 함수
+                    var mo_provinceShow = function mo_provinceShowFunc(){
+                        $provinceList.hide();
+                        $provinceList_mo.trigger('change');
+                        
+                    }
+                    
+                    // ** 모바일인지 PC인지 파악하는 함수
+                    var detectMobile = function detectMobileFunc(){
+                        $(window).on('load resize',function(){
+                           winW = $(this).width();
+                           (winW>768)? $body.addClass('detect_pc').removeClass('detect_mo') : $body.addClass('detect_mo').removeClass('detect_pc')
+
+                        });
+                    }
+
+                    
+                    
+                    detectMobile(); //모바일, PC 판단하여 클래스 추가
+                    $provinceSelect.children('a').add('select').on('click',function(evt){
+                      evt.preventDefault();
+                      ($body.hasClass('detect_pc'))? pc_provinceShow() : mo_provinceShow()
+
+                    });
+                    
+                    
+                    // PC용 - 선택된 지역명 표시
+                    $provinceList.find('a').on('click',function(evt){
+                        evt.preventDefault();
+                        var text = $(this).text();
+                        $provinceInput.val(text);
+                        pc_provinceShow();
+                    });
+                    
+                    // MOBILE용 - 선택된 지역명 표시
+                    $provinceList_mo.on('change',function(){
+                        var text = $(this).find('option:selected').text();
+                        $provinceInput.val(text);
+                        
+                    });
+
+
+                });
+            </script>
+                
+			
+				<div class="formArea signUpForm signUpForm_type02">
+                   <div class="contents">
+                       <div class="formAreaTit">
+                           <h2>SIGN UP</h2>
+                           <p>헬스케어 아카데미 회원정보 입력</p>
+                       </div>
+                       <div class="formAreaInput">
+                           <label for="signup-name">이름</label>
+                           <input type="text" id="signup-name" placeholder="이름을 입력하세요"/>
+
+                           <label for="signup-phone">전화번호</label>
+                           <input type="number" id="signup-phone" placeholder="전화번호를 입력하세요 (-제외)"/>
+
+                           <label for="signup-company">회사명</label>
+                           <input type="text" id="signup-company" placeholder="회사명을 입력하세요"/>
+
+                           <!--근무지역 선택 박스-->
+                           <div class="formSelect">   
+                               <label for="signup-province">근무지역</label>
+                               <a href="">
+                                   <input type="text" id="signup-province" placeholder="근무지역을 선택하세요." readonly="readonly"/>
+                                   <span>목록 보기</span>
+                               </a>
+                               <!-- ul : PC에서만 보입니다 -->
+                               <ul>
+                                   <li><a href="">서울특별시</a></li>
+                                   <li><a href="">부산광역시</a></li>
+                                   <li><a href="">대구광역시</a></li>
+                                   <li><a href="">인천광역시</a></li>
+                                   <li><a href="">광주광역시</a></li>
+                                   <li><a href="">대전광역시</a></li>
+                                   <li><a href="">울산광역시</a></li>
+                                   <li><a href="">세종특별자치시</a></li>
+                                   <li><a href="">경기도</a></li>
+                                   <li><a href="">강원도</a></li>
+                                   <li><a href="">충청북도</a></li>
+                                   <li><a href="">충청남도</a></li>
+                                   <li><a href="">전라북도</a></li>
+                                   <li><a href="">전라남도</a></li>
+                                   <li><a href="">경상북도</a></li>
+                                   <li><a href="">경상남도</a></li>
+                                   <li><a href="">제주특별자치도</a></li>
+                               </ul>
+
+                               <!-- select : 모바일에서만 보입니다-->
+                               <select>
+                                   <option value="">서울특별시</option>
+                                   <option value="">부산광역시</option>
+                                   <option value="">대구광역시</option>
+                                   <option value="">인천광역시</option>
+                                   <option value="">광주광역시</option>
+                                   <option value="">울산광역시</option>
+                                   <option value="">세종특별자치시</option>
+                                   <option value="">경기도</option>
+                                   <option value="">강원도</option>
+                                   <option value="">충청북도</option>
+                                   <option value="">충청남도</option>
+                                   <option value="">전라북도</option>
+                                   <option value="">전라남도</option>
+                                   <option value="">경상북도</option>
+                                   <option value="">경상남도</option>
+                                   <option value="">제주특별자치도</option>
+                               </select>
+                           </div>
+
+                           <label for="signup-position">직급</label>
+                           <input type="text" id="signup-position" placeholder="직급을 입력하세요 (선택 입력사항)"/>
+                           <label for="signup-research">주요 연구분야</label>
+                           <input type="text" id="signup-research" placeholder="주요 연구분야를 입력하세요 (선택 입력사항)"/>
+                       </div>
+                       <a href="" class="formBtn">다음</a>
+                       <em class="alert">필수 입력 항목이 누락되었습니다.<br/>이름.전화번호.회사명.근무지역을 입력해 주세요.</em>
+                    </div>
+                </div>
+                    
+                </div>
+                <!--//singUpForm-->
+			</div>
+
+			<!-- //container -->
+
+			<!-- footer -->
+			<footer>
+				<div class="footerIn">
+					<ul class="snsLink">
+						<li><a href="https://www.instagram.com/3M/" class="instagram" target="_blank" title="새창">Instagram</a></li>
+						<li><a href="https://www.linkedin.com/company/3m" class="linkedin" target="_blank" title="새창">linkedin</a></li>
+						<li><a href="https://www.youtube.com/user/3M" class="youtube" target="_blank" title="새창">youtube</a></li>
+						<li><a href="https://twitter.com/3M" class="twitter" target="_blank" title="새창">twitter</a></li>
+						<li><a href="https://www.facebook.com/3M" class="facebook" target="_blank" title="새창">facebook</a></li>
+					</ul>
+					<p>THE BRANDS LISTED ABOVE ARE TRADEMARKS OF 3M</p>
+				</div>
+				<div>
+					<p>한국쓰리엠(주)  대표자: 아밋 라로야  사업자등록번호: 116-81-06399  주소: 서울특별시 영등포구 의사당대로 82, 19층  대표전화: 010-033-4114 </p>
+					<a href="#" target="_blank" title="새창">법적정보</a><a href="#" target="_blank" title="새창">개인정보처리방침</a>
+					<span class="copy">&copy; 3M 2017. All Rights Reserved.</span>
+				</div>
+			</footer>
+			<!-- //footer -->
+
+
+
+	</body>
+</html>

@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+
+/*
+*   smsArea
+*/
+
+// SMS 발송 영역
+
+
+
+.smsArea{
+    padding-bottom: 45px;
+    //border-bottom: 1px solid #ccc;
+    
+    .tit {
+        display: block;
+        height: 20px;
+        padding: 10px 14px;
+        color: #fff;
+        font-weight: 500;
+        background-color: $color-main;
+        
+        em {
+            display: inline-block;
+            margin-left: 6px;
+            color: rgba(218, 227, 255, 1);
+            font-weight: 400;
+            letter-spacing: 0.05rem;
+        }
+        
+        button {
+            float: right;
+            height: 20px;
+            padding: 0 4px;
+            font-size: 12px;
+            color: #f0f0f0;
+            background-color: transparent;
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+        }
+    } //end of .tit
+    
+    .sms-from {
+        
+        float: left;
+        
+        textarea {
+            display: block;
+            width: 420px;
+            height: 170px;
+            padding: 14px;
+            resize: none;
+            border: 1px solid #969696;
+            line-height: 1.5;
+            font-size: 15px;
+         
+        }
+        
+        
+    } //end of .sms-from
+    
+    .sms-to {
+        float: left;
+        margin-left: 15px;
+        
+        .sms-to-list {
+            width: 420px;
+            height: 200px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            height: 170px;
+            padding: 14px;
+            background-color: #fff;
+            border: 1px solid #969696;
+            
+            input {
+                display: block;
+                width: 100%;
+                height: 32px;
+                margin-bottom: 14px;
+                padding: 0 7px;
+                box-sizing: border-box;
+                font-size: 0.906em;//(=14.5px) //15px이면 sms.from보다 커보여서 살짝 작게 수정
+                font-weight: 400;
+                letter-spacing: 0.025rem;
+                border: 0;
+                background-color: #fff;
+                border: 1px solid #c9c9c9;
+            }
+            
+            
+            .btn-add {
+                display: block;
+                font-size: 13px;
+                padding: 6px 8px;
+                margin-bottom: 12px;
+                color: #434343;
+                text-align: center;
+                background: #eee;
+                border: 1px solid #919191;
+                border-radius: 4px;
+            }
+        }
+        
+        
+        
+    } //end of .sms-to
+    
+    .sms-btn {
+        
+        margin-top: 20px;
+        
+        button {
+            display: inline-block;
+            @include btn-default;
+            padding: 0;
+            width: 90px;
+            height: 36px;
+            line-height: 34px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+            background-color: $color-num;
+            border: 1px solid $color-num;
+        }
+        
+        button:last-child {            
+            margin-left: 12px;
+            color: #727272;
+            border: 1px solid #727272;
+            background-color: transparent;
+        }
+    } //end of sms-btn
+} //end of smsArea
+

@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+
+/*
+*   typeList
+*/
+
+// (공통) 유형선택 - dateSelect와 거의 동일합니다.
+
+#main .typeList.clearfix {
+    
+    margin-top: 20px;
+    
+    & > strong {
+        margin-top: 0px; //잘못입금유형이 2줄이라 강제로 위로 올림
+    }
+     
+    button  {
+        float: left;
+        min-width: 70px;
+        padding: 5px 20px; 
+        margin-top: 4px;
+        margin-left: 5px;
+        font-size: 15px;
+        color: $color-main;
+        background-color: rgba(255,255,255,0);
+        border: 1px solid $color-btn;
+        border-radius: 4px;
+        
+          
+    }
+    
+    
+    strong+* {
+        margin-left: 0;
+    }
+    
+    
+    button.active {
+        @include btn-active; 
+    }
+    
+    
+}

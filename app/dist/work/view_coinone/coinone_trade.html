@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+    
+</head>
+<body> 
+    <div id="wrap">
+       
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active"> <!-- 활성화 시 active class -->
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li> <!-- 활성화 시 active class -->
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section id="main">
+           <div class="main-container">
+              
+               <div class="main-top">
+                  
+                   <h2>거래 주문 현황</h2>
+               </div>
+               
+               
+               <div class="main-board">
+                  
+                   <ul class="tab clearfix">
+                       <li>
+                           <button type="button" class="active">BTC</button>
+                       </li>
+                       <li>
+                           <button type="button">ETH</button>
+                       </li>
+                       <li>
+                           <button type="button">ETC</button>
+                       </li>
+                       <li>
+                           <button type="button">XRP</button>
+                       </li>
+                       <li>
+                           <button type="button">ATOM</button>
+                       </li>
+                   </ul>
+                   
+                   <table>
+                        <caption>거래 주문 현황 테이블</caption>
+                        <colgroup>
+                            <col/><col/><col/>
+                            <col/><col/><col/>
+                            <col/><col/><col/>
+                        </colgroup>
+                        <thead>
+                            <tr class="tableLabel" >
+                                <th scope="col">매도 누적 잔량</th>
+                                <th scope="col">매도 잔량</th>
+                                <th scope="col">가격</th>
+                                <th scope="col">매수 잔량</th>
+                                <th scope="col">매수 누적 잔량</th>
+                                <th scope="col">이름</th>
+                                <th scope="col">마진</th>
+                                <th scope="col">주문 유형</th>
+                                <th scope="col">시간</th>
+                            </tr>
+                       </thead>
+                       <tbody>
+                          
+                           <tr>
+                               <td>4.5689</td>
+                               <td>0.4996</td>
+                               <td>2,908,000</td>
+                               <td></td>
+                               <td></td>
+                               <td>김가나</td>
+                               <td>Margin</td>
+                               <td>청산</td>
+                               <td>
+                                   7/26/2017
+                                   <br/>
+                                   10:28:22AM
+                               </td>
+                           </tr>
+                           
+                           <tr>
+                               <td>4.09</td>
+                               <td>4.09</td>
+                               <td>2,907,000</td>
+                               <td></td>
+                               <td></td>
+                               <td>이모씨</td>
+                               <td></td>
+                               <td></td>
+                               <td>
+                                   7/26/2017
+                                   <br/>
+                                   10:29:21AM
+                               </td>
+                           </tr>
+                           
+                           <tr>
+                               <td></td>
+                               <td></td>
+                               <td>2,899,000</td>
+                               <td>0.0296</td>
+                               <td>0.0296</td>
+                               <td>박모씨</td>
+                               <td></td>
+                               <td></td>
+                               <td>
+                                   7/26/2017
+                                   <br/>
+                                   10:29:28AM
+                               </td>
+                           </tr>
+                           
+                           <tr>
+                               <td></td>
+                               <td></td>
+                               <td>2,899,000</td>
+                               <td>8.164</td>
+                               <td>8.1936</td>
+                               <td>김모씨</td>
+                               <td></td>
+                               <td></td>
+                               <td>
+                                   7/26/2017
+                                   <br/>
+                                   10:29:33AM
+                               </td>
+                           </tr>
+                           
+                           <tr>
+                               <td></td>
+                               <td></td>
+                               <td>2,897,000</td>
+                               <td>0.1507</td>
+                               <td>8.2833</td>
+                               <td>조모씨</td>
+                               <td>Margin</td>
+                               <td>개시</td>
+                               <td>
+                                   7/26/2017
+                                   <br/>
+                                   10:29:33AM
+                               </td>
+                           </tr>
+                           
+                       </tbody>
+                   </table>
+                   
+                   
+               </div>
+               <!-- //end of .main-board -->
+               
+           </div>
+           <!-- //end of .main-container -->
+            
+        </section>
+    </div>
+</body>
+</html>

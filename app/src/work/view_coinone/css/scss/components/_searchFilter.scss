@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+
+/*
+*   searchFilter
+*/
+
+// (공통) 검색 내 필터
+
+
+#search .searchFilter {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 110;
+    width: 1300px;
+    box-sizing: border-box;
+    padding: 16px 26px;
+    //background-color: #fbfcfd;
+    background-color: #fff;
+    //border: 1px solid $color-main;
+    border: 1px solid #aaa;
+    border-top: 1px solid #fff;
+    //box-shadow: 0 20px 30px rgba(49, 49, 49, 0.08),
+    box-shadow: 0 20px 30px rgba(49, 49, 49, 0.08),
+    0px 5px 5px rgba(38, 35, 35, 0.2);
+    
+    
+    .filter-container {
+        overflow: hidden;
+        height: 36px;
+        margin-top: 7px;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #e8e8e8;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+        
+        strong {
+            float: left;
+            display: block;
+            width: 80px;
+            height: 36px;
+            margin-left: 6px;
+            margin-bottom: 4px;
+            line-height: 36px;
+            font-size: 15px;
+            color: $color-main;
+        }
+        
+        ul {
+            float: left;
+            height: 36px;
+        }
+        
+        ul > li {
+            float: left;
+            width: 230px;
+            height: 36px;
+            line-height: 36px;
+            
+            &:after {
+                display: none;
+                content: '';
+                clear: both;
+            }
+            
+            label {
+                margin-right: 10px;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            
+            select { 
+                width: 134px; 
+                height: 30px; 
+                padding: 0 10px;
+                font-size: 14px;
+                background-color: #fff;
+                border: 1px solid #bbb; 
+                border-radius: 8px; 
+                -webkit-appearance: none; 
+                -moz-appearance: none; 
+                appearance: none; 
+                background-image: url("../images/page_3_ico.png"); background-repeat: no-repeat; background-position: 96% 50%; 
+            }
+
+            select::-ms-expand { 
+                display: none; 
+            }
+            
+            input {
+                width: 134px;
+                height: 26px;
+                margin-top: 4px;
+                padding: 0 10px; 
+                background-color: #fff;
+                border: 1px solid #bbb;
+            }
+            
+        }
+        
+        
+        .datePicker { //임시 날짜선택창
+            display: inline-block;
+            line-height: 36px;
+            
+            input {
+                width: 80px;
+            }
+        }
+        
+    } //end of .filter-container
+    
+    
+    .filter-container:nth-child(1) { //1번째 열
+        li:first-child {
+            width: 200px;
+        }
+        
+        li:not(:first-child) {
+            width: 320px;
+        }
+    }    
+    
+    .filter-container:nth-child(4) { //4번째 열
+        li {
+            width: 100%;
+            
+            label {
+                display: none;
+            }
+            input {
+                width: 1100px;
+            }
+        }
+    }
+    
+    
+    
+}

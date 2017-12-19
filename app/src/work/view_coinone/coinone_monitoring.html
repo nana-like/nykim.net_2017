@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW"/>
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+    
+</head>
+<body> 
+    <div id="wrap">
+       
+       <!-- header 부분 전면 수정 (08-02) -->
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active"> <!-- 활성화 시 active class -->
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li> <!-- 활성화 시 active class -->
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        
+
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+                
+                <!-- 상세검색용 필터 리스트 -->
+                <div class="searchFilter">
+                   
+                    <div class="filter-container clearfix">                 
+                       <strong>기타정보</strong>
+                       <ul>
+                           <li>
+                               <label for="">성별</label>
+                               <select name="" id="">
+                                   <option value="">남</option>
+                                   <option value="">여</option>
+                               </select>
+                           </li>
+
+                           <li>
+                               <label for="">생년월일</label>
+                               <div class="datePicker">
+                                  <input type="text" value="01/01/2017"/>
+                                     ~
+                                  <input type="text" value="01/01/2017"/>
+                               </div>
+                           </li>
+
+                           <li>
+                               <label for="">가입일시</label>
+                               <div class="datePicker">
+                                  <input type="text" value="01/01/2017"/>
+                                     ~
+                                  <input type="text" value="01/01/2017"/>
+                               </div>
+                           </li>
+
+                           <li>
+                               <label for="">최근접속일시</label>
+                               <div class="datePicker">
+                                  <input type="text" value="01/01/2017"/>
+                                     ~
+                                  <input type="text" value="01/01/2017"/>
+                               </div>
+                           </li>
+                       </ul>
+                    </div>
+                    <!--//end of .filter-container -->
+                   
+                    <div class="filter-container clearfix">
+                       <strong>인증정보</strong>
+                       <ul>
+                           <li>
+                               <label for="">이메일인증</label>
+                               <select name="" id="">
+                                   <option value="">미인증</option>
+                                   <option value="">완료</option>
+                               </select>
+                           </li>
+                       
+                           <li>
+                               <label for="">휴대폰인증</label>
+                               <select name="" id="">
+                                   <option value="">미인증</option>
+                                   <option value="">완료</option>
+                               </select>
+                           </li>
+
+                           <li>
+                               <label for="">계좌인증</label>
+                               <select name="" id="">
+                                   <option value="">미인증</option>
+                                   <option value="">완료</option>
+                               </select>
+                           </li>
+
+                           <li>
+                               <label for="">실명인증</label>
+                               <select name="" id="">
+                                   <option value="">미인증</option>
+                                   <option value="">완료</option>
+                               </select>
+                           </li>
+
+                           <li>
+                               <label for="">OTP등록</label>
+                               <select name="" id="">
+                                   <option value="">미등록</option>
+                                   <option value="">등록(미사용중)</option>
+                                   <option value="">등록(사용중)</option>
+                               </select>
+                           </li>
+                       </ul>
+                    </div>
+                    <!--//end of .filter-container -->
+                    
+                    <div class="filter-container clearfix">
+                       <strong>출금관련</strong>
+                       <ul>
+                           <li>
+                               <label for="">KRW</label>
+                               <input type="number" placeholder="(숫자 입력)"/>
+                           </li>
+
+                           <li>
+                               <label for="">BTC</label>
+                               <input type="number" placeholder="(숫자 입력)"/>
+                           </li>
+
+                           <li>
+                               <label for="">ETH</label>
+                               <input type="number" placeholder="(숫자 입력)"/>
+                           </li>
+
+                           <li>
+                               <label for="">ETC</label>
+                               <input type="number" placeholder="(숫자 입력)"/>
+                           </li>
+
+                           <li>
+                               <label for="">출금제한상태</label>
+                               <select name="" id="">
+                                   <option value="">출금제한(대기)</option>
+                                   <option value="">출금가능</option>
+                               </select>
+                           </li>
+                       </ul>
+                    </div>
+                    <!--//end of .filter-container -->
+                    
+                    <div class="filter-container">
+                       <strong>메모내용</strong>
+                       <ul>
+                           <li>
+                               <label for="">검색할 메모내용</label>
+                               <input type="text" placeholder="검색할 메모내용을 입력해 주세요."/>
+                           </li>
+                       </ul>
+                    </div>
+                    <!--//end of .filter-container -->
+                    
+                </div>
+                <!--//end of .searchFilter-->
+                
+                
+            </div>
+            <!--//end of .search-container-->
+        </div>
+        <!--//end of #search-->
+        
+        
+        <section id="main">
+           <div class="main-container">
+              
+               <div class="main-top">
+                  
+                   <h2>이상 거래 모니터링</h2>
+                   
+                   <div class="filterArea">
+                      
+                       <div class="dateSelect clearfix">
+                           <strong>기간</strong>
+                           
+                           <div class="btnWrap">
+                               <button type="button">전체</button>
+                               <button type="button" class="active">24시간</button>
+                               <button type="button">48시간</button>
+                               <button type="button">1주</button>
+                           </div>
+                           
+                           
+                           <div class="datePicker">
+                            <!-- 여기에 날짜 선택창을 넣어 주세요 -->
+                              <input type="text" value="01/01/2017"/>
+                                 ~
+                              <input type="text" value="01/01/2017"/>
+                           </div>
+                           
+                       </div>
+                       <!-- //end of .dateSelect -->
+                       
+
+                       <div class="filter-data clearfix">
+                           <strong>검색필터</strong>
+
+                           <div class="data-login clearifx">
+                               <button type="button" class="active">  
+                                   로그인 정보
+                               </button> <!-- active class를 붙이면 색 반전이 됩니다 --> 
+                               <ul>
+                                   <li>
+                                       <label for="filter-ip">접속 IP 변동량</label>
+                                       <input type="text"
+                                           id="filter-ip"
+                                           placeholder="0"/>
+                                   </li>
+                                   <li>
+                                       <label for="filter-pwd">비밀번호 틀린 횟수</label>
+                                       <input type="text"
+                                           id="filter-pwd"
+                                           placeholder="0"/>
+                                   </li>
+                                   <li>
+                                       <label for="filter-logOtp">OTP 틀린 횟수</label>
+                                       <input type="text"
+                                           id="filter-logOtp"
+                                           placeholder="0"/>
+                                   </li>
+                               </ul>
+                           </div>
+                           <!--//end of .data-login-->
+
+                           <div class="data-account clearfix">
+                               <button type="button">
+                               입출금 정보
+                               </button>
+                               <ul>
+                                   <li>
+                                       <label for="filter-krw">KRW 입금액</label>
+                                       <input type="text"
+                                           id="filter-krw"
+                                           placeholder="0"
+                                           class="longer"/>
+                                   </li>
+                                   <li>
+                                       <label for="filter-depo">입금 횟수</label>
+                                       <input type="text"
+                                           id="filter-depo"
+                                           placeholder="0"/>
+                                   </li>
+                                   <li>
+                                       <label for="filter-curr">가상화폐 총 출금액</label>
+                                       <input type="text"
+                                           id="filter-curr"
+                                           placeholder="0"
+                                           class="longer"                                                                                                                   value="20000"/>
+                                   </li>
+                                   <li>
+                                       <label for="filter-draw">총 출금 횟수</label>
+                                       <input type="text"
+                                           id="filter-draw"
+                                           placeholder="0"
+                                           value="34"/>
+                                   </li>
+                                   <li>
+                                       <label for="filter-otp">OTP 틀린 횟수</label>
+                                       <input type="text"
+                                           id="filter-otp"
+                                           placeholder="0"/>
+                                   </li>
+                               </ul>
+                           </div>
+                           <!--//end of .data-account-->
+                       </div>
+                       
+                       <button type="button" class="queryInfilter">조회</button>
+                   </div>
+                   <!-- //end of .filterArea -->
+               </div>
+               <!--//end of .main-top -->
+               
+               
+               <div class="main-board">
+                   
+                   <table>
+                        <caption>이상거래 모니터링 테이블</caption>
+                        <colgroup>
+                            <col/><col/>
+                            <col/><col/>
+                            <col/><col/>
+                            <col class="smallCol"/>
+                            <col class="smallCol"/>
+                            <col class="smallCol"/>
+                            <col class="largeCol"/>
+                            <col class="largeCol"/>
+                            <col class="smallCol"/>
+                            <col class="largeCol"/>
+                            <col class="smallCol"/>
+                            <col class="smallCol"/>
+                            <col class="largeCol"/>
+                            <col class="largeCol memoCol"/>
+                        </colgroup>
+                        <thead>
+                            <tr class="tableLabel" >
+                                <th colspan="2" scope="col">고객정보</th>
+                                <th colspan="4" scope="col">인증정보</th>
+                                <th colspan="4" scope="col">로그인정보</th>
+                                <th colspan="6" scope="col">입출금정보</th>
+                                <th colspan="1" scope="col">메모</th>
+                            </tr>
+                            <tr class="tableCate">
+                                <th>IDX</th>
+                                <th>이름</th>
+                                <th class="th_bg">이메일 인증</th>
+                                <th class="th_bg">휴대폰 인증</th>
+                                <th class="th_bg">계좌 인증</th>
+                                <th class="th_bg">OTP 인증</th>
+                                <th>접속 IP 변동량</th>
+                                <th>비밀번호 틀린 횟수</th>
+                                <th>OTP 틀린 횟수</th>
+                                <th>계정접근 제한</th>
+                                <th class="th_bg">KRW 입금액</th>
+                                <th class="th_bg">입금 횟수</th>
+                                <th class="th_bg">가상화폐 총 출금액</th>
+                                <th class="th_bg">총 출금 횟수</th>
+                                <th class="th_bg">OTP 틀린 횟수</th>
+                                <th class="th_bg">출근제한 관리</th>
+                                <th class="th_bg"></th>
+                            </tr>
+                       </thead>
+                       <tbody> <!-- 테이블 내 버튼에 class="btn-inTable"를 붙여 주세요 (08-07) -->
+                          
+                           <tr>
+                               <td>1</td>
+                               <td>코인원</td>
+                               <td>인증</td>
+                               <td>미인증</td>
+                               <td>인증</td>
+                               <td>미인증</td>
+                               <td>4</td>
+                               <td>3</td>
+                               <td>3</td>
+                               <td>
+                                   <button type="button" class="active btn-inTable">계정잠금</button>
+                                   <button type="button" class="btn-inTable">잠금해제</button>
+                               </td>
+                               <td>8,000,000</td>
+                               <td>5</td>
+                               <td>8,000,000</td>
+                               <td>24</td>
+                               <td>2</td>
+                               <td>
+                                   <button type="button" class="active btn-inTable">출금제한</button>
+                                   <button type="button" class="btn-inTable">제한해제</button>
+                               </td>
+                               <td>
+                                   <textarea>해외 차익 거래자</textarea>
+                                   <button type="submit" class="btn-memo">입력</button>
+                               </td>
+                           </tr>
+                           
+                           <tr>
+                               <td>2</td>
+                               <td>코인원원</td>
+                               <td>인증</td>
+                               <td>인증</td>
+                               <td>인증</td>
+                               <td>미인증</td>
+                               <td>5</td>
+                               <td>3</td>
+                               <td>4</td>
+                               <td>
+                                   <button type="button" class="active btn-inTable">계정잠금</button>
+                                   <button type="button" class="btn-inTable">잠금해제</button>
+                               </td>
+                               <td>12,000,000</td>
+                               <td>5</td>
+                               <td>12,000,000</td>
+                               <td>300</td>
+                               <td>2</td>
+                               <td>
+                                   <button type="button" class="btn-inTable">출금제한</button>
+                                   <button type="button" class="active btn-inTable">제한해제</button>
+                               </td>
+                               <td>
+                                   <textarea>필요 시 메모 입력 메모작성 테스트</textarea>
+                                   <button type="submit"  class="btn-memo">입력</button>
+                               </td>
+                           </tr>
+                           
+                       </tbody>
+                   </table>
+                   
+                   <div class="pagination">
+                      <a href="" class="btn_prev text-indent">이전</a>
+                      <a href="" class="active">1</a>
+                      <a href="">2</a>
+                      <a href="">3</a>
+                      <a href="">4</a>
+                      <a href="">5</a>
+                      <a href="" class="btn_next text-indent">다음</a>
+                   </div>
+                   
+               </div>
+               
+           </div>
+            
+        </section>
+    </div>
+</body>
+</html>

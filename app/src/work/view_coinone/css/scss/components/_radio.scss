@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+
+/*
+*   radio layout
+*/
+// 커스텀 라디오
+
+
+.customRadio  {
+    float: left;
+    width: 70px;
+    height: 30px;
+    margin-left: 5px;
+    line-height: 28px;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: $color-main;
+    border: 1px solid $color-main;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+    &.active {
+        color: #fff;
+        background-color: $color-main;
+    }
+    
+    
+    label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    
+}
+
+
+

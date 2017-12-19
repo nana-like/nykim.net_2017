@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+    
+</head>
+<body>
+    <div id="wrap">
+       
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active">
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li>
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section id="main">
+           <div class="main-container">
+                   
+               <div class="main-top">
+                  
+                   <h2>계정 관리</h2>
+                   <button type="button" class="plus">계정 추가 +</button>
+                   <ul class="userCount">
+                       <li>전체 계정 수: <span>25</span></li>
+                   </ul>
+                   
+               </div>
+               
+               
+               <div class="main-board">
+                                      
+                   <table>
+                        <caption>계정 관리 테이블</caption>
+                        <colgroup>
+                            <col />
+                            <col width="10%" />
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col />
+                            <col />
+                            <col width="22%"/>
+                        </colgroup>
+                        <thead>
+                            <tr class="tableLabel" >
+                                <th colspan="5" scope="col">직원정보</th>
+                                <th colspan="2" scope="col">로그</th>
+                                <th scope="col">처리내용</th>
+                            </tr>
+                            <tr class="tableCate">
+                                <th>소속</th>
+                                <th>이름</th>
+                                <th>휴대폰번호</th>
+                                <th>ID</th>
+                                <th>보안등급</th>
+                                <th class="th_bg">계정생성일시</th>
+                                <th class="th_bg">최종접속일시</th>
+                                <th></th>
+                            </tr>
+                       </thead>
+                       <tbody> 
+                           <tr> 
+                               <td>코인원</td>
+                               <td>테스트</td>
+                               <td>010-1234-5678</td>
+                               <td>abc1234</td>
+                               <td>레벨 4</td>
+                               <td>
+                                   1/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                   6/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                <!-- btn-inline는 버튼을 1줄에 2개씩 나열합니다. -->
+                                <button type="button" class="btn-inTable btn-inline">계정편집</button> 
+                                <button type="button" class="btn-inTable btn-inline">비밀번호 초기화</button>
+                                <button type="button" class="btn-inTable btn-inline">조회기록</button>
+                                <button type="button" class="btn-inTable btn-inline">계정 비활성화</button>
+                               </td>
+                           </tr>
+                           
+                           <tr> 
+                               <td>코인원</td>
+                               <td>가나다</td>
+                               <td>010-1234-5678</td>
+                               <td>abc1234</td>
+                               <td>레벨 1</td>
+                               <td>
+                                   1/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                   6/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                <button type="button" class="btn-inTable btn-inline">계정편집</button>
+                                <button type="button" class="btn-inTable btn-inline">비밀번호 초기화</button>
+                                <button type="button" class="btn-inTable btn-inline">조회기록</button>
+                                <button type="button" class="btn-inTable btn-inline">계정 비활성화</button>
+                               </td>
+                           </tr>
+                           
+                           <tr> 
+                               <td>코인원</td>
+                               <td>가나다</td>
+                               <td>010-1234-5678</td>
+                               <td>abc1234</td>
+                               <td>레벨 1</td>
+                               <td>
+                                   1/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                   6/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                <button type="button" class="btn-inTable btn-inline">계정편집</button>
+                                <button type="button" class="btn-inTable btn-inline">비밀번호 초기화</button>
+                                <button type="button" class="btn-inTable btn-inline">조회기록</button>
+                                <button type="button" class="btn-inTable btn-inline">계정 비활성화</button>
+                               </td>
+                           </tr>
+                           
+                           <tr> 
+                               <td>코인원</td>
+                               <td>가나다</td>
+                               <td>010-1234-5678</td>
+                               <td>abc1234</td>
+                               <td>레벨 1</td>
+                               <td>
+                                   1/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                   6/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                <button type="button" class="btn-inTable btn-inline">계정편집</button>
+                                <button type="button" class="btn-inTable btn-inline">비밀번호 초기화</button>
+                                <button type="button" class="btn-inTable btn-inline">조회기록</button>
+                                <button type="button" class="btn-inTable btn-inline">계정 비활성화</button>
+                               </td>
+                           </tr>
+                           
+                           <tr> 
+                               <td>코인원</td>
+                               <td>가나다</td>
+                               <td>010-1234-5678</td>
+                               <td>abc1234</td>
+                               <td>레벨 1</td>
+                               <td>
+                                   1/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                   6/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                <button type="button" class="btn-inTable btn-inline">계정편집</button>
+                                <button type="button" class="btn-inTable btn-inline">비밀번호 초기화</button>
+                                <button type="button" class="btn-inTable btn-inline">조회기록</button>
+                                <button type="button" class="btn-inTable btn-inline">계정 비활성화</button>
+                               </td>
+                           </tr>
+                           
+                           <tr> 
+                               <td>코인원</td>
+                               <td>가나다</td>
+                               <td>010-1234-5678</td>
+                               <td>abc1234</td>
+                               <td>레벨 1</td>
+                               <td>
+                                   1/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                   6/1/2017
+                                   <br/>
+                                   12:30:10AM
+                               </td>
+                               <td>
+                                <button type="button" class="btn-inTable btn-inline">계정편집</button>
+                                <button type="button" class="btn-inTable btn-inline">비밀번호 초기화</button>
+                                <button type="button" class="btn-inTable btn-inline">조회기록</button>
+                                <button type="button" class="btn-inTable btn-inline">계정 비활성화</button>
+                               </td>
+                           </tr>
+                           
+                           
+                       </tbody>
+                   </table>
+                   
+                   <div class="pagination">
+                      <a href="" class="btn_prev text-indent">이전</a>
+                      <a href="" class="active">1</a> <!-- 활성화 시 active class -->
+                      <a href="">2</a>
+                      <a href="">3</a>
+                      <a href="">4</a>
+                      <a href="">5</a>
+                      <a href="" class="btn_next text-indent">다음</a>
+                   </div>
+                   
+                   
+                   
+               </div>
+               <!-- //end of .main-board -->
+               
+           </div>
+           <!-- //end of .main-container -->
+           
+        </section>
+        
+        
+        
+    </div>
+</body>
+</html>

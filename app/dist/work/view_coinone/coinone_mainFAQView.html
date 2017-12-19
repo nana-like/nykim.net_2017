@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+	
+	<title>Coinone Admin</title>
+   
+    <link rel="shortcut icon" type="image/ico" href="images/common/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <script src="js/jquery-2.2.4.min.js"></script> 
+    <script src="js/script.js"></script>
+    
+</head>
+<body>
+    <div id="wrap">
+       
+        <header id="header">
+            <div class="header-container">
+               
+                <div class="fixedElem">
+                    <h1 class="text-indent"><a href="">Coinone Admin</a></h1>
+
+                    <div class="utils">
+                        <div class="userID">admin1234</div>
+                        <button type="button">승인 : <span>200</span></button>
+                        <button type="button" class="btn-logout">로그아웃</button>
+                    </div>
+                </div>
+                
+                
+                <nav>
+                <div class="bg_sub"></div>
+                    <h2 class="text-hide">Navigation</h2>
+                    <ul id="gnb" class="clearfix">
+                        <li class="active"> <!-- 활성화 시 active class -->
+                            <a href="">고객관리</a>
+                            <div class="sub submnu_1">
+                                <ul class="clearfix">
+                                    <li class="active"><a href="">고객정보조회</a></li> <!-- 활성화 시 active class -->
+                                    <li><a href="">입출금관리</a></li>
+                                    <li><a href="">처리내역</a></li>
+                                    <li><a href="">이상거래 모니터링</a></li>
+                                    <li><a href="">SMS 발송</a></li>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">Q&amp;A</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">로그데이터</a>
+                            <div class="sub submnu_2">
+                                <ul class="clearfix">
+                                    <li><a href="">거래 주문 현황</a></li>
+                                    <li><a href="">거래 체결 내역</a></li>
+                                    <li><a href="">직구센터 내역</a></li>
+                                    <li><a href="">IP 내역</a></li>
+                                    <li><a href="">에러 내역</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">보안관리</a>
+                            <div class="sub submnu_3">
+                                <ul class="clearfix">
+                                    <li><a href="">계정관리</a></li>
+                                    <li><a href="">승인관리</a></li>
+                                    <li><a href="">보안등급 변경이력</a></li>
+                                    <li><a href="">화면조회 내역</a></li>
+                                    <li><a href="">수사 협조</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //.end of header -->
+        
+        
+        <div id="search">
+            <div class="search-container clearfix">
+                <div class="filter">
+                    <button type="button"><span>필터입력</span></button>
+                </div>
+                <div class="searchForm">
+                    <form action="/">
+                        <input type="text" id="searchArea" name="search" placeholder="IDX . Email . 이름 . 휴대폰번호 . 등록계좌번호 . 가상계좌번호 . 지갑주소를 입력해주세요." autocomplete="off"/>
+                        <button type="submit" class="btn-search text-indent">검색</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+        <section id="main" class="mainList">
+            <div class="main-container">
+
+            <div class="main-top">
+
+                <h2>FAQ</h2>
+
+                <div class="filterArea">
+                    <div class="dateSelect clearfix">
+                        <strong>기간</strong>
+
+                        <div class="btnWrap">
+                            <button type="button" class="active">전체</button>
+                            <button type="button">오늘</button>
+                            <button type="button">어제</button>
+                            <button type="button">1주</button>
+                        </div>
+
+
+                        <div class="datePicker">
+                            <input type="text" value="01/01/2017"/>
+                            ~
+                            <input type="text" value="01/01/2017"/>
+                        </div>
+
+                    </div>
+                    <!-- //end of .dateSelect -->
+
+                    <div class="innerSearch clearfix">
+                        <strong>검색</strong>
+
+                        <form action="" class="clearfix">
+                            <select name="" id="">
+                                <option value="">작성자</option>
+                                <option value="">글 제목</option>
+                                <option value="">글 내용</option>
+                            </select>
+                            <input type="text" placeholder="검색어를 입력해 주세요."/>
+                            <button type="button" class="btn-search">조회</button>
+                        </form>
+                    </div>
+                </div>
+                <!--//end of .filterArea -->
+
+            </div>
+            <!--//end of .main-top -->
+
+
+                <div class="main-board">
+                    <div class="list-container">
+                        <button class="btn-back">&laquo;&nbsp; 목록으로 돌아가기</button>
+                        <div class="list-view">
+                            <strong class="tit-2">미성년자 가입 취소 시 대응 방안</strong>
+                            <div class="list-contents">
+                                <p class="list-info">
+                                    <em>작성자 : <span>코인원</span></em>
+                                    <em>작성일 : <i>08/08/2017 10:00:00</i></em>
+                                </p>
+                                <p class="list-txt-entire">
+                                내국인은 본인 명의의 휴대폰으로만 본인 인증이 가능합니다. 
+                                <br/>본인 명의의 휴대폰이 없는 경우 본인 인증을 할 수 없습니다.
+                                </p>
+                                <div class="list-attach">
+                                    <div class="attachedFile">
+                                        <a href="">스크린샷_00.jpg</a>
+                                        <button type="button" class="text-indent">파일 삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--//end of .list-contents-->
+                            
+                                <div class="list-commentsAll">
+                                    <p class="list-commentsNum">댓글 <span>5</span></p>
+                                    <button type="button" class="btn-writeComment">+ 댓글 작성</button>
+                                    <ul>
+                                        <li class="clearfix">
+                                            <em>코인원</em>
+                                            <span>그렇습니다.</span>
+                                            <button type="button" class="text-indent">댓글 삭제</button>
+                                        </li>
+                                        <li class="clearfix">
+                                            <em>코인원</em>
+                                            <span>제 의견도 그렇습니다.</span>
+                                            <button type="button" class="text-indent">댓글 삭제</button>
+                                        </li>
+                                        <li class="clearfix">
+                                            <em>abcde1234567890123456</em>
+                                            <span>맞습니다!!</span>
+                                            <button type="button" class="text-indent">댓글 삭제</button>
+                                        </li>
+                                        <li class="clearfix">
+                                            <em>코인원코인원</em>
+                                            <span>이것은 일반적인 댓글보다 조금 더 긴 2줄 이상의 댓글을 표현하는 댓글 같습니다. 이것은 일반적인 댓글보다 조금 더 긴 2줄 이상의 댓글을 표현하는 댓글 같습니다. 이것은 일반적인 댓글보다 조금 더 긴 2줄 이상의 댓글을 표현하는 댓글 같습니다.</span>
+                                            <button type="button" class="text-indent">댓글 삭제</button>
+                                        </li>
+                                        <li class="clearfix">
+                                            <em>코인원</em>
+                                            <span>그렇습니다.</span>
+                                            <button type="button" class="text-indent">댓글 삭제</button>
+                                        </li>
+                                    </ul>
+                                    
+                                    <div class="pagination">
+                                        <a href="" class="btn_prev text-indent">이전</a>
+                                        <a href="" class="active">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">5</a>
+                                        <a href="" class="btn_next text-indent">다음</a>
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+                                <!--//end of .list-commentsAll-->
+                                
+                        </div>
+                        <!--//end of .list-view-->
+
+                    </div>
+                    <!--//end of .list-container-->
+
+                </div>
+                <!--//end of .main-board-->
+
+            </div>
+            <!-- //end of .main-container -->
+            
+        </section>
+    </div>
+</body>
+</html>

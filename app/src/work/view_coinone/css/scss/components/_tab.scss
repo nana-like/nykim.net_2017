@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+
+/*
+*   tab
+*/
+
+// (공통) 화폐 선택 탭
+
+
+    
+.tab {
+
+    margin-bottom: 20px;
+
+    li {
+
+        float: left;
+        margin-left: 5px;
+
+        button {
+            @include btn-default;
+            @include block-anchor;
+            font-size: 16px;
+
+        }
+
+
+        button.active {
+            @include btn-active;
+        }
+
+    }
+
+    li:first-child {
+        margin-left: 0;
+    }
+    
+    
+    .btn-query {
+        
+        
+        button {
+            padding: 4px 16px;
+            font-size: 15px;
+            font-weight: 400;
+            background-color: $color-num;
+            border: 1px solid $color-num;
+            color: #fff;
+            
+        }
+    }
+}
+    

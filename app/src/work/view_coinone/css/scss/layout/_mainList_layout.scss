@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+
+/*
+*   mainList layout
+*/
+// 게시판 페이지 전용 레이아웃
+
+
+
+.mainList .main-board .list-container {
+    
+    position: relative;
+    margin-top: 45px;
+    margin-bottom: 40px;
+    
+    .btn-write { //작성하기 버튼
+        height: 36px;
+        padding: 0 14px;
+        margin-bottom: 30px;
+        color: #fff; 
+        background-color: $color-main;
+        border-radius: 4px;
+    }
+    
+    .btn-back {
+        height: 36px;
+        padding: 0 14px;
+        margin-bottom: 30px;
+        color: $color-main;
+        background-color: transparent;
+        border: 1px solid $color-main;
+        border-radius: 4px;
+        
+    }
+    
+    
+    .btn-writeComment {
+        height: auto; 
+        padding: 4px 8px;
+        margin-left: 10px;
+        font-size: 14px; 
+        color: $color-main;
+        background-color: transparent;
+        border: 1px solid $color-main;
+        border-radius: 4px;
+    }
+    
+    .btn-deleteItems { //게시글 삭제 버튼
+        @extend .btn-writeComment;
+        position: absolute;
+        top: 14px;
+        right: 14px; 
+        
+    }
+    
+    
+    .btn-deleteNotice { //현재 게시글 삭제 버튼 (View에서만 사용)
+        @extend .btn-writeComment;
+        position: absolute;
+        top: 14px;
+        right: 12px;
+    }
+    
+    
+    ul.list-preview > li { //리스트 목록
+        position: relative;
+        background-color: #fff;
+        margin-bottom: 25px;
+        
+        a {    
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        
+        a:hover {
+            strong {
+                background-color: #d9d9d9;
+            }
+            
+            
+            
+            .list-txt {
+                text-decoration: underline;
+            }
+            
+        }
+        
+    } //end of .list-preview > li
+    
+    
+    .list-view { //해당 게시글
+        position: relative;
+    }
+    
+    
+    strong.tit-1 { //제목1 (리스트 목록용)
+        display: block;
+        width: 1278px;
+        padding-left: 20px;
+        height: 64px;
+        font-size: 1.094rem; //=17.5px
+        font-weight: 500;
+        line-height: 64px;
+        background-color: #f4f4f4;
+        border-top: 2px solid #152558;
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #dfdfdf;
+
+    }
+    
+    strong.tit-2 { //제목2 (해당 게시글용)
+        display: block;
+        width: 1268px;
+        padding-left: 30px;
+        height: 100px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 100px;
+        background-color: #e0e0e0;
+        border-top: 2px solid #152558;
+        border-left: 1px solid #dfdfdf;
+        border-right: 1px solid #dfdfdf;
+
+    }
+    
+
+    .list-contents { //리스트 내용
+        position: relative;
+        box-sizing: border-box;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #dfdfdf;
+
+        .list-info { //작성자, 작성일
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 13px;
+            font-weight: 400;
+            text-align: right;
+            color: #444;
+
+            em:first-child { //작성자-작성일 사이 간격 조절
+                margin-right: 12px;
+                position: relative;
+
+
+                &:after { //작성자-작성일 사이 구분선
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    top: 4px;
+                    right: -8px;
+                    width: 1px;
+                    height: 12px;
+                    background-color: #696969;
+                }
+            }
+
+            i {  
+                font-style: normal;
+            }
+
+        }
+
+
+        .list-txt{ //게시글 미리보기
+            margin: 12px 0 34px; 
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #333;
+        }
+        
+        .list-txt-entire { //게시글 전체 (view)
+            max-height: 600px;
+            overflow-y: auto; 
+            margin: 10px 15px 60px 0;
+            padding: 30px 15px 30px 30px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.7;
+            color: #434343;
+        }
+        
+        
+        .list-attach { //첨부된 파일
+            padding: 0 30px;
+        
+            .attachedFile {
+                position: relative;
+                display: inline-block;
+                margin-right: 10px;
+                margin-bottom: 8px;
+                padding: 6px 46px 6px 10px;
+                font-weight: 500;
+                color: #555;
+                font-size: 14px;
+                letter-spacing: 0.05rem;
+                background-color: #eee;
+                border: 1px solid #ddd;
+                
+                &:last-child {
+                    margin-right: 0px;
+                }
+
+                button {
+                    opacity: 0.5;
+                    position: absolute;
+                    top: 9px;
+                    right: 10px;
+                    width: 12px;
+                    height: 12px;
+                    background-color: transparent;
+                    background-image: url(../images/clse_ico.png);
+                    background-repeat: no-repeat;
+                    background-size: 100%; 
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        
+        
+    } //end of .list-contents
+    
+    
+    .list-view .list-contents { //해당 게시글 내에서 글 주위의 padding 재정의
+        padding: 25px 0;
+        
+        .list-info { //해당 게시글 내에서 작성자/날짜 정보 위치 재정의
+            position: static;
+            margin-right: 34px;
+        }
+    }
+    
+    
+    .list-commentsAll { //덧글 리스트
+            margin-top: 20px; 
+            padding: 40px 30px 10px; 
+            background-color: #fafbfc;
+            border: 1px solid #dfdfdf;
+            
+            ul {
+                margin-top: 38px;
+                
+                li {
+                    position: relative;
+                    margin-bottom: 12px;
+                    padding-bottom: 12px;
+                    border-bottom: 1px solid #cfcfcf;
+                }
+                
+                li > em {
+                    float: left;
+                    display: block;
+                    width: 150px;
+                    padding-right: 10px;
+                    font-size: 15px;
+                    font-weight: 500;  
+                    @include txt-ellipsis;
+                }
+
+                li > span {
+                    float: left;
+                    display: block;
+                    width: 1030px;
+                    font-size: 14px;
+                    font-weight: 400;
+                    //@include txt-ellipsis;
+                }
+                
+                li > span + button { //삭제 버튼
+                    position: absolute;
+                    opacity: 0.4; 
+                    top: 50%;
+                    right: 6px;
+                    width: 10px;
+                    height: 10px;
+                    margin-top: -10px;
+                    background-color: transparent;
+                    background-image: url(../images/clse_ico.png);
+                    background-repeat: no-repeat;
+                    background-size: 100%; 
+                    
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+
+                
+            }
+            
+        } 
+        //end of .list-commentsAll
+
+
+
+        .list-commentsNum { //덧글 수 알림
+                display: inline-block;
+                position: relative;
+                font-size: 15px;
+                font-weight: 500;
+                color: $color-btn;
+
+                &.on:after { //on클래스로 첨부파일 유무 표시
+                    display: block;
+                    position: absolute;
+                    top: 1px;
+                    right: -21px;
+                    content: '';
+                    width: 16px;
+                    height: 18px;
+                    background-image: url(../images/attach_ico.png);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                }
+        }
+    
+    
+}

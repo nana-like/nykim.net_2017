@@ -4,7 +4,7 @@
 *   FONT FACE
 */
 
-/*
+
 @font-face {
 	font-family: 'LotteMartDream'; //롯데마트 드림체
     font-style: normal;
@@ -14,9 +14,10 @@
          url(../font/dreamL.woff) format('woff'),
          url(../font/dreamL.ttf) format('truetype');
 }
-*/
+
 
 ////////// CDN 도입. 속도 비교 후 결정!
+/*
 
 @font-face{
  font-family:'LotteMartDream';
@@ -39,6 +40,7 @@
  src:url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff2') format('woff2'),
      url('http://cdn.jsdelivr.net/korean-webfonts/1/corps/lottemart/LotteMartDream/LotteMartDreamLight.woff') format('woff');
 }
+*/
 
 @font-face {
 	font-family: 'NotoSans'; //본고딕
