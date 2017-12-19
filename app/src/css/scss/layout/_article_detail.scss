@@ -347,6 +347,11 @@
     background-color: $color-work-02;
 }
 
+
+.work_04 .article_detail .detail_main .slider {
+    background-color: $color-work-04;
+}
+
 .work_06 .article_detail .detail_main .slider {
     background-color: $color-work-06;
 }
@@ -374,6 +379,21 @@
     
     &:before {
         background-color: $color-work-02;
+    }
+    
+    &:hover span {
+        color: #fff;
+    }
+}
+
+
+
+.work_04 .article_detail .detail_bottom .detail_link {
+    border-color: $color-work-04;
+    color: $color-work-04;
+    
+    &:before {
+        background-color: $color-work-04;
     }
     
     &:hover span {

@@ -61,7 +61,6 @@ gulp.task('compile:scss', function(){
        .pipe(sourcemaps.init()) // 소스맵 초기화(소스맵 생성)
        .pipe(sourcemaps.write('/', {addComment: false})) //생성한 소스맵을 현재 폴더에 생성하고 주석 없앰
        .pipe(gulp.dest(src+'/css'))
-       .pipe(gulp.dest(dist+'/css'))
        .pipe(livereload());
 });
 //////////////////////////////
@@ -81,7 +80,7 @@ gulp.task('move:html',function(){
 ///////// watch 업무 /////////
 gulp.task('watch', function(){
     livereload.listen();
-    gulp.watch(paths.html, {interval:1000}, ['move:html']);
+   /* gulp.watch(paths.html, {interval:1000}, ['move:html']);*/
     gulp.watch(paths.scss, {interval:1000}, ['compile:scss']);
 	gulp.watch(src + '/**').on('change', livereload.changed);
 });
@@ -90,5 +89,5 @@ gulp.task('watch', function(){
 
 
 ///////// default 정의 /////////
-gulp.task('default', ['webserver', 'move:html', 'compile:scss', 'watch']);
+gulp.task('default', ['webserver', 'compile:scss', 'watch']);
 //////////////////////////////
