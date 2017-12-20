@@ -1,33 +1,42 @@
+
+// 모듈 호출
 var gulp = require('gulp');
 var concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglifyes'),
     rename = require('gulp-rename'),
+    minifyhtml = require('gulp-minify-html'),
+    imagemin = require('gulp-imagemin'),
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     webserver = require('gulp-webserver'),
-    livereload = require('gulp-livereload');
+    browserSync = require('browser-sync').create();
+   // livereload = require('gulp-livereload');
 
 
+// 경로 변수
 var src = 'app/src';
 var dist = 'app/dist';
+var jsSource = 'app/src/js_src';
 var paths = {
-    js : src + '/js/**/*.js',
-    scss : src + '/css/scss/**/*.scss',
-    html : src + '/**/*.html'
-};
+    js: src+'/js_src/**/*.js',
+    scss: src+'/css/scss/**/*.scss',
+    html: src+'/**/*.html',
+    image: src+'/images/**/*'
+}
 
 
-//////// sass 옵션 설정 ////////
+// SASS 옵션
 var sassOptions = {
-    //outputStyle: "compressed",
-    outputStyle: "compact",
+    outputStyle: "compressed",
     indentType : "tab"
 };
-//////////////////////////////
 
 
 
-////////// 웹서버 실행 //////////
+
+
+// 웹서버 실행
+/*
 gulp.task('webserver', function () {
     return gulp.src('app/src') 
         .pipe(webserver({
@@ -36,58 +45,128 @@ gulp.task('webserver', function () {
             livereload: true
         }));
 });
-//////////////////////////////
+*/
 
 
 
-////////// js 압축 //////////
-/*gulp.task('combine:js', function(){ 
-    return gulp.src(paths.js)                                   
-       .pipe(concat('test.js')) //하나로 합치기
-       .pipe(gulp.dest(dist + '/js')) //합친 파일 보내기
-       .pipe(uglify()) //압축하기
-       .pipe(rename('test.min.js')) //압축한 파일 min으로 생성
-       .pipe(gulp.dest(dist + '/js')) //압축한 파일 보내기
-       .pipe(livereload());
-});*/
-//////////////////////////////
 
 
-
-///////// css 컴파일 /////////
-gulp.task('compile:scss', function(){
-    return gulp.src(paths.scss)
-       .pipe(sass(sassOptions).on('error',sass.logError)) //scss 문법 오류 발생 시 watch가 중단되지 않도록 함
-       .pipe(sourcemaps.init()) // 소스맵 초기화(소스맵 생성)
-       .pipe(sourcemaps.write('/', {addComment: false})) //생성한 소스맵을 현재 폴더에 생성하고 주석 없앰
-       .pipe(gulp.dest(src+'/css'))
-       .pipe(livereload());
+// HTML 압축
+gulp.task('minify-html',function(){
+     return gulp.src(paths.html)
+                .pipe(minifyhtml())
+                .pipe(gulp.dest(dist))
+                .pipe(browserSync.stream());
+               // .pipe(livereload());
 });
-//////////////////////////////
 
 
 
-////////// html 복사 //////////
-gulp.task('move:html',function(){
-    return gulp.src(paths.html)
-       .pipe(gulp.dest(dist))
-       .pipe(livereload());
+
+
+
+// SASS 컴파일
+gulp.task('compile-scss',function(){
+     return gulp.src(paths.scss)
+                .pipe(sourcemaps.init({loadMaps: true}))
+                .pipe(sass(sassOptions))
+                .pipe(sourcemaps.write('./'))
+                .pipe(gulp.dest(src+'/css'))
+                .pipe(gulp.dest(dist+'/css'))
+                .pipe(browserSync.stream());
+              //  .pipe(livereload());
 });
-//////////////////////////////
 
 
 
-///////// watch 업무 /////////
-gulp.task('watch', function(){
-    livereload.listen();
-   /* gulp.watch(paths.html, {interval:1000}, ['move:html']);*/
-    gulp.watch(paths.scss, {interval:1000}, ['compile:scss']);
-	gulp.watch(src + '/**').on('change', livereload.changed);
+
+
+
+// JS 합치기
+gulp.task('combine-vendor',function(){
+     return gulp.src([ 
+                    jsSource+'/vendor/jquery-3.2.1.js', 
+                    jsSource+'/vendor/TweenMax.min.js', 
+                    jsSource+'/vendor/salvattore.min.js',
+                    jsSource+'/vendor/lazyload.min.js',
+                    jsSource+'/vendor/swiper.min.js'
+                ])
+                .pipe(concat('vendor.js'))
+                .pipe(gulp.dest(dist+'/js'))
+                .pipe(gulp.dest(src+'/js'));
+                //.pipe(livereload());
+    
 });
-//////////////////////////////
+
+
+gulp.task('combine-js',function(){
+     return gulp.src([ 
+                    jsSource+'/all/common.js',
+                    jsSource+'/all/header.js',
+                    jsSource+'/all/footer.js',
+                    jsSource+'/all/visual.js',
+                    jsSource+'/all/scroll.js',
+                    jsSource+'/work-item.js'
+                ])
+                .pipe(concat('all.js'))
+                .pipe(gulp.dest(dist+'/js'))
+                .pipe(gulp.dest(src+'/js'))
+                .pipe(rename({suffix:'.min'}))
+                .pipe(uglify())
+                .pipe(gulp.dest(src+'/js'))
+                .pipe(gulp.dest(dist+'/js'))
+                .pipe(browserSync.stream());
+                //.pipe(livereload());
+    
+    
+});
 
 
 
-///////// default 정의 /////////
-gulp.task('default', ['webserver', 'compile:scss', 'watch']);
-//////////////////////////////
+gulp.task('copy-font',function(){
+    return gulp.src(src+'/font/**/*')
+                .pipe(gulp.dest(dist+'/font'));
+});
+
+// 이미지 압축
+/*
+gulp.task('minify-image',function(){
+    return gulp.src(paths.image)
+               .pipe(imagemin())
+                .pipe(gulp.dest(dist+'/images'))
+                .pipe(livereload());
+});
+*/
+
+
+
+
+gulp.task('browserSync', function () { 
+    return browserSync.init({
+
+        server: {
+            baseDir: "app/dist"
+        }
+    }); 
+});
+
+
+// watch 업무
+gulp.task('watch',function(){
+    //livereload.listen();
+    gulp.watch(paths.html, {interval:1000},  ['minify-html']);
+    gulp.watch(paths.scss,  ['compile-scss']);
+    gulp.watch(paths.js, {interval:1000},  ['combine-js']);
+    gulp.watch(paths.image, {interval:1000},  ['minify-image']);
+    //gulp.watch('app/src/**/*').on('change', browserSync.reload);
+});
+
+
+
+
+
+
+// default 정의
+gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-js', 'combine-vendor', 'copy-font', /*'minify-image',*/ 'browserSync',  'watch' ]);
+
+

@@ -98,14 +98,16 @@
         }
 
         .title_logo { //비주얼 로고
+            //outline: 5px dotted #b49c4b;
             position: absolute;
             top: 30%;
             left: 50%;
             transform: translateX(-50%);
             opacity: 0;
             display: block;
-            width: 240px;
-            height: 240px;
+            width: 13em;
+            height: 13em;
+            font-size: 18px;
             text-align: center;
         }
     } // end of .visual_title
@@ -224,3 +226,60 @@
 // !미디어 쿼리! //
 /////////////////
 
+
+
+// =============================================
+
+@include pc-lg {
+}
+
+// =============================================
+
+@include pc-sm {     
+
+}
+
+
+// =============================================
+
+@include tablet {     
+
+    .visual .visual_title {
+        .title_text {
+            font-size: 33px;
+        }
+        .title_logo {
+            font-size: 16px;
+        }
+    }
+    
+}
+
+// =============================================
+
+
+@include mo-lg {     
+
+    
+    .visual .visual_title {
+        .title_text {
+            font-size: 30px;
+        }
+        .title_logo {
+            font-size: 14px;
+        }
+    }
+}
+
+
+// =============================================
+
+@include mo-sm {     // mo-sm : ~375px
+    
+}
+// =============================================
+
+@include mo-ip5 { 
+    
+    
+}

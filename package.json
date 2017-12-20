@@ -4,19 +4,28 @@
   "description": "nykim portfolio",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "imagemin": "^5.3.1"
   },
   "devDependencies": {
+    "browser-sync": "^2.19.0",
     "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-concat-multi": "^1.0.1",
+    "gulp-imagemin": "^4.0.0",
     "gulp-livereload": "^3.8.1",
+    "gulp-minify-html": "^1.0.6",
     "gulp-refresh": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
+    "gulp-uglifyes": "^0.1.2",
     "gulp-webserver": "^0.9.1",
-    "livereload": "^0.6.3"
+    "jquery-lazyload": "^1.9.7",
+    "livereload": "^0.6.3",
+    "pump": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
