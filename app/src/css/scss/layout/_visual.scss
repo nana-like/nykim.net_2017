@@ -39,6 +39,7 @@
         margin-top: -1.5em;
         text-align: center;
         text-transform: uppercase;
+        font-size: 18px;
         
         .title_text { //비주얼 문구
             position: absolute;
@@ -98,7 +99,6 @@
         }
 
         .title_logo { //비주얼 로고
-            //outline: 5px dotted #b49c4b;
             position: absolute;
             top: 30%;
             left: 50%;
@@ -107,8 +107,9 @@
             display: block;
             width: 13em;
             height: 13em;
-            font-size: 18px;
+            font-size: 100%;
             text-align: center;
+            //@include ani-visualLogoAni;
         }
     } // end of .visual_title
     
@@ -245,12 +246,13 @@
 @include tablet {     
 
     .visual .visual_title {
+        font-size: 16px;
         .title_text {
             font-size: 33px;
         }
-        .title_logo {
-            font-size: 16px;
-        }
+    }
+    .visual .scroll_text {
+        font-size: 11px;
     }
     
 }
@@ -262,12 +264,13 @@
 
     
     .visual .visual_title {
+        font-size: 13px;
         .title_text {
             font-size: 30px;
         }
-        .title_logo {
-            font-size: 14px;
-        }
+    }
+    .visual .scroll_text {
+        font-size: 11px;
     }
 }
 

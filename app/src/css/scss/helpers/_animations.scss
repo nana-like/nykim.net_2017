@@ -56,12 +56,19 @@
 }
 
 
+@mixin key-visualLogoAni {
+    @keyframes visualLogoAni {
+    }
+}
+
+
 
 @include key-bounce;
 @include key-moveToRight;
 @include key-visualFog01;
 @include key-visualFog02;
 @include key-visualTxtAni;
+@include key-visualLogoAni;
     
 @mixin ani-bounce($count:1){
      animation: bounceOutline .55s ease-in-out $count ;
@@ -77,5 +84,8 @@
 }
 @mixin ani-visualTxtAni($count:infinite){
      animation: visualTxtAni 4s ease-in-out $count;
+}
+@mixin ani-visualLogoAni($count:infinite){
+     animation: visualLogoAni 8s ease-in-out $count;
 }
 
