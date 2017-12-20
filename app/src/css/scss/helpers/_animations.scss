@@ -50,7 +50,7 @@
     @keyframes visualTxtAni {
         0% {opacity: 0; left: 80px;}
         30% {opacity: 1; left: 0;}
-        70% {opacity: 1; left: 0;}
+        60% {opacity: 1; left: 0;}
         100% {opacity: 0; left: -80px;}
     }
 }
@@ -75,7 +75,7 @@
 @mixin ani-visualFog02($count:infinite){
      animation: visualFog02 18s linear $count alternate;
 }
-@mixin ani-visualTxtAni($count:1){
+@mixin ani-visualTxtAni($count:infinite){
      animation: visualTxtAni 4s ease-in-out $count;
 }
 

@@ -4,10 +4,12 @@ $(function(){
     // 전역변수 선언
     var tl_visual = null;
     var $title_text = null;
+    var visualTxt = null;
     
     // 전역에서 사용할 요소 초기화
 	
-        $title_text = $(".title_text");
+    $title_text = $(".title_text");
+    visualTxt = ['unique', 'brilliant', 'notable', 'amazing', 'sparkling', 'unlimited'];
     function init(){
         tl_visual = new TimelineLite();
     }
@@ -63,10 +65,24 @@ $(function(){
     
     function visualTitle_ani(){
 	
-        var visualTxt = ['unique', 'brilliant', 'notable'];
-        $title_text.text(visualTxt[1]);
-
+        var index = Math.floor( Math.random()*visualTxt.length-1 );
+        $title_text.text(visualTxt[index]);
         visualTitleFindN(); 
+        
+        setInterval(function(){
+            var oldIndex = index;
+            index = Math.floor( Math.random()*visualTxt.length-1 );
+            if (oldIndex === index) {
+                index++;
+            }
+            if (index < 0) {
+                index = 0;
+            }
+            console.log('인덱스',index);
+            $title_text.text(visualTxt[index]);
+            visualTitleFindN(); 
+        },4300);
+        
 	}
     
     function visualTitleFindN(){

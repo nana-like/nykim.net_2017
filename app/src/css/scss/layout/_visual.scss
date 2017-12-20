@@ -41,8 +41,10 @@
         text-transform: uppercase;
         
         .title_text { //비주얼 문구
-            position: relative;
-            left: 0px;
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
             @include font-lato(300);
             font-size: 40px;
             color: rgba(255,255,255,0.8);
@@ -52,7 +54,6 @@
                 position: relative;
                 @include ani-visualTxtAni;
                 opacity: 0;
-
 
                 i {
                     position: relative;
@@ -86,6 +87,12 @@
                 }
                 &:nth-child(9){
                     animation-delay: .9s;
+                }
+                &:nth-child(10){
+                    animation-delay: 1s;
+                }
+                &:nth-child(11){
+                    animation-delay: 1.1s;
                 }
             }
         }
@@ -185,8 +192,8 @@
     
     .scroll_text { //SCROLL DOWN 문구
         position: absolute;
-	top: 50%;
-	margin-top: 11em;
+        top: 50%;
+        margin-top: 11em;
         margin-left: -6px;
         @include font-lato(300);
         color: rgba(255,255,255,0.45);
