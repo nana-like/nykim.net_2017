@@ -34,23 +34,6 @@ var sassOptions = {
 
 
 
-
-// 웹서버 실행
-/*
-gulp.task('webserver', function () {
-    return gulp.src('app/src') 
-        .pipe(webserver({
-            host: '0.0.0.0',
-            port: 8000,
-            livereload: true
-        }));
-});
-*/
-
-
-
-
-
 // HTML 압축
 gulp.task('minify-html',function(){
      return gulp.src(paths.html)
@@ -143,14 +126,11 @@ gulp.task('copy-font',function(){
 });
 
 // 이미지 압축
-/*
 gulp.task('minify-image',function(){
     return gulp.src(paths.image)
                .pipe(imagemin())
-                .pipe(gulp.dest(dist+'/images'))
-                .pipe(livereload());
+                .pipe(gulp.dest(dist+'/images'));
 });
-*/
 
 
 
@@ -167,7 +147,6 @@ gulp.task('browserSync', function () {
 
 // watch 업무
 gulp.task('watch',function(){
-    //livereload.listen();
     gulp.watch(paths.html, {interval:1000},  ['minify-html']);
     gulp.watch(paths.scss,  ['compile-scss']);
     gulp.watch(paths.js, {interval:1000},  ['combine-home.js']);
@@ -182,6 +161,6 @@ gulp.task('watch',function(){
 
 
 // default 정의
-gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-all.js', 'combine-vendor.js', 'combine-home.js', 'copy-font', /*'minify-image',*/ 'browserSync',  'watch' ]);
+gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-all.js', 'combine-vendor.js', 'combine-home.js', 'copy-font', 'minify-image', 'browserSync',  'watch' ]);
 
 

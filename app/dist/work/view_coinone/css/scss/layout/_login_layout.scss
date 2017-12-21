@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+
+/*
+*   login layout
+*/
+// 로그인 화면 & 비밀번호 설정화면
+
+
+.login #wrap {
+    position: absolute;
+    width: 100%;
+    min-width: 100%;
+    top: 50%;
+    min-width: 100%;
+    transform: translateY(-50%);
+}
+
+
+.login { 
+    width: 100%; 
+    height: 100%; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-position: center center; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+    background-image: url(../images/login_bg.png);
+}
+
+
+.login .login-tit { 
+    
+    h2 {
+        width: 304px;
+        height: 63px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url(../images/common/logo_large.png);
+    }
+    
+    h2 + p {
+        margin-top: 22px;
+        margin-bottom: 60px;
+        font-size: 20px;
+        text-align: center; 
+        color: #fff; 
+        font-weight: 300;
+    }
+}
+
+.login .login-alert {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    
+}
+
+.login .login-arror {
+    position: absolute;
+    left: 50%;
+    bottom: 140px;
+    transform: translateX(-50%); 
+    color: #ff5e2d;
+}
+
+.login .login-form {
+    
+    input { 
+        display: block;
+        width: 290px;
+        height: 60px; 
+        margin: 0 auto 2px; 
+        font-size: 20px; 
+        padding: 0 15px; 
+        background-color: #fff; 
+        border: 0;
+    }
+    
+    button {
+        display: block;
+        width: 320px;
+        height: 60px;
+        margin: 10px auto 0;
+        font-size: 20px;
+        color: #fff;
+        background-color: #4e8bff;
+        
+        &.btn-login {
+            margin-top: 70px;
+        }
+    }
+    
+}
+

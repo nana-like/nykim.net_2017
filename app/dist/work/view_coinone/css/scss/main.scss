@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+// 최종 작성일 170808 //
+// 작성자 김나영 //
+
+
+// compass
+@import "compass";
+
+// 웹폰트
+@import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css'); //Noto Sans
+
+// 변수, 믹스인
+@import "helpers/variables"; //변수
+@import "helpers/mixins"; //믹스인
+
+// 기본 스타일
+@import "base/reset"; //크로스 브라우저를 위한 기본값 초기화
+@import "base/common"; //범용 클래스 및 태그 스타일링
+
+// 작은 요소들 (범용)
+@import "components/searchFilter"; //검색창 내 필터입력
+@import "components/dateSelect"; //기간 선택
+@import "components/typeList"; //유형 선택
+@import "components/filterArea"; //필터영역
+@import "components/tab"; //화폐 선택 탭
+@import "components/category"; //입출금 관리 카테고리
+@import "components/userCount"; //고객 수 표시
+@import "components/checkbox"; //커스텀 체크박스
+@import "components/radio"; //커스텀 라디오
+@import "components/filter-data"; //상세 필터
+@import "components/table"; //테이블
+@import "components/pagination"; //페이지네이션
+@import "components/modal"; //모달창
+
+// 각 레이아웃
+@import "layout/header_layout"; //상단 헤더
+@import "layout/search_layout"; //검색 영역
+@import "layout/login_layout"; //로그인 및 비밀번호 설정 화면
+@import "layout/mainScreen_layout"; //메인페이지 레이아웃
+@import "layout/mainList_layout"; //메인 게시판페이지 레이아웃
+@import "layout/panel_layout"; //고객상세정보조회 페이지용 panel
+@import "layout/sms_layout"; //SMS 발송 페이지용 
+@import "layout/modal_addStaff_layout"; //계정추가 모달
+@import "layout/modal_mistakes_layout"; //잘못입금 승인 모달
+@import "layout/modal_task_layout"; //고객상세정보 내 업무처리 모달
+@import "layout/modal_mainScreen_layout"; //고객상세정보 내 업무처리 모달
+

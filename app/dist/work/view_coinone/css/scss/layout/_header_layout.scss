@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+
+/*
+*   header layout
+*/
+
+
+#header {
+    position: relative; 
+    width: 100%; 
+    min-width: 1400px;
+    @include background-gradient;
+    
+    .header-container {
+        width: 1300px; 
+        height: 100px; 
+        margin: 0 auto; 
+        //outline: 1px solid gold;
+    }
+}
+
+#header .fixedElem {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1300px;
+    height: 100px;
+    margin-left: -650px;
+    //outline:10px dashed red;
+    
+     h1 {
+        position: absolute;
+        margin-top: 36px;
+        width: 140px;
+        height: 40px;
+        background-image: url(../images/common/logo.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+
+        a {
+            @include block-anchor;
+        }
+     
+    }
+    
+    
+    .utils {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -16px;
+        //background-color: #86ffe3;
+
+        .userID {
+            display: inline-block;
+            margin-right: 12px;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        button {
+            @include btn-default;
+            margin-left: 7px;
+            border: 1px solid #fff;
+            color: #fff;
+            font-weight: 500;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    } //end of .utils
+
+
+}
+
+
+#header nav { 
+    width: 780px; 
+    height: 140px;
+    margin-left: 214px;
+    //outline: 4px solid #ff10ac;
+}
+
+#header .bg_sub {
+    display: none; 
+    z-index: 50; 
+    position: absolute;
+    top: 100px; 
+    left: 0; 
+    width: 100%;  
+    height: 40px; 
+    background-color: $color-bg-sub;
+}
+
+
+#gnb { 
+    z-index: 100; 
+    position: relative; 
+    width: 780px; 
+    height: 140px;
+    //background: steelblue;
+    
+    & > li {
+        float: left;
+        height: 25px;
+        padding: 0 5px;
+        margin-top: 38px;
+        margin-right: 30px;
+        cursor: pointer;
+        //background-color: coral;
+        
+        & > a {
+            @include block-anchor;
+            font-size: 15px;
+            line-height: 25px;
+            color: rgba(255,255,255,0.7);
+            //OUTLINE: 1PX DASHED YELLOW;
+            
+            &:hover {
+                color: rgba(255,255,255,0.85);
+            }
+        }
+        
+        &.active > a {
+            color: #fff;
+        }
+        
+    
+    }
+    
+    
+}
+
+#gnb .sub {
+    display: none;
+    position: absolute;
+    top: 100px;
+    height: 40px;
+   // background-color: azure;
+
+    ul {
+        height: 100%;
+        cursor: default;
+
+        li {
+            float: left;
+            margin-left: 35px;
+            //OUTLINE: 2PX SOLID RED;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+            
+            & > a {
+                line-height: 40px;
+                @include block-anchor;
+                font-size: 15px;
+                font-weight: 400;
+                color: rgba(218,227,255,0.6);
+                
+                &:hover {
+                    color: rgba(218,227,255,0.8);
+                }
+            }
+            
+            &.active > a {
+                color: #fff;
+            }
+            
+        }
+        
+    } //end of .sub > ul
+} //end of #gnb .sub
+

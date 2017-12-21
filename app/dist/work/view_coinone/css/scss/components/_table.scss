@@ -1,0 +1,201 @@
+@charset "utf-8";
+
+
+/*
+*   table
+*/
+
+// (공통) 테이블
+
+
+#main table.table-half {
+    width: 48%;
+    height: 280px;
+    float: left;
+    
+    &:last-child {
+        float: right;
+    }
+}
+
+
+#main table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    background-color: #fff; 
+    box-shadow: 3px 0px 7px rgba(200,200,200,0.35);
+
+    
+    thead > tr.tableLabel {
+        height: 34px;
+        background-color: $color-main;
+        
+        th {
+            font-weight: 500;
+            color: #fff;
+            font-size: 15px;
+        }
+    }
+    
+    
+    thead > tr.tableCate {
+        height: 34px;
+        background-color: #e6e6e6;
+        
+        th {
+            padding: 2px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px; 
+            color: $color-table-tit;
+            border: 1px solid #dfdfdf;
+        }
+        
+        .th_bg {
+            background-color: #dedede;
+        }
+    }
+    
+    
+    
+}
+
+
+
+#main table {
+    
+    tbody tr:first-child th { //첫번째 th 위에 보더 추가
+        border-top: 1px solid #dfdfdf;
+    }
+    
+    tbody th { //tbody내 th (좌측의 테이블헤더)
+        border-left: 1px solid #dfdfdf;
+        border-bottom: 1px solid #dfdfdf;
+        font-size: 0.906em; //=14.5px
+        font-weight: 500;
+        background-color: #e6e6e6;
+        
+    }
+
+    tbody tr:hover { //롤오버 효과
+        background-color: $color-table-hover;
+    }
+    
+    tbody td {
+        text-align: center;
+        font-weight: 400;
+        font-size: 0.844rem; //0.844rem <-13.5px; 
+        padding: 11px 13px;
+        text-align: center;
+        border: 1px solid #dfdfdf;
+        word-break: break-all; 
+        
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    
+    
+
+}
+
+
+#main table {
+        
+    col.smallCol {
+        width: 60px;
+    }
+    
+    col.largeCol {
+        width: 100px;
+    }
+    
+    
+    col.memoCol {
+        width: 120px;
+        font-size: 12px;
+    }
+    
+    
+    
+    button {
+        display: block;
+        width: 100%;
+        
+    }
+    
+   
+    
+    textarea { //테이블 내 메모란
+        resize: none;
+        display: block;
+        box-sizing: border-box;
+        padding: 6px;
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 0.781rem; //12.5px
+        color: #444;
+        border: 0;
+        background: none;
+    }
+
+
+    .btn-inTable { //테이블 내 버튼
+        padding: 6px;
+        color: #333;
+        font-size: 13px;
+        background-color: rgba(255,255,255,0);
+        border: 1px solid #333;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: rgba(255,255,255,1);
+            border: 1px solid $color-num;
+        }
+
+        &:not(:first-child) {
+            margin-top: 7px;
+        }
+
+        &.active {
+            border: 1px solid $color-num;
+            background-color: $color-num;
+            color: #fff;
+
+        }
+    }
+
+
+
+    .btn-inline { //테이블 내 버튼 (인라인)
+        display: inline-block;
+        width: 40%;
+        
+        &:nth-child(odd) {
+            margin-right: 3px;
+        }
+    }
+
+
+
+    .btn-memo { //테이블 내 메모란 '입력' 버튼
+        width: auto;
+        padding: 3px 6px;
+        margin: 0 auto;
+        color: #666;
+        border: 1px solid #666;
+        font-size: 12px;
+        background-color: transparent;
+        border-radius: 4px;
+    }
+
+    
+    
+    
+}
+
+
+

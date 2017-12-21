@@ -1,0 +1,213 @@
+@charset "utf-8";
+
+
+/*
+*   filterArea
+*/
+
+// (공통) 필터 영역
+
+
+
+#main .filterArea {
+    position: relative;
+    box-sizing: border-box;
+    padding: 30px;
+    margin-bottom: 45px;
+    background-color: #fff;
+
+    strong {
+        display: block;
+        float: left;
+        width: 60px;
+        margin-top: 4px;
+        margin-right: 30px;
+    }
+    
+    .queryInfilter { //필터 내 조회버튼
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        letter-spacing: 0.02rem;
+        transform: translateY(-50%);
+        @include btn-default;
+        padding: 0 22px;
+        height: 36px;
+        line-height: 34px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff; 
+        background-color: $color-num;
+        border: 1px solid $color-num;
+
+    }
+ 
+    .resetInfilter { //필터 내 초기화버튼
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        margin-top: -44px;
+        padding: 0px 10px;
+        transform: translateY(-50%);
+        height: 24px;
+        line-height: 24px;
+        font-size: 12px;
+        letter-spacing: -0.02rem;
+        color: #727272;
+        border: 1px solid #727272;
+        border-radius: 4px;
+        background-color: transparent;
+
+    }
+ 
+    
+    .excelExport { //엑셀 내보내기
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        width: 86px;
+        height: 86px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        background-image: url(../images/ico_excel.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        
+        &:hover { //롤오버 효과
+            background-position: -86px 0;
+            
+        }
+        
+        
+    }
+    
+    
+    .innerSearch {
+        
+        margin-top: 20px;
+        
+        strong {
+            display: block;
+            float: left;
+            width: 60px;
+            margin-top: 4px;
+            margin-right: 30px;
+        }
+        
+        select {
+            width: 120px;
+            margin-right: 14px;
+            @include btn-default;
+            font-size: 14px;
+            -webkit-appearance: none; 
+            -moz-appearance: none;    
+            appearance: none;
+            background: url('../images/page_3_ico.png') no-repeat 92% 50%; 
+            }        
+
+        select::-ms-expand {
+           display: none;   
+        }
+        
+        
+        input {
+            width: 220px;
+            height: 25px;
+            margin-right: 11px;
+            padding: 2px 4px; 
+            border: 0;
+            border-bottom: 1px solid #969696;
+            font-size: 14px;
+        }
+        
+        
+        .btn-search {
+            @include btn-default;
+            width: 70px;
+            height: 32px;
+            color: #fff;
+            background-color: $color-num;
+            border: 1px solid $color-num;
+        }
+            
+            
+    } //end of .innerSearch
+    
+    
+    .innerSearch-2 {
+        input {
+            width: 80%;
+        }
+    }
+    
+
+}
+
+
+/* 임시용 */
+.filterArea .multiSelect {
+    
+    margin-top: 20px;
+    
+    strong {
+        margin-top: 7px;
+    }
+}
+
+.multiSelect-container {
+    position: relative;
+    float: left;
+    width: calc(80% - 24px);
+    height: 34px;
+    border: 1px solid $color-main;
+    border-radius: 4px;
+    padding: 1px 12px;
+    background: url('../images/page_3_ico.png') no-repeat 98% 50%; 
+
+    .selectControl {
+        a {
+            display: block;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 34px;
+            background-color: seashell;
+        }
+        p {
+            font-size: 14px;
+            line-height: 31px;
+            color: $color-placeholder;
+        }
+    }
+
+    .selectMenu {
+        position: absolute;
+        top: 36px;
+        z-index: 300;
+        overflow-y: auto;
+        width: 948px;
+        height: 120px;
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #aaa;
+        box-shadow: 0px 3px 5px rgba(200,200,200,0.3);
+
+        li {
+            line-height: 30px;
+            color: #333;
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

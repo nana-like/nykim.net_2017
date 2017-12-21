@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+
+/*
+*   userCount
+*/
+
+// (공통) 카운트 표시
+
+
+
+.userCount {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: auto;
+    color: $color-main;
+    vertical-align: text-bottom;
+    font-size: 13px;
+    line-height: 1;
+
+    li {
+        position: relative;
+        display: inline-block;
+        margin-right: 28px;
+
+        &:last-child {
+          margin-right: 0;  
+        }
+
+        span {
+            color: $color-num;
+        }
+    }
+
+    li:not(:first-child):before { //숫자 옆 | 표시
+        position: absolute;
+        top: 2px;
+        left: -16px;
+        display: inline-block;
+        content: '';
+        width: 1px;
+        height: 13px;
+        background-color: #bdbdbd;
+    }
+
+}

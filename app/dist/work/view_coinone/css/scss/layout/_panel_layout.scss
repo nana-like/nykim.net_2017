@@ -1,0 +1,558 @@
+@charset "utf-8";
+
+
+/*
+*   panel layout
+*/
+// 고객상세정보조회 페이지 전용 레이아웃
+
+
+.userInfo #main {
+    margin-bottom: 45px;
+}
+
+//전체 레이아웃
+#main .panel {
+    float: left;
+    width: 48%;
+    min-height: 260px;
+    margin-bottom: 40px;
+
+    &:nth-child(odd) {
+        float: right;
+    }
+    
+}
+
+
+//제목
+#main .panel-heading {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 500;
+    color: $color-main; //#383838;
+    background-color: #e6e6e6;
+    border-top: 1px solid #dfdfdf;
+    border-left: 1px solid #dfdfdf;
+    border-right: 1px solid #dfdfdf;
+}
+
+//내용
+#main .panel-body {
+    box-sizing: border-box;
+    padding: 16px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    
+    li {
+        height: $panelList_height;
+        line-height: $panelList_height;
+        font-size: 0.906rem;//(=14.5px)
+        color: #333;
+        
+        & > em {
+            display: block;
+            float: left;
+            width: 120px;
+            height: auto;
+            color: #070707;
+            line-height: $panelList_height;
+            font-weight: 500;
+            font-size: 15px;
+            
+        }
+        
+        & > input {
+            display: block;
+            float: left;
+            height: ($panelList_height - 2px);
+            box-sizing: border-box;
+            padding: 0 10px;
+            border: 1px solid #bbb;
+        }
+        
+        select {
+            height: ($panelList_height - 2px);
+            padding-left: 10px;
+            font-size: 15px; 
+            color: #333;
+            background-color: #fff; 
+            border: 1px solid #bbb; 
+            border-radius: 8px; 
+            font-size: 15px; 
+            -webkit-appearance: none; 
+            -moz-appearance: none; 
+            appearance: none; 
+            background-image: url("../images/page_3_ico.png");
+            background-repeat: no-repeat;
+            background-position: 96% 50%; 
+        }
+    }
+    
+    .btn-task {
+        
+        text-align: center;
+           
+        button {
+            display: inline-block;
+            width: 170px;
+            margin-top: 20px;
+            margin-right: 20px;
+            height: ($panelList_height - 2px);
+            font-size: 14px;
+            color: $color-btn;
+            border: 1px solid $color-btn;
+            border-radius: 4px;
+            background-color: transparent;
+        }
+        
+        button:last-child {
+            margin-right: 0;
+        }
+        
+    }
+    
+
+
+} //end of .panel-body
+   
+
+
+// -----------------------------
+// 1) 고객 식별 정보 레이아웃
+#main .userInfo-stat { 
+    width: 100%;
+    margin-bottom: 0px;
+
+    .panel-body li {
+        float: left;
+        width: 33%;
+    }
+}
+
+
+// -----------------------------
+// 2) 인증 현황 레이아웃
+#main .userInfo-verify { 
+    margin-bottom: 0px;
+
+    .panel-body li {
+        float: left;
+        width: 33%;
+        
+        em {
+            width: auto;
+            margin-right: 4px;
+        }
+    }
+    
+    .panel-body .btn-task {
+        margin-top: 12px;
+    }
+    
+     
+}
+
+// -----------------------------
+// 3) 메모 이력 레이아웃
+#main .userInfo-memo {
+    
+    margin-bottom: 0px;
+
+    .panel-body { 
+    position: relative;
+    height: 160px;
+
+        .scrollable {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 88px;
+
+
+            table {
+
+                th {
+                    height: 30px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    border-bottom: 2px solid #d8d8d8;
+                    text-align: left;
+                }
+
+                tbody tr {
+                   padding: 0;
+                }
+
+                tbody td {
+                    padding: 0;
+                    font-size: 13px;
+                    line-height: 1;
+                    text-align: left;
+                    border: 0;
+                    border-bottom: 1px solid #e0e0e0;
+                }
+            }
+
+        } //end of .scrollable
+
+        //기타 메모 입력란
+        .userInfo-memo-input {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 584px; 
+            padding: 14px 16px;
+            font-size: 15px;
+            background-color: #fff; //#e2e2e2;
+
+            p {
+                display: inline-block;
+                width: 70px;
+                height: $addMemo_height;
+                line-height: $addMemo_height;
+            }
+
+            p + input {
+                display: inline-block;
+                position: relative;
+                width: 408px;
+                height: ($addMemo_height - 1px);
+                padding: 0 10px;
+                font-size: 14px;
+                color: #333;
+                border: 1px solid #bbb;
+
+            }
+
+            input + button {
+                display: inline-block;
+                width: 60px;
+                height: $addMemo_height;
+                margin-left: 14px;
+                color: #fff;
+                background-color: $color-num;
+                border: 1px solid $color-num;
+                border-radius: 4px;
+            }
+
+        }//end of .userInfo-addMemo
+
+    } //end of .panel-body.userInfo-memo
+}
+
+// -----------------------------
+// 4) 계좌 현황 레이아웃
+#main .userinfo-accounts {
+    
+    height: 300px;
+    
+    .panel-body {
+        padding: 0;
+    }
+    
+    li {
+        height: auto;
+        font-weight: 400;
+        
+        em {
+            display: block;
+            float: none;
+            width: 590px;
+            padding: 2px 16px;
+            background-color: #f4f4f4;
+        }
+        
+        .data {
+            padding: 12px 16px;
+        }
+        
+        .data > span {
+            float: left;
+            margin-right: 16px;
+        }
+        
+        button { //초기화 버튼
+            float: right;
+            padding: 2px 6px;
+            color: #333;
+            font-size: 13px;
+            background-color: rgba(255,255,255,0);
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+
+    }
+    
+ 
+}
+
+
+
+
+// -----------------------------
+// 5) 가상화폐 지갑 현황 레이아웃
+#main .userinfo-wallets {
+    height: 300px;
+
+    .panel-body li {
+            
+        height: auto;
+        margin-top: 24px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        & > span { //조회정보 보여주는 곳
+            display: block;
+            width: 100%;
+            margin: 14px 0 0;
+            line-height: 1;
+            color: #cc342e;
+            font-size: 0.844rem;
+            font-weight: 400;
+        }
+        
+        
+        em {
+            width: 140px;
+        }
+        
+        input {
+            width: 379px;
+            font-size: 14px;
+        }
+        
+        button {
+            height: $panelList_height;
+            margin-left: 14px;
+            box-sizing: border-box;
+            padding: 0 10px;
+            color: #fff;
+            background-color: $color-num; 
+            border: 1px solid $color-num;
+            border-radius: 4px;
+            
+        }
+        
+
+        
+        select { 
+            width: 440px;
+        }
+        
+        select::-ms-expand { 
+            display: none; 
+        }
+    }
+    
+    .panel-body .btn-task {
+        margin-top: 22px;
+    }
+}
+
+
+// -----------------------------
+// 6) 출금한도 조회 및 변경 레이아웃
+#main .userInfo-limit {
+    
+    .panel-body {
+        padding-bottom: 74px;
+    }
+    
+    
+    li select, li input {
+        width: 207px;
+        height: ($panelList_height - 2px);
+    }
+    
+    li:nth-child(2) {
+        height: 38px; //현재 한도
+        
+        em,span {
+            line-height: 38px;
+        }
+        
+    }
+    
+    button {
+        float: left;
+        font-size: 15px;
+        height: ($panelList_height - 2px);
+        box-sizing: border-box;
+        margin-left: 10px;
+        padding: 0 10px;
+        color: #fff;
+        background-color: $color-num; 
+        border: 1px solid $color-num;
+        border-radius: 4px;
+    }
+    
+}
+
+
+// -----------------------------
+// 7) 가상화폐 출금제한 업무 레이아웃
+#main .userInfo-lock .panel-body {
+    
+    padding: 16px 0;
+    
+    
+    li {
+        padding: 0 16px;
+    }
+    
+    li:nth-child(odd) {
+        background-color: #f4f4f4;
+    }
+    
+    li em {
+        width: 200px;
+    }
+    
+    li select {
+        float: left;
+        width: 170px;
+    }
+    
+    button {
+        float: left;
+        font-size: 15px;
+        height: ($panelList_height - 2px);
+        box-sizing: border-box;
+        margin-left: 10px;
+        padding: 0 10px;
+        color: #fff;
+        background-color: $color-num; 
+        border: 1px solid $color-num;
+        border-radius: 4px;  
+    }
+}
+
+
+// -----------------------------
+// 8) 자산현황
+#main .userInfo-assets .panel-body {
+    
+    
+    table {
+        box-shadow: none;
+        
+        thead th {
+            height: 28px;
+            font-size: 15px;
+        }
+    }
+}
+
+
+
+// -----------------------------
+// 9) 비상변경
+#main .userInfo-emergency .panel-body {
+    
+    position: relative; 
+    height: 265px;
+    
+    li em {
+        width: auto;
+        margin-right: 4px;
+    }
+    
+    .btn-task {
+        position: absolute;
+        left: 32px;
+        bottom: 16px;
+    }
+    
+}
+
+
+
+// -----------------------------
+// 10) 입출금내역 레이아웃
+#main .userInfo-history { 
+    width: 100%;
+    
+    .panel-body {
+        padding:16px 26px 20px;
+    }
+    
+    .filterArea {
+        padding: 0;
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #dfdfdf;
+        
+        strong {
+            margin: 0;
+            font-size: 15px;
+            width: 120px;
+            margin-top: 12px;
+        }
+        
+        
+        .typeList {
+            margin-top: 14px;
+        } 
+        
+        .typeList-currency {
+            float: left;
+            width: 100%;
+            margin-top: 10px;
+            
+            .customCheckbox {
+                margin-top: 5px; 
+                input {
+                    display: none;
+                }
+                
+                input+label {
+                    padding-left: 20px;
+                }
+                
+                input+label:before {
+                    left: 0;
+                }
+            }
+            
+        } //end of .typeList-currency
+        
+        button.queryInfilter {
+            width: 80px;
+            height: 80px; 
+            top: 60px;
+            right: 0;
+        }
+        
+    } //end of .filterArea
+    
+    
+    h4 {
+        font-weight: 400;
+        font-size: 15px;
+        margin: 24px 0 10px;
+    }
+    
+    table {
+        box-shadow: none; 
+    }
+    
+    .pagination {
+        margin: 16px 0 0;
+    }
+    
+} //end of .userInfo-history
+
+
+
+
+
+
+

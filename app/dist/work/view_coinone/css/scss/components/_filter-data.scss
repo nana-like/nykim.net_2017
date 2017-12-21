@@ -1,0 +1,93 @@
+@charset "utf-8";
+
+/*
+* filter-data
+*/
+
+// 상세 필터
+
+
+.filter-data {
+    
+    margin: 30px auto 0; 
+
+    
+    .data-login {
+        overflow: hidden;
+    }
+    
+    .data-account {
+        margin-top: 10px;
+        margin-left: 89px;
+    }
+    
+    button {
+        display: block;
+        float: left;
+        @include btn-default;
+        padding: 4px 10px;
+    
+    
+        &.active {
+            background-color: $color-main;
+            color: #fff;
+        }
+
+    
+        
+        
+    } //end of button
+    
+    
+    
+    
+    
+    ul {
+        //opacity: 0;
+        float: left;
+        margin-top: 6px;
+        margin-left: 20px;
+    
+        li {
+            float: left;
+            margin-left: 24px;
+            font-size: 14px;
+            font-weight: 400;
+            color: #3f4043;
+            
+            &:first-child {
+                margin-left: 0;
+            }
+
+
+            input {
+                width: 37px;
+                height: 22px;
+                box-sizing: border-box;
+                margin-left: 11px; 
+                padding: 0 6px;
+                text-align: center;
+                line-height: 26px;
+                border: 0;
+                border: 1px solid #969696;
+                background: none;
+                color: #0776ff;
+                font-size: 14px;
+
+
+                &.longer {
+                    width: 72px;
+                }
+                
+
+            } //end of input
+
+            
+
+        
+        } //end of li
+        
+    } //end of ul
+    
+}
+

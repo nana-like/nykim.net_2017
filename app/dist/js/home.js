@@ -1,4 +1,3 @@
-console.log('--->> visual.js 시작합니닷 <<---');
 $(function(){
     
     // 전역변수 선언
@@ -53,12 +52,6 @@ $(function(){
                     {right: -30, top: 30, ease: Power2.easeOut}, //왼쪽 아래로 이동
                     "label_01+=0.3"
                 );
-               /* .to(
-                    $fog.fg01,
-                    4,
-                    {right: 60},
-                    "label_01"
-                );*/
         
     }
     
@@ -78,7 +71,7 @@ $(function(){
             if (index < 0) {
                 index = 0;
             }
-            console.log('인덱스',index);
+            //console.log('인덱스',index);
             $title_text.text(visualTxt[index]);
             visualTitleFindN(); 
         },4300);
@@ -103,35 +96,6 @@ $(function(){
     
     
     
-    ////////////////////////////////////////////////
-   
-/* 
-    function visualTitle_ani(){
-        var visualTitleArr = [];
-        var idx = 0;
-        
-        for (var i=0; i<$('.title_text').children().length; i++){
-            
-            visualTitleArr[i] = $('.title_text').children().eq(i);
-        }
-        
-        function animation(){
-            TweenLite.to(visualTitleArr[idx],1.2,{opacity:0});
-        }
-        
-        setInterval(function(){
-            if(idx<visualTitleArr.length){
-                TweenLite.to(visualTitleArr[idx],1,{opacity:1, left:-10, ease: Power2.easeOut});
-                idx++;
-            }
-        },100);
-         //기존 텍스트 애니메이션
-        
-    }
-*/
-
-
-
     
     ////////////////////////////////////////////////
     
@@ -161,7 +125,7 @@ $(function(){
         },800); 
         setTimeout(function(){
             visualTitle_ani();
-        },1200); 
+        },1100); 
         setTimeout(function(){
             visual_ani();  
         },1000); 
@@ -174,13 +138,7 @@ $(function(){
     
     
     
- 
-    console.log('--->> visual.js 끝났습니닷 <<---');
 });
-console.log('---!! 비주얼js 가장 하단의 코드입니다 !!---');
-
-
-
 $(function(){
 
 

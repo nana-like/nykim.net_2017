@@ -1,3 +1,4 @@
+/*common.js*/
 $(function(){
     
     //로딩 이미지 제거
@@ -265,6 +266,7 @@ $(function(){
 });
 
 
+/*footer.js*/
 $(function(){
     
 

@@ -198,6 +198,7 @@
         top: 50%;
         margin-top: 11em;
         margin-left: -6px;
+        padding-right: 0.2em;
         @include font-lato(300);
         color: rgba(255,255,255,0.45);
         font-size: 12px;
@@ -205,17 +206,22 @@
         text-transform: uppercase;
         
         &:before, &:after {
+            opacity: .6;
             display: block;
             position: absolute;
-            top: 0.29rem;
+            top: 0.3rem;
             right: -14px;
             font-size: 10px;
-            font-family: serif;
-            content: '>';
-            transform: rotate(90deg);
+            content: '';
+            width: 1em;
+            height: 1em;
+            background-image: url(../images/ico_darr.svg);
+            background-position: 0 0;
+            background-size: 0.9em 0.9em;
+            background-repeat: no-repeat;
         }       
         &:after {
-            top: -0.03rem;
+            top: 0.04rem;
         }
     } //end of .scroll_text
     

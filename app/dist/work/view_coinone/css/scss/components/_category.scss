@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+
+/*
+*   category
+*/
+
+// 카테고리
+
+
+#main .category {
+    //각 li에 고정 너비가 있어 최대 3개까지가 예쁘게 들어갑니다. 유지보수시 확인해 주세요:>
+    margin-top: 40px;
+    
+    li {
+        position: relative;
+        width: 300px;
+        height: 40px;
+        float: left;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        
+        &:not(:last-child) {
+            border-right: none;
+        }
+        
+        &:last-child:after {
+            position: absolute;
+            bottom: -1px;
+            left: 100%;
+            display: block;
+            content: '';
+            width: 700px; //1300-300-300 //li추가 시 변경 필요
+            height: 1px;
+            background-color: #ccc;
+        }
+        
+        & > a{
+            display: block;
+            line-height: 38px;
+            color: #74777b;
+            background-color: #e5e5e5;
+            font-weight: 400;
+        }
+        
+        & > a:hover {
+            color: #555;
+        }
+        
+    } //end of li
+    
+
+    li.active {
+        border-bottom: none;
+        box-sizing: border-box; 
+        border-top: 4px solid $color-btn;
+        border-radius: 0;
+
+        & > a {
+            line-height: 40px;
+            color: $color-main;
+            background-color: transparent;
+            font-weight: 500;
+        }
+        
+    } //end of li.active
+    
+    
+}

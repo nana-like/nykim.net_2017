@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+
+/*  
+*   checkbox
+*/
+
+
+//화폐 체크박스
+//사용처 : 수사협조 - 거래(입출금)내역 / 고객상세정보 - 거래내역 / 고객상세정보 - 수동처리 모달
+
+.customCheckbox {
+    
+    li {
+        float: left;
+        margin-right: 5px;
+        
+    }
+        
+    input[type="checkbox"] {
+        display: none !important;
+    }
+    
+    input[type="checkbox"]+label {
+        display: block;
+        position: relative;
+        height: 30px;
+        padding: 0 16px 0 30px;
+        color: $color-main;
+        font-size: 15px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 28px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none; 
+
+        
+        &:before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 10px;
+            width: 11px;
+            height: 11px;
+            border: 1px solid #899;
+            border-radius: 2px;
+            opacity: .7;
+            -webkit-transition: all .1s;
+            -o-transition: all .1s;
+            -moz-transition: all .1s;
+            transition: all .1s;
+        }
+        
+    }
+    
+    input:checked + label:before {
+        height: 4px;
+        border-radius: 0;
+        opacity: 1;
+        border-color: $color-num;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        
+    }
+    
+}
+
+.customCheckbox + label {
+    
+}
+
+//포함여부 체크박스
+//사용처 : 수사협조 - 포함여부 체크
+
+.includeCheckbox {
+    display: none;
+}
+
+
+.includeCheckbox + label {
+    display: block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+    
+    &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $color-main;
+        border-radius: 2px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: .7;
+        -webkit-transition: all .1s, border-color .08s;
+        transition: all .1s, border-color .08s;
+    }
+}
+
+
+.includeCheckbox:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-color: $color-num;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

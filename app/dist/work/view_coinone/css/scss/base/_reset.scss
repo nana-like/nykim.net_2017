@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+
+/*  
+*   RESET STYLE
+*/
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, small article, aside, footer, header, nav, address, section, main, time, pre, code, ol, ul, li, hr, strong, textarea, button { 
+    margin: 0;
+    padding: 0; 
+    border: 0; 
+    vertical-align: baseline; 
+    -webkit-text-size-adjust: none; 
+    font-style: normal; 
+    font-size: 100%;
+    line-height: 1.3;
+    font-family: 'Noto Sans KR',  AppleGothic, sans-serif, Helvetica;
+}
+
+ul, ol, li, dl {
+    list-style: none; 
+}
+
+a:link, a:visited, a:hover, a:active { 
+    color: #000;
+    text-decoration: none; 
+    font-family: 'Noto Sans KR',  AppleGothic, sans-serif, Helvetica;
+}
+
+
+hr, caption { 
+    display: none; 
+}
+
+table {
+    table-layout: fixed;
+    word-break: keep-all;
+}
+
+button { 
+    cursor: pointer;
+    font-family: 'Noto Sans KR',  AppleGothic, sans-serif, Helvetica;
+}
+
+
+input { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: content-box;
+    vertical-align: top;
+    border-radius: 0; 
+    -webkit-border-radius: 1px;
+    -webkit-apprearance: none;
+    font-family: 'Noto Sans KR',  AppleGothic, sans-serif, Helvetica;
+}
+
+
+//인풋 플레이스홀더 스타일링
+input::-webkit-input-placeholder { color: #838383; }
+textarea::-webkit-input-placeholder { color: #838383; }
+input:-moz-placeholder { color: #838383; opacity: 1; }
+textarea:-moz-placeholder { color: #838383; opacity: 1; }
+input::-moz-placeholder { color: #838383; opacity: 1; }
+textarea::-moz-placeholder { color: #838383; opacity: 1; }
+input:-ms-input-placeholder { color: #838383; }
+textarea:-ms-input-placeholder { color: #838383; }
+
+//인풋에 포커스시 플레이스홀더 사라짐
+input:focus::-webkit-input-placeholder { color:transparent; }
+textarea:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; }
+textarea:focus:-moz-placeholder { color:transparent; } 
+input:focus::-moz-placeholder { color:transparent; } 
+textarea:focus::-moz-placeholder { color:transparent; } 
+input:focus:-ms-input-placeholder { color:transparent; } 
+textarea:focus:-ms-input-placeholder { color:transparent; } 
+
+
+select {
+    font-family: 'Noto Sans KR',  AppleGothic, sans-serif, Helvetica;
+    cursor: pointer;
+    
+}
+
+html, body {
+    width: 100%; 
+    min-width: 1400px;
+    height: 100%; 
+    font-family: 'Noto Sans KR',  AppleGothic, sans-serif, Helvetica;
+    font-weight: 500;
+    background-color: $color-bg;
+}
+
+#wrap {
+  
+}
+
+
+
+//end of _reset.scss
+
+
+

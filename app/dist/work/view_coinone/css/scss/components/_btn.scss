@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+
+/*
+*   btn series
+*/
+
+// 버튼 모음
+// 테이블에서 쓰이는 버튼은 _table.scss내 있습니다 :>
+
+
+.btn-addStaff { //계정 추가 버튼
+    position: absolute;
+    top: 0;
+    left: 110px;  
+    @include btn-default;
+    
+}
+
+
+.queryInfilter { //필터 내 조회 버튼
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    letter-spacing: 0.02rem;
+    transform: translateY(-50%);
+    @include btn-default;
+    padding: 0 22px;
+    height: 36px;
+    line-height: 34px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    background-color: $color-num;
+    border: 1px solid $color-num;
+
+}
+
+    
+.excelExport { //엑셀 내보내기 버튼
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    width: 86px;
+    height: 86px;
+    transform: translateY(-50%);
+    cursor: default;
+    background-image: url(../images/ico_excel.png);
+    background-repeat: no-repeat;
+    background-position: -86px 0;
+
+    &.active {
+        cursor: pointer;
+        background-position: 0 0;  
+
+    }
+
+
+}
+
+
