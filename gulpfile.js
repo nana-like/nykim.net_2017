@@ -66,7 +66,7 @@ gulp.task('compile-scss',function(){
 
 
 // JS 합치기
-gulp.task('combine-vendor.js',function(){
+gulp.task('copy-vendor.js',function(){
      return gulp.src([ 
                     jsSource+'/vendor/jquery-3.2.1.js', 
                     jsSource+'/vendor/TweenMax.min.js', 
@@ -74,7 +74,6 @@ gulp.task('combine-vendor.js',function(){
                     jsSource+'/vendor/lazyload.min.js',
                     jsSource+'/vendor/swiper.min.js'
                 ])
-                .pipe(concat('vendor.js'))
                 .pipe(gulp.dest(dist+'/js'))
                 .pipe(gulp.dest(src+'/js'));
     
@@ -161,6 +160,6 @@ gulp.task('watch',function(){
 
 
 // default 정의
-gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-all.js', 'combine-vendor.js', 'combine-home.js', 'copy-font', 'minify-image', 'browserSync',  'watch' ]);
+gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-all.js', 'copy-vendor.js', 'combine-home.js', 'copy-font', 'minify-image', 'browserSync',  'watch' ]);
 
 
