@@ -4,7 +4,7 @@ $(function(){
     //로딩 이미지 제거
     function removeLoading(){
        $(".loading").fadeOut(800);
-       $(".loading").css({'z-index':'-100'});
+       //$(".loading").css({'z-index':'-100'});
     }
     
     
@@ -93,14 +93,12 @@ $(function(){
     
     $(window).on('load',function(){
        
-        /*
+        
         setTimeout(function(){
             removeLoading();
         },100);
-        */
         
         
-        removeLoading();
         gnbMaker();
         footerMaker();
         
