@@ -25,11 +25,12 @@
 	<title>웹퍼블리셔 N | 포트폴리오</title>
    
     <link rel="stylesheet" href="../css/main.css"/>
+	<link rel="shortcut icon" href="../images/favicon.ico" /> 
     
+ 
     <style>
-     .loading{z-index:1000;position:fixed;top:0;width:100%;height:100%;background-color:#f8f8f8}.loading_img{position:relative;display:inline-block;top:50%;left:50%;width:150px;height:150px;transform:translateY(-50%) translateX(-50%)}.circle{position:absolute;border:3px solid transparent;border-top-color:#ffca38;border-radius:50%;-webkit-animation:rotate linear infinite;animation:rotate linear infinite}.circle.one{height:50px;width:50px;left:50px;top:50px;-webkit-animation-duration:.85s;animation-duration:.85s}.circle.two{height:75px;width:75px;top:38px;left:38px;-webkit-animation-duration:.95s;animation-duration:.95s}.circle.three{height:100px;width:100px;top:25px;left:25px;-webkit-animation-duration:1.05s;animation-duration:1.05s}@-webkit-keyframes rotate{from{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}to{-webkit-transform:rotateZ(0);transform:rotateZ(0)}}@keyframes rotate{from{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}to{-webkit-transform:rotateZ(0);transform:rotateZ(0)}}
+     .loading{z-index:1000;position:fixed;top:0;width:100%;height:100%;background-color:rgba(248, 248, 248, 0.72)}.loading_img{position:relative;display:inline-block;top:50%;left:50%;width:150px;height:150px;transform:translateY(-50%) translateX(-50%)}.circle{position:absolute;border:3px solid transparent;border-top-color:#ffca38;border-radius:50%;-webkit-animation:rotate linear infinite;animation:rotate linear infinite}.circle.one{height:50px;width:50px;left:50px;top:50px;-webkit-animation-duration:.85s;animation-duration:.85s}.circle.two{height:75px;width:75px;top:38px;left:38px;-webkit-animation-duration:.95s;animation-duration:.95s}.circle.three{height:100px;width:100px;top:25px;left:25px;-webkit-animation-duration:1.05s;animation-duration:1.05s}@-webkit-keyframes rotate{from{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}to{-webkit-transform:rotateZ(0);transform:rotateZ(0)}}@keyframes rotate{from{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}to{-webkit-transform:rotateZ(0);transform:rotateZ(0)}}
     </style>
-
 </head>
 <body>
 
@@ -85,34 +86,49 @@
                             SBA 저축은행의 앱에 추가로 들어갈 페이지를 만들어 전달드린 작업입니다. <br/>
                             유지보수 작업이라 쉽게 마쳤던 작업이지만, 다른 사람의 코드를 읽고 활용하는 방법을 배울 수 있었습니다. <br/>
                             이때 봐두었던 코드 덕분에, 나중에 웹뷰 페이지를 제작할 때 em 개념을 활용한 손쉬운 작업이 가능했습니다.
-                            <span class="detail_mobile br_m"> 모바일에선 현재 페이지를 확대할 수 있어요! <br/ >두 손가락으로 화면을 확대한 뒤 살펴보세요. <i class="detail_ico"></i></span>
+                            <span class="detail_mobile br_m"> 모바일에선 현재 페이지를 확대할 수 있어요! <br/>두 손가락으로 화면을 확대한 뒤 살펴보세요. <i class="detail_ico"></i></span>
                             <span class="detail_line"></span>
                             </p>
                         </div>
                    </div>
                    <div class="detail_main">
                         <ul class="shots">
-                             <li class="shots_item unveiled" data-work="workItem">
+                             <li class="shots_item mobile">
                                  <a href="#" class="item_link">
-                                     <img class="shots_item_img lazyload" src="../images/loading.png" data-src="../images/work04_img_01.png" data-srcset="../images/work04_img_01.png 1200w, ../images/work04_img_01_sm.png 640w" alt="SBI Bank"/>
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_04.png" data-srcset="../images/work04_img_04.png 1200w, ../images/work04_img_04_sm.png 640w" alt="SBI Bank"/>
                                  </a>
                              </li>
-                             <li class="shots_item">
+                             <li class="shots_item mobile">
                                  <a href="#" class="item_link">
-                                     <img class="shots_item_img lazyload" src="../images/loading.png" data-src="../../images/work04_img_01.png" data-srcset="../images/work04_img_02.png 1200w, ../images/work04_img_02_sm.png 640w" alt="SBI Bank"/>
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_02.png" data-srcset="../images/work04_img_02.png 1200w, ../images/work04_img_02_sm.png 640w" alt="SBI Bank"/>
                                  </a>
                              </li>
-                             <li class="shots_item">
+                             <li class="shots_item mobile" data-work="workItem">
                                  <a href="#" class="item_link">
-                                     <img class="shots_item_img lazyload" src="../images/loading.png" data-src="../../images/work04_img_03.png" data-srcset="../images/work04_img_03.png 1200w, ../images/work04_img_03_sm.png 640w" alt="SBI Bank"/>
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../images/work04_img_01.png" data-srcset="../images/work04_img_01.png 1200w, ../images/work04_img_01_sm.png 640w" alt="SBI Bank"/>
+                                 </a>
+                             </li>
+                             <li class="shots_item mobile">
+                                 <a href="#" class="item_link">
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_03.png" data-srcset="../images/work04_img_03.png 1200w, ../images/work04_img_03_sm.png 640w" alt="SBI Bank"/>
+                                 </a>
+                             </li>
+                             <li class="shots_item mobile">
+                                 <a href="#" class="item_link">
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_05.png" data-srcset="../images/work04_img_05.png 1200w, ../images/work04_img_05_sm.png 640w" alt="SBI Bank"/>
+                                 </a>
+                             </li>
+                             <li class="shots_item mobile">
+                                 <a href="#" class="item_link">
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_10.png" data-srcset="../images/work04_img_10.png 1200w, ../images/work04_img_10_sm.png 640w" alt="SBI Bank"/>
                                  </a>
                              </li>
                         </ul>
+                        
                         <div class="slider">
                             <div class="slider_inner">
 
 
-                              <!-- ---Swiper--- -->
 
                                <div class="slider_btn swiper-button-next"></div>
                                <div class="slider_btn swiper-button-prev"></div>
@@ -120,17 +136,18 @@
                               <div class="swiper-container">
 
                                 <div class="swiper-wrapper">
+
                                     <div class="swiper-slide slide_mo">
-                                        <img class="shots_item_img lazyload" src="../images/loading.png" data-src="../../images/work04_img_04.png" data-srcset="../images/work04_img_04.png 1200w, ../images/work04_img_04_sm.png 640w" alt="SBI Bank"/>
+                                        <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_07.png" data-srcset="../images/work04_img_07.png 1200w, ../images/work04_img_07_sm.png 640w" alt="SBI Bank"/>
                                     </div>
                                     <div class="swiper-slide slide_mo">
-                                        <img class="shots_item_img lazyload" src="../images/loading.png" data-src="../../images/work04_img_05.png" data-srcset="../images/work04_img_05.png 1200w, ../images/work04_img_05_sm.png 640w" alt="SBI Bank"/>
+                                        <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_09.png" data-srcset="../images/work04_img_09.png 1200w, ../images/work04_img_09_sm.png 640w" alt="SBI Bank"/>
                                     </div>
                                     <div class="swiper-slide slide_mo">
-                                        <img class="shots_item_img lazyload" src="../images/loading.png" data-src="../../images/work04_img_06.png" data-srcset="../images/work04_img_06.png 1200w, ../images/work04_img_06_sm.png 640w" alt="SBI Bank"/>
+                                        <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_06.png" data-srcset="../images/work04_img_06.png 1200w, ../images/work04_img_06_sm.png 640w" alt="SBI Bank"/>
                                     </div>
                                     <div class="swiper-slide slide_mo">
-                                        <img class="shots_item_img lazyload" src="../images/loading.png" data-src="../../images/work04_img_07.png" data-srcset="../images/work04_img_07.png 1200w, ../images/work04_img_07_sm.png 640w" alt="SBI Bank"/>
+                                        <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/work04_img_08.png" data-srcset="../images/work04_img_08.png 1200w, ../images/work04_img_08_sm.png 640w" alt="SBI Bank"/>
                                     </div>
                                 </div>
 
@@ -140,6 +157,7 @@
 
 
                         </div>
+                        
                         <!-- //.slider-->
 
                      
@@ -170,7 +188,7 @@
 </div>
 <footer class="footer"></footer>
 	<script src="../js/vendor.js"></script>
-	<script src="../js/all.min.js"></script>
+	<script src="../js/all.js"></script>
 	
 	 <script>
         var swiper = new Swiper('.swiper-container', {

@@ -118,6 +118,12 @@
             box-sizing: border-box;
             background-color: $color-bg;
             
+            &:after {
+                display: block;
+                content: '';
+                clear: both;
+            }
+            
             .shots_item {
                 //opacity: 0;
                 display: block;
@@ -144,11 +150,15 @@
                     margin-top: 10%;
                     transform: matrix(1, 0, 0, 1, 0, -30);
                 }*/
-            }
+            } //end of .shots_item
             
-            .shots_item:first-child {
-                // position: relative;
-                // top: -5em;
+            .shots_item.mobile {
+                float: left;
+                width: 48%;
+                
+                &:nth-child(odd){
+                    margin-right: 4%;
+                }
             }
             
         } //end of .shots
@@ -626,6 +636,15 @@
 
             .shots {
                 padding: 2em 1.8em;
+                
+                .shots_item.mobile {
+                    float: none;
+                    width: 100%;
+
+                    &:nth-child(odd){
+                        margin-right: 0;
+                    }
+                }
             }
 
             .slider {
