@@ -8,7 +8,7 @@ $(function(){
     // 전역에서 사용할 요소 초기화
 	
     $title_text = $(".title_text");
-    visualTxt = ['unique', 'brilliant', 'notable', 'amazing', 'sparkling', 'unlimited'];
+    visualTxt = ['unique', 'brilliant', 'notable', 'amazing', 'splendid', 'unlimited']; //비주얼 타이틀에 쓰일 문구
     function init(){
         tl_visual = new TimelineLite();
     }
@@ -121,13 +121,13 @@ $(function(){
         
         
         setTimeout(function(){
-            visualLogo_ani();
+            visualLogo_ani(); //로고 등장
         },800); 
         setTimeout(function(){
-            visualTitle_ani();
+            visualTitle_ani(); //타이틀 애니메이션 시작
         },1100); 
         setTimeout(function(){
-            visual_ani();  
+            visual_ani();  //비주얼 애니메이션(구름, 나무) 시작
         },1000); 
         
     });
