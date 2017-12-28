@@ -179,11 +179,29 @@
 
             .about_text_para {
                 margin-bottom: 1.3em;
+                
+                .about_inspire {
+                    color: #666;
+                    font-weight: 300;
+                    letter-spacing: 0.06rem;
+                    font-size: 88%;
+                    
+                    &:before {
+                        display: inline-block;
+                        content: '';
+                        width: 1em;
+                    }
+                    
+                    &:hover {
+                        color: #43b8c9;
+                        text-decoration: underline;
+                    }
+                }
             }
             
             .about_text_accent {
                 display: inline-block;
-                margin: 0 0 2em 0;
+                margin-bottom: 2em;
                 padding: 0 0.6em;
                 color: #fff;
                 font-weight: 400;
@@ -434,47 +452,6 @@
         
        .about_link {
            display: none;
-           /*position: absolute;
-           bottom: 0;
-           left: 0;
-           width: 100%;
-           margin: 0;
-           
-            .social {
-                justify-content: flex-start;
-                width: 80%;
-                margin: 0 auto;
-                .social_item {
-                    width: 2em;
-                    height: 2em;
-                    margin-left: 1.8em;
-                }
-            }
-
-            .more {
-                width: 80%;
-                margin: 60px auto 0;
-                font-size: 16px;
-                
-                &:before {
-                    position: relative;
-                    left: 0;
-                    transform: none;
-                }
-                
-                .more_link {
-                    display: block;
-                    text-align: left;
-
-                    .icon_circle {
-                        top: 6em;
-                        font-size: 13px;
-                        
-                    }
-                    
-                } 
-                
-            }*/ 
 
         } //end of .about_link
         
@@ -487,6 +464,11 @@
             
             .about_text_para {
                 margin-bottom: 1em;
+                
+                .about_inspire {
+                    display: block;
+                    margin-bottom: 1em;
+                }
             }
 
         } //end of .about_text

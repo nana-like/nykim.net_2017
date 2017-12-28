@@ -1,3 +1,4 @@
+/*visual.js*/
 $(function(){
     
     // 전역변수 선언

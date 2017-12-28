@@ -15,7 +15,7 @@ $(function(){
 
         html += ' <div class="fixed"> ';
             html += ' <h1 class="logo"> ';
-                html += ' <span class="text_hide">웹퍼블리셔 N의 포트폴리오</span> ';
+                html += ' <span class="text_hide">N의 포트폴리오</span> ';
                 html += ' <div> ';
                     html += ' <svg class="title_logo" enable-background="new 0 0 240 236" version="1.1" viewBox="0 0 300 260" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"> ';
                     html += ' <polygon points="49 236 49 52.2 178.9 236 240 236 240 0 191 0 191 174.7 69.8 0 0 0 0 236" fill="#ffd40a"/> ';
@@ -80,7 +80,7 @@ $(function(){
                 html += ' <li class="social_item social_codepen"><a href="https://codepen.io/nykim_/" target="_blank">codepen</a></li> ';
                 html += ' <li class="social_item social_github"><a href="https://github.com/AnnYKim" target="_blank">github</a></li> ';
             html += ' </ul> ';
-            html += ' <p class="update">Last updated on November 7th, 2017</p> ';
+            html += ' <p class="update">Last Updated On December 28th, 2017</p> ';
             html += ' <p class="copyright">&copy; 2017 NY KIM</p> ';
         html += ' </div> ';
 
