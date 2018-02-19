@@ -14,35 +14,47 @@ $(function(){
                     'title': 'Coinone Admin',
                     'desc': '코인원의 관리자 계정 페이지'
                 },
-            "list_02" : 
+            "list_02" :
                 {
                     'number': twolength(1),
-                    'title': '3M HCA',
-                    'desc': '3M 제품 사용자를 위한 플랫폼'
+                    'title': 'Chain Sign',
+                    'desc': '컨트랙트 서비스 랜딩 페이지 (풀반응형)'
                 },
-            "list_03" : 
+            "list_03" :
                 {
                     'number': twolength(2),
-                    'title': 'Old Portfolio',
-                    'desc': '과거 포트폴리오 (반전매력!)',
-                    'link': 'old'
+                    'title': 'silkroad',
+                    'desc': '블록체인 서비스 랜딩 페이지 (풀반응형)'
                 },
             "list_04" : 
                 {
                     'number': twolength(3),
-                    'title': 'SBI BANK',
-                    'desc': 'SBI저축은행 하이브리드앱 '
+                    'title': '3M HCA',
+                    'desc': '3M 제품 사용자를 위한 플랫폼'
                 },
             "list_05" : 
                 {
                     'number': twolength(4),
-                    'title': ' ICON LANDING',
-                    'desc': ' 가상화폐 ICON 랜딩 페이지 (반응형)',
-                    'link': 'icon'
+                    'title': 'Old Portfolio',
+                    'desc': '과거 포트폴리오 (반전매력!)',
+                    'link': 'old'
                 },
             "list_06" : 
                 {
                     'number': twolength(5),
+                    'title': 'SBI BANK',
+                    'desc': 'SBI저축은행 하이브리드앱 '
+                },
+            "list_07" : 
+                {
+                    'number': twolength(6),
+                    'title': ' ICON LANDING',
+                    'desc': ' 가상화폐 ICON 랜딩 페이지 (반응형)',
+                    'link': 'icon'
+                },
+            "list_08" : 
+                {
+                    'number': twolength(7),
                     'title': ' 3M VR ',
                     'desc': ' 가상현실 체험 예약 페이지 '
                 }

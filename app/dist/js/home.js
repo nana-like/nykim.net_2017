@@ -63,7 +63,7 @@ $(function(){
         $title_text.text(visualTxt[index]);
         visualTitleFindN(); 
         
-        setInterval(function(){
+/*        setInterval(function(){
             var oldIndex = index;
             index = Math.floor( Math.random()*visualTxt.length-1 );
             if (oldIndex === index) {
@@ -75,7 +75,7 @@ $(function(){
             //console.log('인덱스',index);
             $title_text.text(visualTxt[index]);
             visualTitleFindN(); 
-        },4300);
+        },4300);*/
         
 	}
     

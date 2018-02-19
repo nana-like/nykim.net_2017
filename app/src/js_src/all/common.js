@@ -80,8 +80,8 @@ $(function(){
                 html += ' <li class="social_item social_codepen"><a href="https://codepen.io/nykim_/" target="_blank">codepen</a></li> ';
                 html += ' <li class="social_item social_github"><a href="https://github.com/AnnYKim" target="_blank">github</a></li> ';
             html += ' </ul> ';
-            html += ' <p class="update">Last Updated On December 28th, 2017</p> ';
-            html += ' <p class="copyright">&copy; 2017 NY KIM</p> ';
+            html += ' <p class="update">Last Updated On Feburary 19th, 2018</p> ';
+            html += ' <p class="copyright">&copy; 2018 NY KIM</p> ';
         html += ' </div> ';
 
         $(".footer").append(html);
