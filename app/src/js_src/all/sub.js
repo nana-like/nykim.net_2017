@@ -23,10 +23,11 @@ var customSubPage = {
     
     '코인원': 
         {
-            'number': 1, //몇 번째 sub페이지가 될 지 설정합니다.
+            'number': 13, //몇 번째 sub페이지가 될지 설정합니다.
             'name': 'coinone', //폴더 및 이미지의 이름입니다. CSS 스타일링 역시 반드시 이 이름으로 지정해야 합니다.
             
-            'title': 'Coinone Admin', //hero 화면의 타이틀
+            'title': 'Coinone Admin',  
+            'desc': '코인원의 관리자 계정 페이지', //설명
             'client': 'Coinone', //클라이언트
             'role': 'UI Development & Design', //역할
             'percent': '(100% &middot; 70%)', //기여도
@@ -43,70 +44,316 @@ var customSubPage = {
     
     'AR GEAR':
         {
-            'number': 2,
-            'title': 'AR GEAR',
+            'number': 12,
             'name': 'arGear',
+            
+            'title': 'AR GEAR',
+            'desc': '랜딩 페이지 (풀반응형)',
             'client': 'AR GEAR',
             'role': 'UI Development',
             'percent': '(100%)',
+            
             'viewCode': true, 
             'detailTitle': '웹퍼블리싱 | 구축',
             'detailInfo' : [
-                'AR GEAR입니다.'
+                ''
             ],
+            
+            'link': true,
         },
+    
     
     
     '스테이지':
         {
-            'number': 3,
+            'number': 11,
             'name' : 'stayge',
+            
             'title': 'STAYGE One',
+            'desc': '랜딩 페이지 (풀반응형)',
             'client': 'STAYGE',
             'role': 'UI Development',
             'percent': '(100%)',
             'viewCode': false, 
             'detailTitle': '웹퍼블리싱 | 구축',
             'detailInfo' : [
-                '스테이지 원이당'
+                ''
+            ],
+            
+            'link': true,
+            'existLink' : 'http://stayge.io/',
+        },
+    
+    
+    'ICOP':
+        {
+            'number': 10,
+            'name': 'icop',
+            
+            'title': 'ICO Platform',
+            'desc': '펀딩 플랫폼',
+            'client': 'ICON Foundation',
+            'role': 'UI Development & Design',
+            'percent': '(100%)',
+            'viewCode': false, 
+            'detailTitle': '웹퍼블리싱 & 웹디자인 | 구축',
+            'detailInfo' : [
+                '123'
             ],
         },
     
     
-//    'test':
-//        {
-//            'number': 0,
-//            'name': '',
-//
-//            'title': '',
-//            'client': '',
-//            'role': '',
-//            'percent': '',
-//            'viewCode': false, 
-//
-//            'detailTitle': '',
-//            'detailInfo' : [
-//            ],
-//        },
+    '파트너스 협약식':
+        {
+            'number': 9,
+            'name': 'partners',
+            
+            'title': 'Presentation Page',
+            'desc': '협약식 체결 화면',
+            'client': 'the loop',
+            'role': 'UI Development & Design',
+            'percent': '(100%)',
+            'viewCode': false, 
+            'detailTitle': '웹퍼블리싱 | 구축',
+            'detailInfo' : [
+                ''
+            ],
+            
+            'link': true,
+        },
+    
+    
+    '실크로드':
+        {
+            'number': 8,
+            'name': 'silkroad',
+            
+            'title': 'silkroad',
+            'desc': '랜딩 페이지(풀반응형)',
+            'client': 'silkroad Foundation',
+            'role': 'UI Development',
+            'percent': '(100%)',
+            'viewCode': false, 
+            'detailTitle': '웹퍼블리싱 | 구축',
+            'detailInfo' : [
+                ''
+            ],
+            
+            'link': true,
+            'existLink' : 'http://silkroadfoundation.io/',
+        },
+    
+    
+    'Chain Sign':
+        {
+            'number': 7,
+            'name': 'sign',
+            
+            'title': 'Chain SIGN',
+            'desc': '랜딩 페이지(풀반응형)',
+            'client': 'the loop',
+            'role': 'UI Development',
+            'percent': '(100%)',
+            'viewCode': false, 
+            'detailTitle': '웹퍼블리싱 | 구축',
+            'detailInfo' : [
+                ''
+            ],
+            
+            'link': true,
+        },
+    
+    
+    'ChangStarr':
+        {
+            'number': 6,
+            'name': 'changstarr',
+            
+            'title': 'Lyrics Page for ChangStarr',
+            'desc': '가사 정보 페이지(웹, 모바일)',
+            'client': "D'Amusements",
+            'role': 'UI Development',
+            'percent': '(100%)',
+            'viewCode': false, 
+            'detailTitle': '웹퍼블리싱 | 구축',
+            'detailInfo' : [
+                ''
+            ],
+            
+            'link': true,
+        },
+    
+    
+    '3M HCA':
+        {
+            'number': 5,
+            'name': 'hca',
+            
+            'title': '3M HCA',
+            'desc': '3M 제품 사용자를 위한 플랫폼',
+            'client': '3M',
+            'role': 'UI Development',
+            'percent': '(50%)',
+            'viewCode': true, 
+            'detailTitle': '웹퍼블리싱 | 구축, 유지보수',
+            'detailInfo' : [
+                ''
+            ],
+        },
+    
 
+    
+    '구 포트폴리오':
+        {
+            'number': 4,
+            'name': 'old',
+            
+            'title': 'Old Portfolio',
+            'desc': '과거 포트폴리오 (반전매력?!)',
+            'client': 'ME!',
+            'role': 'UI Development & Design',
+            'percent': '(100%)',
+            'viewCode': false, 
+            'detailTitle': '웹퍼블리싱 & 웹디자인 | 구축',
+            'detailInfo' : [
+                '3M 제품 사용자를 위한 플랫폼 웹페이지입니다.<br/> 어드민 사이트와 엔드 유저 사이트 둘로 나뉘며, 엔드 유저용 사이트는 반응형으로 제작했습니다.<br/>',
+                '경력 퍼블리셔와 함께 작업을 진행하였고, 그 과정에서 CSS 작성법과 네이밍룰을 배울 수 있었습니다.<br/> 또, 필요한 내용을 요청하는 법, 주석을 남겨 파일을 원활하게 전달하는 법 등 함께 일하면서 필요한 기본 능력 등도 익힐 수 있었습니다.<br/>',
+                '유지보수 분량이 꽤 많았던 작업인데, 기존 CSS를 빠르게 읽고 고치는 방법과,<br/> 다른 CSS를 덮어쓰지 않도록 우선순위를 조정하는 방법 등도 숙지시켜준 즐거운 작업이었습니다.<br/>'
+            ],
+            
+            'link': true,
+        },
+    
 
+    
+    'SBI 저축은행':
+        {
+            'number': 3,
+            'name': 'sbi',
+            
+            'title': 'SBI BANK',
+            'desc': 'SBI저축은행 하이브리드앱',
+            'client': 'SBI Bank',
+            'role': 'UI Development',
+            'percent': '(50%)',
+            'viewCode': false, 
+            'detailTitle': '웹퍼블리싱 | 유지보수',
+            'detailInfo' : [
+                'SBA 저축은행의 앱에 추가로 들어갈 페이지를 만들어 전달드린 작업입니다.<br/> 유지보수 작업이라 쉽게 마쳤던 작업이지만, 다른 사람의 코드를 읽고 활용하는 방법을 배울 수 있었습니다.<br/> 이때 봐두었던 코드 덕분에, 나중에 웹뷰 페이지를 제작할 때 em 개념을 활용한 손쉬운 작업이 가능했습니다.'
+            ],
+        },
+
+    
+    'ICON 초기 랜딩페이지':
+        {
+            'number': 2,
+            'name': 'icon',
+            
+            'title': 'ICON LANDING',
+            'desc': 'ICON 랜딩 페이지 (반응형)',
+            'client': 'ICON Fondation',
+            'role': 'UI Development',
+            'percent': '(100%)',
+            'viewCode': false, 
+            'detailTitle': '웹퍼블리싱 | 구축',
+            'detailInfo' : [
+                ''
+            ],
+            
+            'link': true,
+        },
+    
+    
+    '3M VR 예약페이지':
+        {
+            'number': 1,
+            'name': 'vr',
+            
+            'title': '3M VR',
+            'desc': '가상현실 체험 예약 페이지 (웹, 모바일)',
+            'client': '3M',
+            'role': 'UI Development',
+            'percent': '(100%)',
+            'viewCode': true, 
+            'detailTitle': '웹퍼블리싱 | 구축',
+            'detailInfo' : [
+                ''
+            ],
+        },
+    
     }
 
 
 // ======================================
 
 
+function generateMainPage(){
+    
+    var myTurn = 0; //아이템이 삽입될 컬럼의 인덱스
+            
+    for (var i in customSubPage) {
+        
+        var mainHtml = '';
+        
+        mainHtml += '<div class="work_item">';
+        mainHtml += '<figure>';
+        
+            mainHtml += ' <img src="images/thumb_'+customSubPage[i].name+'.png" alt="'+customSubPage[i].desc+'" class="work_image" /> ';
+
+            if (customSubPage[i].hasOwnProperty('link')) {
+                 // link 프로퍼티가 있는 경우 external 클래스 추가
+                 mainHtml += ' <figcaption class="work_caption external"> ';
+            }else{
+                 mainHtml += ' <figcaption class="work_caption"> ';
+            }
+                
+            mainHtml += ' <div class="caption_textWrap"> ';
+                mainHtml += ' <strong class="caption_title">'+customSubPage[i].title+'</strong> ';
+                mainHtml += ' <p class="caption_desc">'+customSubPage[i].desc+'</p> ';
+            mainHtml += ' </div> ';
+
+            if(customSubPage[i].hasOwnProperty('link')){ //link 프로퍼티가 있는 경우 링크 주소 변경. 이때, existLink가 있다면 그걸로 변경
+                if(customSubPage[i].hasOwnProperty('existLink')){
+                    mainHtml += ' <a href="'+customSubPage[i].existLink+'" target="_blank"></a> ';
+                }else{
+                    mainHtml += ' <a href=" work/view_'+ customSubPage[i].name +'/index.html" target="_blank"></a> ';
+                }
+            }else{
+                mainHtml += ' <a href=" work/work_'+ customSubPage[i].number +'.html "></a> '; 
+            }
+        
+        mainHtml += ' </figcaption> ';
+        
+        mainHtml += '</figure>';
+        mainHtml += '</div>';
+        
+        $(".work_list .column").eq(myTurn).append(mainHtml); //인덱스 번호에 맞춰 아이템 삽입
+                
+       if(myTurn<$(".work_list .column").length-1){ //컬럼 개수에 맞춰 인덱스 증가
+           myTurn++;
+       }else{
+           myTurn = 0;
+       }
+        
+    }
+}
+    
+    
+
+// ======================================
+
+
 function generateSubPage(){
     
-    var num = parseInt($(".wrap").data("sub").substr(5,1));
+    var num = parseInt($(".wrap").data("sub").substr(5,2));
     var maxNum = Object.keys(customSubPage).length;
+    
+    console.log('num=', num);
+    console.log('maxNum=', maxNum);
     
     for (var i in customSubPage) {
         
         if(customSubPage[i].number == num){
-            
-            console.log("!!!");
-            console.log(customSubPage[i])
             
             // --
             // hero 화면 생성
@@ -141,6 +388,7 @@ function generateSubPage(){
                 html_detailTop += '<span class="ly_mt_sm"></span>';
             }
             
+            html_detailTop += '<span class="detail_mobile br_m"> 모바일에선 현재 페이지를 확대할 수 있어요! <br/>두 손가락으로 화면을 확대한 뒤 살펴보세요. <i class="detail_ico"></i></span>';
             html_detailTop += '<span class="detail_line"></span>';
             html_detailTop += '</p></div>';
             
@@ -162,7 +410,7 @@ function generateSubPage(){
             (num <= 1)? prevNum = maxNum : prevNum = (num - 1);
             (num >= maxNum)? nextNum = 1 : nextNum = (num + 1);
             
-            html_detailBottom += '<a href="work_0'+prevNum+'.html" class="detail_btn prev"><span class="detail_btn_title">WORK #'+prevNum+'</span>Prev.</a>';
+            html_detailBottom += '<a href="work_'+prevNum+'.html" class="detail_btn prev"><span class="detail_btn_title">WORK #'+prevNum+'</span>Prev.</a>';
             
              if (customSubPage[i].viewCode === true){ 
                  html_detailBottom += '<a href="view_'+customSubPage[i].name+'/index.html" target="_blank"  class="detail_link btn_effect"><span>view code</span></a>';
@@ -170,7 +418,7 @@ function generateSubPage(){
             
             
             
-            html_detailBottom += '<a href="work_0'+nextNum+'.html" class="detail_btn next"><span class="detail_btn_title">WORK #'+nextNum+'</span>Next.</a>';
+            html_detailBottom += '<a href="work_'+nextNum+'.html" class="detail_btn next"><span class="detail_btn_title">WORK #'+nextNum+'</span>Next.</a>';
             html_detailBottom += '</div>';
             
             
@@ -188,7 +436,8 @@ function generateSubPage(){
 $(window).on("load",function(){
     
     if (!$(".wrap").data('sub')){
-      return false;
+        generateMainPage();
+      //return false;
     }else{
       generateSubPage(); 
     }
