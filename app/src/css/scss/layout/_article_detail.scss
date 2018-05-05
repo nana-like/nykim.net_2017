@@ -348,83 +348,23 @@
 // !각 work 페이지별 컬러링! //
 ////////////////////////////
 
-.work_01 .article_detail .detail_main .slider {
-    background-color: $color-work-01;
-}
-
-
-.work_02 .article_detail .detail_main .slider {
-    background-color: $color-work-02;
-}
-
-
-.work_04 .article_detail .detail_main .slider {
-    background-color: $color-work-04;
-}
-
-.work_06 .article_detail .detail_main .slider {
-    background-color: $color-work-06;
-}
-
-
-
-
-
-.work_01 .article_detail .detail_bottom .detail_link {
-    border-color: $color-work-01;
-    color: $color-work-01;
-    
-    &:before {
-        background-color: $color-work-01;
-    }
-    
-    &:hover span {
-        color: #fff;
+@each $work, $color in $colorList {
+    .#{$work} .article_detail .detail_main .slider {
+        background-color: $color;
     }
 }
 
-.work_02 .article_detail .detail_bottom .detail_link {
-    border-color: $color-work-02;
-    color: $color-work-02;
-    
-    &:before {
-        background-color: $color-work-02;
-    }
-    
-    &:hover span {
-        color: #fff;
-    }
-}
+@each $work, $color in $colorList {
+    .#{$work} .article_detail .detail_bottom .detail_link {
+        border-color: $color;
+        color: $color;
+        
+        &:before {
+            background-color: $color;
+        }
 
-
-
-.work_04 .article_detail .detail_bottom .detail_link {
-    border-color: $color-work-04;
-    color: $color-work-04;
-    
-    &:before {
-        background-color: $color-work-04;
-    }
-    
-    &:hover span {
-        color: #fff;
     }
 }
-
-
-.work_06 .article_detail .detail_bottom .detail_link {
-    border-color: $color-work-06;
-    color: $color-work-06;
-    
-    &:before {
-        background-color: $color-work-06;
-    }
-    
-    &:hover span {
-        color: #fff;
-    }
-}
-
 
 
 //////////////////
@@ -599,6 +539,13 @@
                     display: none;
                 }
             } 
+            
+            .detail_link {
+                
+                &:hover span {
+                    color: #fff;
+                }
+            }
         }
     }
     

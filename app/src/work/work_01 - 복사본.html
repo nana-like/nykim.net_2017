@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-   
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102680245-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-102680245-1');
-    </script>
 
 	<meta charset="utf-8">
 	<meta name="mobile-web-app-capable" content="yes" />
@@ -22,17 +12,17 @@
     <meta name="msapplication-navbutton-color" content="#fce253">
     <meta name="apple-mobile-web-app-status-bar-style" content="#fce253">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, shrink-to-fit=yes, user-scalable=yes" />
-
+	
     <meta name="description" content="N의 포트폴리오" />
-	<meta name="keywords" content="N의 포트폴리오, 웹퍼블리셔, 웹디자이너, 웹퍼블리싱, 웹디자인, 디자인, 퍼블리싱, UI, UX, UI 개발, UI디자인, UI디자이너, UI 개발자, 포트폴리오, N, 김나영, nykim, 감성 디자인" />
+	<meta name="keywords" content="N의 포트폴리오" />
     <meta name="title" content="NY KIM's portfolio" />
-	<meta name="author" content="N, 웹퍼블리셔, UI 디자이너, UI 개발자" />
+	<meta name="author" content="N, 웹퍼블리셔, UI디자이너, UI개발자" />
 	<meta property="og:title" content="N의 사심 가득한 포트폴리오"/>
 	<meta property="og:url" content="http://nykim.net"/>
 	<meta property="og:image" content="images/og_img.png"/>
 	<meta property="og:description" content="N, 감성 UI를 만듭니다."/>
 	
-	<title>N &middot; 감성 UI를 만듭니다</title>
+	<title>N &middot; Portfolio</title>
    
     <link rel="stylesheet" href="../css/main.css"/>
 	<link rel="shortcut icon" href="../images/favicon.ico" /> 
@@ -44,7 +34,7 @@
 </head>
 <body>
 
-<div class="wrap work" data-sub="work_1">
+<div class="wrap work work_01">
  
  <div class="loading">
     <div class="loading_img">
@@ -58,35 +48,75 @@
 
     <div class="ajaxArea">
         <section class="hero topArea">
-            <!-- [!] sub.js에서 내용 생성 -->
+            <div class="inner">
+                <h2 class="hero_title">
+                    Coinone Admin
+                    <i class="hero_title_sm">
+                        <span class="text_hide_m">featured</span> work #1
+                    </i>
+                </h2>
+                <div class="hero_top">
+                    <p class="info_heading info_client">CLIENT<span class="info_text">Coinone</span></p>
+                    <p class="info_heading info_role">ROLE<span class="info_text">UI Development &middot; Design<i class="info_percentage">(100% &middot; 80%)</i></span></p>
+                </div>
+                <div class="hero_center">
+                    <a href="view_coinone/index.html" target="_blank" class="hero_link btn_effect"><span>VIEW CODE</span></a>
+                    <p class="hero_scroll">or just scroll down to see screenshots!</p>
+                </div>
+                <div class="hero_bottom">
+                    <p class="hero_page"><span class="text_hide">Current Page:</span><i class="hash">&#x23;</i><span class="page_current">01</span></p>
+                </div>
+            </div>
+            <!-- //.inner -->
         </section>
 
         <div class="contents">
             <article class="article_detail">
                 <div class="inner">
                    <div class="detail_top">
-                        <!-- [!] sub.js에서 내용 생성 -->
+                        <h2 class="detail_title">
+                           WebPub.
+                           <i class="detail_title_sm">웹퍼블리싱&middot;웹디자인 | 구축</i>
+                        </h2>
+                        <div class="detail_info">
+                            <p class="detail_info_text">
+                            코인원의 어드민 유저를 위해 만든 관리자 페이지입니다. <br/>
+                            디자이너의 시안 없이, 컬러 가이드만 있는 상태에서 UI 개발을 진행했기에 기억에 남는 작업입니다. <br/>
+                            <span class="ly_mt_sm"></span>
+                            기획서를 보면서 바로 작업했기 때문에 제가 할 수 있는 범위가 넓어 즐겁게 작업할 수 있었습니다. <br/>
+                            어드민 페이지이기 때문에 디자인 자체보다는 UX 측면을 중시하려 했고, <br/>
+                            일부 요소들은 문구나 위치 선정에 있어 기획자와 디자이너의 의견을 물어가며 바꿔보기도 했습니다.<br/>
+                            <span class="ly_mt_sm"></span>
+                            또, 공통된 디자인 요소가 많았기 때문에 SASS 모듈화를 도입하였습니다.<br/>
+                            주요 컬러는 변수에 넣고, 버튼 스타일은 mixin으로 만들어 빠르게 재사용할 수 있도록 했습니다.
+                            <span class="detail_mobile br_m"> 모바일에선 현재 페이지를 확대할 수 있어요! <br/>두 손가락으로 화면을 확대한 뒤 살펴보세요. <i class="detail_ico"></i></span>
+                            <span class="detail_line"></span>
+                            </p>
+                        </div>
                    </div>
                    <div class="detail_main">
                         <ul class="shots">
                              <li class="shots_item unveiled" data-work="workItem">
                                  <a href="#" class="item_link">
-                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/coinone_01.png" data-srcset="../images/coinone_01.png 1200w, ../images/coinone_01_sm.png 640w" alt=""/>
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/coinone_01.png" data-srcset="../images/coinone_01.png 1200w, ../images/coinone_01_sm.png 640w" alt="Coinone Admin Page"/>
                                  </a>
                              </li>
                              <li class="shots_item">
                                  <a href="#" class="item_link">
-                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/coinone_02.png" data-srcset="../images/coinone_02.png 1200w, ../images/coinone_02_sm.png 640w" alt=""/>
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/coinone_02.png" data-srcset="../images/coinone_02.png 1200w, ../images/coinone_02_sm.png 640w" alt="Coinone Admin Page"/>
                                  </a>
                              </li>
                              <li class="shots_item">
                                  <a href="#" class="item_link">
-                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/coinone_03.png" data-srcset="../images/coinone_03.png 1200w, ../images/coinone_03_sm.png 640w" alt=""/>
+                                     <img class="shots_item_img lazyload" src="../images/loading.svg" data-src="../../images/coinone_03.png" data-srcset="../images/coinone_03.png 1200w, ../images/coinone_03_sm.png 640w" alt="Coinone Admin Page"/>
                                  </a>
                              </li>
                         </ul>
                         <div class="slider">
                             <div class="slider_inner">
+
+
+                              <!-- ---Swiper--- -->
 
                                <div class="slider_btn swiper-button-next"></div>
                                <div class="slider_btn swiper-button-prev"></div>
@@ -95,13 +125,13 @@
 
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img class="shots_item_img lazyload" src="../images/loading.svg"  data-src="../images/coinone_04.png" data-srcset="../images/coinone_04.png 1200w, ../images/coinone_04_sm.png 640w" alt=""/>
+                                        <img class="shots_item_img lazyload" src="../images/loading.svg"  data-src="../images/coinone_04.png" data-srcset="../images/coinone_04.png 1200w, ../images/coinone_04_sm.png 640w" alt="Coinone Admin Page"/>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img class="shots_item_img lazyload"  src="../images/loading.svg" data-src="../images/coinone_05.png" data-srcset="../images/coinone_05.png 1200w, ../images/coinone_05_sm.png 640w" alt=""/>
+                                        <img class="shots_item_img lazyload"  src="../images/loading.svg" data-src="../images/coinone_05.png" data-srcset="../images/coinone_05.png 1200w, ../images/coinone_05_sm.png 640w" alt="Coinone Admin Page"/>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img class="shots_item_img lazyload"  src="../images/loading.svg" data-src="../images/coinone_06.png" data-srcset="../images/coinone_06.png 1200w, ../images/coinone_06_sm.png 640w" alt=""/>
+                                        <img class="shots_item_img lazyload"  src="../images/loading.svg" data-src="../images/coinone_06.png" data-srcset="../images/coinone_06.png 1200w, ../images/coinone_06_sm.png 640w" alt="Coinone Admin Page"/>
                                     </div>
                                 </div>
 
@@ -109,12 +139,25 @@
 
                             </div>
 
+
                         </div>
+                        <!-- //.slider-->
 
                      
+
+
                     </div>
                    <div class="detail_bottom">
-                        <!-- [!] sub.js에서 내용 생성 -->
+                       <div class="bottom_inner">
+                       <a href="work_06.html" class="detail_btn prev">
+                           <span class="detail_btn_title">WORK #6</span>
+                           Prev.
+                       </a>
+                       <a href="view_coinone/index.html" target="_blank"  class="detail_link btn_effect"><span>view code</span></a>
+                       <a href="work_02.html" class="detail_btn next">
+                           <span class="detail_btn_title">WORK #2</span>
+                           Next.</a>
+                       </div>
                     </div>
                 </div>
                 <!-- //inner -->
@@ -126,6 +169,11 @@
 <!-- //.wrap -->
 </div>
 <footer class="footer"></footer>
+
+<!--
+	<script src="../js/vendor.js"></script>
+	<script src="../js/all.js"></script>
+-->
  
 	<script src="//code.jquery.com/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>

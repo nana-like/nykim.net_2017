@@ -85,7 +85,8 @@ gulp.task('combine-all.js',function(){
                     jsSource+'/all/common.js',
                     jsSource+'/all/header.js',
                     jsSource+'/all/footer.js',
-                    jsSource+'/all/scroll.js'
+                    jsSource+'/all/scroll.js',
+                    jsSource+'/all/sub.js',
                 ])
                 .pipe(concat('all.js'))
                 .pipe(gulp.dest(dist+'/js'))
@@ -150,7 +151,7 @@ gulp.task('watch',function(){
     gulp.watch(paths.scss,  ['compile-scss']);
     gulp.watch(paths.js, {interval:1000},  ['combine-home.js']);
     gulp.watch(paths.js, {interval:1000},  ['combine-all.js']);
-    gulp.watch(paths.image, {interval:1000},  ['minify-image']);
+//    gulp.watch(paths.image, {interval:1000},  ['minify-image']);
     //gulp.watch('app/src/**/*').on('change', browserSync.reload);
 });
 
@@ -160,6 +161,6 @@ gulp.task('watch',function(){
 
 
 // default 정의
-gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-all.js', 'copy-vendor.js', 'combine-home.js', 'copy-font', 'minify-image', 'browserSync',  'watch' ]);
+gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-all.js', 'copy-vendor.js', 'combine-home.js', 'copy-font', 'browserSync',  'watch' ]);
 
 
