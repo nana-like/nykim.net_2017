@@ -1,10 +1,10 @@
 /*
    [ sub.js ]
    
-   2018.05.05
+   2018.05.08
    nykim@nykim.net
 
-   서브페이지(work_**.html) 내용을 자동으로 생성합니다.
+   메인페이지와 서브페이지 내용을 자동으로 생성합니다.
    이제 jQuery의 한계를 느낀드아앍@#$!@
 
 */
@@ -23,7 +23,8 @@ var customSubPage = {
     
     '코인원': 
         {
-            'number': 13, //몇 번째 sub페이지가 될지 설정합니다.
+
+            'show': true, //메인화면에서 보일지 여부를 선택합니다.
             'name': 'coinone', //폴더 및 이미지의 이름입니다. CSS 스타일링 역시 반드시 이 이름으로 지정해야 합니다.
             
             'title': 'Coinone Admin',  
@@ -31,7 +32,7 @@ var customSubPage = {
             'client': 'Coinone', //클라이언트
             'role': 'UI Development & Design', //역할
             'percent': '(100% &middot; 70%)', //기여도
-            'viewCode': true, //true=코드 링크 있음, false=코드 링크 없음
+            'viewCode': true, //true = 코드 링크 있음, false = 코드 링크 없음
             
             'detailTitle': '웹퍼블리싱 & 웹디자인 | 구축',
             'detailInfo' : [
@@ -40,13 +41,14 @@ var customSubPage = {
                 '또, 공통된 디자인 요소가 많았기 때문에 SASS 모듈화를 도입하였습니다.<br/> 주요 컬러는 변수에 넣고, 버튼 스타일은 mixin으로 만들어 빠르게 재사용할 수 있도록 했습니다.'
             ],
             
-            'link': false,
+            'link': false, //true = 외부링크 있음, flase = 서브페이지 있음
         },
     
     
     'AR GEAR':
         {
-            'number': 12,
+
+            'show': true, 
             'name': 'arGear',
             
             'title': 'AR GEAR',
@@ -62,13 +64,15 @@ var customSubPage = {
             ],
             
             'link': true,
+            // 'existLink': 'http://argear.co.kr',
         },
     
     
     
     '스테이지':
         {
-            'number': 11,
+
+            'show': true, 
             'name' : 'stayge',
             
             'title': 'STAYGE One',
@@ -89,18 +93,20 @@ var customSubPage = {
     
     'ICOP':
         {
-            'number': 10,
+
+            'show': true,
             'name': 'icop',
             
             'title': 'ICO Platform',
             'desc': '펀딩 플랫폼',
             'client': 'ICON Foundation',
             'role': 'UI Development & Design',
-            'percent': '(100%)',
+            'percent': '(100% &middot; 90%)',
             'viewCode': false, 
             'detailTitle': '웹퍼블리싱 & 웹디자인 | 구축',
             'detailInfo' : [
-                '123'
+                'ICO를 용이하게 관리할 수 있도록 돕는 플랫폼입니다. 작업 기한이 촉박하여 디자이너의 투입 없이, 초기 레이아웃 구성과 퍼블리싱을 동시에 진행했습니다. 가이드 시안이 전혀 없었기에 UID를 보며 마크업과 UI 작업을 빠르게 끝내고 개발단에 전달하는 것을 목표로 작업했습니다.<br/>',
+                '또, React 기반의 작업이여서 컴포넌트 등을 경험할 수 있었습니다. 또, 여러 사람과 작업하면서 버전 관리의 중요성도 깨달았던 작업입니다. style 브랜치를 두고 dev 브랜치와 병합해 나가면서 개발이 완료되는 과정을 함께할 수 있었습니다.'
             ],
             
             'link': false,
@@ -109,7 +115,8 @@ var customSubPage = {
     
     '파트너스 협약식':
         {
-            'number': 9,
+
+            'show': true,
             'name': 'partners',
             
             'title': 'Presentation Page',
@@ -120,18 +127,17 @@ var customSubPage = {
             'viewCode': false, 
             'detailTitle': '웹퍼블리싱 | 구축',
             'detailInfo' : [
-                ''
+                '핀테크 랩 파트너스 협약식에 쓰일 view를 퍼블리싱 했습니다.'
             ],
             
-            'link': false,
-            
-            
+            'link': true,
         },
     
     
     '실크로드':
         {
-            'number': 8,
+
+            'show': false,
             'name': 'silkroad',
             
             'title': 'silkroad',
@@ -152,7 +158,8 @@ var customSubPage = {
     
     'Chain Sign':
         {
-            'number': 7,
+
+            'show': true,
             'name': 'sign',
             
             'title': 'Chain SIGN',
@@ -173,10 +180,11 @@ var customSubPage = {
     
     '챙스타':
         {
-            'number': 6,
-            'name': 'chang',
+
+            'show': true,
+            'name': 'changstarr',
             
-            'title': 'Lyrics Page',
+            'title': 'Lyrics for Changstarr',
             'desc': 'Changstarr 가사 정보 페이지(웹, 모바일)',
             'client': "D'Amusements",
             'role': 'UI Development',
@@ -194,7 +202,8 @@ var customSubPage = {
     
     '3M HCA':
         {
-            'number': 5,
+
+            'show': true,
             'name': 'hca',
             
             'title': '3M HCA',
@@ -205,7 +214,9 @@ var customSubPage = {
             'viewCode': true, 
             'detailTitle': '웹퍼블리싱 | 구축, 유지보수',
             'detailInfo' : [
-                ''
+                '3M 제품 사용자를 위한 플랫폼 웹페이지입니다.<br/> 어드민 사이트와 엔드 유저 사이트 둘로 나뉘며, 엔드 유저용 사이트는 반응형으로 제작했습니다.<br/>',
+                '경력 퍼블리셔와 함께 작업을 진행하였고, 그 과정에서 CSS 작성법과 네이밍룰을 배울 수 있었습니다.<br/> 또, 필요한 내용을 요청하는 법, 주석을 남겨 파일을 원활하게 전달하는 법 등 함께 일하면서 필요한 기본 능력 등도 익힐 수 있었습니다.<br/>',
+                '유지보수 분량이 꽤 많았던 작업인데, 기존 CSS를 빠르게 읽고 고치는 방법과,<br/> 다른 CSS를 덮어쓰지 않도록 우선순위를 조정하는 방법 등도 숙지시켜준 즐거운 작업이었습니다.<br/>'
             ],
             
             'link': false,
@@ -215,7 +226,8 @@ var customSubPage = {
     
     '구 포트폴리오':
         {
-            'number': 4,
+
+            'show': false,
             'name': 'old',
             
             'title': 'Old Portfolio',
@@ -226,9 +238,7 @@ var customSubPage = {
             'viewCode': false, 
             'detailTitle': '웹퍼블리싱 & 웹디자인 | 구축',
             'detailInfo' : [
-                '3M 제품 사용자를 위한 플랫폼 웹페이지입니다.<br/> 어드민 사이트와 엔드 유저 사이트 둘로 나뉘며, 엔드 유저용 사이트는 반응형으로 제작했습니다.<br/>',
-                '경력 퍼블리셔와 함께 작업을 진행하였고, 그 과정에서 CSS 작성법과 네이밍룰을 배울 수 있었습니다.<br/> 또, 필요한 내용을 요청하는 법, 주석을 남겨 파일을 원활하게 전달하는 법 등 함께 일하면서 필요한 기본 능력 등도 익힐 수 있었습니다.<br/>',
-                '유지보수 분량이 꽤 많았던 작업인데, 기존 CSS를 빠르게 읽고 고치는 방법과,<br/> 다른 CSS를 덮어쓰지 않도록 우선순위를 조정하는 방법 등도 숙지시켜준 즐거운 작업이었습니다.<br/>'
+                '개인 포트폴리오'
             ],
             
             'link': true,
@@ -238,7 +248,8 @@ var customSubPage = {
     
     'SBI 저축은행':
         {
-            'number': 3,
+
+            'show': true,
             'name': 'sbi',
             
             'title': 'SBI BANK',
@@ -249,7 +260,7 @@ var customSubPage = {
             'viewCode': false, 
             'detailTitle': '웹퍼블리싱 | 유지보수',
             'detailInfo' : [
-                'SBA 저축은행의 앱에 추가로 들어갈 페이지를 만들어 전달드린 작업입니다.<br/> 유지보수 작업이라 쉽게 마쳤던 작업이지만, 다른 사람의 코드를 읽고 활용하는 방법을 배울 수 있었습니다.<br/> 이때 봐두었던 코드 덕분에, 나중에 웹뷰 페이지를 제작할 때 em 개념을 활용한 손쉬운 작업이 가능했습니다.'
+                'SBI 저축은행의 앱에 추가로 들어갈 페이지를 만들어 전달드린 작업입니다.<br/> 유지보수 작업이라 쉽게 마쳤던 작업이지만, 다른 사람의 코드를 읽고 활용하는 방법을 배울 수 있었습니다.<br/> 이때 봐두었던 코드 덕분에, 나중에 웹뷰 페이지를 제작할 때 em 개념을 활용한 손쉬운 작업이 가능했습니다.'
             ],
             
             'link': false,
@@ -258,7 +269,8 @@ var customSubPage = {
     
     'ICON 초기 랜딩페이지':
         {
-            'number': 2,
+
+            'show': false,
             'name': 'icon',
             
             'title': 'ICON LANDING',
@@ -278,7 +290,8 @@ var customSubPage = {
     
     '3M VR 예약페이지':
         {
-            'number': 1,
+
+            'show': false,
             'name': 'vr',
             
             'title': '3M VR',
@@ -300,17 +313,22 @@ var customSubPage = {
     var subPageList = [];
 
 
+
+
 // ======================================
 
 
+//서브페이지가 존재하는 work 아이템인지 파악해 변수에 넣습니다.
+
 function checkHasSubPage(){
+
+
     for (var i in customSubPage) {
-        //서브페이지가 존재하는 work 아이템인지 파악해 변수에 넣습니다.
         if(customSubPage[i].link === false){
             subPageList.push(customSubPage[i].name);
-            console.log(subPageList);
         }
     }
+
 }
 
 
@@ -320,48 +338,51 @@ function generateMainPage(){
             
     for (var i in customSubPage) {
         
-        
-        var mainHtml = '';
-        
-        mainHtml += '<div class="work_item">';
-        mainHtml += '<figure>';
-        
-            mainHtml += ' <img src="images/thumb_'+customSubPage[i].name+'.png" alt="'+customSubPage[i].desc+'" class="work_image" /> ';
+        if(customSubPage[i].show === true){
 
-            if (customSubPage[i].link === true) {
-                 // link 프로퍼티가 true인 경우 external 링크 추가
-                 mainHtml += ' <figcaption class="work_caption external"> ';
-            }else{
-                 mainHtml += ' <figcaption class="work_caption"> ';
-            }
-                
-            mainHtml += ' <div class="caption_textWrap"> ';
-                mainHtml += ' <strong class="caption_title">'+customSubPage[i].title+'</strong> ';
-                mainHtml += ' <p class="caption_desc">'+customSubPage[i].desc+'</p> ';
-            mainHtml += ' </div> ';
+            var mainHtml = '';
+        
+            mainHtml += '<div class="work_item">';
+            mainHtml += '<figure>';
+            
+                mainHtml += ' <img src="images/thumb_'+customSubPage[i].name+'.png" alt="'+customSubPage[i].desc+'" class="work_image" /> ';
 
-            if(customSubPage[i].link  === true ){ //link 프로퍼티가 true인 경우 링크 주소 변경. 이때, existLink가 있다면 그걸로 변경
-                if(customSubPage[i].hasOwnProperty('existLink')){
-                    mainHtml += ' <a href="'+customSubPage[i].existLink+'" target="_blank"></a> ';
+                if (customSubPage[i].link === true) {
+                    // link 프로퍼티가 true인 경우 external 링크 추가
+                    mainHtml += ' <figcaption class="work_caption external"> ';
                 }else{
-                    mainHtml += ' <a href=" work/view_'+ customSubPage[i].name +'/index.html" target="_blank"></a> ';
+                    mainHtml += ' <figcaption class="work_caption"> ';
                 }
-            }else{
-                mainHtml += ' <a href=" work/work_'+ customSubPage[i].name +'.html "></a> '; 
-            }
+                    
+                mainHtml += ' <div class="caption_textWrap"> ';
+                    mainHtml += ' <strong class="caption_title">'+customSubPage[i].title+'</strong> ';
+                    mainHtml += ' <p class="caption_desc">'+customSubPage[i].desc+'</p> ';
+                mainHtml += ' </div> ';
+
+                if(customSubPage[i].link  === true ){ //link 프로퍼티가 true인 경우 링크 주소 변경. 이때, existLink가 있다면 그걸로 변경
+                    if(customSubPage[i].hasOwnProperty('existLink')){
+                        mainHtml += ' <a href="'+customSubPage[i].existLink+'" target="_blank"></a> ';
+                    }else{
+                        mainHtml += ' <a href=" work/view_'+ customSubPage[i].name +'/index.html" target="_blank"></a> ';
+                    }
+                }else{
+                    mainHtml += ' <a href=" work/work_'+ customSubPage[i].name +'.html "></a> '; 
+                }
+            
+            mainHtml += ' </figcaption> ';
+            
+            mainHtml += '</figure>';
+            mainHtml += '</div>';
+            
+            $(".work_list .column").eq(myTurn).append(mainHtml); //인덱스 번호에 맞춰 아이템 삽입
+                    
+        if(myTurn<$(".work_list .column").length-1){ //컬럼 개수에 맞춰 인덱스 증가
+            myTurn++;
+        }else{
+            myTurn = 0;
+        }
+        }
         
-        mainHtml += ' </figcaption> ';
-        
-        mainHtml += '</figure>';
-        mainHtml += '</div>';
-        
-        $(".work_list .column").eq(myTurn).append(mainHtml); //인덱스 번호에 맞춰 아이템 삽입
-                
-       if(myTurn<$(".work_list .column").length-1){ //컬럼 개수에 맞춰 인덱스 증가
-           myTurn++;
-       }else{
-           myTurn = 0;
-       }
         
     }
 }
@@ -371,20 +392,17 @@ function generateMainPage(){
 function generateSubPage(){
     
     var pageName = $(".wrap").data("sub").substring(5);
-    var num = 0;
-    // var maxNum = Object.keys(customSubPage).length;
     var maxNum = subPageList.length;
     
-    console.log('pageName=', pageName);
-    console.log('maxNum=', maxNum);
-    
+    // console.log('pageName=', pageName);
+    // console.log('maxNum=', maxNum);
+
     for (var i in customSubPage) {
  
- 
-
+        //name이 일치하는 경우 서브페이지를 그려냅니다.
         if(customSubPage[i].name === pageName){
 
-            num = subPageList.indexOf(pageName) + 1; //현재 페이지가 배열의 몇 번째인지 파악해 num에 대입합니다.
+            var num = subPageList.indexOf(pageName) + 1; //현재 페이지가 배열의 몇 번째인지 파악해 num에 대입합니다.
 
             
             // --
@@ -439,17 +457,18 @@ function generateSubPage(){
             var prevNum = 0;
             var nextNum = 0;
             
-
+            //이전 서브페이지의 html 이름을 파악합니다.
             function getPrevHtmlName(){
-                var prevHtml = subPageList[(num-2)];
+                var prevHtml = subPageList[(num-2)]; //배열에서 2번째 전 요소의 이름을 가져옵니다.
 
-                if(prevHtml === undefined){
-                    prevHtml = subPageList[(subPageList.length - 1)];
+                if(prevHtml === undefined){ //이때 에러가 나면
+                    prevHtml = subPageList[(subPageList.length - 1)]; //배열 최대 수에서 가장 마지막을 가져옵니다.
                 }
                 
                 return prevHtml;
             }
 
+            //다음 서브페이지의 html 이름을 파악합니다.
             function getNextHtmlName(){
                 var nextHtml = subPageList[num];
 
@@ -480,6 +499,11 @@ function generateSubPage(){
             $(".detail_top").append(html_detailTop);
             $(".detail_bottom").append(html_detailBottom);
             $(".wrap").addClass(customSubPage[i].name);
+
+            //임시
+            $("a.item_link").on("click",function(evt){
+                evt.preventDefault();
+            });
             
             
         }
@@ -491,11 +515,6 @@ $(window).on("load",function(){
 
     checkHasSubPage();
     
-    if (!$(".wrap").data('sub')){
-        generateMainPage();
-      //return false;
-    }else{
-      generateSubPage(); 
-    }
+    $(".wrap").data('sub')? generateSubPage() : generateMainPage();
     
 });

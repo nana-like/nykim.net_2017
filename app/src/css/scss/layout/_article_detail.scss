@@ -112,7 +112,7 @@
         
         .shots {
             width: 100%;
-            max-width: 1920px;
+            max-width: 1600px;
             margin: 0 auto;
             padding: 8em $pd-lg 8em;
             box-sizing: border-box;
@@ -369,6 +369,16 @@
 
     }
 }
+
+
+/////////
+///////// ICOP 페이지의 최대 크기
+/////////
+
+// [data-sub=work_icop] .article_detail .detail_main .shots {
+//     max-width: 1400px !important;
+// }
+
 
 
 //////////////////
