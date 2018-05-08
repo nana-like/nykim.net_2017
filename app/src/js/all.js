@@ -490,6 +490,8 @@ var customSubPage = {
                 '기획서를 보면서 바로 작업했기 때문에 제가 할 수 있는 범위가 넓어 즐겁게 작업할 수 있었습니다.<br/> 어드민 페이지이기 때문에 디자인 자체보다는 UX 측면을 중시하려 했고,<br/> 일부 요소들은 문구나 위치 선정에 있어 기획자와 디자이너의 의견을 물어가며 바꿔보기도 했습니다.<br/>',
                 '또, 공통된 디자인 요소가 많았기 때문에 SASS 모듈화를 도입하였습니다.<br/> 주요 컬러는 변수에 넣고, 버튼 스타일은 mixin으로 만들어 빠르게 재사용할 수 있도록 했습니다.'
             ],
+            
+            'link': false,
         },
     
     
@@ -551,6 +553,8 @@ var customSubPage = {
             'detailInfo' : [
                 '123'
             ],
+            
+            'link': false,
         },
     
     
@@ -569,6 +573,8 @@ var customSubPage = {
             'detailInfo' : [
                 ''
             ],
+            
+            'link': false,
             
             
         },
@@ -632,6 +638,8 @@ var customSubPage = {
                 ''
             ],
             
+            'link': false,
+            
         },
     
     
@@ -650,6 +658,8 @@ var customSubPage = {
             'detailInfo' : [
                 ''
             ],
+            
+            'link': false,
         },
     
 
@@ -692,6 +702,8 @@ var customSubPage = {
             'detailInfo' : [
                 'SBA 저축은행의 앱에 추가로 들어갈 페이지를 만들어 전달드린 작업입니다.<br/> 유지보수 작업이라 쉽게 마쳤던 작업이지만, 다른 사람의 코드를 읽고 활용하는 방법을 배울 수 있었습니다.<br/> 이때 봐두었던 코드 덕분에, 나중에 웹뷰 페이지를 제작할 때 em 개념을 활용한 손쉬운 작업이 가능했습니다.'
             ],
+            
+            'link': false,
         },
 
     
@@ -730,12 +742,27 @@ var customSubPage = {
             'detailInfo' : [
                 ''
             ],
+            
+            'link': true,
         },
     
     }
 
+    var subPageList = [];
+
 
 // ======================================
+
+
+function checkHasSubPage(){
+    for (var i in customSubPage) {
+        //서브페이지가 존재하는 work 아이템인지 파악해 변수에 넣습니다.
+        if(customSubPage[i].link === false){
+            subPageList.push(customSubPage[i].name);
+            console.log(subPageList);
+        }
+    }
+}
 
 
 function generateMainPage(){
@@ -744,6 +771,7 @@ function generateMainPage(){
             
     for (var i in customSubPage) {
         
+        
         var mainHtml = '';
         
         mainHtml += '<div class="work_item">';
@@ -751,8 +779,8 @@ function generateMainPage(){
         
             mainHtml += ' <img src="images/thumb_'+customSubPage[i].name+'.png" alt="'+customSubPage[i].desc+'" class="work_image" /> ';
 
-            if (customSubPage[i].hasOwnProperty('link')) {
-                 // link 프로퍼티가 있는 경우 external 클래스 추가
+            if (customSubPage[i].link === true) {
+                 // link 프로퍼티가 true인 경우 external 링크 추가
                  mainHtml += ' <figcaption class="work_caption external"> ';
             }else{
                  mainHtml += ' <figcaption class="work_caption"> ';
@@ -763,14 +791,14 @@ function generateMainPage(){
                 mainHtml += ' <p class="caption_desc">'+customSubPage[i].desc+'</p> ';
             mainHtml += ' </div> ';
 
-            if(customSubPage[i].hasOwnProperty('link')){ //link 프로퍼티가 있는 경우 링크 주소 변경. 이때, existLink가 있다면 그걸로 변경
+            if(customSubPage[i].link  === true ){ //link 프로퍼티가 true인 경우 링크 주소 변경. 이때, existLink가 있다면 그걸로 변경
                 if(customSubPage[i].hasOwnProperty('existLink')){
                     mainHtml += ' <a href="'+customSubPage[i].existLink+'" target="_blank"></a> ';
                 }else{
                     mainHtml += ' <a href=" work/view_'+ customSubPage[i].name +'/index.html" target="_blank"></a> ';
                 }
             }else{
-                mainHtml += ' <a href=" work/work_'+ customSubPage[i].number +'.html "></a> '; 
+                mainHtml += ' <a href=" work/work_'+ customSubPage[i].name +'.html "></a> '; 
             }
         
         mainHtml += ' </figcaption> ';
@@ -788,30 +816,34 @@ function generateMainPage(){
         
     }
 }
-    
-    
-
 // ======================================
 
 
 function generateSubPage(){
     
-    var num = parseInt($(".wrap").data("sub").substr(5,2));
-    var maxNum = Object.keys(customSubPage).length;
+    var pageName = $(".wrap").data("sub").substring(5);
+    var num = 0;
+    // var maxNum = Object.keys(customSubPage).length;
+    var maxNum = subPageList.length;
     
-    console.log('num=', num);
+    console.log('pageName=', pageName);
     console.log('maxNum=', maxNum);
     
     for (var i in customSubPage) {
-        
-        if(customSubPage[i].number == num){
+ 
+ 
+
+        if(customSubPage[i].name === pageName){
+
+            num = subPageList.indexOf(pageName) + 1; //현재 페이지가 배열의 몇 번째인지 파악해 num에 대입합니다.
+
             
             // --
             // hero 화면 생성
             var html_hero = '';
             
             html_hero += '<div class="inner">';
-                html_hero+= '<h2 class="hero_title">'+customSubPage[i].title+'<i class="hero_title_sm"> <span class="text_hide_m">featured</span> work #'+customSubPage[i].number+'</i></h2>';
+                html_hero+= '<h2 class="hero_title">'+customSubPage[i].title+'<i class="hero_title_sm"> <span class="text_hide_m">featured</span> work #'+num+'</i></h2>';
                 html_hero+= '<div class="hero_top"><p class="info_heading info_client">CLIENT<span class="info_text">'+customSubPage[i].client+'</span></p><p class="info_heading info_role">ROLE<span class="info_text">'+customSubPage[i].role+'<i class="info_percentage">'+customSubPage[i].percent+'</i></span></p></div>';
                 html_hero+= '<div class="hero_center">';
             
@@ -858,10 +890,32 @@ function generateSubPage(){
             var prevNum = 0;
             var nextNum = 0;
             
+
+            function getPrevHtmlName(){
+                var prevHtml = subPageList[(num-2)];
+
+                if(prevHtml === undefined){
+                    prevHtml = subPageList[(subPageList.length - 1)];
+                }
+                
+                return prevHtml;
+            }
+
+            function getNextHtmlName(){
+                var nextHtml = subPageList[num];
+
+                if(nextHtml === undefined){
+                    nextHtml = subPageList[0];
+                }
+                
+                return nextHtml;
+
+            }
+
             (num <= 1)? prevNum = maxNum : prevNum = (num - 1);
             (num >= maxNum)? nextNum = 1 : nextNum = (num + 1);
             
-            html_detailBottom += '<a href="work_'+prevNum+'.html" class="detail_btn prev"><span class="detail_btn_title">WORK #'+prevNum+'</span>Prev.</a>';
+            html_detailBottom += '<a href="work_'+getPrevHtmlName()+'.html" class="detail_btn prev"><span class="detail_btn_title">WORK #'+prevNum+'</span>Prev.</a>';
             
              if (customSubPage[i].viewCode === true){ 
                  html_detailBottom += '<a href="view_'+customSubPage[i].name+'/index.html" target="_blank"  class="detail_link btn_effect"><span>view code</span></a>';
@@ -869,7 +923,7 @@ function generateSubPage(){
             
             
             
-            html_detailBottom += '<a href="work_'+nextNum+'.html" class="detail_btn next"><span class="detail_btn_title">WORK #'+nextNum+'</span>Next.</a>';
+            html_detailBottom += '<a href="work_'+getNextHtmlName()+'.html" class="detail_btn next"><span class="detail_btn_title">WORK #'+nextNum+'</span>Next.</a>';
             html_detailBottom += '</div>';
             
             
@@ -885,6 +939,8 @@ function generateSubPage(){
 
 
 $(window).on("load",function(){
+
+    checkHasSubPage();
     
     if (!$(".wrap").data('sub')){
         generateMainPage();
