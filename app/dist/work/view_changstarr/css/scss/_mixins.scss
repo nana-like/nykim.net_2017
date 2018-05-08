@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+/*! 
+*  MIXINS STYLE
+*/ 
+
+
+// font
+@mixin font-korean($weight:500)  { 
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, 'Nanum Myeongjo', serif;
+    font-weight: $weight;
+}
+
+
+// font
+@mixin font-popup($weight:400)  { 
+    font-family: 'Spoqa Han Sans', AppleGothic, sans-serif, Helvetica;
+    font-weight: $weight;
+}

@@ -36,7 +36,7 @@ var sassOptions = {
 
 // HTML 압축
 gulp.task('minify-html',function(){
-     return gulp.src(paths.html)
+     return gulp.src([paths.html, !src+'/work'])
                 .pipe(minifyhtml())
                 .pipe(gulp.dest(dist))
                 .pipe(browserSync.stream());
@@ -50,7 +50,7 @@ gulp.task('minify-html',function(){
 
 // SASS 컴파일
 gulp.task('compile-scss',function(){
-     return gulp.src(paths.scss)
+     return gulp.src([paths.scss, !src+'/work'])
                 .pipe(sourcemaps.init({loadMaps: true}))
                 .pipe(sass(sassOptions))
                 .pipe(sourcemaps.write('./'))

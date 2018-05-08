@@ -1,0 +1,300 @@
+/*!
+    Media Query
+*/
+@media screen and (max-width: 1100px) {
+    
+    .header {
+        
+        .track {
+            font-size: 13px;
+            height: 490px;
+        
+            .track_list {
+                //background-color: #8bd849;
+                height: 270px;
+                
+                .track_item {
+                    font-size: 14px;
+                    margin: 0 2em 0.8em 2em;
+                    
+                    &:hover > .track_link {
+                        background-color: transparent;
+                    }
+                
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 767px) {
+    .header {
+        
+        .track {
+            font-size: 12px;
+            height: 100%;
+        
+            .track_list {
+                //background-color: #6767ff;
+                display: block;
+                padding: 0px;
+                height: 100%;
+                
+                .track_item {
+                    font-size: 15px;
+                    margin: 0 0em 0.6em 0em;
+                    line-height: 1.6;
+                    
+                    &:hover > .track_link {
+                        background-color: transparent;
+                    }
+                    
+                }
+            }
+        }
+    }
+     
+    
+    .contents {
+        //background-color: #179534;
+        .contents_top {
+            padding: 6em 25px 0;
+            
+            .song_title {
+                display: block;
+                font-size: 24px;
+                margin-bottom: 30px;
+            }
+            
+            .song_info {
+                float: none;
+                clear: both;
+                margin: 4em 0 30px 0;
+                font-size: 14px;
+                line-height: 1.8;
+                
+                .song_author {
+                    font-size: 17px;
+                }
+            }
+        }
+        
+        .contents_btm {
+            //padding: 0 20px 8em;
+            
+            .song_video {
+                right: 0;
+                position: relative;
+                margin-top: 0;
+                width: 100%;
+                height: 240px;
+            }
+            
+            .lyrics {
+                font-size: 15px;
+                line-height: 2.15;
+                
+                .lyrics_link {
+                    padding: 4px 0px;
+                }
+            }
+        }
+    }
+         
+    html.mobile .contents {
+            
+            .contents_popup {
+                z-index: 10;
+                -webkit-backface-visibility: hidden;
+                -webkit-overflow-scrolling: touch;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                padding-left: 0;
+                background-color: #1b1b1b;
+                transition: opacity .6s;
+                
+                .popup_line {
+                    position: fixed;
+                    left: initial;
+                    right: 420px;
+                }
+                
+                .popup_info {
+                    overflow-y: scroll;
+                
+                    .popup_lyrics {
+                        display: block;
+                        padding: 22px 20px 17px 20px;
+                    }
+                    
+                    .popup_desc {
+                        padding: 24px 20px 24px 20px;
+                        p {
+                            font-size: 14px;
+                            line-height: 2.2;
+                            margin-bottom: 1em;
+                        }
+                    }
+                }
+                
+                &.on {
+                    visibility: visible;
+                    
+                    &+.popup_arrow {
+                        opacity: 0;
+                        
+                        &+.popup_layer {
+                            opacity: 1;
+                            display: block;
+                            transition: opacity .6s;
+                        }
+                    }
+                }
+            }
+            
+            
+            
+            .popup_arrow {
+                display: none;
+            }
+            
+            .popup_close {
+                display: block;
+                right: 420px;
+                opacity: 0;
+            }
+    
+            
+            .popup_close.on {
+                opacity: 1;
+                transition: opacity .5s;
+            }
+        
+            #disqus_thread {
+                padding: 24px 20px 24px 20px;
+            }
+    
+}
+        
+}
+@media screen and (max-width: 640px) {
+    
+    .header {
+        padding-top: 20px;
+        
+        .visual {
+            height: 100%;
+            padding: 2em 0 0;
+            margin: 0 auto 1.8em;
+            
+            .title {
+                font-size: 26px;
+            }
+            
+            .sns {
+                right: 15px;
+                
+                li {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+        }
+        
+        .track {
+            font-size: 12px;
+            height: 100%;
+            
+            .player {
+                width: 320px;
+            }
+        
+            .track_list {
+                padding:0 15px;
+                //background-color: #ffe200;
+                
+                .track_item {
+                    font-size: 14px;
+                    //margin: 0 0px 0.6em 0px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+    
+    
+    
+    .contents {
+        //background-color: #0b61d6;
+        
+        .contents_top {
+            padding: 5em 25px 0;
+            
+            .song_title {
+                display: block;
+                font-size: 25px;
+            }
+            
+            .song_info {
+                //text-align: right;
+                margin: 3em 0 30px 0;
+                font-size: 14px;
+                line-height: 1.6;
+                
+                .song_author {
+                    font-size: 18px;
+                }
+            }
+        }
+        
+        .contents_btm {
+            padding: 0 20px 8em;
+            
+            .lyrics {
+                font-size: 14px;
+                line-height: 2.15;
+                
+                .lyrics_link {
+                    padding: 4px 0px;
+                }
+            }
+        }
+    }
+    
+    
+    html.mobile .contents{
+            
+            
+            .contents_popup {
+                width: 85vw;
+                
+                .popup_line {
+                    position: fixed;
+                    left: initial;
+                    right: 85vw;
+                }
+                
+                .popup_info {
+                
+                    .popup_lyrics {
+                    }
+                    
+                    .popup_desc {
+                        p {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+            
+            .popup_close {
+                right: 85vw;
+            }
+        
+            
+        }
+    
+}

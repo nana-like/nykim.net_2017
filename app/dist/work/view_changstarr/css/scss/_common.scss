@@ -1,0 +1,583 @@
+@charset "utf-8";
+
+/*!  
+ *   COMMON
+ */
+
+
+.no_scroll {
+    overflow: hidden;
+}
+
+.wrap {
+    position: relative; 
+    text-align: center;
+    background-color: #121212;
+}
+
+.header {
+    padding-top: 40px;
+    background-color: #000;
+    
+    .visual {
+        max-width: 1540px;
+        min-width: 320px;
+        margin: 0 auto 2.5em;
+        position: relative;
+        padding: 1.6em 0;
+        font-size: 38px;
+        height: 21em;
+        
+        .visual_image {
+            // _vendor.scss에서 컨트롤 가능
+        }
+        
+        .title {
+            position: relative;
+            margin-top: 1em;
+        }
+        
+        .sns {
+            position: absolute;
+            top: 0px;
+            right: 20px;
+            
+            li {
+                overflow: hidden;
+                //width: 22px;
+                height: 22x;
+                margin-left: 22px;
+                font-size: 12px;
+                float: left;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
+                background-size: 100%;
+                text-indent: -99em;
+                
+                &:first-child {
+                    margin-left: 0;
+                }
+                
+                & > a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+                
+            }
+            .sns_soundcloud {
+                width: 21px;
+                background-image: url(../images/ico_soundcloud.png);
+            }
+            .sns_facebook {
+                width: 7px;
+                background-image: url(../images/ico_facebook.png);
+            }
+            .sns_instagram {
+                width: 16px;
+                background-image: url(../images/ico_instagram.png);
+            }
+            .sns_youtube {
+                width: 18px;
+                background-image: url(../images/ico_youtube.png);
+                
+            }
+        }
+    }
+    
+    .track {
+        font-size: 16px;
+        height: 28em;
+        padding: 3.3em 0;
+        background-image: url(../images/track_bg.png);
+        background-size: cover;
+        background-position: center;
+        
+        .player {
+            width: 372px;
+            height: 120px;
+            margin: 0 auto;
+        }
+        
+        .track_list {
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            max-width: 980px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            height: 12em;
+            margin: 3em auto 0;
+
+            .track_item {
+                margin: 0 0 0.8em;
+                font-size: 15px;
+                font-weight: bold;
+                letter-spacing: 0.05rem;
+                line-height: 1.75;
+                text-align: left;
+
+                a {
+                    padding: 5px 10px;
+                    color: #fff;
+                    background-size: 200% 0%;
+                    background-position: 100%;
+                    transition: background-position .4s;
+                    text-shadow: 3px 3px 13px rgba(11, 11, 11, 0.4);
+                }
+                
+                &:hover  .track_link {
+                    background-color: rgba(255, 255, 255, 0.3);
+                }
+                
+                &.on > .track_link {
+                    color: #000;
+                    background-color: #fff !important;
+                    transform:translateZ(0);
+                    transition: background-position .4s;
+                    text-shadow: none;
+                }
+                
+                
+                
+                .track_num {
+                    margin-right: 4px;
+                }
+            }
+
+        } //end of .track_list
+    } //end of .track
+    
+}
+
+
+
+.contents {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 17px;
+    padding-bottom: 3em;
+    background-color: #121212;
+    
+    .contents_top {
+        position: relative;
+        overflow: hidden;
+        max-width: 940px;
+        //box-sizing: border-box;
+        margin: 0 auto;
+        padding: 6em 20px 0;
+        color: #fff;
+        //outline: 3px dotted navy;
+        
+        .song_title {
+            float: left;
+            font-weight: bold;
+            font-size: 28px;
+        }
+        
+        .song_info {
+            float: right;
+            margin: 0 0px 0 0;
+            font-size: 15px;
+            text-align: left;
+            color: #7d7d7d;
+            letter-spacing: 0.02rem;
+            line-height: 2.1;
+            
+            .song_author {
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+        
+    }
+    
+/*    .video_area {
+        position: absolute;
+        //top: 50%;
+        left: 50%;
+        max-width: 940px;
+        width: 100%;
+        height: 112px;
+        transform: translateX(-50%);
+        background-color: #ff0000;
+        
+        .video {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            background-color: gold;
+        }
+    }*/
+    
+    .contents_btm {
+        position: relative;
+        max-width: 940px;
+        //box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0 15px 10em;
+        
+        .song_video {
+            display: block;
+            position: absolute;
+            right: 20px;
+            width: 180px;
+            height: 112px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            background-image: url(//img.youtube.com/vi/_Bx3mRiicdY/sddefault.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            
+            &:before {
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.21);
+                content: '';
+            }
+            
+            &:hover > .ico_player {
+                opacity: 1;
+            }
+            
+            .ico_player {
+                opacity: .8;
+                z-index: 10;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                display: block;
+                width: 24px;
+                height: 24px;
+                transform: translateX(-50%) translateY(-50%);
+                background-image: url(../images/ico_player.png);
+                background-position: 21px 24px;
+                background-repeat: no-repeat;
+                background-position: center;
+                
+        
+            }
+            
+            
+        }
+        
+        .lyrics {
+            @include font-korean;
+            padding: 0 0 0 3px;
+            font-size: 100%;
+            font-weight: normal;
+            text-align: left;
+            line-height: 2.1;
+            color: #fff;
+            
+            &:after {
+                display: block;
+                clear: both;
+                content: '';
+            }
+            
+
+            i { //양 옆 여백
+                padding: 0 4px 0 4px;
+            }
+            
+            .partition {
+                display: block;
+                width: 100%;
+                margin-top: 1em;
+            }
+            
+            .lyrics_link {
+                position: relative;
+                color: #fff;
+                padding: 6px 0px;
+                background-image: linear-gradient(-90deg,transparent,transparent 50%,#292929 0);
+                background-size: 200% 0%;
+                background-position: 100%;
+                
+                -webkit-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-perspective: 1000;
+                perspective: 1000;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+                -webkit-transition: background-position .4s;
+                transition: background-position .4s;
+                
+                
+                &.show {
+                    background-size: 200% 100%;
+                    background-position: 0 0;
+                    -webkit-transform: translate3d(0,0,0);
+                    transform: translate3d(0,0,0);
+                    -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+                    -webkit-perspective: 1000;
+                    perspective: 1000;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    -webkit-transition: background-position .4s;
+                    transition: background-position .4s;
+                }
+                
+                &:hover {
+                    background-image: linear-gradient(-90deg,transparent,transparent 50%,#3e3e3e 0);
+                }
+                
+                
+                &.on {
+                    background-image: linear-gradient(-90deg,transparent,transparent 50%,#ff1d59 0) !important;
+                }
+                
+                &:active,
+                &:focus{
+                    outline: none; //아웃라인 없애기
+                }
+                
+            }
+            
+           
+        } // .lyrics
+        
+        
+        .popup_layer {
+            opacity: 0;
+            display: none;
+            width: 100%;
+            height: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(20, 21, 20, 0.74);
+            -webkit-backface-visibility: hidden;
+        }
+        
+
+    $arrow-size: 14px;
+    $popup-size: 420px;
+        
+        
+    .contents_popup {
+        //display: none;
+        visibility: hidden;
+        z-index: 10;
+        @include font-popup;
+        overflow-y: hidden;
+        position: absolute;
+        top: 0px; 
+        right: 0;
+        width: $popup-size;
+        height: auto;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: left;
+        line-height: 2.3;
+        word-break: keep-all;
+        
+        
+        .popup_line {
+            z-index: 15;
+            opacity: 0;
+            position: absolute;
+            top: 0px;
+            //left: $arrow-size;
+            left: 0;
+            display: block;
+            width: 2px;
+            height: 100%;
+            background-color: #ff1d59;
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+            -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+            -webkit-perspective: 1000;
+            perspective: 1000;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            
+        }
+        
+        .popup_info {
+            z-index: 10;
+            opacity: 0;
+            height: 100%;
+            background-color: #1b1b1b;
+            
+            
+            .popup_lyrics {
+                display: none;
+                background-color: #ff1d59;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+        
+            
+            .popup_desc {
+                padding: 20px 28px 20px 28px;
+                
+                p {
+                    margin-bottom: 1.2em;
+                }
+                
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+        
+        &.on {
+            visibility: visible;
+            
+            .popup_line {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0%);
+                transition: transform .4s;
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-perspective: 1000;
+                perspective: 1000;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+            
+            .popup_info {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity .4s;
+                transition-delay: .2s;
+                -webkit-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-perspective: 1000;
+                perspective: 1000;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+            
+            & + .popup_arrow {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                right: ($popup-size);
+                transition: opacity 1s, right .5s;
+                transition-delay: .4s;
+                -webkit-transform: translate3d(0,0,0);
+                transform: translate3d(0,0,0);
+                -webkit-transform-style: preserve-3d;
+                transform-style: preserve-3d;
+                -webkit-perspective: 1000;
+                perspective: 1000;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+            
+        } //.contents_popup.on
+
+
+        } //.contents_popup
+        
+        
+        
+        .popup_arrow {
+            opacity: 0;
+            position: absolute; 
+            top: 0px;
+            right: ($popup-size - ($arrow-size *2));
+            display: block;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: ($arrow-size/2) $arrow-size ($arrow-size/2) 0;
+            border-color: transparent #ff1d59 transparent transparent;
+            
+            &:after {
+                display: block;
+                position: absolute;
+                top: -4px;
+                left: 6px;
+                content: '';
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 4px 8px 4px 0;
+                border-color: transparent #151515 transparent transparent;
+            }
+            
+        }
+        
+        .popup_close {
+            display: none;
+            z-index: 20;
+            overflow: hidden;
+            position: fixed;
+            top: $arrow-size;
+            right: $popup-size;
+            width: $arrow-size *1.5;
+            height: $arrow-size *1.5;
+            margin-right: ($arrow-size * 0.7);
+            text-indent: -99em;
+            background-image: url(../images/ico_close.svg);
+            background-size: 100%;
+        }
+        
+        
+        
+    } //.contents_btm
+    
+} //.contents
+
+
+// !! IE 지원
+.browser_ie .contents .contents_btm .lyrics .lyrics_link {
+    background-image: none;
+    background-color: #292929;
+    
+    &:hover {
+        background-image: none;
+        background-color: #3e3e3e;
+    }
+    
+    &.on {
+        background-image: none !important;
+        background-color: #ff567e !important;
+    }
+    
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+    
+}
+
+
+#particles-js {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    max-width: 1600px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+#disqus_thread {
+    padding: 20px 28px 20px 28px;
+}

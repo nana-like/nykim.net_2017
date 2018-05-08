@@ -640,7 +640,7 @@ var customSubPage = {
             'client': "D'Amusements",
             'role': 'UI Development',
             'percent': '(100%)',
-            'viewCode': false, 
+            'viewCode': true, 
             'detailTitle': '웹퍼블리싱 | 구축',
             'detailInfo' : [
                 ''
@@ -952,9 +952,9 @@ function generateSubPage(){
             $(".wrap").addClass(customSubPage[i].name);
 
             //임시
-            $("a.item_link").on("click",function(evt){
-                evt.preventDefault();
-            });
+            // $("ul.shots a.item_link").on("click",function(evt){
+            //     evt.preventDefault();
+            // });
             
             
         }

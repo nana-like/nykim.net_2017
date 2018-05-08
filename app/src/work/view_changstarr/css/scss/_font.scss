@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+/*! 
+*   FONT FACE
+*/  
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+    src: local('Spoqa Han Sans Regular'),
+    url('../font/SpoqaHanSansRegular.woff2') format('woff2'),
+    url('../font/SpoqaHanSansRegular.woff') format('woff'),
+    url('../font/SpoqaHanSansRegular.ttf') format('truetype');
+}
+
