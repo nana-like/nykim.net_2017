@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/*!   
+*   VARIABLES
+*/
+
+
+// COLOR
+$col-btn: #01b4ff;
+$col-tit-sec-sm: #057adc;
+$col-tit-art-sm: #6a89dc;
+$col-tit-sec: #0c0c0c;
+$col-tit-art: #646464;
+$col-bg-effect: #0e2e85;
+$col-bg-booking: #293147;
+$col-tit-effect-sm: #6db6f4;
+
+
+
+// SIZE
+$header-height: 80px; 
+$header-height-mo: 100px; 
+$process-img-size: 150px;
+$process-arrow-size: 32px;
+$process-list-gap: 50px;
+
+
+
+
+
+// MIXIN TIME !
+@mixin ellipsis ($lines: 1) {
+    @if ($lines == 1) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    } @else {
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: $lines;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@mixin transition ($elem:all, $time:0.3s, $ease:ease-in-out){
+  transition: $elem $time $ease;
+}

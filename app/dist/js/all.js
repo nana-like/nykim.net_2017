@@ -570,7 +570,7 @@ var customSubPage = {
                 ''
             ],
             
-            'link': true,
+            
         },
     
     
@@ -612,16 +612,17 @@ var customSubPage = {
             ],
             
             'link': true,
+            'existLink' : 'http://chainsign.co.kr/',
         },
     
     
-    'ChangStarr':
+    '챙스타':
         {
             'number': 6,
-            'name': 'changstarr',
+            'name': 'chang',
             
-            'title': 'Lyrics Page for ChangStarr',
-            'desc': '가사 정보 페이지(웹, 모바일)',
+            'title': 'Lyrics Page',
+            'desc': 'Changstarr 가사 정보 페이지(웹, 모바일)',
             'client': "D'Amusements",
             'role': 'UI Development',
             'percent': '(100%)',
@@ -631,7 +632,6 @@ var customSubPage = {
                 ''
             ],
             
-            'link': true,
         },
     
     

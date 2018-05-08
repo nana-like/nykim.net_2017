@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/*!  
+*   RESET STYLE
+*/
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, small article, aside, footer, header, nav, address, section, main, time, ol, ul, li, hr, strong, figure, tr, th, td, dl, dt, dd, fieldset { 
+    margin: 0;
+    padding: 0; 
+    border: 0; 
+    vertical-align: baseline; 
+    -webkit-text-size-adjust: none; 
+    font-style: normal; 
+}
+
+ul, ol, li, dl {
+    list-style: none; 
+}
+
+a:link, a:visited, a:hover, a:active { 
+    text-decoration: none; 
+    font-family: 'Noto Sans', AppleGothic, sans-serif, Helvetica;
+}
+
+hr { 
+    display: none; 
+}
+
+button { 
+    display: block;
+    cursor: pointer;
+    font-family: 'Noto Sans', AppleGothic, sans-serif, Helvetica;
+    border: 0;
+}
+
+caption {
+    display: none;
+}
+
+i {
+  font-style: normal;
+}
+
+input { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: content-box;
+    vertical-align: top;
+    border-radius: 0; 
+    -webkit-border-radius: 1px;
+    -webkit-apprearance: none;
+}
+
+
+html, body {
+    position: relative;
+    width: 100%; 
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%; 
+    font-size: 16px;
+    font-family: 'Noto Sans',  AppleGothic, sans-serif, Helvetica;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+html {
+  background-color: #343a4a;
+}
+
+.wrap {
+  background-color: #fff;
+}
+
+//end of _reset.scss
+
+
+
