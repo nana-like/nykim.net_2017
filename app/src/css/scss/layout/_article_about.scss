@@ -197,6 +197,10 @@
                         text-decoration: underline;
                     }
                 }
+
+                & > small {
+                    color: #555;
+                }
             }
             
             .about_text_accent {
@@ -288,10 +292,12 @@
                 .more_link {
 
                     .icon_circle {
-                        top: 6em;
-                        font-size: 13px;
-                        margin-left: 5.8em;
-                       // outline: 3px solid blue;
+                        top: 140%;
+                        font-size: 11px;
+                        //outline: 3px solid green;
+                        
+                        left: 50%;
+                        margin-left: -1.5em;
                     }
                     
                 } 
@@ -375,10 +381,12 @@
                     letter-spacing: 0.06rem;
 
                     .icon_circle {
-                        top: 5em;
+                        top: 7.5em;
                         font-size: 11px;
                         //outline: 3px solid green;
-                        margin-left: 5.1em;
+                        
+                        left: 50%;
+                        margin-left: -1.5em;
                     }
                     
                 } 
@@ -530,6 +538,10 @@
             
             .about_text_para {
                 margin-bottom: 1em;
+
+                & > small {
+                    display: block;
+                }
             }
 
         } //end of .about_text
