@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+// layout
+
+$wrap-width: 1100px;
+$wrap-height: 1080px;
+$main-width: 1100px;
+$table-height: 500px;
+$wrap-padding: 25px;
+//$table-width: 100px, 130px, 569px, 90px, 101px;
+//$table-width: 10%, 20%, 42%, 15%, 13%; //반응형
+$table-width: 91px, 131px, 70px; // [수정] 180319 
+
+
+// ANIMATION
+
+@keyframes newTableRowEffect {
+  0%, 100% { 
+  }
+  20% {
+        background-color: #f0f3fe; 
+        border-color: #95bdff;
+  }
+  30% {
+        box-shadow: 0 2px 5px #9ec3ff; 
+  }
+}
+
+@keyframes newBlockEffect {
+  0% {
+    opacity: 0;
+    margin-left: 20px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: 0;
+  }
+}

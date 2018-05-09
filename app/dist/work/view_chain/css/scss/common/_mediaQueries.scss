@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+
+// **** Media Queries **** //
+
+
+// Break Point (Desktop First)
+$desktop-sm-width	: 1200px;
+$tablet-width		: 769px;
+$mobile-width		: 640px;
+$mobile-sm-width		: 360px;
+ 
+
+// ! 사용법 !
+//
+//   @include pc-lg {
+//	  h1 {
+//	 	color: red;
+//    }
+//   }
+//
+
+// ----------------------- * -----------------------
+
+  
+// Desktop (Small) 
+@mixin pc-sm {
+	@media screen and (max-width: #{$desktop-sm-width}) {
+		@content;
+	}
+}
+
+ 
+// ----------------------- * -----------------------
+
+  
+// Tablet 
+@mixin tablet {
+	@media screen and (max-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+// ----------------------- * -----------------------
+
+
+// Mobile
+@mixin mobile {
+	@media screen and (max-width: #{$mobile-width}) {
+		@content;
+	}
+}
+
+
+// ----------------------- * -----------------------
+
+
+// Mobile (Small)
+@mixin mobile-sm {
+	@media screen and (max-width: #{$mobile-sm-width}) {
+		@content;
+	}
+}
+
+
+// ----------------------- * -----------------------
+

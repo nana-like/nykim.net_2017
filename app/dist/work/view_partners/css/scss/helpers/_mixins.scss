@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+
+// 폰트
+
+@mixin font-main { //NotoSans
+    font-family: 'Noto Sans KR', AppleGothic, sans-serif, Helvetica;
+}
+@mixin font-sub { //
+    font-family: 'Open Sans', AppleGothic, sans-serif, Helvetica;
+}
+
+
+// 레이아웃
+
+@mixin position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+@mixin ellipsis ($lines: 1) {
+  @if ($lines == 1) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  } @else {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: $lines;
+      -webkit-box-orient: vertical;
+  }
+}
+
+
+
+// 기타
+
+@mixin block-anchor {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin trans($obj, $time:.2s, $ease:linear){
+    transition: $obj $time $ease;
+}
