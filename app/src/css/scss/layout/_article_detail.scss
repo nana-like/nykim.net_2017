@@ -30,7 +30,7 @@
         height: auto;
         max-width: 1600px;
         margin: 0 auto;
-        padding: 1.2em 0 1.2em;
+        padding: 1.2em 1em 1.2em;
         box-sizing: border-box;
         font-size: 68px;
         //transition: font-size .5s;
@@ -569,8 +569,8 @@
         .detail_top { // 설명 부분
             flex-direction: column;
             font-size: 50px;
-            padding-left: 1em;
-            padding-right: 1em;
+            padding-left: .8em;
+            padding-right: .8em;
         
             .detail_info {
                 font-size: 14px;

@@ -18,8 +18,7 @@
     height: 100vh;
     min-height: 740px;
     margin: 0 auto;
-    //background-image:url(../images/visual_blue_1920.png);
-    background-image:url(../images/visual_temp_1215.jpeg);
+    background-image:url(../images/visual_bg_3.jpg);
     background-position: 50% 80%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -40,8 +39,32 @@
         text-align: center;
         text-transform: uppercase;
         font-size: 18px;
+
+
+        // .title_text_slide {
+        //     position: absolute;
+        //     top: 20%;
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        //     @include font-lato(300);
+        //     font-size: 40px;
+        //     color: rgba(255,255,255,0.8);
+        //     text-transform: uppercase;
+
+        //     & > .letter {
+        //         display: inline-block;
+        //         line-height: 1em;
+        //     }
+
+        //     i {
+        //         position: relative;
+        //         font-style: normal;
+        //         text-shadow: 0 0 4px #fff, 0 0 2px rgba(255, 245, 217, 0.6);
+        //     }
+
+        // }
         
-        .title_text { //비주얼 문구
+        .title_text_slide { //비주얼 문구
             position: absolute;
             top: 20%;
             left: 50%;
@@ -253,7 +276,7 @@
 
     .visual .visual_title {
         font-size: 16px;
-        .title_text {
+        .title_text_slide {
             font-size: 33px;
         }
     }
@@ -271,7 +294,7 @@
     
     .visual .visual_title {
         font-size: 13px;
-        .title_text {
+        .title_text_slide {
             font-size: 30px;
         }
     }

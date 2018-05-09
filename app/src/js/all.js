@@ -60,6 +60,9 @@ $(function(){
     
     // Footer 생성 함수
     function footerMaker(){
+
+        var updateDay = 'May 9th';
+
         var html = '';
 
         html += ' <h2 class="title footer_title">Let&acute;s start right Now!</h2> ';
@@ -80,8 +83,8 @@ $(function(){
                 html += ' <li class="social_item social_codepen"><a href="https://codepen.io/nykim_/" target="_blank">codepen</a></li> ';
                 html += ' <li class="social_item social_github"><a href="https://github.com/AnnYKim" target="_blank">github</a></li> ';
             html += ' </ul> ';
-            html += ' <p class="update">Last Updated On December 28th, 2017</p> ';
-            html += ' <p class="copyright">&copy; 2017 NY KIM</p> ';
+            html += ' <p class="update">Last Updated On '+updateDay+', 2018</p> ';
+            html += ' <p class="copyright">&copy; 2018 NY KIM</p> ';
         html += ' </div> ';
 
         $(".footer").append(html);
@@ -640,10 +643,11 @@ var customSubPage = {
             'client': "D'Amusements",
             'role': 'UI Development',
             'percent': '(100%)',
-            'viewCode': true, 
+            'viewCode': false, 
             'detailTitle': '웹퍼블리싱 | 구축',
             'detailInfo' : [
-                ''
+                '앨범의 가사와 해당 가사에 담긴 내용을 보여주는 웹페이지입니다. 반응형이지만 모바일에서 더 나은 성능을 제공하기 위해, userAgent로 모바일 접속을 판단한 뒤 스타일을 분기해 적용시켰습니다.<br/>',
+                'CSS와 jQuery를 활용해 다양한 효과를 주어, 기존 가사 정보 페이지와 차별화가 느껴지도록 작업했습니다.',
             ],
             
             'link': false,
@@ -952,9 +956,9 @@ function generateSubPage(){
             $(".wrap").addClass(customSubPage[i].name);
 
             //임시
-            // $("ul.shots a.item_link").on("click",function(evt){
-            //     evt.preventDefault();
-            // });
+            $("ul.shots a.item_link").on("click",function(evt){
+                evt.preventDefault();
+            });
             
             
         }

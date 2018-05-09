@@ -8,7 +8,7 @@ $(function(){
     
     // 전역에서 사용할 요소 초기화
 	
-    $title_text = $(".title_text");
+    $title_text = $(".title_text_slide");
     visualTxt = ['unique', 'brilliant', 'notable', 'amazing', 'splendid', 'unlimited']; //비주얼 타이틀에 쓰일 문구
     function init(){
         tl_visual = new TimelineLite();
@@ -72,7 +72,7 @@ $(function(){
             if (index < 0) {
                 index = 0;
             }
-            //console.log('인덱스',index);
+            // console.log('인덱스',index);
             $title_text.text(visualTxt[index]);
             visualTitleFindN(); 
         },4300);
@@ -81,11 +81,9 @@ $(function(){
     
     function visualTitleFindN(){
         
-        
-        
-        $title_text.html( //비주얼 타이틀 쪼개기
-            $title_text.html().replace(/./g, "<span>$&</span>").replace(/\s/g, "&nbsp;")
-        );
+        $title_text.each(function(){
+            $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+          });
         
         $title_text.children().each(function(){ //N을 찾아서 i 태그로 감싸기
             if($(this).text().indexOf('N')>-1 || $(this).text().indexOf('n')>-1){
@@ -94,7 +92,14 @@ $(function(){
         });
         
     }
-    
+
+
+
+
+
+
+
+
     
     
     
@@ -133,8 +138,30 @@ $(function(){
         
     });
     
-    
-    
+
+
+        
+    var titleAnime = anime.timeline({autoplay: false, loop:true})
+    .add({
+        targets: '.title_text_slide .letter',
+        translateX: [40,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: function(el, i) {
+        return 500 + 30 * i;
+        }
+    }).add({
+        targets: '.title_text_slide .letter',
+        translateX: [0,-30],
+        opacity: [1,0],
+        easing: "easeInExpo",
+        duration: 1100,
+        delay: function(el, i) {
+        return 100 + 30 * i;
+        },
+    });
     
     
     

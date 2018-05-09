@@ -189,10 +189,11 @@ var customSubPage = {
             'client': "D'Amusements",
             'role': 'UI Development',
             'percent': '(100%)',
-            'viewCode': true, 
+            'viewCode': false, 
             'detailTitle': '웹퍼블리싱 | 구축',
             'detailInfo' : [
-                ''
+                '앨범의 가사와 해당 가사에 담긴 내용을 보여주는 웹페이지입니다. 반응형이지만 모바일에서 더 나은 성능을 제공하기 위해, userAgent로 모바일 접속을 판단한 뒤 스타일을 분기해 적용시켰습니다.<br/>',
+                'CSS와 jQuery를 활용해 다양한 효과를 주어, 기존 가사 정보 페이지와 차별화가 느껴지도록 작업했습니다.',
             ],
             
             'link': false,
@@ -501,9 +502,9 @@ function generateSubPage(){
             $(".wrap").addClass(customSubPage[i].name);
 
             //임시
-            // $("ul.shots a.item_link").on("click",function(evt){
-            //     evt.preventDefault();
-            // });
+            $("ul.shots a.item_link").on("click",function(evt){
+                evt.preventDefault();
+            });
             
             
         }
