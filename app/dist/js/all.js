@@ -60,6 +60,9 @@ $(function(){
     
     // Footer 생성 함수
     function footerMaker(){
+
+        var updateDay = 'May 9th';
+
         var html = '';
 
         html += ' <h2 class="title footer_title">Let&acute;s start right Now!</h2> ';
@@ -76,12 +79,12 @@ $(function(){
         html += ' </address> ';
         html += ' <div class="footer_bottom"> ';
             html += ' <ul class="social"> ';
-                html += ' <li class="social_item social_pinterest"><a href="https://www.pinterest.co.kr/ppphlox/" target="_blank">pinterest</a></li> ';
+                html += ' <li class="social_item social_blog"><a href="http://blog.naver.com/phlox__" target="_blank">blog</a></li> ';
                 html += ' <li class="social_item social_codepen"><a href="https://codepen.io/nykim_/" target="_blank">codepen</a></li> ';
                 html += ' <li class="social_item social_github"><a href="https://github.com/AnnYKim" target="_blank">github</a></li> ';
             html += ' </ul> ';
-            html += ' <p class="update">Last Updated On December 28th, 2017</p> ';
-            html += ' <p class="copyright">&copy; 2017 NY KIM</p> ';
+            html += ' <p class="update">Last Updated On '+updateDay+', 2018</p> ';
+            html += ' <p class="copyright">&copy; 2018 NY KIM</p> ';
         html += ' </div> ';
 
         $(".footer").append(html);
@@ -439,7 +442,7 @@ $(function(){
     
     $(window).on('resize',function(){
         topAreaHeight = $('.topArea').outerHeight();
-        console.log(topAreaHeight);
+        //console.log(topAreaHeight);
     });
     
     
