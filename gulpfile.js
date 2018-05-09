@@ -9,7 +9,8 @@ var concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     webserver = require('gulp-webserver'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    gulpIgnore = require('gulp-ignore');
    // livereload = require('gulp-livereload');
 
 
@@ -20,7 +21,7 @@ var jsSource = 'app/src/js_src';
 var paths = {
     js: src+'/js_src/**/*.js',
     scss: src+'/css/scss/**/*.scss',
-    html: src+'/**/*.html',
+    html: src+'/*.html',
     image: src+'/images/**/*'
 }
 
@@ -36,7 +37,7 @@ var sassOptions = {
 
 // HTML 압축
 gulp.task('minify-html',function(){
-     return gulp.src([paths.html, !src+'/work'])
+     return gulp.src([paths.html, '!src/app/work/**/*.html'])
                 .pipe(minifyhtml())
                 .pipe(gulp.dest(dist))
                 .pipe(browserSync.stream());
@@ -50,7 +51,7 @@ gulp.task('minify-html',function(){
 
 // SASS 컴파일
 gulp.task('compile-scss',function(){
-     return gulp.src([paths.scss, !src+'/work'])
+     return gulp.src(paths.scss)
                 .pipe(sourcemaps.init({loadMaps: true}))
                 .pipe(sass(sassOptions))
                 .pipe(sourcemaps.write('./'))
@@ -104,7 +105,6 @@ gulp.task('combine-all.js',function(){
 gulp.task('combine-home.js',function(){
      return gulp.src([ 
                     jsSource+'/all/visual.js',
-                    jsSource+'/work-item.js'
                 ])
                 .pipe(concat('home.js'))
                 .pipe(gulp.dest(dist+'/js'))
@@ -119,10 +119,19 @@ gulp.task('combine-home.js',function(){
 });
 
 
-
+//폰트 카피
 gulp.task('copy-font',function(){
     return gulp.src(src+'/font/**/*')
                 .pipe(gulp.dest(dist+'/font'));
+});
+
+
+//view_* 카피
+gulp.task('copy-view', function(){
+    return gulp.src([src+'/work/**/*', , '!app/src/work/_unused/**/*'])
+                // .pipe(gulpIgnore(src+'/work/_unused/**/*'))
+                
+                .pipe(gulp.dest(dist+'/work'));
 });
 
 // 이미지 압축
@@ -147,8 +156,8 @@ gulp.task('browserSync', function () {
 
 // watch 업무
 gulp.task('watch',function(){
-    gulp.watch(paths.html, {interval:1000},  ['minify-html']);
-    gulp.watch(paths.scss,  ['compile-scss']);
+    gulp.watch([paths.html, '!app/src/work/**/*'], {interval:1000},  ['minify-html']);
+    gulp.watch([paths.scss, '!app/src/work/**/*'],  ['compile-scss']);
     gulp.watch(paths.js, {interval:1000},  ['combine-home.js']);
     gulp.watch(paths.js, {interval:1000},  ['combine-all.js']);
 //    gulp.watch(paths.image, {interval:1000},  ['minify-image']);
@@ -161,6 +170,6 @@ gulp.task('watch',function(){
 
 
 // default 정의
-gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-all.js', 'copy-vendor.js', 'combine-home.js', 'copy-font', 'browserSync',  'watch' ]);
+gulp.task('default', [ 'minify-html', 'compile-scss', 'combine-all.js', 'copy-vendor.js', 'combine-home.js', 'copy-font', 'copy-view', 'minify-image', 'browserSync',  'watch' ]);
 
 

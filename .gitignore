@@ -1,5 +1,6 @@
 node_modules/
-work/
+app/dist/work/
+app/src/work
 *.scssc
 config.rb
 README.md

@@ -13,6 +13,7 @@
     "gulp-babel": "^7.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-concat-multi": "^1.0.1",
+    "gulp-ignore": "^2.0.2",
     "gulp-imagemin": "^4.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-minify-html": "^1.0.6",
