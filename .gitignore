@@ -1,4 +1,5 @@
 node_modules/
-*scssc
+work/
+*.scssc
 config.rb
 README.md
