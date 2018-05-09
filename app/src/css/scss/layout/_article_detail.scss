@@ -30,7 +30,7 @@
         height: auto;
         max-width: 1600px;
         margin: 0 auto;
-        padding: 1.2em 0 1.2em;
+        padding: 1.2em 1em 1.2em;
         box-sizing: border-box;
         font-size: 68px;
         //transition: font-size .5s;
@@ -112,7 +112,7 @@
         
         .shots {
             width: 100%;
-            max-width: 1920px;
+            max-width: 1600px;
             margin: 0 auto;
             padding: 8em $pd-lg 8em;
             box-sizing: border-box;
@@ -331,6 +331,10 @@
                 background-image: url(../images/ico_link_dark.svg) !important;
                 transition: background-image .5s;
             }
+                
+            &:hover span {
+                color: #fff;
+            }
         
             &:hover:after {
                 background-image: url(../images/ico_link.svg) !important;
@@ -348,82 +352,32 @@
 // !각 work 페이지별 컬러링! //
 ////////////////////////////
 
-.work_01 .article_detail .detail_main .slider {
-    background-color: $color-work-01;
-}
-
-
-.work_02 .article_detail .detail_main .slider {
-    background-color: $color-work-02;
-}
-
-
-.work_04 .article_detail .detail_main .slider {
-    background-color: $color-work-04;
-}
-
-.work_06 .article_detail .detail_main .slider {
-    background-color: $color-work-06;
-}
-
-
-
-
-
-.work_01 .article_detail .detail_bottom .detail_link {
-    border-color: $color-work-01;
-    color: $color-work-01;
-    
-    &:before {
-        background-color: $color-work-01;
-    }
-    
-    &:hover span {
-        color: #fff;
+@each $work, $color in $colorList {
+    .#{$work} .article_detail .detail_main .slider {
+        background-color: $color;
     }
 }
 
-.work_02 .article_detail .detail_bottom .detail_link {
-    border-color: $color-work-02;
-    color: $color-work-02;
-    
-    &:before {
-        background-color: $color-work-02;
-    }
-    
-    &:hover span {
-        color: #fff;
+@each $work, $color in $colorList {
+    .#{$work} .article_detail .detail_bottom .detail_link {
+        border-color: $color;
+        color: $color;
+        
+        &:before {
+            background-color: $color;
+        }
+
     }
 }
 
 
+/////////
+///////// ICOP 페이지의 최대 크기
+/////////
 
-.work_04 .article_detail .detail_bottom .detail_link {
-    border-color: $color-work-04;
-    color: $color-work-04;
-    
-    &:before {
-        background-color: $color-work-04;
-    }
-    
-    &:hover span {
-        color: #fff;
-    }
-}
-
-
-.work_06 .article_detail .detail_bottom .detail_link {
-    border-color: $color-work-06;
-    color: $color-work-06;
-    
-    &:before {
-        background-color: $color-work-06;
-    }
-    
-    &:hover span {
-        color: #fff;
-    }
-}
+// [data-sub=work_icop] .article_detail .detail_main .shots {
+//     max-width: 1400px !important;
+// }
 
 
 
@@ -599,6 +553,7 @@
                     display: none;
                 }
             } 
+            
         }
     }
     
@@ -614,8 +569,8 @@
         .detail_top { // 설명 부분
             flex-direction: column;
             font-size: 50px;
-            padding-left: 1em;
-            padding-right: 1em;
+            padding-left: .8em;
+            padding-right: .8em;
         
             .detail_info {
                 font-size: 14px;

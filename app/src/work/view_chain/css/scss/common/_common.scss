@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/*!   
+*   COMMON STYLE
+*/
+
+
+.grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 5.625em;
+  padding-bottom: 5.625em;
+  padding-left: 50px;
+  padding-right: 50px;
+  //outline: 3px dotted gold;
+  box-sizing: border-box;
+  font-size: 16px;
+  
+    @include pc-sm {
+      max-width: 100%;
+    }
+
+    @include tablet {
+      padding-left: 34px;
+      padding-right: 34px;   
+    }
+    
+    @include mobile {
+      padding-top: 3em;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 3em;
+      font-size: 14px;
+    }
+  
+
+
+}
+
+.header > .grid {
+  padding-top: 0;
+  padding-bottom: 0;
+  @include mobile {
+  }
+}
+
+.article > .grid {
+  padding-top: 0;
+}
+
+
+.article {
+  font-size: 16px;
+  padding-top: 6.25em;
+  padding-bottom: 5.750em;
+  
+  @include mobile {
+      padding-top: 3em;
+      padding-bottom: 3em;
+      font-size: 14px;
+  }
+}
+
+
+.container-left {
+  float: left;
+  
+  @include pc-sm {
+      float: none;
+    }
+}
+
+.container-right {
+  float: right;
+  
+  @include pc-sm {
+      float: none;
+    }
+}
+
+
+.button-booking {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: $col-btn;
+  border-radius: 3px;
+  box-shadow: 0 12px 14px -8px rgba(0, 0, 0, 0.5);
+  @include transition(background-color, 0.2s);
+  
+  &:active {
+    background-color: #2148b1;
+    @include transition(background-color, 0.2s);
+    outline: 0; 
+  }
+}
+
+
+.section-title-small {
+  color: $col-tit-sec-sm;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+  //@include transition(font-size);
+  
+ /*   @include pc-sm {
+      font-size: 18px;
+      
+    }*/
+
+    @include tablet {
+      font-size: 15px;
+    }
+    
+    @include mobile {
+      font-size: 12px;
+    }
+
+  
+}
+
+
+.section-title {
+  margin-top: 0.324em;
+  color: $col-tit-sec;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  //@include transition(font-size);
+  
+/*    @include pc-sm {
+      font-size: 29px;
+    }*/
+
+    @include tablet {
+      font-size: 24px;
+    }
+    
+    @include mobile {
+      font-size: 20px;
+    }
+
+}
+
+
+.article-title-small {
+  color: $col-tit-art-sm;
+  font-size: 18px;
+  font-weight: 700;
+  //@include transition(font-size);
+  
+ /*   @include pc-sm {
+      font-size: 16px;
+      text-align: center; 
+    }*/
+
+    @include tablet {
+      font-size: 14px;
+    }
+    
+    @include mobile {
+      font-size: 11px;
+    }
+
+  
+}
+
+.article-title {
+  margin-top: 0.25em;
+  color: $col-tit-art;
+  font-size: 24px;
+  font-weight: 700;
+  //@include transition(font-size);
+  
+ /*   @include pc-sm {
+      font-size: 21px;
+      text-align: center; 
+    }
+*/
+    @include tablet {
+      font-size: 18px;
+    }
+    
+    @include mobile {
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+}
+
+
+.text-thin {
+  font-weight: 400;
+}
+
+.text-gray {
+  color: #8e8e8e;
+}
+
+.text-blue {
+  color: #6a89dc;
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.br_m {
+  display: none;
+}
+.br_pc {
+  display: block;
+}
+
+.br_pc_lg {
+  display: block;
+}
+
+.br_pc_sm {
+  display: none;
+}
+
+@include pc-sm {
+  .br_pc_lg {
+    display: none;
+  }
+  .br_pc_sm {
+    display: block;
+  }
+}
+
+@include tablet {
+  .br_m {
+    display: block;
+  }
+  .br_pc {
+    display: none;
+  }
+}

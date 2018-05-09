@@ -9,16 +9,18 @@ $color-sub : #ffe079;
 $color-bg : #f5f5f5;
 $color-wrap : #fafafa;
 
-// color for each works
-$color-work-01 : #111f6f;
-//$color-work-02 : #fd7622;
-$color-work-02 : #ff7e2d;
-$color-work-04 : #097fc3;
-$color-work-06 : #6c35b4;
 
+// color for each works (Last Modified: 2018-05-09)
+$colorList: (
+    'coinone': #111f6f,
+    'icop': #5eede4,
+    'changstarr': #323232,
+    'hca': #ff7e2d,
+    'sbi': #097fc3,
+    'vr': #6c35b4
+);
 
 // padding for media queries
-
 $pd-lg : 10em;
 $pd-md : 8em;
 $pd-tb : 4.6em;

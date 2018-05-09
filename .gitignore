@@ -1,2 +1,6 @@
-
 node_modules/
+app/dist/work/
+app/src/work
+*.scssc
+config.rb
+README.md

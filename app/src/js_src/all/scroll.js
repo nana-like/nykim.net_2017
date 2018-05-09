@@ -111,7 +111,7 @@ $(function(){
     
     $(window).on('resize',function(){
         topAreaHeight = $('.topArea').outerHeight();
-        console.log(topAreaHeight);
+        //console.log(topAreaHeight);
     });
     
     

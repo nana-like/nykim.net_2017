@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*!  
+ *   RESET
+ */
+
+
+// === Reset ===
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, small article, aside, footer, header, nav, address, section, main, time, ol, ul, li, hr, strong, figure, dl, dt, dd, br { 
+    margin: 0;
+    padding: 0; 
+    border: 0; 
+    vertical-align: baseline; 
+    -webkit-text-size-adjust: none; 
+    font-style: normal; 
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+// === List ===
+ul, ol, li, dl {
+    list-style: none; 
+}
+
+// === Link ===
+a:link,a:visited,
+a:hover,a:active{
+    text-decoration: none;
+}
+a:focus{
+    outline:thin dotted;
+}
+
+
+// === Typo ===
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+    font-size: inherit;
+}
+strong{
+    vertical-align: top; 
+    font-weight: bold;
+}
+hr{
+    display: none;
+    box-sizing:content-box;
+    height: 0;
+}
+span, em{
+    vertical-align:top;
+}
+
+
+// === Input ===
+input { 
+    margin: 0;
+    padding: 0; 
+    box-sizing: content-box;
+    vertical-align: top;
+    border-radius: 0; 
+    -webkit-border-radius: 1px;
+    -webkit-apprearance: none;
+}
+
+
+// === Form ===
+button{
+    -webkit-box-sizing: border-box; 
+    color: #333333; 
+    text-align:left; 
+    font-family: inherit; 
+    letter-spacing: -0.05rem; 
+    cursor: pointer; 
+    font-size: inherit;
+}
+button, input, select, textarea{
+    border: none;
+    background-color: #fff;
+}
+
+textarea{
+    vertical-align:top;
+    border:solid 1px #ccc;
+}
+
+// === Table ===
+table{
+    border-collapse: collapse;
+    empty-cells: show;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+table caption, fieldset legend{
+    display:none;
+}
+
+
+// === HTML & Body ===
+html, body {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%; 
+    min-width: 100%;
+    //font-family: TimesNewRoman, "Times New Roman", 'Nanum Myeongjo', Times, Baskerville, Georgia, Batang, '바탕', 'Batang', '바탕체', Gungsuh, '궁서', serif;
+    font-family: TimesNewRoman, "Times New Roman", 'Nanum Myeongjo', Times, Baskerville, Georgia, 'Nanum Myeongjo', serif;
+    font-weight: 300;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: #121212;
+}
+
+body {
+    font-size: 1.35rem; 
+    line-height: 1.5;
+    color: #333;
+    background-color: #121212;
+}
+
+/*
+
+@media only screen and (min-width:748px) and (orientation:portrait) {
+	html{font-size:100%;}
+}
+
+@media only screen and (min-width:920px) {
+	html{font-size:100%;}
+}*/
+

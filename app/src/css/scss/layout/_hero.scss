@@ -148,20 +148,13 @@
 // !각 work 페이지별 히어로 이미지! //
 //////////////////////////////////
 
-.work_01 .hero {
-    background-image:url(../images/hero_work_01.png);
-}
-.work_02 .hero {
-    background-image:url(../images/hero_work_02.jpg);
-}
-.work_04 .hero {
-    background-image:url(../images/hero_work_04.jpg);
-}
-.work_06 .hero {
-    background-image:url(../images/hero_work_06.jpg);
-}
 
 
+@each $work, $color in $colorList {
+    .#{$work} .hero {
+        background-image: url(../images/hero_#{$work}.jpg);
+    }
+}
 
 
 //////////////////
