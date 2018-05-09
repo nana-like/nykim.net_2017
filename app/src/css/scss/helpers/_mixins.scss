@@ -90,6 +90,10 @@
         background-image: url(../images/ico_pinterest.svg);
         background-size: cover;
     }
+    &.social_blog {
+        background-image: url(../images/ico_blog.svg);
+        background-size: cover;
+    }
 
     a {
         @include block-anchor
