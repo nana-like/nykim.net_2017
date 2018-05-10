@@ -23,7 +23,7 @@
     
     .logo {
         cursor: pointer;
-        opacity: 1;
+        opacity: .7;
         z-index: 300;
         position: absolute;
         top: 20px;
@@ -34,6 +34,11 @@
         
         &.onTop {
             opacity: 0;
+        }
+
+        &:hover {
+            opacity: 1;
+            transition: opacity .3s;
         }
     }
     
@@ -57,16 +62,21 @@
         
 
         .menu_burger {
+            opacity: .7;
             position: absolute;
             width: $burgerWidth;
             height: $burgerHeight;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            transition: transform 750ms ease-in-out, width .5s, height .5s, top .5s, left .5s;
+            transition: transform 750ms ease-in-out, width .5s, height .5s, top .5s, left .5s, opacity .3s;
             
             &:focus {
                 outline: 0;
+            }
+            &:hover {
+                opacity: 1;
+                transition: opacity .3s;
             }
 
             .line {
@@ -77,6 +87,7 @@
                 width: 80%;
                 pointer-events: none;
                 transition: transform .35s ease-in-out, background-color .2s;
+
             }
 
             .line_01 {
