@@ -455,7 +455,7 @@ $(function(){
 /*
    [ sub.js ]
    
-   2018.05.08
+   2018.05.30
    nykim@nykim.net
 
    메인페이지와 서브페이지 내용을 자동으로 생성합니다.
@@ -518,7 +518,7 @@ var customSubPage = {
             ],
             
             'link': true,
-            // 'existLink': 'http://argear.co.kr',
+            // 'existLink': 'http://argear.io',
         },
     
     
@@ -541,7 +541,7 @@ var customSubPage = {
             ],
             
             'link': true,
-            'existLink' : 'http://stayge.io/',
+            // 'existLink' : 'http://stayge.io/',
         },
     
     
