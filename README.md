@@ -11,9 +11,9 @@
     - base/
       - common.scss
       - reset.scss
-      _ font.scss
+      - font.scss
     - helpers/
-      _ animations.scss
+      - animations.scss
       - mediaQueries.scss
       - mixins.scss
       - variables.scss
