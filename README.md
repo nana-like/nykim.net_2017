@@ -4,6 +4,19 @@
 
 *UI designed & developed by nykim*
 
+## About This Project
+- 이 웹사이트는 개인 포트폴리오를 모아둔 곳입니다.
+- 제 취향과 사랑을 듬뿍 담아 만들었습니다.
+
+## 스크린샷
+- Version 2 (현재)
+![nykim.net (ver.2)](http://nykim.net/repo/img/nykimnet_v2.png)
+
+- Version 1 (과거)
+![nykim.net (ver.1)](http://nykim.net/repo/img/nykimnet_v1.png)
+
+_(지금은 ver.3 을 준비중이에요!)_
+
 ## Tree Structure
 
 - css/
